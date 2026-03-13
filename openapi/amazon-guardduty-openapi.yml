@@ -1,0 +1,79 @@
+openapi: 3.1.0
+info:
+  title: Amazon GuardDuty API
+  description: >-
+    Amazon GuardDuty is an intelligent threat detection service that
+    continuously monitors for malicious activity and unauthorized behavior.
+    This API enables you to create and manage detectors, list and manage
+    findings, configure threat intelligence feeds, manage member accounts,
+    and set up automated response workflows.
+  version: '2017-11-28'
+  contact:
+    name: Amazon Web Services
+    url: https://aws.amazon.com/contact-us/
+  termsOfService: https://aws.amazon.com/service-terms/
+externalDocs:
+  description: Amazon GuardDuty API Reference
+  url: https://docs.aws.amazon.com/guardduty/latest/APIReference/Welcome.html
+servers:
+  - url: https://guardduty.{region}.amazonaws.com
+    description: Amazon GuardDuty Regional Endpoint
+    variables:
+      region:
+        default: us-east-1
+        description: AWS Region
+tags:
+  - name: Detectors
+    description: Operations for creating and managing GuardDuty detectors
+  - name: Findings
+    description: Operations for listing and managing security findings
+  - name: IP Sets
+    description: Operations for managing trusted IP lists
+  - name: Members
+    description: Operations for managing member accounts
+paths:
+  /detector:
+    post:
+      operationId: CreateDetector
+      summary: Create a new GuardDuty detector
+      description: Creates a single Amazon GuardDuty detector.
+      tags:
+        - Detectors
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - Enable
+              properties:
+                Enable:
+                  type: boolean
+                  description: Whether to enable the detector
+                FindingPublishingFrequency:
+                  type: string
+                  enum: [FIFTEEN_MINUTES, ONE_HOUR, SIX_HOURS]
+                  description: The frequency of notifications
+                DataSources:
+                  type: object
+                  description: Data sources to enable
+                Features:
+                  type: array
+                  description: Features to enable on the detector
+                  items:
+                    type: object
+                Tags:
+                  type: object
+                  description: Tags for the detector
+      responses:
+        '200':
+          description: Detector created successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  DetectorId:
+                    type: string
+                    description: The unique ID of the created detector

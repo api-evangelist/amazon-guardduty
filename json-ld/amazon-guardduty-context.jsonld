@@ -1,0 +1,43 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "guardduty": "https://docs.aws.amazon.com/guardduty/latest/APIReference/",
+    "schema": "https://schema.org/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "dcterms": "http://purl.org/dc/terms/",
+
+    "Finding": {
+      "@id": "guardduty:Finding",
+      "@context": {
+        "id": "guardduty:findingId",
+        "accountId": "guardduty:accountId",
+        "region": "guardduty:region",
+        "type": "guardduty:findingType",
+        "severity": "guardduty:severity",
+        "title": "schema:name",
+        "description": "schema:description",
+        "confidence": "guardduty:confidence",
+        "resource": "guardduty:resource",
+        "service": "guardduty:service",
+        "createdAt": {
+          "@id": "dcterms:created",
+          "@type": "xsd:dateTime"
+        },
+        "updatedAt": {
+          "@id": "dcterms:modified",
+          "@type": "xsd:dateTime"
+        }
+      }
+    },
+
+    "Detector": {
+      "@id": "guardduty:Detector",
+      "@context": {
+        "detectorId": "guardduty:detectorId",
+        "status": "guardduty:detectorStatus",
+        "findingPublishingFrequency": "guardduty:findingPublishingFrequency",
+        "dataSources": "guardduty:dataSources"
+      }
+    }
+  }
+}

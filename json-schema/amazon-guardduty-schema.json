@@ -1,0 +1,88 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://api-evangelist.com/schemas/amazon/guardduty/finding.json",
+  "title": "Amazon GuardDuty Finding",
+  "description": "Represents an Amazon GuardDuty security finding with its associated details, severity, and metadata.",
+  "type": "object",
+  "required": ["id", "type", "severity"],
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "The unique identifier of the finding"
+    },
+    "accountId": {
+      "type": "string",
+      "description": "The AWS account ID where the finding was generated"
+    },
+    "region": {
+      "type": "string",
+      "description": "The AWS Region where the finding was generated"
+    },
+    "type": {
+      "type": "string",
+      "description": "The type of finding (e.g., UnauthorizedAccess:EC2/MaliciousIPCaller)"
+    },
+    "severity": {
+      "type": "number",
+      "description": "The severity of the finding (0.0 to 10.0)"
+    },
+    "title": {
+      "type": "string",
+      "description": "The title of the finding"
+    },
+    "description": {
+      "type": "string",
+      "description": "The description of the finding"
+    },
+    "confidence": {
+      "type": "number",
+      "description": "The confidence level of the finding"
+    },
+    "resource": {
+      "type": "object",
+      "description": "The resource affected by the finding",
+      "properties": {
+        "resourceType": {
+          "type": "string",
+          "description": "The type of AWS resource"
+        },
+        "instanceDetails": {
+          "type": "object",
+          "description": "Details about the EC2 instance involved"
+        },
+        "accessKeyDetails": {
+          "type": "object",
+          "description": "Details about the IAM access key involved"
+        }
+      }
+    },
+    "service": {
+      "type": "object",
+      "description": "Additional information about the finding",
+      "properties": {
+        "action": {
+          "type": "object",
+          "description": "Information about the activity"
+        },
+        "count": {
+          "type": "integer",
+          "description": "The number of times this finding was observed"
+        },
+        "detectorId": {
+          "type": "string",
+          "description": "The detector ID that generated the finding"
+        }
+      }
+    },
+    "createdAt": {
+      "type": "string",
+      "format": "date-time",
+      "description": "The time the finding was first observed"
+    },
+    "updatedAt": {
+      "type": "string",
+      "format": "date-time",
+      "description": "The time the finding was last updated"
+    }
+  }
+}
