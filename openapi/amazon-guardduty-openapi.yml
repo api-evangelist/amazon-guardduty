@@ -25,12 +25,6 @@ servers:
 tags:
   - name: Detectors
     description: Operations for creating and managing GuardDuty detectors
-  - name: Findings
-    description: Operations for listing and managing security findings
-  - name: IP Sets
-    description: Operations for managing trusted IP lists
-  - name: Members
-    description: Operations for managing member accounts
 paths:
   /detector:
     post:
