@@ -35,7 +35,7 @@ paths:
   /detector:
     post:
       operationId: CreateDetector
-      summary: Create a new GuardDuty detector
+      summary: Amazon GuardDuty Create a new GuardDuty detector
       description: Creates a single Amazon GuardDuty detector.
       tags:
         - Detectors
