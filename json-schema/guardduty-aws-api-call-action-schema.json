@@ -1,0 +1,126 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-guardduty/refs/heads/main/json-schema/guardduty-aws-api-call-action-schema.json",
+  "title": "AwsApiCallAction",
+  "description": "Contains information about the API action.",
+  "type": "object",
+  "properties": {
+    "Api": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "xml": {
+            "name": "api"
+          },
+          "description": "The Amazon Web Services API name."
+        }
+      ]
+    },
+    "CallerType": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "xml": {
+            "name": "callerType"
+          },
+          "description": "The Amazon Web Services API caller type."
+        }
+      ]
+    },
+    "DomainDetails": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/DomainDetails"
+        },
+        {
+          "xml": {
+            "name": "domainDetails"
+          },
+          "description": "The domain information for the Amazon Web Services API call."
+        }
+      ]
+    },
+    "ErrorCode": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "xml": {
+            "name": "errorCode"
+          },
+          "description": "The error code of the failed Amazon Web Services API action."
+        }
+      ]
+    },
+    "UserAgent": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "xml": {
+            "name": "userAgent"
+          },
+          "description": "The agent through which the API request was made."
+        }
+      ]
+    },
+    "RemoteIpDetails": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/RemoteIpDetails"
+        },
+        {
+          "xml": {
+            "name": "remoteIpDetails"
+          },
+          "description": "The remote IP information of the connection that initiated the Amazon Web Services API call."
+        }
+      ]
+    },
+    "ServiceName": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "xml": {
+            "name": "serviceName"
+          },
+          "description": "The Amazon Web Services service name whose API was invoked."
+        }
+      ]
+    },
+    "RemoteAccountDetails": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/RemoteAccountDetails"
+        },
+        {
+          "xml": {
+            "name": "remoteAccountDetails"
+          },
+          "description": "The details of the Amazon Web Services account that made the API call. This field appears if the call was made from outside your account."
+        }
+      ]
+    },
+    "AffectedResources": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/AffectedResources"
+        },
+        {
+          "xml": {
+            "name": "affectedResources"
+          },
+          "description": "The details of the Amazon Web Services account that made the API call. This field identifies the resources that were affected by this API call."
+        }
+      ]
+    }
+  }
+}

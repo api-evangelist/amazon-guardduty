@@ -1,0 +1,164 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-guardduty/refs/heads/main/json-structure/guardduty-resource-structure.json",
+  "name": "Resource",
+  "description": "Contains information about the Amazon Web Services resource associated with the activity that prompted GuardDuty to generate a finding.",
+  "type": "object",
+  "properties": {
+    "AccessKeyDetails": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/AccessKeyDetails"
+        },
+        {
+          "xml": {
+            "name": "accessKeyDetails"
+          },
+          "description": "The IAM access key details (user information) of a user that engaged in the activity that prompted GuardDuty to generate a finding."
+        }
+      ]
+    },
+    "S3BucketDetails": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/S3BucketDetails"
+        },
+        {
+          "xml": {
+            "name": "s3BucketDetails"
+          },
+          "description": "Contains information on the S3 bucket."
+        }
+      ]
+    },
+    "InstanceDetails": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/InstanceDetails"
+        },
+        {
+          "xml": {
+            "name": "instanceDetails"
+          },
+          "description": "The information about the EC2 instance associated with the activity that prompted GuardDuty to generate a finding."
+        }
+      ]
+    },
+    "EksClusterDetails": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/EksClusterDetails"
+        },
+        {
+          "xml": {
+            "name": "eksClusterDetails"
+          },
+          "description": "Details about the EKS cluster involved in a Kubernetes finding."
+        }
+      ]
+    },
+    "KubernetesDetails": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/KubernetesDetails"
+        },
+        {
+          "xml": {
+            "name": "kubernetesDetails"
+          },
+          "description": "Details about the Kubernetes user and workload involved in a Kubernetes finding."
+        }
+      ]
+    },
+    "ResourceType": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "xml": {
+            "name": "resourceType"
+          },
+          "description": "The type of Amazon Web Services resource."
+        }
+      ]
+    },
+    "EbsVolumeDetails": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/EbsVolumeDetails"
+        },
+        {
+          "xml": {
+            "name": "ebsVolumeDetails"
+          },
+          "description": "Contains list of scanned and skipped EBS volumes with details."
+        }
+      ]
+    },
+    "EcsClusterDetails": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/EcsClusterDetails"
+        },
+        {
+          "xml": {
+            "name": "ecsClusterDetails"
+          },
+          "description": "Contains information about the details of the ECS Cluster."
+        }
+      ]
+    },
+    "ContainerDetails": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Container"
+        },
+        {
+          "xml": {
+            "name": "containerDetails"
+          }
+        }
+      ]
+    },
+    "RdsDbInstanceDetails": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/RdsDbInstanceDetails"
+        },
+        {
+          "xml": {
+            "name": "rdsDbInstanceDetails"
+          },
+          "description": "Contains information about the database instance to which an anomalous login attempt was made."
+        }
+      ]
+    },
+    "RdsDbUserDetails": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/RdsDbUserDetails"
+        },
+        {
+          "xml": {
+            "name": "rdsDbUserDetails"
+          },
+          "description": "Contains information about the user details through which anomalous login attempt was made."
+        }
+      ]
+    },
+    "LambdaDetails": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/LambdaDetails"
+        },
+        {
+          "xml": {
+            "name": "lambdaDetails"
+          },
+          "description": "Contains information about the Lambda function that was involved in a finding."
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-guardduty/refs/heads/main/json-schema/guardduty-remote-account-details-schema.json",
+  "title": "RemoteAccountDetails",
+  "description": "Contains details about the remote Amazon Web Services account that made the API call.",
+  "type": "object",
+  "properties": {
+    "AccountId": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "xml": {
+            "name": "accountId"
+          },
+          "description": "The Amazon Web Services account ID of the remote API caller."
+        }
+      ]
+    },
+    "Affiliated": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Boolean"
+        },
+        {
+          "xml": {
+            "name": "affiliated"
+          },
+          "description": "Details on whether the Amazon Web Services account of the remote API caller is related to your GuardDuty environment. If this value is <code>True</code> the API caller is affiliated to your account in some way. If it is <code>False</code> the API caller is from outside your environment."
+        }
+      ]
+    }
+  }
+}

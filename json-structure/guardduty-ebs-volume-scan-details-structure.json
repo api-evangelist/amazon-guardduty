@@ -1,0 +1,87 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-guardduty/refs/heads/main/json-structure/guardduty-ebs-volume-scan-details-structure.json",
+  "name": "EbsVolumeScanDetails",
+  "description": "Contains details from the malware scan that created a finding.",
+  "type": "object",
+  "properties": {
+    "ScanId": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "xml": {
+            "name": "scanId"
+          },
+          "description": "Unique Id of the malware scan that generated the finding."
+        }
+      ]
+    },
+    "ScanStartedAt": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Timestamp"
+        },
+        {
+          "xml": {
+            "name": "scanStartedAt"
+          },
+          "description": "Returns the start date and time of the malware scan."
+        }
+      ]
+    },
+    "ScanCompletedAt": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Timestamp"
+        },
+        {
+          "xml": {
+            "name": "scanCompletedAt"
+          },
+          "description": "Returns the completion date and time of the malware scan."
+        }
+      ]
+    },
+    "TriggerFindingId": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "xml": {
+            "name": "triggerFindingId"
+          },
+          "description": "GuardDuty finding ID that triggered a malware scan."
+        }
+      ]
+    },
+    "Sources": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Sources"
+        },
+        {
+          "xml": {
+            "name": "sources"
+          },
+          "description": "Contains list of threat intelligence sources used to detect threats."
+        }
+      ]
+    },
+    "ScanDetections": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ScanDetections"
+        },
+        {
+          "xml": {
+            "name": "scanDetections"
+          },
+          "description": "Contains a complete view providing malware scan result details."
+        }
+      ]
+    }
+  }
+}

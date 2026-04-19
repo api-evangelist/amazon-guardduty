@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-guardduty/refs/heads/main/json-structure/guardduty-runtime-details-structure.json",
+  "name": "RuntimeDetails",
+  "description": "Information about the process and any required context values for a specific finding.",
+  "type": "object",
+  "properties": {
+    "Process": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ProcessDetails"
+        },
+        {
+          "xml": {
+            "name": "process"
+          },
+          "description": "Information about the observed process."
+        }
+      ]
+    },
+    "Context": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/RuntimeContext"
+        },
+        {
+          "xml": {
+            "name": "context"
+          },
+          "description": "Additional information about the suspicious activity."
+        }
+      ]
+    }
+  }
+}

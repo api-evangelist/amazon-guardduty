@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-guardduty/refs/heads/main/json-structure/guardduty-filter-criterion-structure.json",
+  "name": "FilterCriterion",
+  "description": "Represents a condition that when matched will be added to the response of the operation. Irrespective of using any filter criteria, an administrator account can view the scan entries for all of its member accounts. However, each member account can view the scan entries only for their own account.",
+  "type": "object",
+  "properties": {
+    "CriterionKey": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/CriterionKey"
+        },
+        {
+          "xml": {
+            "name": "criterionKey"
+          },
+          "description": "An enum value representing possible scan properties to match with given scan entries."
+        }
+      ]
+    },
+    "FilterCondition": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/FilterCondition"
+        },
+        {
+          "xml": {
+            "name": "filterCondition"
+          },
+          "description": "Contains information about the condition."
+        }
+      ]
+    }
+  }
+}

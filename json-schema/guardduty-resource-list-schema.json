@@ -1,0 +1,10 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-guardduty/refs/heads/main/json-schema/guardduty-resource-list-schema.json",
+  "title": "ResourceList",
+  "description": "ResourceList schema from Amazon GuardDuty API",
+  "type": "array",
+  "items": {
+    "$ref": "#/components/schemas/String"
+  }
+}

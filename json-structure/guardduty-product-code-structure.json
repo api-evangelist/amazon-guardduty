@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-guardduty/refs/heads/main/json-structure/guardduty-product-code-structure.json",
+  "name": "ProductCode",
+  "description": "Contains information about the product code for the EC2 instance.",
+  "type": "object",
+  "properties": {
+    "Code": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "xml": {
+            "name": "productCodeId"
+          },
+          "description": "The product code information."
+        }
+      ]
+    },
+    "ProductType": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "xml": {
+            "name": "productCodeType"
+          },
+          "description": "The product code type."
+        }
+      ]
+    }
+  }
+}

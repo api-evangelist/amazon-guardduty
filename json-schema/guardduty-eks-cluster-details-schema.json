@@ -1,0 +1,87 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-guardduty/refs/heads/main/json-schema/guardduty-eks-cluster-details-schema.json",
+  "title": "EksClusterDetails",
+  "description": "Details about the EKS cluster involved in a Kubernetes finding.",
+  "type": "object",
+  "properties": {
+    "Name": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "xml": {
+            "name": "name"
+          },
+          "description": "EKS cluster name."
+        }
+      ]
+    },
+    "Arn": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "xml": {
+            "name": "arn"
+          },
+          "description": "EKS cluster ARN."
+        }
+      ]
+    },
+    "VpcId": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "xml": {
+            "name": "vpcId"
+          },
+          "description": "The VPC ID to which the EKS cluster is attached."
+        }
+      ]
+    },
+    "Status": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "xml": {
+            "name": "status"
+          },
+          "description": "The EKS cluster status."
+        }
+      ]
+    },
+    "Tags": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Tags"
+        },
+        {
+          "xml": {
+            "name": "tags"
+          },
+          "description": "The EKS cluster tags."
+        }
+      ]
+    },
+    "CreatedAt": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Timestamp"
+        },
+        {
+          "xml": {
+            "name": "createdAt"
+          },
+          "description": "The timestamp when the EKS cluster was created."
+        }
+      ]
+    }
+  }
+}

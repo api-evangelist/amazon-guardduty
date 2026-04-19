@@ -1,0 +1,10 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-guardduty/refs/heads/main/json-schema/guardduty-count-by-severity-schema.json",
+  "title": "CountBySeverity",
+  "description": "CountBySeverity schema from Amazon GuardDuty API",
+  "type": "object",
+  "additionalProperties": {
+    "$ref": "#/components/schemas/Integer"
+  }
+}

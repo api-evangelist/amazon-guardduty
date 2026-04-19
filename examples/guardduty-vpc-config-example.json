@@ -1,0 +1,5 @@
+{
+  "SubnetIds": "abc123def456",
+  "VpcId": "abc123def456",
+  "SecurityGroups": "example-SecurityGrou"
+}

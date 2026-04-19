@@ -1,0 +1,8 @@
+{
+  "CloudTrail": "example-CloudTrail",
+  "DNSLogs": "example-DNSLogs",
+  "FlowLogs": "example-FlowLogs",
+  "S3Logs": "example-S3Logs",
+  "Kubernetes": "example-Kubernetes",
+  "MalwareProtection": "example-MalwareProte"
+}

@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-guardduty/refs/heads/main/json-schema/guardduty-coverage-filter-condition-schema.json",
+  "title": "CoverageFilterCondition",
+  "description": "Represents a condition that when matched will be added to the response of the operation.",
+  "type": "object",
+  "properties": {
+    "Equals": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Equals"
+        },
+        {
+          "xml": {
+            "name": "equals"
+          },
+          "description": "Represents an equal condition that is applied to a single field while retrieving the coverage details."
+        }
+      ]
+    },
+    "NotEquals": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/NotEquals"
+        },
+        {
+          "xml": {
+            "name": "notEquals"
+          },
+          "description": "Represents a not equal condition that is applied to a single field while retrieving the coverage details."
+        }
+      ]
+    }
+  }
+}

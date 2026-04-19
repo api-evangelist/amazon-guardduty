@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-guardduty/refs/heads/main/json-schema/guardduty-service-additional-info-schema.json",
+  "title": "ServiceAdditionalInfo",
+  "description": "Additional information about the generated finding.",
+  "type": "object",
+  "properties": {
+    "Value": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "xml": {
+            "name": "value"
+          },
+          "description": "This field specifies the value of the additional information."
+        }
+      ]
+    },
+    "Type": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "xml": {
+            "name": "type"
+          },
+          "description": "Describes the type of the additional information."
+        }
+      ]
+    }
+  }
+}

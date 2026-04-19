@@ -1,0 +1,61 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-guardduty/refs/heads/main/json-schema/guardduty-list-coverage-request-schema.json",
+  "title": "ListCoverageRequest",
+  "description": "ListCoverageRequest schema from Amazon GuardDuty API",
+  "type": "object",
+  "properties": {
+    "NextToken": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "xml": {
+            "name": "nextToken"
+          },
+          "description": "A token to use for paginating results that are returned in the response. Set the value of this parameter to null for the first request to a list action. For subsequent calls, use the NextToken value returned from the previous request to continue listing results after the first page."
+        }
+      ]
+    },
+    "MaxResults": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/MaxResults"
+        },
+        {
+          "xml": {
+            "name": "maxResults"
+          },
+          "description": "The maximum number of results to return in the response."
+        }
+      ]
+    },
+    "FilterCriteria": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/CoverageFilterCriteria"
+        },
+        {
+          "xml": {
+            "name": "filterCriteria"
+          },
+          "description": "Represents the criteria used to filter the coverage details."
+        }
+      ]
+    },
+    "SortCriteria": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/CoverageSortCriteria"
+        },
+        {
+          "xml": {
+            "name": "sortCriteria"
+          },
+          "description": "Represents the criteria used to sort the coverage details."
+        }
+      ]
+    }
+  }
+}

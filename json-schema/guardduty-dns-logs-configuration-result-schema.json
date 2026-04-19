@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-guardduty/refs/heads/main/json-schema/guardduty-dns-logs-configuration-result-schema.json",
+  "title": "DNSLogsConfigurationResult",
+  "description": "Contains information on the status of DNS logs as a data source.",
+  "type": "object",
+  "properties": {
+    "Status": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/DataSourceStatus"
+        },
+        {
+          "xml": {
+            "name": "status"
+          },
+          "description": "Denotes whether DNS logs is enabled as a data source."
+        }
+      ]
+    }
+  },
+  "required": [
+    "Status"
+  ]
+}

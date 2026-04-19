@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-guardduty/refs/heads/main/json-structure/guardduty-default-server-side-encryption-structure.json",
+  "name": "DefaultServerSideEncryption",
+  "description": "Contains information on the server side encryption method used in the S3 bucket. See <a href=\"https://docs.aws.amazon.com/AmazonS3/latest/dev/serv-side-encryption.html\">S3 Server-Side Encryption</a> for more information.",
+  "type": "object",
+  "properties": {
+    "EncryptionType": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "xml": {
+            "name": "encryptionType"
+          },
+          "description": "The type of encryption used for objects within the S3 bucket."
+        }
+      ]
+    },
+    "KmsMasterKeyArn": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "xml": {
+            "name": "kmsMasterKeyArn"
+          },
+          "description": "The Amazon Resource Name (ARN) of the KMS encryption key. Only available if the bucket <code>EncryptionType</code> is <code>aws:kms</code>."
+        }
+      ]
+    }
+  }
+}

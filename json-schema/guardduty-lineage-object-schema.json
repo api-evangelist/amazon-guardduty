@@ -1,0 +1,126 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-guardduty/refs/heads/main/json-schema/guardduty-lineage-object-schema.json",
+  "title": "LineageObject",
+  "description": "Information about the runtime process details.",
+  "type": "object",
+  "properties": {
+    "StartTime": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Timestamp"
+        },
+        {
+          "xml": {
+            "name": "startTime"
+          },
+          "description": "The time when the process started. This is in UTC format."
+        }
+      ]
+    },
+    "NamespacePid": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Integer"
+        },
+        {
+          "xml": {
+            "name": "namespacePid"
+          },
+          "description": "The process ID of the child process."
+        }
+      ]
+    },
+    "UserId": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Integer"
+        },
+        {
+          "xml": {
+            "name": "userId"
+          },
+          "description": "The user ID of the user that executed the process."
+        }
+      ]
+    },
+    "Name": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "xml": {
+            "name": "name"
+          },
+          "description": "The name of the process."
+        }
+      ]
+    },
+    "Pid": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Integer"
+        },
+        {
+          "xml": {
+            "name": "pid"
+          },
+          "description": "The ID of the process."
+        }
+      ]
+    },
+    "Uuid": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "xml": {
+            "name": "uuid"
+          },
+          "description": "The unique ID assigned to the process by GuardDuty."
+        }
+      ]
+    },
+    "ExecutablePath": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "xml": {
+            "name": "executablePath"
+          },
+          "description": "The absolute path of the process executable file."
+        }
+      ]
+    },
+    "Euid": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Integer"
+        },
+        {
+          "xml": {
+            "name": "euid"
+          },
+          "description": "The effective user ID that was used to execute the process."
+        }
+      ]
+    },
+    "ParentUuid": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "xml": {
+            "name": "parentUuid"
+          },
+          "description": "The unique ID of the parent process. This ID is assigned to the parent process by GuardDuty."
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-guardduty/refs/heads/main/json-structure/guardduty-create-members-request-structure.json",
+  "name": "CreateMembersRequest",
+  "description": "CreateMembersRequest schema from Amazon GuardDuty API",
+  "type": "object",
+  "properties": {
+    "AccountDetails": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/AccountDetails"
+        },
+        {
+          "xml": {
+            "name": "accountDetails"
+          },
+          "description": "A list of account ID and email address pairs of the accounts that you want to associate with the GuardDuty administrator account."
+        }
+      ]
+    }
+  },
+  "required": [
+    "AccountDetails"
+  ]
+}

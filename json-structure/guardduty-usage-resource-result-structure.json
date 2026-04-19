@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-guardduty/refs/heads/main/json-structure/guardduty-usage-resource-result-structure.json",
+  "name": "UsageResourceResult",
+  "description": "Contains information on the sum of usage based on an Amazon Web Services resource.",
+  "type": "object",
+  "properties": {
+    "Resource": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "xml": {
+            "name": "resource"
+          },
+          "description": "The Amazon Web Services resource that generated usage."
+        }
+      ]
+    },
+    "Total": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Total"
+        },
+        {
+          "xml": {
+            "name": "total"
+          },
+          "description": "Represents the sum total of usage for the specified resource type."
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,100 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-guardduty/refs/heads/main/json-schema/guardduty-kubernetes-workload-details-schema.json",
+  "title": "KubernetesWorkloadDetails",
+  "description": "Details about the Kubernetes workload involved in a Kubernetes finding.",
+  "type": "object",
+  "properties": {
+    "Name": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "xml": {
+            "name": "name"
+          },
+          "description": "Kubernetes workload name."
+        }
+      ]
+    },
+    "Type": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "xml": {
+            "name": "type"
+          },
+          "description": "Kubernetes workload type (e.g. Pod, Deployment, etc.)."
+        }
+      ]
+    },
+    "Uid": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "xml": {
+            "name": "uid"
+          },
+          "description": "Kubernetes workload ID."
+        }
+      ]
+    },
+    "Namespace": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "xml": {
+            "name": "namespace"
+          },
+          "description": "Kubernetes namespace that the workload is part of."
+        }
+      ]
+    },
+    "HostNetwork": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Boolean"
+        },
+        {
+          "xml": {
+            "name": "hostNetwork"
+          },
+          "description": "Whether the hostNetwork flag is enabled for the pods included in the workload."
+        }
+      ]
+    },
+    "Containers": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Containers"
+        },
+        {
+          "xml": {
+            "name": "containers"
+          },
+          "description": "Containers running as part of the Kubernetes workload."
+        }
+      ]
+    },
+    "Volumes": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Volumes"
+        },
+        {
+          "xml": {
+            "name": "volumes"
+          },
+          "description": "Volumes used by the Kubernetes workload."
+        }
+      ]
+    }
+  }
+}

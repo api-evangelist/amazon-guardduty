@@ -1,0 +1,48 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-guardduty/refs/heads/main/json-schema/guardduty-bucket-level-permissions-schema.json",
+  "title": "BucketLevelPermissions",
+  "description": "Contains information about the bucket level permissions for the S3 bucket.",
+  "type": "object",
+  "properties": {
+    "AccessControlList": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/AccessControlList"
+        },
+        {
+          "xml": {
+            "name": "accessControlList"
+          },
+          "description": "Contains information on how Access Control Policies are applied to the bucket."
+        }
+      ]
+    },
+    "BucketPolicy": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/BucketPolicy"
+        },
+        {
+          "xml": {
+            "name": "bucketPolicy"
+          },
+          "description": "Contains information on the bucket policies for the S3 bucket."
+        }
+      ]
+    },
+    "BlockPublicAccess": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/BlockPublicAccess"
+        },
+        {
+          "xml": {
+            "name": "blockPublicAccess"
+          },
+          "description": "Contains information on which account level S3 Block Public Access settings are applied to the S3 bucket."
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-guardduty/refs/heads/main/json-schema/guardduty-host-path-schema.json",
+  "title": "HostPath",
+  "description": "Represents a pre-existing file or directory on the host machine that the volume maps to.",
+  "type": "object",
+  "properties": {
+    "Path": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "xml": {
+            "name": "path"
+          },
+          "description": "Path of the file or directory on the host that the volume maps to."
+        }
+      ]
+    }
+  }
+}

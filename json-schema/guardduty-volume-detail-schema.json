@@ -1,0 +1,100 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-guardduty/refs/heads/main/json-schema/guardduty-volume-detail-schema.json",
+  "title": "VolumeDetail",
+  "description": "Contains EBS volume details.",
+  "type": "object",
+  "properties": {
+    "VolumeArn": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "xml": {
+            "name": "volumeArn"
+          },
+          "description": "EBS volume Arn information."
+        }
+      ]
+    },
+    "VolumeType": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "xml": {
+            "name": "volumeType"
+          },
+          "description": "The EBS volume type."
+        }
+      ]
+    },
+    "DeviceName": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "xml": {
+            "name": "deviceName"
+          },
+          "description": "The device name for the EBS volume."
+        }
+      ]
+    },
+    "VolumeSizeInGB": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Integer"
+        },
+        {
+          "xml": {
+            "name": "volumeSizeInGB"
+          },
+          "description": "EBS volume size in GB."
+        }
+      ]
+    },
+    "EncryptionType": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "xml": {
+            "name": "encryptionType"
+          },
+          "description": "EBS volume encryption type."
+        }
+      ]
+    },
+    "SnapshotArn": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "xml": {
+            "name": "snapshotArn"
+          },
+          "description": "Snapshot Arn of the EBS volume."
+        }
+      ]
+    },
+    "KmsKeyArn": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "xml": {
+            "name": "kmsKeyArn"
+          },
+          "description": "KMS key Arn used to encrypt the EBS volume."
+        }
+      ]
+    }
+  }
+}

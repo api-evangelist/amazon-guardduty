@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-guardduty/refs/heads/main/json-schema/guardduty-sort-criteria-schema.json",
+  "title": "SortCriteria",
+  "description": "Contains information about the criteria used for sorting findings.",
+  "type": "object",
+  "properties": {
+    "AttributeName": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "xml": {
+            "name": "attributeName"
+          },
+          "description": "Represents the finding attribute, such as <code>accountId</code>, that sorts the findings."
+        }
+      ]
+    },
+    "OrderBy": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/OrderBy"
+        },
+        {
+          "xml": {
+            "name": "orderBy"
+          },
+          "description": "The order by which the sorted findings are to be displayed."
+        }
+      ]
+    }
+  }
+}

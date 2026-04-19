@@ -1,0 +1,6 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-guardduty/refs/heads/main/json-structure/guardduty-bad-request-exception-structure.json",
+  "name": "BadRequestException",
+  "description": "BadRequestException schema from Amazon GuardDuty API"
+}

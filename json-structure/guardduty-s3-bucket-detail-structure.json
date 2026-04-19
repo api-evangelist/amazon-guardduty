@@ -1,0 +1,113 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-guardduty/refs/heads/main/json-structure/guardduty-s3-bucket-detail-structure.json",
+  "name": "S3BucketDetail",
+  "description": "Contains information on the S3 bucket.",
+  "type": "object",
+  "properties": {
+    "Arn": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "xml": {
+            "name": "arn"
+          },
+          "description": "The Amazon Resource Name (ARN) of the S3 bucket."
+        }
+      ]
+    },
+    "Name": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "xml": {
+            "name": "name"
+          },
+          "description": "The name of the S3 bucket."
+        }
+      ]
+    },
+    "Type": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "xml": {
+            "name": "type"
+          },
+          "description": "Describes whether the bucket is a source or destination bucket."
+        }
+      ]
+    },
+    "CreatedAt": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Timestamp"
+        },
+        {
+          "xml": {
+            "name": "createdAt"
+          },
+          "description": "The date and time the bucket was created at."
+        }
+      ]
+    },
+    "Owner": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Owner"
+        },
+        {
+          "xml": {
+            "name": "owner"
+          },
+          "description": "The owner of the S3 bucket."
+        }
+      ]
+    },
+    "Tags": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Tags"
+        },
+        {
+          "xml": {
+            "name": "tags"
+          },
+          "description": "All tags attached to the S3 bucket"
+        }
+      ]
+    },
+    "DefaultServerSideEncryption": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/DefaultServerSideEncryption"
+        },
+        {
+          "xml": {
+            "name": "defaultServerSideEncryption"
+          },
+          "description": "Describes the server side encryption method used in the S3 bucket."
+        }
+      ]
+    },
+    "PublicAccess": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/PublicAccess"
+        },
+        {
+          "xml": {
+            "name": "publicAccess"
+          },
+          "description": "Describes the public access policies that apply to the S3 bucket."
+        }
+      ]
+    }
+  }
+}

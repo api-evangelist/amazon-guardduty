@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-guardduty/refs/heads/main/json-schema/guardduty-get-member-detectors-request-schema.json",
+  "title": "GetMemberDetectorsRequest",
+  "description": "GetMemberDetectorsRequest schema from Amazon GuardDuty API",
+  "type": "object",
+  "properties": {
+    "AccountIds": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/AccountIds"
+        },
+        {
+          "xml": {
+            "name": "accountIds"
+          },
+          "description": "The account ID of the member account."
+        }
+      ]
+    }
+  },
+  "required": [
+    "AccountIds"
+  ]
+}

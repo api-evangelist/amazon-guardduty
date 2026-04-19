@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-guardduty/refs/heads/main/json-schema/guardduty-get-member-detectors-response-schema.json",
+  "title": "GetMemberDetectorsResponse",
+  "description": "GetMemberDetectorsResponse schema from Amazon GuardDuty API",
+  "type": "object",
+  "properties": {
+    "MemberDataSourceConfigurations": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/MemberDataSourceConfigurations"
+        },
+        {
+          "xml": {
+            "name": "members"
+          },
+          "description": "An object that describes which data sources are enabled for a member account."
+        }
+      ]
+    },
+    "UnprocessedAccounts": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/UnprocessedAccounts"
+        },
+        {
+          "xml": {
+            "name": "unprocessedAccounts"
+          },
+          "description": "A list of member account IDs that were unable to be processed along with an explanation for why they were not processed."
+        }
+      ]
+    }
+  },
+  "required": [
+    "MemberDataSourceConfigurations",
+    "UnprocessedAccounts"
+  ]
+}

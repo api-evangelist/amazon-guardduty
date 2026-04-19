@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-guardduty/refs/heads/main/json-schema/guardduty-rds-login-attempt-action-schema.json",
+  "title": "RdsLoginAttemptAction",
+  "description": "Indicates that a login attempt was made to the potentially compromised database from a remote IP address.",
+  "type": "object",
+  "properties": {
+    "RemoteIpDetails": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/RemoteIpDetails"
+        },
+        {
+          "xml": {
+            "name": "remoteIpDetails"
+          }
+        }
+      ]
+    },
+    "LoginAttributes": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/LoginAttributes"
+        },
+        {
+          "description": "Indicates the login attributes used in the login attempt."
+        }
+      ]
+    }
+  }
+}

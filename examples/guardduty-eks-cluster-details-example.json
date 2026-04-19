@@ -1,0 +1,8 @@
+{
+  "Name": "MyThreatFilter",
+  "Arn": "arn:aws:guardduty:us-east-1:123456789012:detector/abc123",
+  "VpcId": "abc123def456",
+  "Status": "ENABLED",
+  "Tags": "example-Tags",
+  "CreatedAt": "example-CreatedAt"
+}

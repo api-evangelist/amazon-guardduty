@@ -1,0 +1,61 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-guardduty/refs/heads/main/json-structure/guardduty-scan-threat-name-structure.json",
+  "name": "ScanThreatName",
+  "description": "Contains files infected with the given threat providing details of malware name and severity.",
+  "type": "object",
+  "properties": {
+    "Name": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "xml": {
+            "name": "name"
+          },
+          "description": "The name of the identified threat."
+        }
+      ]
+    },
+    "Severity": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "xml": {
+            "name": "severity"
+          },
+          "description": "Severity of threat identified as part of the malware scan."
+        }
+      ]
+    },
+    "ItemCount": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Integer"
+        },
+        {
+          "xml": {
+            "name": "itemCount"
+          },
+          "description": "Total number of files infected with given threat."
+        }
+      ]
+    },
+    "FilePaths": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/FilePaths"
+        },
+        {
+          "xml": {
+            "name": "filePaths"
+          },
+          "description": "List of infected files in EBS volume with details."
+        }
+      ]
+    }
+  }
+}

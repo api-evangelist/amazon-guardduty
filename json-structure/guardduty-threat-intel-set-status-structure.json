@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-guardduty/refs/heads/main/json-structure/guardduty-threat-intel-set-status-structure.json",
+  "name": "ThreatIntelSetStatus",
+  "description": "ThreatIntelSetStatus schema from Amazon GuardDuty API",
+  "type": "string",
+  "enum": [
+    "INACTIVE",
+    "ACTIVATING",
+    "ACTIVE",
+    "DEACTIVATING",
+    "ERROR",
+    "DELETE_PENDING",
+    "DELETED"
+  ]
+}

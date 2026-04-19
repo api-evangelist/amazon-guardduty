@@ -1,0 +1,8 @@
+{
+  "id": "abc123def456",
+  "accountId": "abc123def456",
+  "region": "example-region",
+  "type": "example-type",
+  "severity": 72.88,
+  "title": "example-title"
+}

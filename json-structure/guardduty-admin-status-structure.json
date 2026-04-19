@@ -1,0 +1,11 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-guardduty/refs/heads/main/json-structure/guardduty-admin-status-structure.json",
+  "name": "AdminStatus",
+  "description": "AdminStatus schema from Amazon GuardDuty API",
+  "type": "string",
+  "enum": [
+    "ENABLED",
+    "DISABLE_IN_PROGRESS"
+  ]
+}

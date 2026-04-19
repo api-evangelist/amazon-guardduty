@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-guardduty/refs/heads/main/json-schema/guardduty-unprocessed-account-schema.json",
+  "title": "UnprocessedAccount",
+  "description": "Contains information about the accounts that weren't processed.",
+  "type": "object",
+  "properties": {
+    "AccountId": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/AccountId"
+        },
+        {
+          "xml": {
+            "name": "accountId"
+          },
+          "description": "The Amazon Web Services account ID."
+        }
+      ]
+    },
+    "Result": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "xml": {
+            "name": "result"
+          },
+          "description": "A reason why the account hasn't been processed."
+        }
+      ]
+    }
+  },
+  "required": [
+    "AccountId",
+    "Result"
+  ]
+}

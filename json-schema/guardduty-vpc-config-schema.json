@@ -1,0 +1,48 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-guardduty/refs/heads/main/json-schema/guardduty-vpc-config-schema.json",
+  "title": "VpcConfig",
+  "description": "Amazon Virtual Private Cloud configuration details associated with your Lambda function.",
+  "type": "object",
+  "properties": {
+    "SubnetIds": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/SubnetIds"
+        },
+        {
+          "xml": {
+            "name": "subnetIds"
+          },
+          "description": "The identifiers of the subnets that are associated with your Lambda function."
+        }
+      ]
+    },
+    "VpcId": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "xml": {
+            "name": "vpcId"
+          },
+          "description": "The identifier of the Amazon Virtual Private Cloud."
+        }
+      ]
+    },
+    "SecurityGroups": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/SecurityGroups"
+        },
+        {
+          "xml": {
+            "name": "securityGroups"
+          },
+          "description": "The identifier of the security group attached to the Lambda function."
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-guardduty/refs/heads/main/json-structure/guardduty-organization-ebs-volumes-result-structure.json",
+  "name": "OrganizationEbsVolumesResult",
+  "description": "An object that contains information on the status of whether EBS volumes scanning will be enabled as a data source for an organization.",
+  "type": "object",
+  "properties": {
+    "AutoEnable": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Boolean"
+        },
+        {
+          "xml": {
+            "name": "autoEnable"
+          },
+          "description": "An object that contains the status of whether scanning EBS volumes should be auto-enabled for new members joining the organization."
+        }
+      ]
+    }
+  }
+}

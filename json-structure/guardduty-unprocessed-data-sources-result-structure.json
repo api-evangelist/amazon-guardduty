@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-guardduty/refs/heads/main/json-structure/guardduty-unprocessed-data-sources-result-structure.json",
+  "name": "UnprocessedDataSourcesResult",
+  "description": "Specifies the names of the data sources that couldn't be enabled.",
+  "type": "object",
+  "properties": {
+    "MalwareProtection": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/MalwareProtectionConfigurationResult"
+        },
+        {
+          "xml": {
+            "name": "malwareProtection"
+          }
+        }
+      ]
+    }
+  }
+}

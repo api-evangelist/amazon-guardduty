@@ -1,0 +1,8 @@
+{
+  "AvailabilityZone": "example-Availability",
+  "IamInstanceProfile": "example-IamInstanceP",
+  "ImageDescription": "example-ImageDescrip",
+  "ImageId": "abc123def456",
+  "InstanceId": "abc123def456",
+  "InstanceState": "example-InstanceStat"
+}

@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-guardduty/refs/heads/main/json-schema/guardduty-get-members-response-schema.json",
+  "title": "GetMembersResponse",
+  "description": "GetMembersResponse schema from Amazon GuardDuty API",
+  "type": "object",
+  "properties": {
+    "Members": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Members"
+        },
+        {
+          "xml": {
+            "name": "members"
+          },
+          "description": "A list of members."
+        }
+      ]
+    },
+    "UnprocessedAccounts": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/UnprocessedAccounts"
+        },
+        {
+          "xml": {
+            "name": "unprocessedAccounts"
+          },
+          "description": "A list of objects that contain the unprocessed account and a result string that explains why it was unprocessed."
+        }
+      ]
+    }
+  },
+  "required": [
+    "Members",
+    "UnprocessedAccounts"
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-guardduty/refs/heads/main/json-schema/guardduty-enable-organization-admin-account-request-schema.json",
+  "title": "EnableOrganizationAdminAccountRequest",
+  "description": "EnableOrganizationAdminAccountRequest schema from Amazon GuardDuty API",
+  "type": "object",
+  "properties": {
+    "AdminAccountId": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "xml": {
+            "name": "adminAccountId"
+          },
+          "description": "The Amazon Web Services Account ID for the organization account to be enabled as a GuardDuty delegated administrator."
+        }
+      ]
+    }
+  },
+  "required": [
+    "AdminAccountId"
+  ]
+}

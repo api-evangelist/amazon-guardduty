@@ -1,0 +1,48 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-guardduty/refs/heads/main/json-schema/guardduty-organization-feature-configuration-schema.json",
+  "title": "OrganizationFeatureConfiguration",
+  "description": "A list of features which will be configured for the organization.",
+  "type": "object",
+  "properties": {
+    "Name": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/OrgFeature"
+        },
+        {
+          "xml": {
+            "name": "name"
+          },
+          "description": "The name of the feature that will be configured for the organization."
+        }
+      ]
+    },
+    "AutoEnable": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/OrgFeatureStatus"
+        },
+        {
+          "xml": {
+            "name": "autoEnable"
+          },
+          "description": "The status of the feature that will be configured for the organization."
+        }
+      ]
+    },
+    "AdditionalConfiguration": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/OrganizationAdditionalConfigurations"
+        },
+        {
+          "xml": {
+            "name": "additionalConfiguration"
+          },
+          "description": "The additional information that will be configured for the organization."
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-guardduty/refs/heads/main/json-structure/guardduty-country-structure.json",
+  "name": "Country",
+  "description": "Contains information about the country where the remote IP address is located.",
+  "type": "object",
+  "properties": {
+    "CountryCode": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "xml": {
+            "name": "countryCode"
+          },
+          "description": "The country code of the remote IP address."
+        }
+      ]
+    },
+    "CountryName": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "xml": {
+            "name": "countryName"
+          },
+          "description": "The country name of the remote IP address."
+        }
+      ]
+    }
+  }
+}

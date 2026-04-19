@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-guardduty/refs/heads/main/json-schema/guardduty-auto-enable-members-schema.json",
+  "title": "AutoEnableMembers",
+  "description": "AutoEnableMembers schema from Amazon GuardDuty API",
+  "type": "string",
+  "enum": [
+    "NEW",
+    "ALL",
+    "NONE"
+  ]
+}

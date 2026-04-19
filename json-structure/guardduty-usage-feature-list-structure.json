@@ -1,0 +1,10 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-guardduty/refs/heads/main/json-structure/guardduty-usage-feature-list-structure.json",
+  "name": "UsageFeatureList",
+  "description": "UsageFeatureList schema from Amazon GuardDuty API",
+  "type": "array",
+  "items": {
+    "$ref": "#/components/schemas/UsageFeature"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-guardduty/refs/heads/main/json-structure/guardduty-filter-rank-structure.json",
+  "name": "FilterRank",
+  "description": "FilterRank schema from Amazon GuardDuty API",
+  "type": "int32",
+  "minimum": 1,
+  "maximum": 100
+}

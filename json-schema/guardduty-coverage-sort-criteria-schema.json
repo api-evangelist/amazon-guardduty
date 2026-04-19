@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-guardduty/refs/heads/main/json-schema/guardduty-coverage-sort-criteria-schema.json",
+  "title": "CoverageSortCriteria",
+  "description": "Information about the sorting criteria used in the coverage statistics.",
+  "type": "object",
+  "properties": {
+    "AttributeName": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/CoverageSortKey"
+        },
+        {
+          "xml": {
+            "name": "attributeName"
+          },
+          "description": "Represents the field name used to sort the coverage details."
+        }
+      ]
+    },
+    "OrderBy": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/OrderBy"
+        },
+        {
+          "xml": {
+            "name": "orderBy"
+          },
+          "description": "The order in which the sorted findings are to be displayed."
+        }
+      ]
+    }
+  }
+}

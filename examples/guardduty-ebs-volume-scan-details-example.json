@@ -1,0 +1,8 @@
+{
+  "ScanId": "abc123def456",
+  "ScanStartedAt": "example-ScanStartedA",
+  "ScanCompletedAt": "example-ScanComplete",
+  "TriggerFindingId": "abc123def456",
+  "Sources": "example-Sources",
+  "ScanDetections": "example-ScanDetectio"
+}

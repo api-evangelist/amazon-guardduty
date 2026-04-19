@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-guardduty/refs/heads/main/json-structure/guardduty-create-detector-response-structure.json",
+  "name": "CreateDetectorResponse",
+  "description": "CreateDetectorResponse schema from Amazon GuardDuty API",
+  "type": "object",
+  "properties": {
+    "DetectorId": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/DetectorId"
+        },
+        {
+          "xml": {
+            "name": "detectorId"
+          },
+          "description": "The unique ID of the created detector."
+        }
+      ]
+    },
+    "UnprocessedDataSources": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/UnprocessedDataSourcesResult"
+        },
+        {
+          "xml": {
+            "name": "unprocessedDataSources"
+          },
+          "description": "Specifies the data sources that couldn't be enabled when GuardDuty was enabled for the first time."
+        }
+      ]
+    }
+  }
+}

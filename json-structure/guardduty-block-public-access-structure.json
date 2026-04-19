@@ -1,0 +1,61 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-guardduty/refs/heads/main/json-structure/guardduty-block-public-access-structure.json",
+  "name": "BlockPublicAccess",
+  "description": "Contains information on how the bucker owner's S3 Block Public Access settings are being applied to the S3 bucket. See <a href=\"https://docs.aws.amazon.com/AmazonS3/latest/dev/access-control-block-public-access.html\">S3 Block Public Access</a> for more information. ",
+  "type": "object",
+  "properties": {
+    "IgnorePublicAcls": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Boolean"
+        },
+        {
+          "xml": {
+            "name": "ignorePublicAcls"
+          },
+          "description": "Indicates if S3 Block Public Access is set to <code>IgnorePublicAcls</code>."
+        }
+      ]
+    },
+    "RestrictPublicBuckets": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Boolean"
+        },
+        {
+          "xml": {
+            "name": "restrictPublicBuckets"
+          },
+          "description": "Indicates if S3 Block Public Access is set to <code>RestrictPublicBuckets</code>."
+        }
+      ]
+    },
+    "BlockPublicAcls": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Boolean"
+        },
+        {
+          "xml": {
+            "name": "blockPublicAcls"
+          },
+          "description": "Indicates if S3 Block Public Access is set to <code>BlockPublicAcls</code>."
+        }
+      ]
+    },
+    "BlockPublicPolicy": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Boolean"
+        },
+        {
+          "xml": {
+            "name": "blockPublicPolicy"
+          },
+          "description": "Indicates if S3 Block Public Access is set to <code>BlockPublicPolicy</code>."
+        }
+      ]
+    }
+  }
+}

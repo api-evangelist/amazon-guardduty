@@ -1,0 +1,4 @@
+{
+  "Arn": "arn:aws:guardduty:us-east-1:123456789012:detector/abc123",
+  "Id": "abc123def456"
+}

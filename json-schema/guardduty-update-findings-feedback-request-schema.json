@@ -1,0 +1,52 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-guardduty/refs/heads/main/json-schema/guardduty-update-findings-feedback-request-schema.json",
+  "title": "UpdateFindingsFeedbackRequest",
+  "description": "UpdateFindingsFeedbackRequest schema from Amazon GuardDuty API",
+  "type": "object",
+  "properties": {
+    "FindingIds": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/FindingIds"
+        },
+        {
+          "xml": {
+            "name": "findingIds"
+          },
+          "description": "The IDs of the findings that you want to mark as useful or not useful."
+        }
+      ]
+    },
+    "Feedback": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Feedback"
+        },
+        {
+          "xml": {
+            "name": "feedback"
+          },
+          "description": "The feedback for the finding."
+        }
+      ]
+    },
+    "Comments": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "xml": {
+            "name": "comments"
+          },
+          "description": "Additional feedback about the GuardDuty findings."
+        }
+      ]
+    }
+  },
+  "required": [
+    "FindingIds",
+    "Feedback"
+  ]
+}

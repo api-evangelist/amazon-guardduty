@@ -1,0 +1,139 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-guardduty/refs/heads/main/json-structure/guardduty-ecs-task-details-structure.json",
+  "name": "EcsTaskDetails",
+  "description": "Contains information about the task in an ECS cluster.",
+  "type": "object",
+  "properties": {
+    "Arn": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "xml": {
+            "name": "arn"
+          },
+          "description": "The Amazon Resource Name (ARN) of the task."
+        }
+      ]
+    },
+    "DefinitionArn": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "xml": {
+            "name": "definitionArn"
+          },
+          "description": "The ARN of the task definition that creates the task."
+        }
+      ]
+    },
+    "Version": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "xml": {
+            "name": "version"
+          },
+          "description": "The version counter for the task."
+        }
+      ]
+    },
+    "TaskCreatedAt": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Timestamp"
+        },
+        {
+          "xml": {
+            "name": "createdAt"
+          },
+          "description": "The Unix timestamp for the time when the task was created."
+        }
+      ]
+    },
+    "StartedAt": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Timestamp"
+        },
+        {
+          "xml": {
+            "name": "startedAt"
+          },
+          "description": "The Unix timestamp for the time when the task started."
+        }
+      ]
+    },
+    "StartedBy": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "xml": {
+            "name": "startedBy"
+          },
+          "description": "Contains the tag specified when a task is started."
+        }
+      ]
+    },
+    "Tags": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Tags"
+        },
+        {
+          "xml": {
+            "name": "tags"
+          },
+          "description": "The tags of the ECS Task."
+        }
+      ]
+    },
+    "Volumes": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Volumes"
+        },
+        {
+          "xml": {
+            "name": "volumes"
+          },
+          "description": "The list of data volume definitions for the task."
+        }
+      ]
+    },
+    "Containers": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Containers"
+        },
+        {
+          "xml": {
+            "name": "containers"
+          },
+          "description": "The containers that's associated with the task."
+        }
+      ]
+    },
+    "Group": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "xml": {
+            "name": "group"
+          },
+          "description": "The name of the task group that's associated with the task."
+        }
+      ]
+    }
+  }
+}

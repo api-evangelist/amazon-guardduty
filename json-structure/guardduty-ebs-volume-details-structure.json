@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-guardduty/refs/heads/main/json-structure/guardduty-ebs-volume-details-structure.json",
+  "name": "EbsVolumeDetails",
+  "description": "Contains list of scanned and skipped EBS volumes with details.",
+  "type": "object",
+  "properties": {
+    "ScannedVolumeDetails": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/VolumeDetails"
+        },
+        {
+          "xml": {
+            "name": "scannedVolumeDetails"
+          },
+          "description": "List of EBS volumes that were scanned."
+        }
+      ]
+    },
+    "SkippedVolumeDetails": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/VolumeDetails"
+        },
+        {
+          "xml": {
+            "name": "skippedVolumeDetails"
+          },
+          "description": "List of EBS volumes that were skipped from the malware scan."
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,93 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-guardduty/refs/heads/main/json-structure/guardduty-data-source-configurations-result-structure.json",
+  "name": "DataSourceConfigurationsResult",
+  "description": "Contains information on the status of data sources for the detector.",
+  "type": "object",
+  "properties": {
+    "CloudTrail": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/CloudTrailConfigurationResult"
+        },
+        {
+          "xml": {
+            "name": "cloudTrail"
+          },
+          "description": "An object that contains information on the status of CloudTrail as a data source."
+        }
+      ]
+    },
+    "DNSLogs": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/DNSLogsConfigurationResult"
+        },
+        {
+          "xml": {
+            "name": "dnsLogs"
+          },
+          "description": "An object that contains information on the status of DNS logs as a data source."
+        }
+      ]
+    },
+    "FlowLogs": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/FlowLogsConfigurationResult"
+        },
+        {
+          "xml": {
+            "name": "flowLogs"
+          },
+          "description": "An object that contains information on the status of VPC flow logs as a data source."
+        }
+      ]
+    },
+    "S3Logs": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/S3LogsConfigurationResult"
+        },
+        {
+          "xml": {
+            "name": "s3Logs"
+          },
+          "description": "An object that contains information on the status of S3 Data event logs as a data source."
+        }
+      ]
+    },
+    "Kubernetes": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/KubernetesConfigurationResult"
+        },
+        {
+          "xml": {
+            "name": "kubernetes"
+          },
+          "description": "An object that contains information on the status of all Kubernetes data sources."
+        }
+      ]
+    },
+    "MalwareProtection": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/MalwareProtectionConfigurationResult"
+        },
+        {
+          "xml": {
+            "name": "malwareProtection"
+          },
+          "description": "Describes the configuration of Malware Protection data sources."
+        }
+      ]
+    }
+  },
+  "required": [
+    "CloudTrail",
+    "DNSLogs",
+    "FlowLogs",
+    "S3Logs"
+  ]
+}

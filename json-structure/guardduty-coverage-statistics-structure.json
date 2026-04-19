@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-guardduty/refs/heads/main/json-structure/guardduty-coverage-statistics-structure.json",
+  "name": "CoverageStatistics",
+  "description": "Information about the coverage statistics for a resource.",
+  "type": "object",
+  "properties": {
+    "CountByResourceType": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/CountByResourceType"
+        },
+        {
+          "xml": {
+            "name": "countByResourceType"
+          },
+          "description": "Represents coverage statistics for EKS clusters aggregated by resource type."
+        }
+      ]
+    },
+    "CountByCoverageStatus": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/CountByCoverageStatus"
+        },
+        {
+          "xml": {
+            "name": "countByCoverageStatus"
+          },
+          "description": "Represents coverage statistics for EKS clusters aggregated by coverage status."
+        }
+      ]
+    }
+  }
+}

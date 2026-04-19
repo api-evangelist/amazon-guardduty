@@ -1,0 +1,38 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-guardduty/refs/heads/main/json-structure/guardduty-list-filters-response-structure.json",
+  "name": "ListFiltersResponse",
+  "description": "ListFiltersResponse schema from Amazon GuardDuty API",
+  "type": "object",
+  "properties": {
+    "FilterNames": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/FilterNames"
+        },
+        {
+          "xml": {
+            "name": "filterNames"
+          },
+          "description": "A list of filter names."
+        }
+      ]
+    },
+    "NextToken": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "xml": {
+            "name": "nextToken"
+          },
+          "description": "The pagination parameter to be used on the next list operation to retrieve more items."
+        }
+      ]
+    }
+  },
+  "required": [
+    "FilterNames"
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-guardduty/refs/heads/main/json-structure/guardduty-member-additional-configuration-results-structure.json",
+  "name": "MemberAdditionalConfigurationResults",
+  "description": "MemberAdditionalConfigurationResults schema from Amazon GuardDuty API",
+  "type": "array",
+  "items": {
+    "$ref": "#/components/schemas/MemberAdditionalConfigurationResult"
+  }
+}

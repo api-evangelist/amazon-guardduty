@@ -1,0 +1,93 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-guardduty/refs/heads/main/json-schema/guardduty-create-ip-set-request-schema.json",
+  "title": "CreateIPSetRequest",
+  "description": "CreateIPSetRequest schema from Amazon GuardDuty API",
+  "type": "object",
+  "properties": {
+    "Name": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Name"
+        },
+        {
+          "xml": {
+            "name": "name"
+          },
+          "description": "<p>The user-friendly name to identify the IPSet.</p> <p> Allowed characters are alphanumeric, whitespace, dash (-), and underscores (_).</p>"
+        }
+      ]
+    },
+    "Format": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/IpSetFormat"
+        },
+        {
+          "xml": {
+            "name": "format"
+          },
+          "description": "The format of the file that contains the IPSet."
+        }
+      ]
+    },
+    "Location": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Location"
+        },
+        {
+          "xml": {
+            "name": "location"
+          },
+          "description": "The URI of the file that contains the IPSet. "
+        }
+      ]
+    },
+    "Activate": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Boolean"
+        },
+        {
+          "xml": {
+            "name": "activate"
+          },
+          "description": "A Boolean value that indicates whether GuardDuty is to start using the uploaded IPSet."
+        }
+      ]
+    },
+    "ClientToken": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ClientToken"
+        },
+        {
+          "xml": {
+            "name": "clientToken"
+          },
+          "description": "The idempotency token for the create request."
+        }
+      ]
+    },
+    "Tags": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/TagMap"
+        },
+        {
+          "xml": {
+            "name": "tags"
+          },
+          "description": "The tags to be added to a new IP set resource."
+        }
+      ]
+    }
+  },
+  "required": [
+    "Name",
+    "Format",
+    "Location",
+    "Activate"
+  ]
+}

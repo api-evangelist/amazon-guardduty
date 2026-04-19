@@ -1,0 +1,8 @@
+{
+  "Arn": "arn:aws:guardduty:us-east-1:123456789012:detector/abc123",
+  "Name": "MyThreatFilter",
+  "Type": "example-Type",
+  "CreatedAt": "example-CreatedAt",
+  "Owner": "example-Owner",
+  "Tags": "example-Tags"
+}

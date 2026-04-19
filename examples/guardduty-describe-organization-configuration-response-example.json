@@ -1,0 +1,8 @@
+{
+  "AutoEnable": "example-AutoEnable",
+  "MemberAccountLimitReached": "example-MemberAccoun",
+  "DataSources": "example-DataSources",
+  "Features": "example-Features",
+  "NextToken": "example-NextToken",
+  "AutoEnableOrganizationMembers": "example-AutoEnableOr"
+}

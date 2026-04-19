@@ -1,0 +1,49 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-guardduty/refs/heads/main/json-schema/guardduty-account-free-trial-info-schema.json",
+  "title": "AccountFreeTrialInfo",
+  "description": "Provides details of the GuardDuty member account that uses a free trial service.",
+  "type": "object",
+  "properties": {
+    "AccountId": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "xml": {
+            "name": "accountId"
+          },
+          "description": "The account identifier of the GuardDuty member account."
+        }
+      ]
+    },
+    "DataSources": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/DataSourcesFreeTrial"
+        },
+        {
+          "deprecated": true,
+          "xml": {
+            "name": "dataSources"
+          },
+          "description": "Describes the data source enabled for the GuardDuty member account.This parameter is deprecated, use Features instead"
+        }
+      ]
+    },
+    "Features": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/FreeTrialFeatureConfigurationsResults"
+        },
+        {
+          "xml": {
+            "name": "features"
+          },
+          "description": "A list of features enabled for the GuardDuty account."
+        }
+      ]
+    }
+  }
+}

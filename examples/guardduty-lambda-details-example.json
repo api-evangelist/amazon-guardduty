@@ -1,0 +1,8 @@
+{
+  "FunctionArn": "arn:aws:guardduty:us-east-1:123456789012:detector/abc123",
+  "FunctionName": "MyThreatFilter",
+  "Description": "example-Description",
+  "LastModifiedAt": "example-LastModified",
+  "RevisionId": "abc123def456",
+  "FunctionVersion": "example-FunctionVers"
+}

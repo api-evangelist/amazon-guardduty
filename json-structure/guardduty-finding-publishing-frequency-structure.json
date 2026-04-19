@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-guardduty/refs/heads/main/json-structure/guardduty-finding-publishing-frequency-structure.json",
+  "name": "FindingPublishingFrequency",
+  "description": "FindingPublishingFrequency schema from Amazon GuardDuty API",
+  "type": "string",
+  "enum": [
+    "FIFTEEN_MINUTES",
+    "ONE_HOUR",
+    "SIX_HOURS"
+  ]
+}

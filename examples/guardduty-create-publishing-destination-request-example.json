@@ -1,0 +1,5 @@
+{
+  "DestinationType": "example-DestinationT",
+  "DestinationProperties": "example-DestinationP",
+  "ClientToken": "example-ClientToken"
+}

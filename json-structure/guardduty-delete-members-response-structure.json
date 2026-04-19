@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-guardduty/refs/heads/main/json-structure/guardduty-delete-members-response-structure.json",
+  "name": "DeleteMembersResponse",
+  "description": "DeleteMembersResponse schema from Amazon GuardDuty API",
+  "type": "object",
+  "properties": {
+    "UnprocessedAccounts": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/UnprocessedAccounts"
+        },
+        {
+          "xml": {
+            "name": "unprocessedAccounts"
+          },
+          "description": "The accounts that could not be processed."
+        }
+      ]
+    }
+  },
+  "required": [
+    "UnprocessedAccounts"
+  ]
+}

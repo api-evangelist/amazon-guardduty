@@ -1,0 +1,126 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-guardduty/refs/heads/main/json-structure/guardduty-lambda-details-structure.json",
+  "name": "LambdaDetails",
+  "description": "Information about the Lambda function involved in the finding.",
+  "type": "object",
+  "properties": {
+    "FunctionArn": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "xml": {
+            "name": "functionArn"
+          },
+          "description": "Amazon Resource Name (ARN) of the Lambda function."
+        }
+      ]
+    },
+    "FunctionName": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "xml": {
+            "name": "functionName"
+          },
+          "description": "Name of the Lambda function."
+        }
+      ]
+    },
+    "Description": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "xml": {
+            "name": "description"
+          },
+          "description": "Description of the Lambda function."
+        }
+      ]
+    },
+    "LastModifiedAt": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Timestamp"
+        },
+        {
+          "xml": {
+            "name": "lastModifiedAt"
+          },
+          "description": "The timestamp when the Lambda function was last modified. This field is in the UTC date string format <code>(2023-03-22T19:37:20.168Z)</code>."
+        }
+      ]
+    },
+    "RevisionId": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "xml": {
+            "name": "revisionId"
+          },
+          "description": "The revision ID of the Lambda function version."
+        }
+      ]
+    },
+    "FunctionVersion": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "xml": {
+            "name": "functionVersion"
+          },
+          "description": "The version of the Lambda function."
+        }
+      ]
+    },
+    "Role": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "xml": {
+            "name": "role"
+          },
+          "description": "The execution role of the Lambda function."
+        }
+      ]
+    },
+    "VpcConfig": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/VpcConfig"
+        },
+        {
+          "xml": {
+            "name": "vpcConfig"
+          },
+          "description": "Amazon Virtual Private Cloud configuration details associated with your Lambda function."
+        }
+      ]
+    },
+    "Tags": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Tags"
+        },
+        {
+          "xml": {
+            "name": "tags"
+          },
+          "description": "A list of tags attached to this resource, listed in the format of <code>key</code>:<code>value</code> pair."
+        }
+      ]
+    }
+  }
+}

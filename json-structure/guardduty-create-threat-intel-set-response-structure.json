@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-guardduty/refs/heads/main/json-structure/guardduty-create-threat-intel-set-response-structure.json",
+  "name": "CreateThreatIntelSetResponse",
+  "description": "CreateThreatIntelSetResponse schema from Amazon GuardDuty API",
+  "type": "object",
+  "properties": {
+    "ThreatIntelSetId": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "xml": {
+            "name": "threatIntelSetId"
+          },
+          "description": "The ID of the ThreatIntelSet resource."
+        }
+      ]
+    }
+  },
+  "required": [
+    "ThreatIntelSetId"
+  ]
+}

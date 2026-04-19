@@ -1,0 +1,34 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-guardduty/refs/heads/main/json-structure/guardduty-usage-feature-result-structure.json",
+  "name": "UsageFeatureResult",
+  "description": "Contains information about the result of the total usage based on the feature.",
+  "type": "object",
+  "properties": {
+    "Feature": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/UsageFeature"
+        },
+        {
+          "xml": {
+            "name": "feature"
+          },
+          "description": "The feature that generated the usage cost."
+        }
+      ]
+    },
+    "Total": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Total"
+        },
+        {
+          "xml": {
+            "name": "total"
+          }
+        }
+      ]
+    }
+  }
+}

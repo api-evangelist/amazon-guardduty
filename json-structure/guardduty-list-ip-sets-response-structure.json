@@ -1,0 +1,38 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-guardduty/refs/heads/main/json-structure/guardduty-list-ip-sets-response-structure.json",
+  "name": "ListIPSetsResponse",
+  "description": "ListIPSetsResponse schema from Amazon GuardDuty API",
+  "type": "object",
+  "properties": {
+    "IpSetIds": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/IpSetIds"
+        },
+        {
+          "xml": {
+            "name": "ipSetIds"
+          },
+          "description": "The IDs of the IPSet resources."
+        }
+      ]
+    },
+    "NextToken": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "xml": {
+            "name": "nextToken"
+          },
+          "description": "The pagination parameter to be used on the next list operation to retrieve more items."
+        }
+      ]
+    }
+  },
+  "required": [
+    "IpSetIds"
+  ]
+}

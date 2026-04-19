@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-guardduty/refs/heads/main/json-schema/guardduty-private-ip-address-details-schema.json",
+  "title": "PrivateIpAddressDetails",
+  "description": "Contains other private IP address information of the EC2 instance.",
+  "type": "object",
+  "properties": {
+    "PrivateDnsName": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "xml": {
+            "name": "privateDnsName"
+          },
+          "description": "The private DNS name of the EC2 instance."
+        }
+      ]
+    },
+    "PrivateIpAddress": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "xml": {
+            "name": "privateIpAddress"
+          },
+          "description": "The private IP address of the EC2 instance."
+        }
+      ]
+    }
+  }
+}

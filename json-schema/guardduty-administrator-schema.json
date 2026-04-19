@@ -1,0 +1,61 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-guardduty/refs/heads/main/json-schema/guardduty-administrator-schema.json",
+  "title": "Administrator",
+  "description": "Contains information about the administrator account and invitation.",
+  "type": "object",
+  "properties": {
+    "AccountId": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/AccountId"
+        },
+        {
+          "xml": {
+            "name": "accountId"
+          },
+          "description": "The ID of the account used as the administrator account."
+        }
+      ]
+    },
+    "InvitationId": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "xml": {
+            "name": "invitationId"
+          },
+          "description": "The value that is used to validate the administrator account to the member account."
+        }
+      ]
+    },
+    "RelationshipStatus": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "xml": {
+            "name": "relationshipStatus"
+          },
+          "description": "The status of the relationship between the administrator and member accounts."
+        }
+      ]
+    },
+    "InvitedAt": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "xml": {
+            "name": "invitedAt"
+          },
+          "description": "The timestamp when the invitation was sent."
+        }
+      ]
+    }
+  }
+}

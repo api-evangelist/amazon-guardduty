@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-guardduty/refs/heads/main/json-schema/guardduty-runtime-details-schema.json",
+  "title": "RuntimeDetails",
+  "description": "Information about the process and any required context values for a specific finding.",
+  "type": "object",
+  "properties": {
+    "Process": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ProcessDetails"
+        },
+        {
+          "xml": {
+            "name": "process"
+          },
+          "description": "Information about the observed process."
+        }
+      ]
+    },
+    "Context": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/RuntimeContext"
+        },
+        {
+          "xml": {
+            "name": "context"
+          },
+          "description": "Additional information about the suspicious activity."
+        }
+      ]
+    }
+  }
+}

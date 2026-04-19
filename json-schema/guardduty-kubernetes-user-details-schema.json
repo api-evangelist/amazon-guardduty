@@ -1,0 +1,48 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-guardduty/refs/heads/main/json-schema/guardduty-kubernetes-user-details-schema.json",
+  "title": "KubernetesUserDetails",
+  "description": "Details about the Kubernetes user involved in a Kubernetes finding.",
+  "type": "object",
+  "properties": {
+    "Username": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "xml": {
+            "name": "username"
+          },
+          "description": "The username of the user who called the Kubernetes API."
+        }
+      ]
+    },
+    "Uid": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "xml": {
+            "name": "uid"
+          },
+          "description": "The user ID of the user who called the Kubernetes API."
+        }
+      ]
+    },
+    "Groups": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Groups"
+        },
+        {
+          "xml": {
+            "name": "groups"
+          },
+          "description": "The groups that include the user who called the Kubernetes API."
+        }
+      ]
+    }
+  }
+}

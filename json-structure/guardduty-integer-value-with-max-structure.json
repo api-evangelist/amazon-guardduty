@@ -1,0 +1,9 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-guardduty/refs/heads/main/json-structure/guardduty-integer-value-with-max-structure.json",
+  "name": "IntegerValueWithMax",
+  "description": "IntegerValueWithMax schema from Amazon GuardDuty API",
+  "type": "int32",
+  "minimum": 1,
+  "maximum": 50
+}

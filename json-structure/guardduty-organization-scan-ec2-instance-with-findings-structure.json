@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-guardduty/refs/heads/main/json-structure/guardduty-organization-scan-ec2-instance-with-findings-structure.json",
+  "name": "OrganizationScanEc2InstanceWithFindings",
+  "description": "Organization-wide EC2 instances with findings scan configuration.",
+  "type": "object",
+  "properties": {
+    "EbsVolumes": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/OrganizationEbsVolumes"
+        },
+        {
+          "xml": {
+            "name": "ebsVolumes"
+          },
+          "description": "Whether scanning EBS volumes should be auto-enabled for new members joining the organization."
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-guardduty/refs/heads/main/json-schema/guardduty-organization-feature-configuration-result-schema.json",
+  "title": "OrganizationFeatureConfigurationResult",
+  "description": "A list of features which will be configured for the organization.",
+  "type": "object",
+  "properties": {
+    "Name": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/OrgFeature"
+        },
+        {
+          "xml": {
+            "name": "name"
+          },
+          "description": "The name of the feature that is configured for the member accounts within the organization."
+        }
+      ]
+    },
+    "AutoEnable": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/OrgFeatureStatus"
+        },
+        {
+          "xml": {
+            "name": "autoEnable"
+          },
+          "description": "<p>Describes how The status of the feature that are configured for the member accounts within the organization.</p> <p>If you set <code>AutoEnable</code> to <code>NEW</code>, a feature will be configured for only the new accounts when they join the organization.</p> <p>If you set <code>AutoEnable</code> to <code>NONE</code>, no feature will be configured for the accounts when they join the organization.</p>"
+        }
+      ]
+    },
+    "AdditionalConfiguration": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/OrganizationAdditionalConfigurationResults"
+        },
+        {
+          "xml": {
+            "name": "additionalConfiguration"
+          },
+          "description": "The additional configuration that is configured for the member accounts within the organization."
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-guardduty/refs/heads/main/json-schema/guardduty-disassociate-from-master-account-response-schema.json",
+  "title": "DisassociateFromMasterAccountResponse",
+  "description": "This output is deprecated, use DisassociateFromAdministratorAccountResponse instead",
+  "type": "object",
+  "properties": {}
+}

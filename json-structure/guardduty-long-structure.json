@@ -1,0 +1,7 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-guardduty/refs/heads/main/json-structure/guardduty-long-structure.json",
+  "name": "Long",
+  "description": "Long schema from Amazon GuardDuty API",
+  "type": "int32"
+}

@@ -1,0 +1,178 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-guardduty/refs/heads/main/json-structure/guardduty-instance-details-structure.json",
+  "name": "InstanceDetails",
+  "description": "Contains information about the details of an instance.",
+  "type": "object",
+  "properties": {
+    "AvailabilityZone": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "xml": {
+            "name": "availabilityZone"
+          },
+          "description": "The Availability Zone of the EC2 instance."
+        }
+      ]
+    },
+    "IamInstanceProfile": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/IamInstanceProfile"
+        },
+        {
+          "xml": {
+            "name": "iamInstanceProfile"
+          },
+          "description": "The profile information of the EC2 instance."
+        }
+      ]
+    },
+    "ImageDescription": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "xml": {
+            "name": "imageDescription"
+          },
+          "description": "The image description of the EC2 instance."
+        }
+      ]
+    },
+    "ImageId": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "xml": {
+            "name": "imageId"
+          },
+          "description": "The image ID of the EC2 instance."
+        }
+      ]
+    },
+    "InstanceId": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "xml": {
+            "name": "instanceId"
+          },
+          "description": "The ID of the EC2 instance."
+        }
+      ]
+    },
+    "InstanceState": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "xml": {
+            "name": "instanceState"
+          },
+          "description": "The state of the EC2 instance."
+        }
+      ]
+    },
+    "InstanceType": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "xml": {
+            "name": "instanceType"
+          },
+          "description": "The type of the EC2 instance."
+        }
+      ]
+    },
+    "OutpostArn": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "xml": {
+            "name": "outpostArn"
+          },
+          "description": "The Amazon Resource Name (ARN) of the Amazon Web Services Outpost. Only applicable to Amazon Web Services Outposts instances."
+        }
+      ]
+    },
+    "LaunchTime": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "xml": {
+            "name": "launchTime"
+          },
+          "description": "The launch time of the EC2 instance."
+        }
+      ]
+    },
+    "NetworkInterfaces": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/NetworkInterfaces"
+        },
+        {
+          "xml": {
+            "name": "networkInterfaces"
+          },
+          "description": "The elastic network interface information of the EC2 instance."
+        }
+      ]
+    },
+    "Platform": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "xml": {
+            "name": "platform"
+          },
+          "description": "The platform of the EC2 instance."
+        }
+      ]
+    },
+    "ProductCodes": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ProductCodes"
+        },
+        {
+          "xml": {
+            "name": "productCodes"
+          },
+          "description": "The product code of the EC2 instance."
+        }
+      ]
+    },
+    "Tags": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Tags"
+        },
+        {
+          "xml": {
+            "name": "tags"
+          },
+          "description": "The tags of the EC2 instance."
+        }
+      ]
+    }
+  }
+}

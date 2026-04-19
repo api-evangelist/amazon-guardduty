@@ -1,0 +1,61 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-guardduty/refs/heads/main/json-structure/guardduty-organization-structure.json",
+  "name": "Organization",
+  "description": "Contains information about the ISP organization of the remote IP address.",
+  "type": "object",
+  "properties": {
+    "Asn": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "xml": {
+            "name": "asn"
+          },
+          "description": "The Autonomous System Number (ASN) of the internet provider of the remote IP address."
+        }
+      ]
+    },
+    "AsnOrg": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "xml": {
+            "name": "asnOrg"
+          },
+          "description": "The organization that registered this ASN."
+        }
+      ]
+    },
+    "Isp": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "xml": {
+            "name": "isp"
+          },
+          "description": "The ISP information for the internet provider."
+        }
+      ]
+    },
+    "Org": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "xml": {
+            "name": "org"
+          },
+          "description": "The name of the internet provider."
+        }
+      ]
+    }
+  }
+}

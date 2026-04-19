@@ -1,0 +1,8 @@
+{
+  "Action": "example-Action",
+  "Evidence": "abc123def456",
+  "Archived": "example-Archived",
+  "Count": "example-Count",
+  "DetectorId": "abc123def456",
+  "EventFirstSeen": "example-EventFirstSe"
+}

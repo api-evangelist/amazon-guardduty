@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-guardduty/refs/heads/main/json-structure/guardduty-data-source-free-trial-structure.json",
+  "name": "DataSourceFreeTrial",
+  "description": "Contains information about which data sources are enabled for the GuardDuty member account.",
+  "type": "object",
+  "properties": {
+    "FreeTrialDaysRemaining": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Integer"
+        },
+        {
+          "xml": {
+            "name": "freeTrialDaysRemaining"
+          },
+          "description": "A value that specifies the number of days left to use each enabled data source."
+        }
+      ]
+    }
+  }
+}

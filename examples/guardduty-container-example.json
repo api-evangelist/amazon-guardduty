@@ -1,0 +1,8 @@
+{
+  "ContainerRuntime": "example-ContainerRun",
+  "Id": "abc123def456",
+  "Name": "MyThreatFilter",
+  "Image": "example-Image",
+  "ImagePrefix": "example-ImagePrefix",
+  "VolumeMounts": "example-VolumeMounts"
+}

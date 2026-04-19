@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-guardduty/refs/heads/main/json-schema/guardduty-kubernetes-audit-logs-configuration-schema.json",
+  "title": "KubernetesAuditLogsConfiguration",
+  "description": "Describes whether Kubernetes audit logs are enabled as a data source.",
+  "type": "object",
+  "properties": {
+    "Enable": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Boolean"
+        },
+        {
+          "xml": {
+            "name": "enable"
+          },
+          "description": "The status of Kubernetes audit logs as a data source."
+        }
+      ]
+    }
+  },
+  "required": [
+    "Enable"
+  ]
+}

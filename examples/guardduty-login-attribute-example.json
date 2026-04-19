@@ -1,0 +1,6 @@
+{
+  "User": "example-User",
+  "Application": "example-Application",
+  "FailedLoginAttempts": "example-FailedLoginA",
+  "SuccessfulLoginAttempts": "example-SuccessfulLo"
+}

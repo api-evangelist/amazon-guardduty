@@ -1,0 +1,7 @@
+{
+  "DestinationId": "abc123def456",
+  "DestinationType": "example-DestinationT",
+  "Status": "ENABLED",
+  "PublishingFailureStartTimestamp": "example-PublishingFa",
+  "DestinationProperties": "example-DestinationP"
+}

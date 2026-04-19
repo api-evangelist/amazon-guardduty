@@ -1,0 +1,74 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-guardduty/refs/heads/main/json-structure/guardduty-rds-db-user-details-structure.json",
+  "name": "RdsDbUserDetails",
+  "description": "Contains information about the user and authentication details for a database instance involved in the finding.",
+  "type": "object",
+  "properties": {
+    "User": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "xml": {
+            "name": "user"
+          },
+          "description": "The user name used in the anomalous login attempt."
+        }
+      ]
+    },
+    "Application": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "xml": {
+            "name": "application"
+          },
+          "description": "The application name used in the anomalous login attempt."
+        }
+      ]
+    },
+    "Database": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "xml": {
+            "name": "database"
+          },
+          "description": "The name of the database instance involved in the anomalous login attempt."
+        }
+      ]
+    },
+    "Ssl": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "xml": {
+            "name": "ssl"
+          },
+          "description": "The version of the Secure Socket Layer (SSL) used for the network."
+        }
+      ]
+    },
+    "AuthMethod": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "xml": {
+            "name": "authMethod"
+          },
+          "description": "The authentication method used by the user involved in the finding."
+        }
+      ]
+    }
+  }
+}

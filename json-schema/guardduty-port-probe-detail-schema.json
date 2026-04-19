@@ -1,0 +1,48 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-guardduty/refs/heads/main/json-schema/guardduty-port-probe-detail-schema.json",
+  "title": "PortProbeDetail",
+  "description": "Contains information about the port probe details.",
+  "type": "object",
+  "properties": {
+    "LocalPortDetails": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/LocalPortDetails"
+        },
+        {
+          "xml": {
+            "name": "localPortDetails"
+          },
+          "description": "The local port information of the connection."
+        }
+      ]
+    },
+    "LocalIpDetails": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/LocalIpDetails"
+        },
+        {
+          "xml": {
+            "name": "localIpDetails"
+          },
+          "description": "The local IP information of the connection."
+        }
+      ]
+    },
+    "RemoteIpDetails": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/RemoteIpDetails"
+        },
+        {
+          "xml": {
+            "name": "remoteIpDetails"
+          },
+          "description": "The remote IP information of the connection."
+        }
+      ]
+    }
+  }
+}

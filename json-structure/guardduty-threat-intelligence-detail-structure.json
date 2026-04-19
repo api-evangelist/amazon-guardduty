@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-guardduty/refs/heads/main/json-structure/guardduty-threat-intelligence-detail-structure.json",
+  "name": "ThreatIntelligenceDetail",
+  "description": "An instance of a threat intelligence detail that constitutes evidence for the finding.",
+  "type": "object",
+  "properties": {
+    "ThreatListName": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "xml": {
+            "name": "threatListName"
+          },
+          "description": "The name of the threat intelligence list that triggered the finding."
+        }
+      ]
+    },
+    "ThreatNames": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ThreatNames"
+        },
+        {
+          "xml": {
+            "name": "threatNames"
+          },
+          "description": "A list of names of the threats in the threat intelligence list that triggered the finding."
+        }
+      ]
+    }
+  }
+}

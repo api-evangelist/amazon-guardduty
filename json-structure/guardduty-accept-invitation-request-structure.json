@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-guardduty/refs/heads/main/json-structure/guardduty-accept-invitation-request-structure.json",
+  "name": "AcceptInvitationRequest",
+  "description": "This input is deprecated, use AcceptAdministratorInvitationRequest instead",
+  "type": "object",
+  "properties": {
+    "MasterId": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "xml": {
+            "name": "masterId"
+          },
+          "description": "The account ID of the GuardDuty administrator account whose invitation you're accepting."
+        }
+      ]
+    },
+    "InvitationId": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "xml": {
+            "name": "invitationId"
+          },
+          "description": "The value that is used to validate the administrator account to the member account."
+        }
+      ]
+    }
+  },
+  "required": [
+    "MasterId",
+    "InvitationId"
+  ]
+}

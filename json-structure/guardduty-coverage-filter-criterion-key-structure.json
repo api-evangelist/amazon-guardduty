@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-guardduty/refs/heads/main/json-structure/guardduty-coverage-filter-criterion-key-structure.json",
+  "name": "CoverageFilterCriterionKey",
+  "description": "CoverageFilterCriterionKey schema from Amazon GuardDuty API",
+  "type": "string",
+  "enum": [
+    "ACCOUNT_ID",
+    "CLUSTER_NAME",
+    "RESOURCE_TYPE",
+    "COVERAGE_STATUS",
+    "ADDON_VERSION"
+  ]
+}

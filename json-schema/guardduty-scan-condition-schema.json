@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-guardduty/refs/heads/main/json-schema/guardduty-scan-condition-schema.json",
+  "title": "ScanCondition",
+  "description": "Contains information about the condition.",
+  "type": "object",
+  "properties": {
+    "MapEquals": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/MapEquals"
+        },
+        {
+          "xml": {
+            "name": "mapEquals"
+          },
+          "description": "Represents an <i>mapEqual</i> <b/> condition to be applied to a single field when triggering for malware scan."
+        }
+      ]
+    }
+  },
+  "required": [
+    "MapEquals"
+  ]
+}

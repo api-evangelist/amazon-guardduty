@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-guardduty/refs/heads/main/json-structure/guardduty-security-group-structure.json",
+  "name": "SecurityGroup",
+  "description": "Contains information about the security groups associated with the EC2 instance.",
+  "type": "object",
+  "properties": {
+    "GroupId": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "xml": {
+            "name": "groupId"
+          },
+          "description": "The security group ID of the EC2 instance."
+        }
+      ]
+    },
+    "GroupName": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "xml": {
+            "name": "groupName"
+          },
+          "description": "The security group name of the EC2 instance."
+        }
+      ]
+    }
+  }
+}

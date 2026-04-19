@@ -1,0 +1,8 @@
+{
+  "AccountId": "abc123def456",
+  "Arn": "arn:aws:guardduty:us-east-1:123456789012:detector/abc123",
+  "Confidence": "abc123def456",
+  "CreatedAt": "example-CreatedAt",
+  "Description": "example-Description",
+  "Id": "abc123def456"
+}

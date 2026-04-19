@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-guardduty/refs/heads/main/json-structure/guardduty-permission-configuration-structure.json",
+  "name": "PermissionConfiguration",
+  "description": "Contains information about how permissions are configured for the S3 bucket.",
+  "type": "object",
+  "properties": {
+    "BucketLevelPermissions": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/BucketLevelPermissions"
+        },
+        {
+          "xml": {
+            "name": "bucketLevelPermissions"
+          },
+          "description": "Contains information about the bucket level permissions for the S3 bucket."
+        }
+      ]
+    },
+    "AccountLevelPermissions": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/AccountLevelPermissions"
+        },
+        {
+          "xml": {
+            "name": "accountLevelPermissions"
+          },
+          "description": "Contains information about the account level permissions on the S3 bucket."
+        }
+      ]
+    }
+  }
+}

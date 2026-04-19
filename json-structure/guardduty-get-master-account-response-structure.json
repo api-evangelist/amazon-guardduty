@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-guardduty/refs/heads/main/json-structure/guardduty-get-master-account-response-structure.json",
+  "name": "GetMasterAccountResponse",
+  "description": "This output is deprecated, use GetAdministratorAccountResponse instead",
+  "type": "object",
+  "properties": {
+    "Master": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Master"
+        },
+        {
+          "xml": {
+            "name": "master"
+          },
+          "description": "The administrator account details."
+        }
+      ]
+    }
+  },
+  "required": [
+    "Master"
+  ]
+}

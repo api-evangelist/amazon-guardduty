@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-guardduty/refs/heads/main/json-structure/guardduty-port-probe-action-structure.json",
+  "name": "PortProbeAction",
+  "description": "Contains information about the PORT_PROBE action described in the finding.",
+  "type": "object",
+  "properties": {
+    "Blocked": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Boolean"
+        },
+        {
+          "xml": {
+            "name": "blocked"
+          },
+          "description": "Indicates whether EC2 blocked the port probe to the instance, such as with an ACL."
+        }
+      ]
+    },
+    "PortProbeDetails": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/PortProbeDetails"
+        },
+        {
+          "xml": {
+            "name": "portProbeDetails"
+          },
+          "description": "A list of objects related to port probe details."
+        }
+      ]
+    }
+  }
+}

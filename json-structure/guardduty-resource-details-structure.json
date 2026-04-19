@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-guardduty/refs/heads/main/json-structure/guardduty-resource-details-structure.json",
+  "name": "ResourceDetails",
+  "description": "Represents the resources that were scanned in the scan entry.",
+  "type": "object",
+  "properties": {
+    "InstanceArn": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/InstanceArn"
+        },
+        {
+          "xml": {
+            "name": "instanceArn"
+          },
+          "description": "InstanceArn that was scanned in the scan entry."
+        }
+      ]
+    }
+  }
+}

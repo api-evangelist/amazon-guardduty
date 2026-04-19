@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-guardduty/refs/heads/main/json-structure/guardduty-free-trial-feature-result-structure.json",
+  "name": "FreeTrialFeatureResult",
+  "description": "FreeTrialFeatureResult schema from Amazon GuardDuty API",
+  "type": "string",
+  "enum": [
+    "FLOW_LOGS",
+    "CLOUD_TRAIL",
+    "DNS_LOGS",
+    "S3_DATA_EVENTS",
+    "EKS_AUDIT_LOGS",
+    "EBS_MALWARE_PROTECTION",
+    "RDS_LOGIN_EVENTS",
+    "EKS_RUNTIME_MONITORING",
+    "LAMBDA_NETWORK_LOGS"
+  ]
+}

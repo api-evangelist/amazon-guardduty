@@ -1,0 +1,8 @@
+{
+  "Name": "MyThreatFilter",
+  "Format": "example-Format",
+  "Location": "example-Location",
+  "Activate": "example-Activate",
+  "ClientToken": "example-ClientToken",
+  "Tags": "example-Tags"
+}

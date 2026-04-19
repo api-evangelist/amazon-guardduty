@@ -1,0 +1,38 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-guardduty/refs/heads/main/json-structure/guardduty-list-detectors-response-structure.json",
+  "name": "ListDetectorsResponse",
+  "description": "ListDetectorsResponse schema from Amazon GuardDuty API",
+  "type": "object",
+  "properties": {
+    "DetectorIds": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/DetectorIds"
+        },
+        {
+          "xml": {
+            "name": "detectorIds"
+          },
+          "description": "A list of detector IDs."
+        }
+      ]
+    },
+    "NextToken": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "xml": {
+            "name": "nextToken"
+          },
+          "description": "The pagination parameter to be used on the next list operation to retrieve more items."
+        }
+      ]
+    }
+  },
+  "required": [
+    "DetectorIds"
+  ]
+}

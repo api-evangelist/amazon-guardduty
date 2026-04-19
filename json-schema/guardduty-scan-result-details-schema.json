@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-guardduty/refs/heads/main/json-schema/guardduty-scan-result-details-schema.json",
+  "title": "ScanResultDetails",
+  "description": "Represents the result of the scan.",
+  "type": "object",
+  "properties": {
+    "ScanResult": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ScanResult"
+        },
+        {
+          "xml": {
+            "name": "scanResult"
+          },
+          "description": "An enum value representing possible scan results."
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "AccountId": "abc123def456",
+  "DetectorId": "abc123def456",
+  "MasterId": "abc123def456",
+  "Email": "example-Email",
+  "RelationshipStatus": "ENABLED",
+  "InvitedAt": "example-InvitedAt"
+}

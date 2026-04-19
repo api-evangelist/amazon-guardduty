@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-guardduty/refs/heads/main/json-structure/guardduty-get-findings-statistics-response-structure.json",
+  "name": "GetFindingsStatisticsResponse",
+  "description": "GetFindingsStatisticsResponse schema from Amazon GuardDuty API",
+  "type": "object",
+  "properties": {
+    "FindingStatistics": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/FindingStatistics"
+        },
+        {
+          "xml": {
+            "name": "findingStatistics"
+          },
+          "description": "The finding statistics object."
+        }
+      ]
+    }
+  },
+  "required": [
+    "FindingStatistics"
+  ]
+}

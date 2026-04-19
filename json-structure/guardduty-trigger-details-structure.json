@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-guardduty/refs/heads/main/json-structure/guardduty-trigger-details-structure.json",
+  "name": "TriggerDetails",
+  "description": "Represents the reason the scan was triggered.",
+  "type": "object",
+  "properties": {
+    "GuardDutyFindingId": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/NonEmptyString"
+        },
+        {
+          "xml": {
+            "name": "guardDutyFindingId"
+          },
+          "description": "The ID of the GuardDuty finding that triggered the malware scan."
+        }
+      ]
+    },
+    "Description": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/NonEmptyString"
+        },
+        {
+          "xml": {
+            "name": "description"
+          },
+          "description": "The description of the scan trigger."
+        }
+      ]
+    }
+  }
+}

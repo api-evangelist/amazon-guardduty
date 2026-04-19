@@ -1,0 +1,100 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-guardduty/refs/heads/main/json-schema/guardduty-network-connection-action-schema.json",
+  "title": "NetworkConnectionAction",
+  "description": "Contains information about the NETWORK_CONNECTION action described in the finding.",
+  "type": "object",
+  "properties": {
+    "Blocked": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Boolean"
+        },
+        {
+          "xml": {
+            "name": "blocked"
+          },
+          "description": "Indicates whether EC2 blocked the network connection to your instance."
+        }
+      ]
+    },
+    "ConnectionDirection": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "xml": {
+            "name": "connectionDirection"
+          },
+          "description": "The network connection direction."
+        }
+      ]
+    },
+    "LocalPortDetails": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/LocalPortDetails"
+        },
+        {
+          "xml": {
+            "name": "localPortDetails"
+          },
+          "description": "The local port information of the connection."
+        }
+      ]
+    },
+    "Protocol": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "xml": {
+            "name": "protocol"
+          },
+          "description": "The network connection protocol."
+        }
+      ]
+    },
+    "LocalIpDetails": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/LocalIpDetails"
+        },
+        {
+          "xml": {
+            "name": "localIpDetails"
+          },
+          "description": "The local IP information of the connection."
+        }
+      ]
+    },
+    "RemoteIpDetails": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/RemoteIpDetails"
+        },
+        {
+          "xml": {
+            "name": "remoteIpDetails"
+          },
+          "description": "The remote IP information of the connection."
+        }
+      ]
+    },
+    "RemotePortDetails": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/RemotePortDetails"
+        },
+        {
+          "xml": {
+            "name": "remotePortDetails"
+          },
+          "description": "The remote port information of the connection."
+        }
+      ]
+    }
+  }
+}

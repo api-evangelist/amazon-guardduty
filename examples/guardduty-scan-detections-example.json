@@ -1,0 +1,6 @@
+{
+  "ScannedItemCount": "example-ScannedItemC",
+  "ThreatsDetectedItemCount": "example-ThreatsDetec",
+  "HighestSeverityThreatDetails": "example-HighestSever",
+  "ThreatDetectedByName": "MyThreatFilter"
+}

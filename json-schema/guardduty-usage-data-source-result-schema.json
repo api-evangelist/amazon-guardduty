@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-guardduty/refs/heads/main/json-schema/guardduty-usage-data-source-result-schema.json",
+  "title": "UsageDataSourceResult",
+  "description": "Contains information on the result of usage based on data source type.",
+  "type": "object",
+  "properties": {
+    "DataSource": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/DataSource"
+        },
+        {
+          "xml": {
+            "name": "dataSource"
+          },
+          "description": "The data source type that generated usage."
+        }
+      ]
+    },
+    "Total": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Total"
+        },
+        {
+          "xml": {
+            "name": "total"
+          },
+          "description": "Represents the total of usage for the specified data source."
+        }
+      ]
+    }
+  }
+}

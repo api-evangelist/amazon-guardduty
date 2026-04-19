@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-guardduty/refs/heads/main/json-schema/guardduty-volume-mount-schema.json",
+  "title": "VolumeMount",
+  "description": "Container volume mount.",
+  "type": "object",
+  "properties": {
+    "Name": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "xml": {
+            "name": "name"
+          },
+          "description": "Volume mount name."
+        }
+      ]
+    },
+    "MountPath": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "xml": {
+            "name": "mountPath"
+          },
+          "description": "Volume mount path."
+        }
+      ]
+    }
+  }
+}

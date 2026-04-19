@@ -1,0 +1,191 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-guardduty/refs/heads/main/json-structure/guardduty-service-structure.json",
+  "name": "Service",
+  "description": "Contains additional information about the generated finding.",
+  "type": "object",
+  "properties": {
+    "Action": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Action"
+        },
+        {
+          "xml": {
+            "name": "action"
+          },
+          "description": "Information about the activity that is described in a finding."
+        }
+      ]
+    },
+    "Evidence": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Evidence"
+        },
+        {
+          "xml": {
+            "name": "evidence"
+          },
+          "description": "An evidence object associated with the service."
+        }
+      ]
+    },
+    "Archived": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Boolean"
+        },
+        {
+          "xml": {
+            "name": "archived"
+          },
+          "description": "Indicates whether this finding is archived."
+        }
+      ]
+    },
+    "Count": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Integer"
+        },
+        {
+          "xml": {
+            "name": "count"
+          },
+          "description": "The total count of the occurrences of this finding type."
+        }
+      ]
+    },
+    "DetectorId": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/DetectorId"
+        },
+        {
+          "xml": {
+            "name": "detectorId"
+          },
+          "description": "The detector ID for the GuardDuty service."
+        }
+      ]
+    },
+    "EventFirstSeen": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "xml": {
+            "name": "eventFirstSeen"
+          },
+          "description": "The first-seen timestamp of the activity that prompted GuardDuty to generate this finding."
+        }
+      ]
+    },
+    "EventLastSeen": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "xml": {
+            "name": "eventLastSeen"
+          },
+          "description": "The last-seen timestamp of the activity that prompted GuardDuty to generate this finding."
+        }
+      ]
+    },
+    "ResourceRole": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "xml": {
+            "name": "resourceRole"
+          },
+          "description": "The resource role information for this finding."
+        }
+      ]
+    },
+    "ServiceName": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "xml": {
+            "name": "serviceName"
+          },
+          "description": "The name of the Amazon Web Services service (GuardDuty) that generated a finding."
+        }
+      ]
+    },
+    "UserFeedback": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "xml": {
+            "name": "userFeedback"
+          },
+          "description": "Feedback that was submitted about the finding."
+        }
+      ]
+    },
+    "AdditionalInfo": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ServiceAdditionalInfo"
+        },
+        {
+          "xml": {
+            "name": "additionalInfo"
+          },
+          "description": "Contains additional information about the generated finding."
+        }
+      ]
+    },
+    "FeatureName": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "xml": {
+            "name": "featureName"
+          },
+          "description": "The name of the feature that generated a finding."
+        }
+      ]
+    },
+    "EbsVolumeScanDetails": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/EbsVolumeScanDetails"
+        },
+        {
+          "xml": {
+            "name": "ebsVolumeScanDetails"
+          },
+          "description": "Returns details from the malware scan that created a finding."
+        }
+      ]
+    },
+    "RuntimeDetails": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/RuntimeDetails"
+        },
+        {
+          "xml": {
+            "name": "runtimeDetails"
+          },
+          "description": "Information about the process and any required context values for a specific finding"
+        }
+      ]
+    }
+  }
+}

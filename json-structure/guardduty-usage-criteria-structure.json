@@ -1,0 +1,62 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-guardduty/refs/heads/main/json-structure/guardduty-usage-criteria-structure.json",
+  "name": "UsageCriteria",
+  "description": "Contains information about the criteria used to query usage statistics.",
+  "type": "object",
+  "properties": {
+    "AccountIds": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/AccountIds"
+        },
+        {
+          "xml": {
+            "name": "accountIds"
+          },
+          "description": "The account IDs to aggregate usage statistics from."
+        }
+      ]
+    },
+    "DataSources": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/DataSourceList"
+        },
+        {
+          "deprecated": true,
+          "xml": {
+            "name": "dataSources"
+          },
+          "description": "The data sources to aggregate usage statistics from.This parameter is deprecated, use Features instead"
+        }
+      ]
+    },
+    "Resources": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ResourceList"
+        },
+        {
+          "xml": {
+            "name": "resources"
+          },
+          "description": "The resources to aggregate usage statistics from. Only accepts exact resource names."
+        }
+      ]
+    },
+    "Features": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/UsageFeatureList"
+        },
+        {
+          "xml": {
+            "name": "features"
+          },
+          "description": "The features to aggregate usage statistics from."
+        }
+      ]
+    }
+  }
+}

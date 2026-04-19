@@ -1,0 +1,48 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-guardduty/refs/heads/main/json-schema/guardduty-filter-condition-schema.json",
+  "title": "FilterCondition",
+  "description": "Contains information about the condition.",
+  "type": "object",
+  "properties": {
+    "EqualsValue": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/NonEmptyString"
+        },
+        {
+          "xml": {
+            "name": "equalsValue"
+          },
+          "description": "Represents an <i>equal</i> <b/> condition to be applied to a single field when querying for scan entries."
+        }
+      ]
+    },
+    "GreaterThan": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/LongValue"
+        },
+        {
+          "xml": {
+            "name": "greaterThan"
+          },
+          "description": "Represents a <i>greater than</i> condition to be applied to a single field when querying for scan entries."
+        }
+      ]
+    },
+    "LessThan": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/LongValue"
+        },
+        {
+          "xml": {
+            "name": "lessThan"
+          },
+          "description": "Represents a <i>less than</i> condition to be applied to a single field when querying for scan entries."
+        }
+      ]
+    }
+  }
+}

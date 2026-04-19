@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-guardduty/refs/heads/main/json-structure/guardduty-evidence-structure.json",
+  "name": "Evidence",
+  "description": "Contains information about the reason that the finding was generated.",
+  "type": "object",
+  "properties": {
+    "ThreatIntelligenceDetails": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ThreatIntelligenceDetails"
+        },
+        {
+          "xml": {
+            "name": "threatIntelligenceDetails"
+          },
+          "description": "A list of threat intelligence details related to the evidence."
+        }
+      ]
+    }
+  }
+}

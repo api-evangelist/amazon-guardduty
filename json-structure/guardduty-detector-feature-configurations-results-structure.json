@@ -1,0 +1,10 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-guardduty/refs/heads/main/json-structure/guardduty-detector-feature-configurations-results-structure.json",
+  "name": "DetectorFeatureConfigurationsResults",
+  "description": "DetectorFeatureConfigurationsResults schema from Amazon GuardDuty API",
+  "type": "array",
+  "items": {
+    "$ref": "#/components/schemas/DetectorFeatureConfigurationResult"
+  }
+}

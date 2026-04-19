@@ -1,0 +1,6 @@
+{
+  "Name": "MyThreatFilter",
+  "Severity": "example-Severity",
+  "ItemCount": "example-ItemCount",
+  "FilePaths": "example-FilePaths"
+}

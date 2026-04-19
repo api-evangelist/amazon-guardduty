@@ -1,0 +1,48 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-guardduty/refs/heads/main/json-schema/guardduty-member-additional-configuration-result-schema.json",
+  "title": "MemberAdditionalConfigurationResult",
+  "description": "Information about the additional configuration for the member account.",
+  "type": "object",
+  "properties": {
+    "Name": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/OrgFeatureAdditionalConfiguration"
+        },
+        {
+          "xml": {
+            "name": "name"
+          },
+          "description": "Indicates the name of the additional configuration that is set for the member account."
+        }
+      ]
+    },
+    "Status": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/FeatureStatus"
+        },
+        {
+          "xml": {
+            "name": "status"
+          },
+          "description": "Indicates the status of the additional configuration that is set for the member account."
+        }
+      ]
+    },
+    "UpdatedAt": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Timestamp"
+        },
+        {
+          "xml": {
+            "name": "updatedAt"
+          },
+          "description": "The timestamp at which the additional configuration was set for the member account. This is in UTC format."
+        }
+      ]
+    }
+  }
+}

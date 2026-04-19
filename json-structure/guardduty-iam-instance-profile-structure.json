@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-guardduty/refs/heads/main/json-structure/guardduty-iam-instance-profile-structure.json",
+  "name": "IamInstanceProfile",
+  "description": "Contains information about the EC2 instance profile.",
+  "type": "object",
+  "properties": {
+    "Arn": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "xml": {
+            "name": "arn"
+          },
+          "description": "The profile ARN of the EC2 instance."
+        }
+      ]
+    },
+    "Id": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "xml": {
+            "name": "id"
+          },
+          "description": "The profile ID of the EC2 instance."
+        }
+      ]
+    }
+  }
+}

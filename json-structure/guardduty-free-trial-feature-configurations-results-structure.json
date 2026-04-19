@@ -1,0 +1,10 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-guardduty/refs/heads/main/json-structure/guardduty-free-trial-feature-configurations-results-structure.json",
+  "name": "FreeTrialFeatureConfigurationsResults",
+  "description": "FreeTrialFeatureConfigurationsResults schema from Amazon GuardDuty API",
+  "type": "array",
+  "items": {
+    "$ref": "#/components/schemas/FreeTrialFeatureConfigurationResult"
+  }
+}

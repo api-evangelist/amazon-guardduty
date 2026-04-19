@@ -1,43 +1,1443 @@
 {
   "@context": {
     "@version": 1.1,
-    "guardduty": "https://docs.aws.amazon.com/guardduty/latest/APIReference/",
+    "guardduty": "https://aws.amazon.com/guardduty/schema/",
     "schema": "https://schema.org/",
     "xsd": "http://www.w3.org/2001/XMLSchema#",
-    "dcterms": "http://purl.org/dc/terms/",
-
-    "Finding": {
-      "@id": "guardduty:Finding",
-      "@context": {
-        "id": "guardduty:findingId",
-        "accountId": "guardduty:accountId",
-        "region": "guardduty:region",
-        "type": "guardduty:findingType",
-        "severity": "guardduty:severity",
-        "title": "schema:name",
-        "description": "schema:description",
-        "confidence": "guardduty:confidence",
-        "resource": "guardduty:resource",
-        "service": "guardduty:service",
-        "createdAt": {
-          "@id": "dcterms:created",
-          "@type": "xsd:dateTime"
-        },
-        "updatedAt": {
-          "@id": "dcterms:modified",
-          "@type": "xsd:dateTime"
-        }
-      }
+    "CreatePublishingDestinationRequest": "guardduty:CreatePublishingDestinationRequest",
+    "City": {
+      "@id": "guardduty:City",
+      "@type": "xsd:string"
     },
-
-    "Detector": {
-      "@id": "guardduty:Detector",
-      "@context": {
-        "detectorId": "guardduty:detectorId",
-        "status": "guardduty:detectorStatus",
-        "findingPublishingFrequency": "guardduty:findingPublishingFrequency",
-        "dataSources": "guardduty:dataSources"
-      }
+    "GetMembersRequest": "guardduty:GetMembersRequest",
+    "UpdateThreatIntelSetResponse": "guardduty:UpdateThreatIntelSetResponse",
+    "MemberFeaturesConfigurationResult": "guardduty:MemberFeaturesConfigurationResult",
+    "RuntimeContext": "guardduty:RuntimeContext",
+    "DeleteFilterResponse": "guardduty:DeleteFilterResponse",
+    "GetMembersResponse": "guardduty:GetMembersResponse",
+    "GetMalwareScanSettingsResponse": "guardduty:GetMalwareScanSettingsResponse",
+    "DisassociateFromAdministratorAccountRequest": "guardduty:DisassociateFromAdministratorAccountRequest",
+    "AdminAccount": "guardduty:AdminAccount",
+    "DescribePublishingDestinationResponse": "guardduty:DescribePublishingDestinationResponse",
+    "AccountFreeTrialInfo": "guardduty:AccountFreeTrialInfo",
+    "UpdateThreatIntelSetRequest": "guardduty:UpdateThreatIntelSetRequest",
+    "DeletePublishingDestinationRequest": "guardduty:DeletePublishingDestinationRequest",
+    "CreateMembersResponse": "guardduty:CreateMembersResponse",
+    "DetectorFeatureConfigurationResult": "guardduty:DetectorFeatureConfigurationResult",
+    "AccountDetail": "guardduty:AccountDetail",
+    "OrganizationDataSourceConfigurations": "guardduty:OrganizationDataSourceConfigurations",
+    "CoverageResource": "guardduty:CoverageResource",
+    "VolumeDetail": "guardduty:VolumeDetail",
+    "MalwareProtectionConfiguration": "guardduty:MalwareProtectionConfiguration",
+    "Total": {
+      "@id": "guardduty:Total",
+      "@type": "xsd:string"
+    },
+    "BucketPolicy": {
+      "@id": "guardduty:BucketPolicy",
+      "@type": "xsd:string"
+    },
+    "CoverageSortCriteria": "guardduty:CoverageSortCriteria",
+    "KubernetesAuditLogsConfiguration": "guardduty:KubernetesAuditLogsConfiguration",
+    "Scan": "guardduty:Scan",
+    "CoverageEksClusterDetails": "guardduty:CoverageEksClusterDetails",
+    "UpdateDetectorResponse": "guardduty:UpdateDetectorResponse",
+    "ScanDetections": {
+      "@id": "guardduty:ScanDetections",
+      "@type": "xsd:string"
+    },
+    "StartMonitoringMembersRequest": "guardduty:StartMonitoringMembersRequest",
+    "KubernetesDetails": {
+      "@id": "guardduty:KubernetesDetails",
+      "@type": "xsd:string"
+    },
+    "GetMemberDetectorsRequest": "guardduty:GetMemberDetectorsRequest",
+    "Amazon GuardDuty Finding": "guardduty:Amazon GuardDuty Finding",
+    "DeletePublishingDestinationResponse": "guardduty:DeletePublishingDestinationResponse",
+    "EcsTaskDetails": "guardduty:EcsTaskDetails",
+    "OrganizationAdditionalConfigurationResult": "guardduty:OrganizationAdditionalConfigurationResult",
+    "DisassociateMembersRequest": "guardduty:DisassociateMembersRequest",
+    "OrganizationFeatureConfiguration": "guardduty:OrganizationFeatureConfiguration",
+    "ServiceAdditionalInfo": "guardduty:ServiceAdditionalInfo",
+    "ListThreatIntelSetsRequest": "guardduty:ListThreatIntelSetsRequest",
+    "Finding": "guardduty:Finding",
+    "UnarchiveFindingsResponse": "guardduty:UnarchiveFindingsResponse",
+    "ListCoverageResponse": "guardduty:ListCoverageResponse",
+    "AccessControlList": {
+      "@id": "guardduty:AccessControlList",
+      "@type": "xsd:string"
+    },
+    "SortCriteria": {
+      "@id": "guardduty:SortCriteria",
+      "@type": "xsd:string"
+    },
+    "ListFiltersRequest": "guardduty:ListFiltersRequest",
+    "ScanConditionPair": "guardduty:ScanConditionPair",
+    "UpdatePublishingDestinationResponse": "guardduty:UpdatePublishingDestinationResponse",
+    "MemberDataSourceConfiguration": "guardduty:MemberDataSourceConfiguration",
+    "LocalIpDetails": {
+      "@id": "guardduty:LocalIpDetails",
+      "@type": "xsd:string"
+    },
+    "DeleteThreatIntelSetRequest": "guardduty:DeleteThreatIntelSetRequest",
+    "RemoteIpDetails": {
+      "@id": "guardduty:RemoteIpDetails",
+      "@type": "xsd:string"
+    },
+    "GetThreatIntelSetRequest": "guardduty:GetThreatIntelSetRequest",
+    "UnarchiveFindingsRequest": "guardduty:UnarchiveFindingsRequest",
+    "UpdateMemberDetectorsResponse": "guardduty:UpdateMemberDetectorsResponse",
+    "MemberFeaturesConfiguration": "guardduty:MemberFeaturesConfiguration",
+    "OrganizationMalwareProtectionConfigurationResult": "guardduty:OrganizationMalwareProtectionConfigurationResult",
+    "ThreatsDetectedItemCount": {
+      "@id": "guardduty:ThreatsDetectedItemCount",
+      "@type": "xsd:string"
+    },
+    "DataSourcesFreeTrial": "guardduty:DataSourcesFreeTrial",
+    "GetFindingsRequest": "guardduty:GetFindingsRequest",
+    "CreateMembersRequest": "guardduty:CreateMembersRequest",
+    "UpdateFilterRequest": "guardduty:UpdateFilterRequest",
+    "CreateDetectorRequest": "guardduty:CreateDetectorRequest",
+    "EbsVolumeScanDetails": {
+      "@id": "guardduty:EbsVolumeScanDetails",
+      "@type": "xsd:string"
+    },
+    "UpdateIPSetResponse": "guardduty:UpdateIPSetResponse",
+    "GetDetectorRequest": "guardduty:GetDetectorRequest",
+    "FlowLogsConfigurationResult": "guardduty:FlowLogsConfigurationResult",
+    "ListInvitationsRequest": "guardduty:ListInvitationsRequest",
+    "OrganizationFeatureConfigurationResult": "guardduty:OrganizationFeatureConfigurationResult",
+    "VpcConfig": "guardduty:VpcConfig",
+    "DomainDetails": "guardduty:DomainDetails",
+    "AccessKeyDetails": {
+      "@id": "guardduty:AccessKeyDetails",
+      "@type": "xsd:string"
+    },
+    "ThreatDetectedByName": {
+      "@id": "guardduty:ThreatDetectedByName",
+      "@type": "xsd:string"
+    },
+    "Condition": "guardduty:Condition",
+    "Owner": "guardduty:Owner",
+    "KubernetesConfiguration": "guardduty:KubernetesConfiguration",
+    "DeleteDetectorResponse": "guardduty:DeleteDetectorResponse",
+    "GetDetectorResponse": "guardduty:GetDetectorResponse",
+    "DeclineInvitationsResponse": "guardduty:DeclineInvitationsResponse",
+    "CreateThreatIntelSetRequest": "guardduty:CreateThreatIntelSetRequest",
+    "UpdateMemberDetectorsRequest": "guardduty:UpdateMemberDetectorsRequest",
+    "ListCoverageRequest": "guardduty:ListCoverageRequest",
+    "DataSourceFreeTrial": "guardduty:DataSourceFreeTrial",
+    "DetectorAdditionalConfigurationResult": "guardduty:DetectorAdditionalConfigurationResult",
+    "TagMap": "guardduty:TagMap",
+    "DetectorAdditionalConfiguration": "guardduty:DetectorAdditionalConfiguration",
+    "ProcessDetails": "guardduty:ProcessDetails",
+    "PermissionConfiguration": "guardduty:PermissionConfiguration",
+    "OrganizationKubernetesConfiguration": "guardduty:OrganizationKubernetesConfiguration",
+    "Service": {
+      "@id": "guardduty:Service",
+      "@type": "xsd:string"
+    },
+    "UsageStatistics": "guardduty:UsageStatistics",
+    "DestinationProperties": {
+      "@id": "guardduty:DestinationProperties",
+      "@type": "xsd:string"
+    },
+    "GetIPSetResponse": "guardduty:GetIPSetResponse",
+    "OrganizationMalwareProtectionConfiguration": "guardduty:OrganizationMalwareProtectionConfiguration",
+    "UsageFeatureResult": "guardduty:UsageFeatureResult",
+    "ListTagsForResourceRequest": "guardduty:ListTagsForResourceRequest",
+    "Country": {
+      "@id": "guardduty:Country",
+      "@type": "xsd:string"
+    },
+    "DescribeMalwareScansRequest": "guardduty:DescribeMalwareScansRequest",
+    "DisassociateFromMasterAccountRequest": "guardduty:DisassociateFromMasterAccountRequest",
+    "GetMalwareScanSettingsRequest": "guardduty:GetMalwareScanSettingsRequest",
+    "NetworkConnectionAction": {
+      "@id": "guardduty:NetworkConnectionAction",
+      "@type": "xsd:string"
+    },
+    "InviteMembersResponse": "guardduty:InviteMembersResponse",
+    "OrganizationAdditionalConfiguration": "guardduty:OrganizationAdditionalConfiguration",
+    "Criterion": {
+      "@id": "guardduty:Criterion",
+      "@type": "xsd:string"
+    },
+    "ScanEc2InstanceWithFindings": {
+      "@id": "guardduty:ScanEc2InstanceWithFindings",
+      "@type": "xsd:string"
+    },
+    "ScanThreatName": "guardduty:ScanThreatName",
+    "DNSLogsConfigurationResult": "guardduty:DNSLogsConfigurationResult",
+    "CreateIPSetRequest": "guardduty:CreateIPSetRequest",
+    "ListPublishingDestinationsResponse": "guardduty:ListPublishingDestinationsResponse",
+    "GetFindingsResponse": "guardduty:GetFindingsResponse",
+    "DescribeOrganizationConfigurationResponse": "guardduty:DescribeOrganizationConfigurationResponse",
+    "ListTagsForResourceResponse": "guardduty:ListTagsForResourceResponse",
+    "UsageDataSourceResult": "guardduty:UsageDataSourceResult",
+    "OrganizationEbsVolumes": "guardduty:OrganizationEbsVolumes",
+    "DisableOrganizationAdminAccountResponse": "guardduty:DisableOrganizationAdminAccountResponse",
+    "BucketLevelPermissions": {
+      "@id": "guardduty:BucketLevelPermissions",
+      "@type": "xsd:string"
+    },
+    "ScanFilePath": "guardduty:ScanFilePath",
+    "FindingCriteria": {
+      "@id": "guardduty:FindingCriteria",
+      "@type": "xsd:string"
+    },
+    "ScannedItemCount": {
+      "@id": "guardduty:ScannedItemCount",
+      "@type": "xsd:string"
+    },
+    "UpdateOrganizationConfigurationResponse": "guardduty:UpdateOrganizationConfigurationResponse",
+    "CoverageFilterCriteria": "guardduty:CoverageFilterCriteria",
+    "UsageAccountResult": "guardduty:UsageAccountResult",
+    "GetAdministratorAccountRequest": "guardduty:GetAdministratorAccountRequest",
+    "GetCoverageStatisticsRequest": "guardduty:GetCoverageStatisticsRequest",
+    "AddonDetails": {
+      "@id": "guardduty:AddonDetails",
+      "@type": "xsd:string"
+    },
+    "BlockPublicAccess": {
+      "@id": "guardduty:BlockPublicAccess",
+      "@type": "xsd:string"
+    },
+    "ListThreatIntelSetsResponse": "guardduty:ListThreatIntelSetsResponse",
+    "GetIPSetRequest": "guardduty:GetIPSetRequest",
+    "MemberAdditionalConfigurationResult": "guardduty:MemberAdditionalConfigurationResult",
+    "OrganizationKubernetesConfigurationResult": "guardduty:OrganizationKubernetesConfigurationResult",
+    "ListFiltersResponse": "guardduty:ListFiltersResponse",
+    "CreatePublishingDestinationResponse": "guardduty:CreatePublishingDestinationResponse",
+    "UnprocessedDataSourcesResult": "guardduty:UnprocessedDataSourcesResult",
+    "RdsDbInstanceDetails": {
+      "@id": "guardduty:RdsDbInstanceDetails",
+      "@type": "xsd:string"
+    },
+    "Invitation": "guardduty:Invitation",
+    "Action": {
+      "@id": "guardduty:Action",
+      "@type": "xsd:string"
+    },
+    "FindingStatistics": "guardduty:FindingStatistics",
+    "OrganizationScanEc2InstanceWithFindingsResult": "guardduty:OrganizationScanEc2InstanceWithFindingsResult",
+    "OrganizationKubernetesAuditLogsConfiguration": "guardduty:OrganizationKubernetesAuditLogsConfiguration",
+    "DisassociateMembersResponse": "guardduty:DisassociateMembersResponse",
+    "Resource": {
+      "@id": "guardduty:Resource",
+      "@type": "xsd:string"
+    },
+    "CreateThreatIntelSetResponse": "guardduty:CreateThreatIntelSetResponse",
+    "AcceptInvitationResponse": "guardduty:AcceptInvitationResponse",
+    "MemberAdditionalConfiguration": "guardduty:MemberAdditionalConfiguration",
+    "OrganizationKubernetesAuditLogsConfigurationResult": "guardduty:OrganizationKubernetesAuditLogsConfigurationResult",
+    "CreateIPSetResponse": "guardduty:CreateIPSetResponse",
+    "DeleteIPSetRequest": "guardduty:DeleteIPSetRequest",
+    "InviteMembersRequest": "guardduty:InviteMembersRequest",
+    "GetAdministratorAccountResponse": "guardduty:GetAdministratorAccountResponse",
+    "DisassociateFromAdministratorAccountResponse": "guardduty:DisassociateFromAdministratorAccountResponse",
+    "DisassociateFromMasterAccountResponse": "guardduty:DisassociateFromMasterAccountResponse",
+    "GetCoverageStatisticsResponse": "guardduty:GetCoverageStatisticsResponse",
+    "ListInvitationsResponse": "guardduty:ListInvitationsResponse",
+    "RemoteAccountDetails": "guardduty:RemoteAccountDetails",
+    "CreateSampleFindingsRequest": "guardduty:CreateSampleFindingsRequest",
+    "OrganizationScanEc2InstanceWithFindings": "guardduty:OrganizationScanEc2InstanceWithFindings",
+    "GetRemainingFreeTrialDaysResponse": "guardduty:GetRemainingFreeTrialDaysResponse",
+    "ArchiveFindingsResponse": "guardduty:ArchiveFindingsResponse",
+    "CloudTrailConfigurationResult": "guardduty:CloudTrailConfigurationResult",
+    "UpdateFindingsFeedbackResponse": "guardduty:UpdateFindingsFeedbackResponse",
+    "GetMemberDetectorsResponse": "guardduty:GetMemberDetectorsResponse",
+    "StartMonitoringMembersResponse": "guardduty:StartMonitoringMembersResponse",
+    "AcceptAdministratorInvitationRequest": "guardduty:AcceptAdministratorInvitationRequest",
+    "GetUsageStatisticsRequest": "guardduty:GetUsageStatisticsRequest",
+    "CoverageFilterCriterion": "guardduty:CoverageFilterCriterion",
+    "ListDetectorsResponse": "guardduty:ListDetectorsResponse",
+    "EcsClusterDetails": {
+      "@id": "guardduty:EcsClusterDetails",
+      "@type": "xsd:string"
+    },
+    "FreeTrialFeatureConfigurationResult": "guardduty:FreeTrialFeatureConfigurationResult",
+    "CreateFilterResponse": "guardduty:CreateFilterResponse",
+    "DataSourceConfigurations": "guardduty:DataSourceConfigurations",
+    "OrganizationDataSourceConfigurationsResult": "guardduty:OrganizationDataSourceConfigurationsResult",
+    "GetMasterAccountResponse": "guardduty:GetMasterAccountResponse",
+    "DescribeOrganizationConfigurationRequest": "guardduty:DescribeOrganizationConfigurationRequest",
+    "ScanResultDetails": {
+      "@id": "guardduty:ScanResultDetails",
+      "@type": "xsd:string"
+    },
+    "ScanCriterion": "guardduty:ScanCriterion",
+    "CreateDetectorResponse": "guardduty:CreateDetectorResponse",
+    "ResourceDetails": {
+      "@id": "guardduty:ResourceDetails",
+      "@type": "xsd:string"
+    },
+    "PortProbeAction": {
+      "@id": "guardduty:PortProbeAction",
+      "@type": "xsd:string"
+    },
+    "UpdateFindingsFeedbackRequest": "guardduty:UpdateFindingsFeedbackRequest",
+    "AcceptInvitationRequest": "guardduty:AcceptInvitationRequest",
+    "KubernetesConfigurationResult": "guardduty:KubernetesConfigurationResult",
+    "GetThreatIntelSetResponse": "guardduty:GetThreatIntelSetResponse",
+    "TriggerDetails": {
+      "@id": "guardduty:TriggerDetails",
+      "@type": "xsd:string"
+    },
+    "GetFilterResponse": "guardduty:GetFilterResponse",
+    "PublicAccess": "guardduty:PublicAccess",
+    "SecurityContext": "guardduty:SecurityContext",
+    "Evidence": {
+      "@id": "guardduty:Evidence",
+      "@type": "xsd:string"
+    },
+    "RdsDbUserDetails": {
+      "@id": "guardduty:RdsDbUserDetails",
+      "@type": "xsd:string"
+    },
+    "LocalPortDetails": {
+      "@id": "guardduty:LocalPortDetails",
+      "@type": "xsd:string"
+    },
+    "ListOrganizationAdminAccountsResponse": "guardduty:ListOrganizationAdminAccountsResponse",
+    "GetFindingsStatisticsResponse": "guardduty:GetFindingsStatisticsResponse",
+    "DeleteMembersRequest": "guardduty:DeleteMembersRequest",
+    "UnprocessedAccount": "guardduty:UnprocessedAccount",
+    "ListOrganizationAdminAccountsRequest": "guardduty:ListOrganizationAdminAccountsRequest",
+    "CoverageResourceDetails": "guardduty:CoverageResourceDetails",
+    "DeleteInvitationsRequest": "guardduty:DeleteInvitationsRequest",
+    "GetInvitationsCountRequest": "guardduty:GetInvitationsCountRequest",
+    "NetworkInterface": "guardduty:NetworkInterface",
+    "Administrator": {
+      "@id": "guardduty:Administrator",
+      "@type": "xsd:string"
+    },
+    "UpdateIPSetRequest": "guardduty:UpdateIPSetRequest",
+    "UsageResourceResult": "guardduty:UsageResourceResult",
+    "TagResourceResponse": "guardduty:TagResourceResponse",
+    "UntagResourceResponse": "guardduty:UntagResourceResponse",
+    "ListPublishingDestinationsRequest": "guardduty:ListPublishingDestinationsRequest",
+    "ThreatIntelligenceDetail": "guardduty:ThreatIntelligenceDetail",
+    "DefaultServerSideEncryption": "guardduty:DefaultServerSideEncryption",
+    "KubernetesWorkloadDetails": {
+      "@id": "guardduty:KubernetesWorkloadDetails",
+      "@type": "xsd:string"
+    },
+    "StopMonitoringMembersResponse": "guardduty:StopMonitoringMembersResponse",
+    "FilterCriterion": {
+      "@id": "guardduty:FilterCriterion",
+      "@type": "xsd:string"
+    },
+    "UpdateMalwareScanSettingsRequest": "guardduty:UpdateMalwareScanSettingsRequest",
+    "HighestSeverityThreatDetails": {
+      "@id": "guardduty:HighestSeverityThreatDetails",
+      "@type": "xsd:string"
+    },
+    "DisableOrganizationAdminAccountRequest": "guardduty:DisableOrganizationAdminAccountRequest",
+    "OrganizationEbsVolumesResult": "guardduty:OrganizationEbsVolumesResult",
+    "Destination": "guardduty:Destination",
+    "UntagResourceRequest": "guardduty:UntagResourceRequest",
+    "DnsRequestAction": {
+      "@id": "guardduty:DnsRequestAction",
+      "@type": "xsd:string"
+    },
+    "DeleteThreatIntelSetResponse": "guardduty:DeleteThreatIntelSetResponse",
+    "KubernetesAuditLogsConfigurationResult": "guardduty:KubernetesAuditLogsConfigurationResult",
+    "CreateFilterRequest": "guardduty:CreateFilterRequest",
+    "ListIPSetsRequest": "guardduty:ListIPSetsRequest",
+    "RemotePortDetails": {
+      "@id": "guardduty:RemotePortDetails",
+      "@type": "xsd:string"
+    },
+    "RuntimeDetails": {
+      "@id": "guardduty:RuntimeDetails",
+      "@type": "xsd:string"
+    },
+    "UpdateOrganizationConfigurationRequest": "guardduty:UpdateOrganizationConfigurationRequest",
+    "ScanResourceCriteria": {
+      "@id": "guardduty:ScanResourceCriteria",
+      "@type": "xsd:string"
+    },
+    "ListMembersRequest": "guardduty:ListMembersRequest",
+    "IamInstanceProfile": "guardduty:IamInstanceProfile",
+    "UpdateMalwareScanSettingsResponse": "guardduty:UpdateMalwareScanSettingsResponse",
+    "Tag": "guardduty:Tag",
+    "DataSourceConfigurationsResult": "guardduty:DataSourceConfigurationsResult",
+    "KubernetesUserDetails": {
+      "@id": "guardduty:KubernetesUserDetails",
+      "@type": "xsd:string"
+    },
+    "Volume": "guardduty:Volume",
+    "FilterCondition": {
+      "@id": "guardduty:FilterCondition",
+      "@type": "xsd:string"
+    },
+    "CountByResourceType": "guardduty:CountByResourceType",
+    "TagResourceRequest": "guardduty:TagResourceRequest",
+    "UsageCriteria": {
+      "@id": "guardduty:UsageCriteria",
+      "@type": "xsd:string"
+    },
+    "Container": "guardduty:Container",
+    "Organization": {
+      "@id": "guardduty:Organization",
+      "@type": "xsd:string"
+    },
+    "Member": "guardduty:Member",
+    "MalwareProtectionConfigurationResult": "guardduty:MalwareProtectionConfigurationResult",
+    "RdsLoginAttemptAction": {
+      "@id": "guardduty:RdsLoginAttemptAction",
+      "@type": "xsd:string"
+    },
+    "VolumeMount": "guardduty:VolumeMount",
+    "DeleteMembersResponse": "guardduty:DeleteMembersResponse",
+    "DetectorFeatureConfiguration": "guardduty:DetectorFeatureConfiguration",
+    "AccountLevelPermissions": {
+      "@id": "guardduty:AccountLevelPermissions",
+      "@type": "xsd:string"
+    },
+    "S3LogsConfigurationResult": "guardduty:S3LogsConfigurationResult",
+    "GetInvitationsCountResponse": "guardduty:GetInvitationsCountResponse",
+    "ListDetectorsRequest": "guardduty:ListDetectorsRequest",
+    "InstanceDetails": {
+      "@id": "guardduty:InstanceDetails",
+      "@type": "xsd:string"
+    },
+    "UpdateFilterResponse": "guardduty:UpdateFilterResponse",
+    "OrganizationS3LogsConfiguration": "guardduty:OrganizationS3LogsConfiguration",
+    "EnableOrganizationAdminAccountRequest": "guardduty:EnableOrganizationAdminAccountRequest",
+    "GetUsageStatisticsResponse": "guardduty:GetUsageStatisticsResponse",
+    "DeclineInvitationsRequest": "guardduty:DeclineInvitationsRequest",
+    "ListFindingsRequest": "guardduty:ListFindingsRequest",
+    "PrivateIpAddressDetails": "guardduty:PrivateIpAddressDetails",
+    "HostPath": "guardduty:HostPath",
+    "DeleteFilterRequest": "guardduty:DeleteFilterRequest",
+    "S3BucketDetail": "guardduty:S3BucketDetail",
+    "UpdateDetectorRequest": "guardduty:UpdateDetectorRequest",
+    "EksClusterDetails": {
+      "@id": "guardduty:EksClusterDetails",
+      "@type": "xsd:string"
+    },
+    "EbsVolumesResult": "guardduty:EbsVolumesResult",
+    "AffectedResources": "guardduty:AffectedResources",
+    "Master": "guardduty:Master",
+    "EnableOrganizationAdminAccountResponse": "guardduty:EnableOrganizationAdminAccountResponse",
+    "LoginAttribute": "guardduty:LoginAttribute",
+    "ListMembersResponse": "guardduty:ListMembersResponse",
+    "CoverageFilterCondition": "guardduty:CoverageFilterCondition",
+    "CoverageStatistics": {
+      "@id": "guardduty:CoverageStatistics",
+      "@type": "xsd:string"
+    },
+    "DeleteIPSetResponse": "guardduty:DeleteIPSetResponse",
+    "AcceptAdministratorInvitationResponse": "guardduty:AcceptAdministratorInvitationResponse",
+    "ListIPSetsResponse": "guardduty:ListIPSetsResponse",
+    "StopMonitoringMembersRequest": "guardduty:StopMonitoringMembersRequest",
+    "DeleteDetectorRequest": "guardduty:DeleteDetectorRequest",
+    "CreateSampleFindingsResponse": "guardduty:CreateSampleFindingsResponse",
+    "MalwareProtectionDataSourceFreeTrial": "guardduty:MalwareProtectionDataSourceFreeTrial",
+    "DescribeMalwareScansResponse": "guardduty:DescribeMalwareScansResponse",
+    "GetFilterRequest": "guardduty:GetFilterRequest",
+    "UpdatePublishingDestinationRequest": "guardduty:UpdatePublishingDestinationRequest",
+    "DescribePublishingDestinationRequest": "guardduty:DescribePublishingDestinationRequest",
+    "FilterCriteria": {
+      "@id": "guardduty:FilterCriteria",
+      "@type": "xsd:string"
+    },
+    "ScanCondition": "guardduty:ScanCondition",
+    "DeleteInvitationsResponse": "guardduty:DeleteInvitationsResponse",
+    "LineageObject": "guardduty:LineageObject",
+    "SecurityGroup": "guardduty:SecurityGroup",
+    "KubernetesApiCallAction": {
+      "@id": "guardduty:KubernetesApiCallAction",
+      "@type": "xsd:string"
+    },
+    "ScanEc2InstanceWithFindingsResult": "guardduty:ScanEc2InstanceWithFindingsResult",
+    "GetMasterAccountRequest": "guardduty:GetMasterAccountRequest",
+    "EbsVolumeDetails": {
+      "@id": "guardduty:EbsVolumeDetails",
+      "@type": "xsd:string"
+    },
+    "OrganizationS3LogsConfigurationResult": "guardduty:OrganizationS3LogsConfigurationResult",
+    "ArchiveFindingsRequest": "guardduty:ArchiveFindingsRequest",
+    "S3LogsConfiguration": "guardduty:S3LogsConfiguration",
+    "KubernetesDataSourceFreeTrial": "guardduty:KubernetesDataSourceFreeTrial",
+    "CountByCoverageStatus": "guardduty:CountByCoverageStatus",
+    "CountBySeverity": {
+      "@id": "guardduty:CountBySeverity",
+      "@type": "xsd:string"
+    },
+    "PortProbeDetail": "guardduty:PortProbeDetail",
+    "ListFindingsResponse": "guardduty:ListFindingsResponse",
+    "LambdaDetails": {
+      "@id": "guardduty:LambdaDetails",
+      "@type": "xsd:string"
+    },
+    "ProductCode": "guardduty:ProductCode",
+    "GetRemainingFreeTrialDaysRequest": "guardduty:GetRemainingFreeTrialDaysRequest",
+    "GeoLocation": {
+      "@id": "guardduty:GeoLocation",
+      "@type": "xsd:string"
+    },
+    "GetFindingsStatisticsRequest": "guardduty:GetFindingsStatisticsRequest",
+    "AwsApiCallAction": {
+      "@id": "guardduty:AwsApiCallAction",
+      "@type": "xsd:string"
+    },
+    "DestinationType": {
+      "@id": "guardduty:DestinationType",
+      "@type": "xsd:string"
+    },
+    "ClientToken": {
+      "@id": "guardduty:ClientToken",
+      "@type": "xsd:string"
+    },
+    "CityName": {
+      "@id": "guardduty:CityName",
+      "@type": "xsd:string"
+    },
+    "AccountIds": {
+      "@id": "guardduty:AccountIds",
+      "@type": "xsd:string"
+    },
+    "Name": "schema:name",
+    "Status": {
+      "@id": "guardduty:Status",
+      "@type": "xsd:string"
+    },
+    "UpdatedAt": {
+      "@id": "guardduty:UpdatedAt",
+      "@type": "xsd:string"
+    },
+    "AdditionalConfiguration": {
+      "@id": "guardduty:AdditionalConfiguration",
+      "@type": "xsd:string"
+    },
+    "ModifyingProcess": {
+      "@id": "guardduty:ModifyingProcess",
+      "@type": "xsd:string"
+    },
+    "ModifiedAt": {
+      "@id": "guardduty:ModifiedAt",
+      "@type": "xsd:string"
+    },
+    "ScriptPath": {
+      "@id": "guardduty:ScriptPath",
+      "@type": "xsd:string"
+    },
+    "LibraryPath": {
+      "@id": "guardduty:LibraryPath",
+      "@type": "xsd:string"
+    },
+    "LdPreloadValue": {
+      "@id": "guardduty:LdPreloadValue",
+      "@type": "xsd:string"
+    },
+    "SocketPath": {
+      "@id": "guardduty:SocketPath",
+      "@type": "xsd:string"
+    },
+    "RuncBinaryPath": {
+      "@id": "guardduty:RuncBinaryPath",
+      "@type": "xsd:string"
+    },
+    "ReleaseAgentPath": {
+      "@id": "guardduty:ReleaseAgentPath",
+      "@type": "xsd:string"
+    },
+    "MountSource": {
+      "@id": "guardduty:MountSource",
+      "@type": "xsd:string"
+    },
+    "MountTarget": {
+      "@id": "guardduty:MountTarget",
+      "@type": "xsd:string"
+    },
+    "FileSystemType": {
+      "@id": "guardduty:FileSystemType",
+      "@type": "xsd:string"
+    },
+    "Flags": {
+      "@id": "guardduty:Flags",
+      "@type": "xsd:string"
+    },
+    "ModuleName": {
+      "@id": "guardduty:ModuleName",
+      "@type": "xsd:string"
+    },
+    "ModuleFilePath": {
+      "@id": "guardduty:ModuleFilePath",
+      "@type": "xsd:string"
+    },
+    "ModuleSha256": {
+      "@id": "guardduty:ModuleSha256",
+      "@type": "xsd:string"
+    },
+    "ShellHistoryFilePath": {
+      "@id": "guardduty:ShellHistoryFilePath",
+      "@type": "xsd:string"
+    },
+    "TargetProcess": {
+      "@id": "guardduty:TargetProcess",
+      "@type": "xsd:string"
+    },
+    "AddressFamily": {
+      "@id": "guardduty:AddressFamily",
+      "@type": "xsd:string"
+    },
+    "IanaProtocolNumber": {
+      "@id": "guardduty:IanaProtocolNumber",
+      "@type": "xsd:string"
+    },
+    "MemoryRegions": {
+      "@id": "guardduty:MemoryRegions",
+      "@type": "xsd:string"
+    },
+    "Members": {
+      "@id": "guardduty:Members",
+      "@type": "xsd:string"
+    },
+    "UnprocessedAccounts": {
+      "@id": "guardduty:UnprocessedAccounts",
+      "@type": "xsd:string"
+    },
+    "EbsSnapshotPreservation": {
+      "@id": "guardduty:EbsSnapshotPreservation",
+      "@type": "xsd:string"
+    },
+    "AdminAccountId": {
+      "@id": "guardduty:AdminAccountId",
+      "@type": "xsd:string"
+    },
+    "AdminStatus": {
+      "@id": "guardduty:AdminStatus",
+      "@type": "xsd:string"
+    },
+    "DestinationId": {
+      "@id": "guardduty:DestinationId",
+      "@type": "xsd:string"
+    },
+    "PublishingFailureStartTimestamp": {
+      "@id": "guardduty:PublishingFailureStartTimestamp",
+      "@type": "xsd:string"
+    },
+    "AccountId": {
+      "@id": "guardduty:AccountId",
+      "@type": "xsd:string"
+    },
+    "DataSources": {
+      "@id": "guardduty:DataSources",
+      "@type": "xsd:string"
+    },
+    "Features": {
+      "@id": "guardduty:Features",
+      "@type": "xsd:string"
+    },
+    "Location": {
+      "@id": "guardduty:Location",
+      "@type": "xsd:string"
+    },
+    "Activate": {
+      "@id": "guardduty:Activate",
+      "@type": "xsd:string"
+    },
+    "Email": {
+      "@id": "guardduty:Email",
+      "@type": "xsd:string"
+    },
+    "S3Logs": {
+      "@id": "guardduty:S3Logs",
+      "@type": "xsd:string"
+    },
+    "Kubernetes": {
+      "@id": "guardduty:Kubernetes",
+      "@type": "xsd:string"
+    },
+    "MalwareProtection": {
+      "@id": "guardduty:MalwareProtection",
+      "@type": "xsd:string"
+    },
+    "ResourceId": {
+      "@id": "guardduty:ResourceId",
+      "@type": "xsd:string"
+    },
+    "DetectorId": {
+      "@id": "guardduty:DetectorId",
+      "@type": "xsd:string"
+    },
+    "CoverageStatus": {
+      "@id": "guardduty:CoverageStatus",
+      "@type": "xsd:string"
+    },
+    "Issue": {
+      "@id": "guardduty:Issue",
+      "@type": "xsd:string"
+    },
+    "VolumeArn": {
+      "@id": "guardduty:VolumeArn",
+      "@type": "xsd:string"
+    },
+    "VolumeType": {
+      "@id": "guardduty:VolumeType",
+      "@type": "xsd:string"
+    },
+    "DeviceName": {
+      "@id": "guardduty:DeviceName",
+      "@type": "xsd:string"
+    },
+    "VolumeSizeInGB": {
+      "@id": "guardduty:VolumeSizeInGB",
+      "@type": "xsd:string"
+    },
+    "EncryptionType": {
+      "@id": "guardduty:EncryptionType",
+      "@type": "xsd:string"
+    },
+    "SnapshotArn": {
+      "@id": "guardduty:SnapshotArn",
+      "@type": "xsd:string"
+    },
+    "KmsKeyArn": {
+      "@id": "guardduty:KmsKeyArn",
+      "@type": "xsd:string"
+    },
+    "Amount": {
+      "@id": "guardduty:Amount",
+      "@type": "xsd:string"
+    },
+    "Unit": {
+      "@id": "guardduty:Unit",
+      "@type": "xsd:string"
+    },
+    "AllowsPublicReadAccess": {
+      "@id": "guardduty:AllowsPublicReadAccess",
+      "@type": "xsd:string"
+    },
+    "AllowsPublicWriteAccess": {
+      "@id": "guardduty:AllowsPublicWriteAccess",
+      "@type": "xsd:string"
+    },
+    "AttributeName": {
+      "@id": "guardduty:AttributeName",
+      "@type": "xsd:string"
+    },
+    "OrderBy": {
+      "@id": "guardduty:OrderBy",
+      "@type": "xsd:string"
+    },
+    "Enable": {
+      "@id": "guardduty:Enable",
+      "@type": "xsd:string"
+    },
+    "AdminDetectorId": {
+      "@id": "guardduty:AdminDetectorId",
+      "@type": "xsd:string"
+    },
+    "ScanId": {
+      "@id": "guardduty:ScanId",
+      "@type": "xsd:string"
+    },
+    "ScanStatus": {
+      "@id": "guardduty:ScanStatus",
+      "@type": "xsd:string"
+    },
+    "FailureReason": {
+      "@id": "guardduty:FailureReason",
+      "@type": "xsd:string"
+    },
+    "ScanStartTime": {
+      "@id": "guardduty:ScanStartTime",
+      "@type": "xsd:string"
+    },
+    "ScanEndTime": {
+      "@id": "guardduty:ScanEndTime",
+      "@type": "xsd:string"
+    },
+    "TotalBytes": {
+      "@id": "guardduty:TotalBytes",
+      "@type": "xsd:string"
+    },
+    "FileCount": {
+      "@id": "guardduty:FileCount",
+      "@type": "xsd:string"
+    },
+    "AttachedVolumes": {
+      "@id": "guardduty:AttachedVolumes",
+      "@type": "xsd:string"
+    },
+    "ClusterName": {
+      "@id": "guardduty:ClusterName",
+      "@type": "xsd:string"
+    },
+    "CoveredNodes": {
+      "@id": "guardduty:CoveredNodes",
+      "@type": "xsd:string"
+    },
+    "CompatibleNodes": {
+      "@id": "guardduty:CompatibleNodes",
+      "@type": "xsd:string"
+    },
+    "id": {
+      "@id": "guardduty:id",
+      "@type": "xsd:string"
+    },
+    "accountId": {
+      "@id": "guardduty:accountId",
+      "@type": "xsd:string"
+    },
+    "region": {
+      "@id": "guardduty:region",
+      "@type": "xsd:string"
+    },
+    "type": {
+      "@id": "guardduty:type",
+      "@type": "xsd:string"
+    },
+    "severity": {
+      "@id": "guardduty:severity",
+      "@type": "xsd:decimal"
+    },
+    "title": {
+      "@id": "guardduty:title",
+      "@type": "xsd:string"
+    },
+    "description": "schema:description",
+    "confidence": {
+      "@id": "guardduty:confidence",
+      "@type": "xsd:decimal"
+    },
+    "resource": {
+      "@id": "guardduty:resource",
+      "@type": "xsd:string"
+    },
+    "resourceType": {
+      "@id": "guardduty:resourceType",
+      "@type": "xsd:string"
+    },
+    "instanceDetails": {
+      "@id": "guardduty:instanceDetails",
+      "@type": "xsd:string"
+    },
+    "accessKeyDetails": {
+      "@id": "guardduty:accessKeyDetails",
+      "@type": "xsd:string"
+    },
+    "service": {
+      "@id": "guardduty:service",
+      "@type": "xsd:string"
+    },
+    "action": {
+      "@id": "guardduty:action",
+      "@type": "xsd:string"
+    },
+    "count": {
+      "@id": "guardduty:count",
+      "@type": "xsd:integer"
+    },
+    "detectorId": {
+      "@id": "guardduty:detectorId",
+      "@type": "xsd:string"
+    },
+    "createdAt": {
+      "@id": "guardduty:createdAt",
+      "@type": "xsd:dateTime"
+    },
+    "updatedAt": {
+      "@id": "guardduty:updatedAt",
+      "@type": "xsd:dateTime"
+    },
+    "Arn": {
+      "@id": "guardduty:Arn",
+      "@type": "xsd:string"
+    },
+    "DefinitionArn": {
+      "@id": "guardduty:DefinitionArn",
+      "@type": "xsd:string"
+    },
+    "Version": {
+      "@id": "guardduty:Version",
+      "@type": "xsd:string"
+    },
+    "TaskCreatedAt": {
+      "@id": "guardduty:TaskCreatedAt",
+      "@type": "xsd:string"
+    },
+    "StartedAt": {
+      "@id": "guardduty:StartedAt",
+      "@type": "xsd:string"
+    },
+    "StartedBy": {
+      "@id": "guardduty:StartedBy",
+      "@type": "xsd:string"
+    },
+    "Tags": {
+      "@id": "guardduty:Tags",
+      "@type": "xsd:string"
+    },
+    "Volumes": {
+      "@id": "guardduty:Volumes",
+      "@type": "xsd:string"
+    },
+    "Containers": {
+      "@id": "guardduty:Containers",
+      "@type": "xsd:string"
+    },
+    "Group": {
+      "@id": "guardduty:Group",
+      "@type": "xsd:string"
+    },
+    "AutoEnable": {
+      "@id": "guardduty:AutoEnable",
+      "@type": "xsd:string"
+    },
+    "Value": {
+      "@id": "guardduty:Value",
+      "@type": "xsd:string"
+    },
+    "Type": {
+      "@id": "guardduty:Type",
+      "@type": "xsd:string"
+    },
+    "Confidence": {
+      "@id": "guardduty:Confidence",
+      "@type": "xsd:string"
+    },
+    "CreatedAt": {
+      "@id": "guardduty:CreatedAt",
+      "@type": "xsd:string"
+    },
+    "Description": "schema:description",
+    "Id": {
+      "@id": "guardduty:Id",
+      "@type": "xsd:string"
+    },
+    "Partition": {
+      "@id": "guardduty:Partition",
+      "@type": "xsd:string"
+    },
+    "Region": {
+      "@id": "guardduty:Region",
+      "@type": "xsd:string"
+    },
+    "SchemaVersion": {
+      "@id": "guardduty:SchemaVersion",
+      "@type": "xsd:string"
+    },
+    "Severity": {
+      "@id": "guardduty:Severity",
+      "@type": "xsd:string"
+    },
+    "Title": {
+      "@id": "guardduty:Title",
+      "@type": "xsd:string"
+    },
+    "Resources": {
+      "@id": "guardduty:Resources",
+      "@type": "xsd:string"
+    },
+    "NextToken": {
+      "@id": "guardduty:NextToken",
+      "@type": "xsd:string"
+    },
+    "Key": {
+      "@id": "guardduty:Key",
+      "@type": "xsd:string"
+    },
+    "IpAddressV4": {
+      "@id": "guardduty:IpAddressV4",
+      "@type": "xsd:string"
+    },
+    "FindingIds": {
+      "@id": "guardduty:FindingIds",
+      "@type": "xsd:string"
+    },
+    "Files": {
+      "@id": "guardduty:Files",
+      "@type": "xsd:string"
+    },
+    "CloudTrail": {
+      "@id": "guardduty:CloudTrail",
+      "@type": "xsd:string"
+    },
+    "DnsLogs": {
+      "@id": "guardduty:DnsLogs",
+      "@type": "xsd:string"
+    },
+    "FlowLogs": {
+      "@id": "guardduty:FlowLogs",
+      "@type": "xsd:string"
+    },
+    "AccountDetails": {
+      "@id": "guardduty:AccountDetails",
+      "@type": "xsd:string"
+    },
+    "Rank": {
+      "@id": "guardduty:Rank",
+      "@type": "xsd:string"
+    },
+    "FindingPublishingFrequency": {
+      "@id": "guardduty:FindingPublishingFrequency",
+      "@type": "xsd:string"
+    },
+    "ScanStartedAt": {
+      "@id": "guardduty:ScanStartedAt",
+      "@type": "xsd:string"
+    },
+    "ScanCompletedAt": {
+      "@id": "guardduty:ScanCompletedAt",
+      "@type": "xsd:string"
+    },
+    "TriggerFindingId": {
+      "@id": "guardduty:TriggerFindingId",
+      "@type": "xsd:string"
+    },
+    "Sources": {
+      "@id": "guardduty:Sources",
+      "@type": "xsd:string"
+    },
+    "SubnetIds": {
+      "@id": "guardduty:SubnetIds",
+      "@type": "xsd:string"
+    },
+    "VpcId": {
+      "@id": "guardduty:VpcId",
+      "@type": "xsd:string"
+    },
+    "SecurityGroups": {
+      "@id": "guardduty:SecurityGroups",
+      "@type": "xsd:string"
+    },
+    "Domain": {
+      "@id": "guardduty:Domain",
+      "@type": "xsd:string"
+    },
+    "AccessKeyId": {
+      "@id": "guardduty:AccessKeyId",
+      "@type": "xsd:string"
+    },
+    "PrincipalId": {
+      "@id": "guardduty:PrincipalId",
+      "@type": "xsd:string"
+    },
+    "UserName": {
+      "@id": "guardduty:UserName",
+      "@type": "xsd:string"
+    },
+    "UserType": {
+      "@id": "guardduty:UserType",
+      "@type": "xsd:string"
+    },
+    "ItemCount": {
+      "@id": "guardduty:ItemCount",
+      "@type": "xsd:string"
+    },
+    "UniqueThreatNameCount": {
+      "@id": "guardduty:UniqueThreatNameCount",
+      "@type": "xsd:string"
+    },
+    "Shortened": {
+      "@id": "guardduty:Shortened",
+      "@type": "xsd:string"
+    },
+    "ThreatNames": {
+      "@id": "guardduty:ThreatNames",
+      "@type": "xsd:string"
+    },
+    "Eq": {
+      "@id": "guardduty:Eq",
+      "@type": "xsd:string"
+    },
+    "Neq": {
+      "@id": "guardduty:Neq",
+      "@type": "xsd:string"
+    },
+    "Gt": {
+      "@id": "guardduty:Gt",
+      "@type": "xsd:string"
+    },
+    "Gte": {
+      "@id": "guardduty:Gte",
+      "@type": "xsd:string"
+    },
+    "Lt": {
+      "@id": "guardduty:Lt",
+      "@type": "xsd:string"
+    },
+    "Lte": {
+      "@id": "guardduty:Lte",
+      "@type": "xsd:string"
+    },
+    "Equals": {
+      "@id": "guardduty:Equals",
+      "@type": "xsd:string"
+    },
+    "NotEquals": {
+      "@id": "guardduty:NotEquals",
+      "@type": "xsd:string"
+    },
+    "GreaterThan": {
+      "@id": "guardduty:GreaterThan",
+      "@type": "xsd:string"
+    },
+    "GreaterThanOrEqual": {
+      "@id": "guardduty:GreaterThanOrEqual",
+      "@type": "xsd:string"
+    },
+    "LessThan": {
+      "@id": "guardduty:LessThan",
+      "@type": "xsd:string"
+    },
+    "LessThanOrEqual": {
+      "@id": "guardduty:LessThanOrEqual",
+      "@type": "xsd:string"
+    },
+    "AuditLogs": {
+      "@id": "guardduty:AuditLogs",
+      "@type": "xsd:string"
+    },
+    "ServiceRole": {
+      "@id": "guardduty:ServiceRole",
+      "@type": "xsd:string"
+    },
+    "Format": {
+      "@id": "guardduty:Format",
+      "@type": "xsd:string"
+    },
+    "MaxResults": {
+      "@id": "guardduty:MaxResults",
+      "@type": "xsd:string"
+    },
+    "FreeTrialDaysRemaining": {
+      "@id": "guardduty:FreeTrialDaysRemaining",
+      "@type": "xsd:string"
+    },
+    "ExecutablePath": {
+      "@id": "guardduty:ExecutablePath",
+      "@type": "xsd:string"
+    },
+    "ExecutableSha256": {
+      "@id": "guardduty:ExecutableSha256",
+      "@type": "xsd:string"
+    },
+    "NamespacePid": {
+      "@id": "guardduty:NamespacePid",
+      "@type": "xsd:string"
+    },
+    "Pwd": {
+      "@id": "guardduty:Pwd",
+      "@type": "xsd:string"
+    },
+    "Pid": {
+      "@id": "guardduty:Pid",
+      "@type": "xsd:string"
+    },
+    "StartTime": {
+      "@id": "guardduty:StartTime",
+      "@type": "xsd:string"
+    },
+    "Uuid": {
+      "@id": "guardduty:Uuid",
+      "@type": "xsd:string"
+    },
+    "ParentUuid": {
+      "@id": "guardduty:ParentUuid",
+      "@type": "xsd:string"
+    },
+    "User": {
+      "@id": "guardduty:User",
+      "@type": "xsd:string"
+    },
+    "UserId": {
+      "@id": "guardduty:UserId",
+      "@type": "xsd:string"
+    },
+    "Euid": {
+      "@id": "guardduty:Euid",
+      "@type": "xsd:string"
+    },
+    "Lineage": {
+      "@id": "guardduty:Lineage",
+      "@type": "xsd:string"
+    },
+    "Archived": {
+      "@id": "guardduty:Archived",
+      "@type": "xsd:string"
+    },
+    "Count": {
+      "@id": "guardduty:Count",
+      "@type": "xsd:string"
+    },
+    "EventFirstSeen": {
+      "@id": "guardduty:EventFirstSeen",
+      "@type": "xsd:string"
+    },
+    "EventLastSeen": {
+      "@id": "guardduty:EventLastSeen",
+      "@type": "xsd:string"
+    },
+    "ResourceRole": {
+      "@id": "guardduty:ResourceRole",
+      "@type": "xsd:string"
+    },
+    "ServiceName": {
+      "@id": "guardduty:ServiceName",
+      "@type": "xsd:string"
+    },
+    "UserFeedback": {
+      "@id": "guardduty:UserFeedback",
+      "@type": "xsd:string"
+    },
+    "AdditionalInfo": {
+      "@id": "guardduty:AdditionalInfo",
+      "@type": "xsd:string"
+    },
+    "FeatureName": {
+      "@id": "guardduty:FeatureName",
+      "@type": "xsd:string"
+    },
+    "SumByAccount": {
+      "@id": "guardduty:SumByAccount",
+      "@type": "xsd:string"
+    },
+    "SumByDataSource": {
+      "@id": "guardduty:SumByDataSource",
+      "@type": "xsd:string"
+    },
+    "SumByResource": {
+      "@id": "guardduty:SumByResource",
+      "@type": "xsd:string"
+    },
+    "TopResources": {
+      "@id": "guardduty:TopResources",
+      "@type": "xsd:string"
+    },
+    "SumByFeature": {
+      "@id": "guardduty:SumByFeature",
+      "@type": "xsd:string"
+    },
+    "DestinationArn": {
+      "@id": "guardduty:DestinationArn",
+      "@type": "xsd:string"
+    },
+    "Feature": {
+      "@id": "guardduty:Feature",
+      "@type": "xsd:string"
+    },
+    "CountryCode": {
+      "@id": "guardduty:CountryCode",
+      "@type": "xsd:string"
+    },
+    "CountryName": {
+      "@id": "guardduty:CountryName",
+      "@type": "xsd:string"
+    },
+    "Blocked": {
+      "@id": "guardduty:Blocked",
+      "@type": "xsd:string"
+    },
+    "ConnectionDirection": {
+      "@id": "guardduty:ConnectionDirection",
+      "@type": "xsd:string"
+    },
+    "Protocol": {
+      "@id": "guardduty:Protocol",
+      "@type": "xsd:string"
+    },
+    "EbsVolumes": {
+      "@id": "guardduty:EbsVolumes",
+      "@type": "xsd:string"
+    },
+    "FilePaths": {
+      "@id": "guardduty:FilePaths",
+      "@type": "xsd:string"
+    },
+    "Destinations": {
+      "@id": "guardduty:Destinations",
+      "@type": "xsd:string"
+    },
+    "Findings": {
+      "@id": "guardduty:Findings",
+      "@type": "xsd:string"
+    },
+    "MemberAccountLimitReached": {
+      "@id": "guardduty:MemberAccountLimitReached",
+      "@type": "xsd:string"
+    },
+    "AutoEnableOrganizationMembers": {
+      "@id": "guardduty:AutoEnableOrganizationMembers",
+      "@type": "xsd:string"
+    },
+    "DataSource": {
+      "@id": "guardduty:DataSource",
+      "@type": "xsd:string"
+    },
+    "FilePath": {
+      "@id": "guardduty:FilePath",
+      "@type": "xsd:string"
+    },
+    "Hash": {
+      "@id": "guardduty:Hash",
+      "@type": "xsd:string"
+    },
+    "FileName": {
+      "@id": "guardduty:FileName",
+      "@type": "xsd:string"
+    },
+    "TotalGb": {
+      "@id": "guardduty:TotalGb",
+      "@type": "xsd:string"
+    },
+    "StatisticsType": {
+      "@id": "guardduty:StatisticsType",
+      "@type": "xsd:string"
+    },
+    "AddonVersion": {
+      "@id": "guardduty:AddonVersion",
+      "@type": "xsd:string"
+    },
+    "AddonStatus": {
+      "@id": "guardduty:AddonStatus",
+      "@type": "xsd:string"
+    },
+    "IgnorePublicAcls": {
+      "@id": "guardduty:IgnorePublicAcls",
+      "@type": "xsd:string"
+    },
+    "RestrictPublicBuckets": {
+      "@id": "guardduty:RestrictPublicBuckets",
+      "@type": "xsd:string"
+    },
+    "BlockPublicAcls": {
+      "@id": "guardduty:BlockPublicAcls",
+      "@type": "xsd:string"
+    },
+    "BlockPublicPolicy": {
+      "@id": "guardduty:BlockPublicPolicy",
+      "@type": "xsd:string"
+    },
+    "ThreatIntelSetIds": {
+      "@id": "guardduty:ThreatIntelSetIds",
+      "@type": "xsd:string"
+    },
+    "FilterNames": {
+      "@id": "guardduty:FilterNames",
+      "@type": "xsd:string"
+    },
+    "DbInstanceIdentifier": {
+      "@id": "guardduty:DbInstanceIdentifier",
+      "@type": "xsd:string"
+    },
+    "Engine": {
+      "@id": "guardduty:Engine",
+      "@type": "xsd:string"
+    },
+    "EngineVersion": {
+      "@id": "guardduty:EngineVersion",
+      "@type": "xsd:string"
+    },
+    "DbClusterIdentifier": {
+      "@id": "guardduty:DbClusterIdentifier",
+      "@type": "xsd:string"
+    },
+    "DbInstanceArn": {
+      "@id": "guardduty:DbInstanceArn",
+      "@type": "xsd:string"
+    },
+    "InvitationId": {
+      "@id": "guardduty:InvitationId",
+      "@type": "xsd:string"
+    },
+    "RelationshipStatus": {
+      "@id": "guardduty:RelationshipStatus",
+      "@type": "xsd:string"
+    },
+    "InvitedAt": {
+      "@id": "guardduty:InvitedAt",
+      "@type": "xsd:string"
+    },
+    "ActionType": {
+      "@id": "guardduty:ActionType",
+      "@type": "xsd:string"
+    },
+    "S3BucketDetails": {
+      "@id": "guardduty:S3BucketDetails",
+      "@type": "xsd:string"
+    },
+    "ResourceType": {
+      "@id": "guardduty:ResourceType",
+      "@type": "xsd:string"
+    },
+    "ContainerDetails": {
+      "@id": "guardduty:ContainerDetails",
+      "@type": "xsd:string"
+    },
+    "ThreatIntelSetId": {
+      "@id": "guardduty:ThreatIntelSetId",
+      "@type": "xsd:string"
+    },
+    "IpSetId": {
+      "@id": "guardduty:IpSetId",
+      "@type": "xsd:string"
+    },
+    "DisableEmailNotification": {
+      "@id": "guardduty:DisableEmailNotification",
+      "@type": "xsd:string"
+    },
+    "Message": {
+      "@id": "guardduty:Message",
+      "@type": "xsd:string"
+    },
+    "Invitations": {
+      "@id": "guardduty:Invitations",
+      "@type": "xsd:string"
+    },
+    "Affiliated": {
+      "@id": "guardduty:Affiliated",
+      "@type": "xsd:string"
+    },
+    "FindingTypes": {
+      "@id": "guardduty:FindingTypes",
+      "@type": "xsd:string"
+    },
+    "Accounts": {
+      "@id": "guardduty:Accounts",
+      "@type": "xsd:string"
+    },
+    "MemberDataSourceConfigurations": {
+      "@id": "guardduty:MemberDataSourceConfigurations",
+      "@type": "xsd:string"
+    },
+    "AdministratorId": {
+      "@id": "guardduty:AdministratorId",
+      "@type": "xsd:string"
+    },
+    "UsageStatisticType": {
+      "@id": "guardduty:UsageStatisticType",
+      "@type": "xsd:string"
+    },
+    "CriterionKey": {
+      "@id": "guardduty:CriterionKey",
+      "@type": "xsd:string"
+    },
+    "DetectorIds": {
+      "@id": "guardduty:DetectorIds",
+      "@type": "xsd:string"
+    },
+    "ActiveServicesCount": {
+      "@id": "guardduty:ActiveServicesCount",
+      "@type": "xsd:string"
+    },
+    "RegisteredContainerInstancesCount": {
+      "@id": "guardduty:RegisteredContainerInstancesCount",
+      "@type": "xsd:string"
+    },
+    "RunningTasksCount": {
+      "@id": "guardduty:RunningTasksCount",
+      "@type": "xsd:string"
+    },
+    "TaskDetails": {
+      "@id": "guardduty:TaskDetails",
+      "@type": "xsd:string"
     }
   }
 }

@@ -1,0 +1,8 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-guardduty/refs/heads/main/json-structure/guardduty-get-filter-request-structure.json",
+  "name": "GetFilterRequest",
+  "description": "GetFilterRequest schema from Amazon GuardDuty API",
+  "type": "object",
+  "properties": {}
+}

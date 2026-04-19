@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-guardduty/refs/heads/main/json-structure/guardduty-coverage-filter-criterion-structure.json",
+  "name": "CoverageFilterCriterion",
+  "description": "Represents a condition that when matched will be added to the response of the operation.",
+  "type": "object",
+  "properties": {
+    "CriterionKey": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/CoverageFilterCriterionKey"
+        },
+        {
+          "xml": {
+            "name": "criterionKey"
+          },
+          "description": "An enum value representing possible filter fields."
+        }
+      ]
+    },
+    "FilterCondition": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/CoverageFilterCondition"
+        },
+        {
+          "xml": {
+            "name": "filterCondition"
+          },
+          "description": "Contains information about the condition."
+        }
+      ]
+    }
+  }
+}

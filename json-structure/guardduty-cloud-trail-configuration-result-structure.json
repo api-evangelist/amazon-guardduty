@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-guardduty/refs/heads/main/json-structure/guardduty-cloud-trail-configuration-result-structure.json",
+  "name": "CloudTrailConfigurationResult",
+  "description": "Contains information on the status of CloudTrail as a data source for the detector.",
+  "type": "object",
+  "properties": {
+    "Status": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/DataSourceStatus"
+        },
+        {
+          "xml": {
+            "name": "status"
+          },
+          "description": "Describes whether CloudTrail is enabled as a data source for the detector."
+        }
+      ]
+    }
+  },
+  "required": [
+    "Status"
+  ]
+}

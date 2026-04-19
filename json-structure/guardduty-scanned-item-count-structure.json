@@ -1,0 +1,48 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-guardduty/refs/heads/main/json-structure/guardduty-scanned-item-count-structure.json",
+  "name": "ScannedItemCount",
+  "description": "Total number of scanned files.",
+  "type": "object",
+  "properties": {
+    "TotalGb": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Integer"
+        },
+        {
+          "xml": {
+            "name": "totalGb"
+          },
+          "description": "Total GB of files scanned for malware."
+        }
+      ]
+    },
+    "Files": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Integer"
+        },
+        {
+          "xml": {
+            "name": "files"
+          },
+          "description": "Number of files scanned."
+        }
+      ]
+    },
+    "Volumes": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Integer"
+        },
+        {
+          "xml": {
+            "name": "volumes"
+          },
+          "description": "Total number of scanned volumes."
+        }
+      ]
+    }
+  }
+}

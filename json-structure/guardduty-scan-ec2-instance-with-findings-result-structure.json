@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-guardduty/refs/heads/main/json-structure/guardduty-scan-ec2-instance-with-findings-result-structure.json",
+  "name": "ScanEc2InstanceWithFindingsResult",
+  "description": "An object that contains information on the status of whether Malware Protection for EC2 instances with findings will be enabled as a data source.",
+  "type": "object",
+  "properties": {
+    "EbsVolumes": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/EbsVolumesResult"
+        },
+        {
+          "xml": {
+            "name": "ebsVolumes"
+          },
+          "description": "Describes the configuration of scanning EBS volumes as a data source."
+        }
+      ]
+    }
+  }
+}

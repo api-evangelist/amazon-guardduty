@@ -1,0 +1,38 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-guardduty/refs/heads/main/json-structure/guardduty-get-findings-request-structure.json",
+  "name": "GetFindingsRequest",
+  "description": "GetFindingsRequest schema from Amazon GuardDuty API",
+  "type": "object",
+  "properties": {
+    "FindingIds": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/FindingIds"
+        },
+        {
+          "xml": {
+            "name": "findingIds"
+          },
+          "description": "The IDs of the findings that you want to retrieve."
+        }
+      ]
+    },
+    "SortCriteria": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/SortCriteria"
+        },
+        {
+          "xml": {
+            "name": "sortCriteria"
+          },
+          "description": "Represents the criteria used for sorting findings."
+        }
+      ]
+    }
+  },
+  "required": [
+    "FindingIds"
+  ]
+}

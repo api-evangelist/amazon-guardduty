@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-guardduty/refs/heads/main/json-schema/guardduty-addon-details-schema.json",
+  "title": "AddonDetails",
+  "description": "Information about the installed EKS add-on (GuardDuty security agent).",
+  "type": "object",
+  "properties": {
+    "AddonVersion": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "xml": {
+            "name": "addonVersion"
+          },
+          "description": "Version of the installed EKS add-on."
+        }
+      ]
+    },
+    "AddonStatus": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "xml": {
+            "name": "addonStatus"
+          },
+          "description": "Status of the installed EKS add-on."
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "DetectorId": "abc123def456",
+  "AdminDetectorId": "abc123def456",
+  "ScanId": "abc123def456",
+  "ScanStatus": "ENABLED",
+  "FailureReason": "example-FailureReaso",
+  "ScanStartTime": "example-ScanStartTim"
+}

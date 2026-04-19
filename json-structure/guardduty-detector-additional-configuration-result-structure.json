@@ -1,0 +1,48 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-guardduty/refs/heads/main/json-structure/guardduty-detector-additional-configuration-result-structure.json",
+  "name": "DetectorAdditionalConfigurationResult",
+  "description": "Information about the additional configuration.",
+  "type": "object",
+  "properties": {
+    "Name": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/FeatureAdditionalConfiguration"
+        },
+        {
+          "xml": {
+            "name": "name"
+          },
+          "description": "Name of the additional configuration."
+        }
+      ]
+    },
+    "Status": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/FeatureStatus"
+        },
+        {
+          "xml": {
+            "name": "status"
+          },
+          "description": "Status of the additional configuration."
+        }
+      ]
+    },
+    "UpdatedAt": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Timestamp"
+        },
+        {
+          "xml": {
+            "name": "updatedAt"
+          },
+          "description": "The timestamp at which the additional configuration was last updated. This is in UTC format."
+        }
+      ]
+    }
+  }
+}

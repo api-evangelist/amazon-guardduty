@@ -1,0 +1,10 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-guardduty/refs/heads/main/json-structure/guardduty-scan-criterion-key-structure.json",
+  "name": "ScanCriterionKey",
+  "description": "An enum value representing possible resource properties to match with given scan condition.",
+  "type": "string",
+  "enum": [
+    "EC2_INSTANCE_TAG"
+  ]
+}

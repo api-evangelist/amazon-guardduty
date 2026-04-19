@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-guardduty/refs/heads/main/json-structure/guardduty-s3-logs-configuration-structure.json",
+  "name": "S3LogsConfiguration",
+  "description": "Describes whether S3 data event logs will be enabled as a data source.",
+  "type": "object",
+  "properties": {
+    "Enable": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Boolean"
+        },
+        {
+          "xml": {
+            "name": "enable"
+          },
+          "description": " The status of S3 data event logs as a data source."
+        }
+      ]
+    }
+  },
+  "required": [
+    "Enable"
+  ]
+}

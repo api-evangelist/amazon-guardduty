@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-guardduty/refs/heads/main/json-schema/guardduty-stop-monitoring-members-request-schema.json",
+  "title": "StopMonitoringMembersRequest",
+  "description": "StopMonitoringMembersRequest schema from Amazon GuardDuty API",
+  "type": "object",
+  "properties": {
+    "AccountIds": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/AccountIds"
+        },
+        {
+          "xml": {
+            "name": "accountIds"
+          },
+          "description": "A list of account IDs for the member accounts to stop monitoring."
+        }
+      ]
+    }
+  },
+  "required": [
+    "AccountIds"
+  ]
+}

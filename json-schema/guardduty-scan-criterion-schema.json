@@ -1,0 +1,10 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-guardduty/refs/heads/main/json-schema/guardduty-scan-criterion-schema.json",
+  "title": "ScanCriterion",
+  "description": "Represents a map of resource properties that match specified conditions and values when triggering malware scans.",
+  "type": "object",
+  "additionalProperties": {
+    "$ref": "#/components/schemas/ScanCondition"
+  }
+}

@@ -1,0 +1,120 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-guardduty/refs/heads/main/json-schema/guardduty-member-schema.json",
+  "title": "Member",
+  "description": "Contains information about the member account. ",
+  "type": "object",
+  "properties": {
+    "AccountId": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/AccountId"
+        },
+        {
+          "xml": {
+            "name": "accountId"
+          },
+          "description": "The ID of the member account."
+        }
+      ]
+    },
+    "DetectorId": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/DetectorId"
+        },
+        {
+          "xml": {
+            "name": "detectorId"
+          },
+          "description": "The detector ID of the member account."
+        }
+      ]
+    },
+    "MasterId": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "xml": {
+            "name": "masterId"
+          },
+          "description": "The administrator account ID."
+        }
+      ]
+    },
+    "Email": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Email"
+        },
+        {
+          "xml": {
+            "name": "email"
+          },
+          "description": "The email address of the member account."
+        }
+      ]
+    },
+    "RelationshipStatus": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "xml": {
+            "name": "relationshipStatus"
+          },
+          "description": "The status of the relationship between the member and the administrator."
+        }
+      ]
+    },
+    "InvitedAt": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "xml": {
+            "name": "invitedAt"
+          },
+          "description": "The timestamp when the invitation was sent."
+        }
+      ]
+    },
+    "UpdatedAt": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "xml": {
+            "name": "updatedAt"
+          },
+          "description": "The last-updated timestamp of the member."
+        }
+      ]
+    },
+    "AdministratorId": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "xml": {
+            "name": "administratorId"
+          },
+          "description": "The administrator account ID."
+        }
+      ]
+    }
+  },
+  "required": [
+    "AccountId",
+    "MasterId",
+    "Email",
+    "RelationshipStatus",
+    "UpdatedAt"
+  ]
+}

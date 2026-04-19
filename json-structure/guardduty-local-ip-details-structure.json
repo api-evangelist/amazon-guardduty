@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-guardduty/refs/heads/main/json-structure/guardduty-local-ip-details-structure.json",
+  "name": "LocalIpDetails",
+  "description": "Contains information about the local IP address of the connection.",
+  "type": "object",
+  "properties": {
+    "IpAddressV4": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "xml": {
+            "name": "ipAddressV4"
+          },
+          "description": "The IPv4 local address of the connection."
+        }
+      ]
+    }
+  }
+}

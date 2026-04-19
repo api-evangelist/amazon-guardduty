@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-guardduty/refs/heads/main/json-schema/guardduty-kubernetes-details-schema.json",
+  "title": "KubernetesDetails",
+  "description": "Details about Kubernetes resources such as a Kubernetes user or workload resource involved in a Kubernetes finding.",
+  "type": "object",
+  "properties": {
+    "KubernetesUserDetails": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/KubernetesUserDetails"
+        },
+        {
+          "xml": {
+            "name": "kubernetesUserDetails"
+          },
+          "description": "Details about the Kubernetes user involved in a Kubernetes finding."
+        }
+      ]
+    },
+    "KubernetesWorkloadDetails": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/KubernetesWorkloadDetails"
+        },
+        {
+          "xml": {
+            "name": "kubernetesWorkloadDetails"
+          },
+          "description": "Details about the Kubernetes workload involved in a Kubernetes finding."
+        }
+      ]
+    }
+  }
+}

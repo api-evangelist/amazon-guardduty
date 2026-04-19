@@ -1,0 +1,62 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-guardduty/refs/heads/main/json-structure/guardduty-update-detector-request-structure.json",
+  "name": "UpdateDetectorRequest",
+  "description": "UpdateDetectorRequest schema from Amazon GuardDuty API",
+  "type": "object",
+  "properties": {
+    "Enable": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Boolean"
+        },
+        {
+          "xml": {
+            "name": "enable"
+          },
+          "description": "Specifies whether the detector is enabled or not enabled."
+        }
+      ]
+    },
+    "FindingPublishingFrequency": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/FindingPublishingFrequency"
+        },
+        {
+          "xml": {
+            "name": "findingPublishingFrequency"
+          },
+          "description": "An enum value that specifies how frequently findings are exported, such as to CloudWatch Events."
+        }
+      ]
+    },
+    "DataSources": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/DataSourceConfigurations"
+        },
+        {
+          "deprecated": true,
+          "xml": {
+            "name": "dataSources"
+          },
+          "description": "<p>Describes which data sources will be updated.</p> <p>There might be regional differences because some data sources might not be available in all the Amazon Web Services Regions where GuardDuty is presently supported. For more information, see <a href=\"https://docs.aws.amazon.com/guardduty/latest/ug/guardduty_regions.html\">Regions and endpoints</a>.</p>This parameter is deprecated, use Features instead"
+        }
+      ]
+    },
+    "Features": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/DetectorFeatureConfigurations"
+        },
+        {
+          "xml": {
+            "name": "features"
+          },
+          "description": "Provides the features that will be updated for the detector."
+        }
+      ]
+    }
+  }
+}

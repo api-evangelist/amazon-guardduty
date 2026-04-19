@@ -1,0 +1,91 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-guardduty/refs/heads/main/json-structure/guardduty-create-detector-request-structure.json",
+  "name": "CreateDetectorRequest",
+  "description": "CreateDetectorRequest schema from Amazon GuardDuty API",
+  "type": "object",
+  "properties": {
+    "Enable": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Boolean"
+        },
+        {
+          "xml": {
+            "name": "enable"
+          },
+          "description": "A Boolean value that specifies whether the detector is to be enabled."
+        }
+      ]
+    },
+    "ClientToken": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ClientToken"
+        },
+        {
+          "xml": {
+            "name": "clientToken"
+          },
+          "description": "The idempotency token for the create request."
+        }
+      ]
+    },
+    "FindingPublishingFrequency": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/FindingPublishingFrequency"
+        },
+        {
+          "xml": {
+            "name": "findingPublishingFrequency"
+          },
+          "description": "A value that specifies how frequently updated findings are exported."
+        }
+      ]
+    },
+    "DataSources": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/DataSourceConfigurations"
+        },
+        {
+          "deprecated": true,
+          "xml": {
+            "name": "dataSources"
+          },
+          "description": "<p>Describes which data sources will be enabled for the detector.</p> <p>There might be regional differences because some data sources might not be available in all the Amazon Web Services Regions where GuardDuty is presently supported. For more information, see <a href=\"https://docs.aws.amazon.com/guardduty/latest/ug/guardduty_regions.html\">Regions and endpoints</a>.</p>This parameter is deprecated, use Features instead"
+        }
+      ]
+    },
+    "Tags": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/TagMap"
+        },
+        {
+          "xml": {
+            "name": "tags"
+          },
+          "description": "The tags to be added to a new detector resource."
+        }
+      ]
+    },
+    "Features": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/DetectorFeatureConfigurations"
+        },
+        {
+          "xml": {
+            "name": "features"
+          },
+          "description": "A list of features that will be configured for the detector."
+        }
+      ]
+    }
+  },
+  "required": [
+    "Enable"
+  ]
+}

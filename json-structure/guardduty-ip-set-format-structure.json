@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-guardduty/refs/heads/main/json-structure/guardduty-ip-set-format-structure.json",
+  "name": "IpSetFormat",
+  "description": "IpSetFormat schema from Amazon GuardDuty API",
+  "type": "string",
+  "enum": [
+    "TXT",
+    "STIX",
+    "OTX_CSV",
+    "ALIEN_VAULT",
+    "PROOF_POINT",
+    "FIRE_EYE"
+  ]
+}

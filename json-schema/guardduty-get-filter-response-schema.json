@@ -1,0 +1,92 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-guardduty/refs/heads/main/json-schema/guardduty-get-filter-response-schema.json",
+  "title": "GetFilterResponse",
+  "description": "GetFilterResponse schema from Amazon GuardDuty API",
+  "type": "object",
+  "properties": {
+    "Name": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/FilterName"
+        },
+        {
+          "xml": {
+            "name": "name"
+          },
+          "description": "The name of the filter."
+        }
+      ]
+    },
+    "Description": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/FilterDescription"
+        },
+        {
+          "xml": {
+            "name": "description"
+          },
+          "description": "The description of the filter."
+        }
+      ]
+    },
+    "Action": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/FilterAction"
+        },
+        {
+          "xml": {
+            "name": "action"
+          },
+          "description": "Specifies the action that is to be applied to the findings that match the filter."
+        }
+      ]
+    },
+    "Rank": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/FilterRank"
+        },
+        {
+          "xml": {
+            "name": "rank"
+          },
+          "description": "Specifies the position of the filter in the list of current filters. Also specifies the order in which this filter is applied to the findings."
+        }
+      ]
+    },
+    "FindingCriteria": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/FindingCriteria"
+        },
+        {
+          "xml": {
+            "name": "findingCriteria"
+          },
+          "description": "Represents the criteria to be used in the filter for querying findings."
+        }
+      ]
+    },
+    "Tags": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/TagMap"
+        },
+        {
+          "xml": {
+            "name": "tags"
+          },
+          "description": "The tags of the filter resource."
+        }
+      ]
+    }
+  },
+  "required": [
+    "Name",
+    "Action",
+    "FindingCriteria"
+  ]
+}

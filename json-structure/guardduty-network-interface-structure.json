@@ -1,0 +1,139 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-guardduty/refs/heads/main/json-structure/guardduty-network-interface-structure.json",
+  "name": "NetworkInterface",
+  "description": "Contains information about the elastic network interface of the EC2 instance.",
+  "type": "object",
+  "properties": {
+    "Ipv6Addresses": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Ipv6Addresses"
+        },
+        {
+          "xml": {
+            "name": "ipv6Addresses"
+          },
+          "description": "A list of IPv6 addresses for the EC2 instance."
+        }
+      ]
+    },
+    "NetworkInterfaceId": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "xml": {
+            "name": "networkInterfaceId"
+          },
+          "description": "The ID of the network interface."
+        }
+      ]
+    },
+    "PrivateDnsName": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "xml": {
+            "name": "privateDnsName"
+          },
+          "description": "The private DNS name of the EC2 instance."
+        }
+      ]
+    },
+    "PrivateIpAddress": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "xml": {
+            "name": "privateIpAddress"
+          },
+          "description": "The private IP address of the EC2 instance."
+        }
+      ]
+    },
+    "PrivateIpAddresses": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/PrivateIpAddresses"
+        },
+        {
+          "xml": {
+            "name": "privateIpAddresses"
+          },
+          "description": "Other private IP address information of the EC2 instance."
+        }
+      ]
+    },
+    "PublicDnsName": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "xml": {
+            "name": "publicDnsName"
+          },
+          "description": "The public DNS name of the EC2 instance."
+        }
+      ]
+    },
+    "PublicIp": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "xml": {
+            "name": "publicIp"
+          },
+          "description": "The public IP address of the EC2 instance."
+        }
+      ]
+    },
+    "SecurityGroups": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/SecurityGroups"
+        },
+        {
+          "xml": {
+            "name": "securityGroups"
+          },
+          "description": "The security groups associated with the EC2 instance."
+        }
+      ]
+    },
+    "SubnetId": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "xml": {
+            "name": "subnetId"
+          },
+          "description": "The subnet ID of the EC2 instance."
+        }
+      ]
+    },
+    "VpcId": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "xml": {
+            "name": "vpcId"
+          },
+          "description": "The VPC ID of the EC2 instance."
+        }
+      ]
+    }
+  }
+}

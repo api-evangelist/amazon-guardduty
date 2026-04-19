@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-guardduty/refs/heads/main/json-structure/guardduty-get-remaining-free-trial-days-request-structure.json",
+  "name": "GetRemainingFreeTrialDaysRequest",
+  "description": "GetRemainingFreeTrialDaysRequest schema from Amazon GuardDuty API",
+  "type": "object",
+  "properties": {
+    "AccountIds": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/AccountIds"
+        },
+        {
+          "xml": {
+            "name": "accountIds"
+          },
+          "description": "A list of account identifiers of the GuardDuty member account."
+        }
+      ]
+    }
+  }
+}

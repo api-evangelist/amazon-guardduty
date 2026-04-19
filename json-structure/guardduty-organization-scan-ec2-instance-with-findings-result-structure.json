@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-guardduty/refs/heads/main/json-structure/guardduty-organization-scan-ec2-instance-with-findings-result-structure.json",
+  "name": "OrganizationScanEc2InstanceWithFindingsResult",
+  "description": "An object that contains information on the status of scanning EC2 instances with findings for an organization.",
+  "type": "object",
+  "properties": {
+    "EbsVolumes": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/OrganizationEbsVolumesResult"
+        },
+        {
+          "xml": {
+            "name": "ebsVolumes"
+          },
+          "description": "Describes the configuration for scanning EBS volumes for an organization."
+        }
+      ]
+    }
+  }
+}

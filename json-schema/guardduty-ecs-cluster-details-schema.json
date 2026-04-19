@@ -1,0 +1,113 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-guardduty/refs/heads/main/json-schema/guardduty-ecs-cluster-details-schema.json",
+  "title": "EcsClusterDetails",
+  "description": "Contains information about the details of the ECS Cluster.",
+  "type": "object",
+  "properties": {
+    "Name": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "xml": {
+            "name": "name"
+          },
+          "description": "The name of the ECS Cluster."
+        }
+      ]
+    },
+    "Arn": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "xml": {
+            "name": "arn"
+          },
+          "description": "The Amazon Resource Name (ARN) that identifies the cluster."
+        }
+      ]
+    },
+    "Status": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "xml": {
+            "name": "status"
+          },
+          "description": "The status of the ECS cluster."
+        }
+      ]
+    },
+    "ActiveServicesCount": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Integer"
+        },
+        {
+          "xml": {
+            "name": "activeServicesCount"
+          },
+          "description": "The number of services that are running on the cluster in an ACTIVE state."
+        }
+      ]
+    },
+    "RegisteredContainerInstancesCount": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Integer"
+        },
+        {
+          "xml": {
+            "name": "registeredContainerInstancesCount"
+          },
+          "description": "The number of container instances registered into the cluster."
+        }
+      ]
+    },
+    "RunningTasksCount": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Integer"
+        },
+        {
+          "xml": {
+            "name": "runningTasksCount"
+          },
+          "description": "The number of tasks in the cluster that are in the RUNNING state."
+        }
+      ]
+    },
+    "Tags": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Tags"
+        },
+        {
+          "xml": {
+            "name": "tags"
+          },
+          "description": "The tags of the ECS Cluster."
+        }
+      ]
+    },
+    "TaskDetails": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/EcsTaskDetails"
+        },
+        {
+          "xml": {
+            "name": "taskDetails"
+          },
+          "description": "Contains information about the details of the ECS Task."
+        }
+      ]
+    }
+  }
+}

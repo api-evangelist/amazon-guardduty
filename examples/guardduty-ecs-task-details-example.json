@@ -1,0 +1,8 @@
+{
+  "Arn": "arn:aws:guardduty:us-east-1:123456789012:detector/abc123",
+  "DefinitionArn": "arn:aws:guardduty:us-east-1:123456789012:detector/abc123",
+  "Version": "example-Version",
+  "TaskCreatedAt": "example-TaskCreatedA",
+  "StartedAt": "example-StartedAt",
+  "StartedBy": "example-StartedBy"
+}

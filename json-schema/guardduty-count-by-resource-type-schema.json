@@ -1,0 +1,10 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-guardduty/refs/heads/main/json-schema/guardduty-count-by-resource-type-schema.json",
+  "title": "CountByResourceType",
+  "description": "CountByResourceType schema from Amazon GuardDuty API",
+  "type": "object",
+  "additionalProperties": {
+    "$ref": "#/components/schemas/Long"
+  }
+}

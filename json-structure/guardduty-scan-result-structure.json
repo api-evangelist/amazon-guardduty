@@ -1,0 +1,11 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-guardduty/refs/heads/main/json-structure/guardduty-scan-result-structure.json",
+  "name": "ScanResult",
+  "description": "ScanResult schema from Amazon GuardDuty API",
+  "type": "string",
+  "enum": [
+    "CLEAN",
+    "INFECTED"
+  ]
+}

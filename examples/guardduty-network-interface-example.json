@@ -1,0 +1,8 @@
+{
+  "Ipv6Addresses": "example-Ipv6Addresse",
+  "NetworkInterfaceId": "abc123def456",
+  "PrivateDnsName": "MyThreatFilter",
+  "PrivateIpAddress": "example-PrivateIpAdd",
+  "PrivateIpAddresses": "example-PrivateIpAdd",
+  "PublicDnsName": "MyThreatFilter"
+}

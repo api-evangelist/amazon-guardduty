@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-guardduty/refs/heads/main/json-structure/guardduty-invite-members-response-structure.json",
+  "name": "InviteMembersResponse",
+  "description": "InviteMembersResponse schema from Amazon GuardDuty API",
+  "type": "object",
+  "properties": {
+    "UnprocessedAccounts": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/UnprocessedAccounts"
+        },
+        {
+          "xml": {
+            "name": "unprocessedAccounts"
+          },
+          "description": "A list of objects that contain the unprocessed account and a result string that explains why it was unprocessed."
+        }
+      ]
+    }
+  },
+  "required": [
+    "UnprocessedAccounts"
+  ]
+}

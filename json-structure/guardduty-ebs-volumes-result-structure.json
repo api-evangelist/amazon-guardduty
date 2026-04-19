@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-guardduty/refs/heads/main/json-structure/guardduty-ebs-volumes-result-structure.json",
+  "name": "EbsVolumesResult",
+  "description": "Describes the configuration of scanning EBS volumes as a data source.",
+  "type": "object",
+  "properties": {
+    "Status": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/DataSourceStatus"
+        },
+        {
+          "xml": {
+            "name": "status"
+          },
+          "description": "Describes whether scanning EBS volumes is enabled as a data source."
+        }
+      ]
+    },
+    "Reason": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "xml": {
+            "name": "reason"
+          },
+          "description": "Specifies the reason why scanning EBS volumes (Malware Protection) was not enabled as a data source."
+        }
+      ]
+    }
+  }
+}

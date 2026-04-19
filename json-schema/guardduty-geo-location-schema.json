@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-guardduty/refs/heads/main/json-schema/guardduty-geo-location-schema.json",
+  "title": "GeoLocation",
+  "description": "Contains information about the location of the remote IP address.",
+  "type": "object",
+  "properties": {
+    "Lat": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Double"
+        },
+        {
+          "xml": {
+            "name": "lat"
+          },
+          "description": "The latitude information of the remote IP address."
+        }
+      ]
+    },
+    "Lon": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Double"
+        },
+        {
+          "xml": {
+            "name": "lon"
+          },
+          "description": "The longitude information of the remote IP address."
+        }
+      ]
+    }
+  }
+}

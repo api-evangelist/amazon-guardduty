@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-guardduty/refs/heads/main/json-schema/guardduty-create-publishing-destination-response-schema.json",
+  "title": "CreatePublishingDestinationResponse",
+  "description": "CreatePublishingDestinationResponse schema from Amazon GuardDuty API",
+  "type": "object",
+  "properties": {
+    "DestinationId": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "xml": {
+            "name": "destinationId"
+          },
+          "description": "The ID of the publishing destination that is created."
+        }
+      ]
+    }
+  },
+  "required": [
+    "DestinationId"
+  ]
+}

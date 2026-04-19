@@ -1,0 +1,61 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-guardduty/refs/heads/main/json-schema/guardduty-scan-detections-schema.json",
+  "title": "ScanDetections",
+  "description": "Contains a complete view providing malware scan result details.",
+  "type": "object",
+  "properties": {
+    "ScannedItemCount": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ScannedItemCount"
+        },
+        {
+          "xml": {
+            "name": "scannedItemCount"
+          },
+          "description": "Total number of scanned files."
+        }
+      ]
+    },
+    "ThreatsDetectedItemCount": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ThreatsDetectedItemCount"
+        },
+        {
+          "xml": {
+            "name": "threatsDetectedItemCount"
+          },
+          "description": "Total number of infected files."
+        }
+      ]
+    },
+    "HighestSeverityThreatDetails": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/HighestSeverityThreatDetails"
+        },
+        {
+          "xml": {
+            "name": "highestSeverityThreatDetails"
+          },
+          "description": "Details of the highest severity threat detected during malware scan and number of infected files."
+        }
+      ]
+    },
+    "ThreatDetectedByName": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ThreatDetectedByName"
+        },
+        {
+          "xml": {
+            "name": "threatDetectedByName"
+          },
+          "description": "Contains details about identified threats organized by threat name."
+        }
+      ]
+    }
+  }
+}

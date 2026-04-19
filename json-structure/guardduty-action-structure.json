@@ -1,0 +1,100 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-guardduty/refs/heads/main/json-structure/guardduty-action-structure.json",
+  "name": "Action",
+  "description": "Contains information about actions.",
+  "type": "object",
+  "properties": {
+    "ActionType": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "xml": {
+            "name": "actionType"
+          },
+          "description": "The GuardDuty finding activity type."
+        }
+      ]
+    },
+    "AwsApiCallAction": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/AwsApiCallAction"
+        },
+        {
+          "xml": {
+            "name": "awsApiCallAction"
+          },
+          "description": "Information about the AWS_API_CALL action described in this finding."
+        }
+      ]
+    },
+    "DnsRequestAction": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/DnsRequestAction"
+        },
+        {
+          "xml": {
+            "name": "dnsRequestAction"
+          },
+          "description": "Information about the DNS_REQUEST action described in this finding."
+        }
+      ]
+    },
+    "NetworkConnectionAction": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/NetworkConnectionAction"
+        },
+        {
+          "xml": {
+            "name": "networkConnectionAction"
+          },
+          "description": "Information about the NETWORK_CONNECTION action described in this finding."
+        }
+      ]
+    },
+    "PortProbeAction": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/PortProbeAction"
+        },
+        {
+          "xml": {
+            "name": "portProbeAction"
+          },
+          "description": "Information about the PORT_PROBE action described in this finding."
+        }
+      ]
+    },
+    "KubernetesApiCallAction": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/KubernetesApiCallAction"
+        },
+        {
+          "xml": {
+            "name": "kubernetesApiCallAction"
+          },
+          "description": "Information about the Kubernetes API call action described in this finding."
+        }
+      ]
+    },
+    "RdsLoginAttemptAction": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/RdsLoginAttemptAction"
+        },
+        {
+          "xml": {
+            "name": "rdsLoginAttemptAction"
+          },
+          "description": "Information about <code>RDS_LOGIN_ATTEMPT</code> action described in this finding."
+        }
+      ]
+    }
+  }
+}

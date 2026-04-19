@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-guardduty/refs/heads/main/json-schema/guardduty-decline-invitations-request-schema.json",
+  "title": "DeclineInvitationsRequest",
+  "description": "DeclineInvitationsRequest schema from Amazon GuardDuty API",
+  "type": "object",
+  "properties": {
+    "AccountIds": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/AccountIds"
+        },
+        {
+          "xml": {
+            "name": "accountIds"
+          },
+          "description": "A list of account IDs of the Amazon Web Services accounts that sent invitations to the current member account that you want to decline invitations from."
+        }
+      ]
+    }
+  },
+  "required": [
+    "AccountIds"
+  ]
+}

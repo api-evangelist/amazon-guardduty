@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-guardduty/refs/heads/main/json-schema/guardduty-get-coverage-statistics-response-schema.json",
+  "title": "GetCoverageStatisticsResponse",
+  "description": "GetCoverageStatisticsResponse schema from Amazon GuardDuty API",
+  "type": "object",
+  "properties": {
+    "CoverageStatistics": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/CoverageStatistics"
+        },
+        {
+          "xml": {
+            "name": "coverageStatistics"
+          },
+          "description": "Represents the count aggregated by the <code>statusCode</code> and <code>resourceType</code>."
+        }
+      ]
+    }
+  }
+}

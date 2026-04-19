@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-guardduty/refs/heads/main/json-schema/guardduty-stop-monitoring-members-response-schema.json",
+  "title": "StopMonitoringMembersResponse",
+  "description": "StopMonitoringMembersResponse schema from Amazon GuardDuty API",
+  "type": "object",
+  "properties": {
+    "UnprocessedAccounts": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/UnprocessedAccounts"
+        },
+        {
+          "xml": {
+            "name": "unprocessedAccounts"
+          },
+          "description": "A list of objects that contain an accountId for each account that could not be processed, and a result string that indicates why the account was not processed. "
+        }
+      ]
+    }
+  },
+  "required": [
+    "UnprocessedAccounts"
+  ]
+}

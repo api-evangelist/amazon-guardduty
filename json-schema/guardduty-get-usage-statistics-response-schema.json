@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-guardduty/refs/heads/main/json-schema/guardduty-get-usage-statistics-response-schema.json",
+  "title": "GetUsageStatisticsResponse",
+  "description": "GetUsageStatisticsResponse schema from Amazon GuardDuty API",
+  "type": "object",
+  "properties": {
+    "UsageStatistics": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/UsageStatistics"
+        },
+        {
+          "xml": {
+            "name": "usageStatistics"
+          },
+          "description": "The usage statistics object. If a UsageStatisticType was provided, the objects representing other types will be null."
+        }
+      ]
+    },
+    "NextToken": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "xml": {
+            "name": "nextToken"
+          },
+          "description": "The pagination parameter to be used on the next list operation to retrieve more items."
+        }
+      ]
+    }
+  }
+}

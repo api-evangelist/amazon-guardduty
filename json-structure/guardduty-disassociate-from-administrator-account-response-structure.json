@@ -1,0 +1,8 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-guardduty/refs/heads/main/json-structure/guardduty-disassociate-from-administrator-account-response-structure.json",
+  "name": "DisassociateFromAdministratorAccountResponse",
+  "description": "DisassociateFromAdministratorAccountResponse schema from Amazon GuardDuty API",
+  "type": "object",
+  "properties": {}
+}

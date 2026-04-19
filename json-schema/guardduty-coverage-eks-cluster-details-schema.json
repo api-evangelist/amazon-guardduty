@@ -1,0 +1,61 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-guardduty/refs/heads/main/json-schema/guardduty-coverage-eks-cluster-details-schema.json",
+  "title": "CoverageEksClusterDetails",
+  "description": "Information about the EKS cluster that has a coverage status.",
+  "type": "object",
+  "properties": {
+    "ClusterName": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "xml": {
+            "name": "clusterName"
+          },
+          "description": "Name of the EKS cluster."
+        }
+      ]
+    },
+    "CoveredNodes": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Long"
+        },
+        {
+          "xml": {
+            "name": "coveredNodes"
+          },
+          "description": "Represents the nodes within the EKS cluster that have a <code>HEALTHY</code> coverage status."
+        }
+      ]
+    },
+    "CompatibleNodes": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Long"
+        },
+        {
+          "xml": {
+            "name": "compatibleNodes"
+          },
+          "description": "Represents all the nodes within the EKS cluster in your account."
+        }
+      ]
+    },
+    "AddonDetails": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/AddonDetails"
+        },
+        {
+          "xml": {
+            "name": "addonDetails"
+          },
+          "description": "Information about the installed EKS add-on."
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "Eq": "example-Eq",
+  "Neq": "example-Neq",
+  "Gt": "example-Gt",
+  "Gte": "example-Gte",
+  "Lt": "example-Lt",
+  "Lte": "example-Lte"
+}

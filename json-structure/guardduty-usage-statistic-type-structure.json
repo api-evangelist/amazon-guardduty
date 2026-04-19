@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-guardduty/refs/heads/main/json-structure/guardduty-usage-statistic-type-structure.json",
+  "name": "UsageStatisticType",
+  "description": "UsageStatisticType schema from Amazon GuardDuty API",
+  "type": "string",
+  "enum": [
+    "SUM_BY_ACCOUNT",
+    "SUM_BY_DATA_SOURCE",
+    "SUM_BY_RESOURCE",
+    "TOP_RESOURCES",
+    "SUM_BY_FEATURES"
+  ]
+}

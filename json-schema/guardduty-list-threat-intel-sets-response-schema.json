@@ -1,0 +1,38 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-guardduty/refs/heads/main/json-schema/guardduty-list-threat-intel-sets-response-schema.json",
+  "title": "ListThreatIntelSetsResponse",
+  "description": "ListThreatIntelSetsResponse schema from Amazon GuardDuty API",
+  "type": "object",
+  "properties": {
+    "ThreatIntelSetIds": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ThreatIntelSetIds"
+        },
+        {
+          "xml": {
+            "name": "threatIntelSetIds"
+          },
+          "description": "The IDs of the ThreatIntelSet resources."
+        }
+      ]
+    },
+    "NextToken": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "xml": {
+            "name": "nextToken"
+          },
+          "description": "The pagination parameter to be used on the next list operation to retrieve more items."
+        }
+      ]
+    }
+  },
+  "required": [
+    "ThreatIntelSetIds"
+  ]
+}

@@ -1,0 +1,61 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-guardduty/refs/heads/main/json-schema/guardduty-member-features-configuration-result-schema.json",
+  "title": "MemberFeaturesConfigurationResult",
+  "description": "Contains information about the features for the member account.",
+  "type": "object",
+  "properties": {
+    "Name": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/OrgFeature"
+        },
+        {
+          "xml": {
+            "name": "name"
+          },
+          "description": "Indicates the name of the feature that is enabled for the detector."
+        }
+      ]
+    },
+    "Status": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/FeatureStatus"
+        },
+        {
+          "xml": {
+            "name": "status"
+          },
+          "description": "Indicates the status of the feature that is enabled for the detector."
+        }
+      ]
+    },
+    "UpdatedAt": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Timestamp"
+        },
+        {
+          "xml": {
+            "name": "updatedAt"
+          },
+          "description": "The timestamp at which the feature object was updated."
+        }
+      ]
+    },
+    "AdditionalConfiguration": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/MemberAdditionalConfigurationResults"
+        },
+        {
+          "xml": {
+            "name": "additionalConfiguration"
+          },
+          "description": "Indicates the additional configuration of the feature that is configured for the member account."
+        }
+      ]
+    }
+  }
+}

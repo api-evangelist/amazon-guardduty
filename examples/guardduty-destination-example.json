@@ -1,0 +1,5 @@
+{
+  "DestinationId": "abc123def456",
+  "DestinationType": "example-DestinationT",
+  "Status": "ENABLED"
+}

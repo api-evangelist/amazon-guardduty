@@ -1,0 +1,63 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-guardduty/refs/heads/main/json-structure/guardduty-update-organization-configuration-request-structure.json",
+  "name": "UpdateOrganizationConfigurationRequest",
+  "description": "UpdateOrganizationConfigurationRequest schema from Amazon GuardDuty API",
+  "type": "object",
+  "properties": {
+    "AutoEnable": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Boolean"
+        },
+        {
+          "deprecated": true,
+          "xml": {
+            "name": "autoEnable"
+          },
+          "description": "<p>Indicates whether to automatically enable member accounts in the organization.</p> <p>Even though this is still supported, we recommend using <code>AutoEnableOrganizationMembers</code> to achieve the similar results.</p>This field is deprecated, use AutoEnableOrganizationMembers instead"
+        }
+      ]
+    },
+    "DataSources": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/OrganizationDataSourceConfigurations"
+        },
+        {
+          "deprecated": true,
+          "xml": {
+            "name": "dataSources"
+          },
+          "description": "Describes which data sources will be updated.This parameter is deprecated, use Features instead"
+        }
+      ]
+    },
+    "Features": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/OrganizationFeaturesConfigurations"
+        },
+        {
+          "xml": {
+            "name": "features"
+          },
+          "description": "A list of features that will be configured for the organization."
+        }
+      ]
+    },
+    "AutoEnableOrganizationMembers": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/AutoEnableMembers"
+        },
+        {
+          "xml": {
+            "name": "autoEnableOrganizationMembers"
+          },
+          "description": "<p>Indicates the auto-enablement configuration of GuardDuty for the member accounts in the organization. </p> <ul> <li> <p> <code>NEW</code>: Indicates that when a new account joins the organization, they will have GuardDuty enabled automatically. </p> </li> <li> <p> <code>ALL</code>: Indicates that all accounts in the Amazon Web Services Organization have GuardDuty enabled automatically. This includes <code>NEW</code> accounts that join the organization and accounts that may have been suspended or removed from the organization in GuardDuty.</p> </li> <li> <p> <code>NONE</code>: Indicates that GuardDuty will not be automatically enabled for any accounts in the organization. GuardDuty must be managed for each account individually by the administrator.</p> </li> </ul>"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,74 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-guardduty/refs/heads/main/json-schema/guardduty-remote-ip-details-schema.json",
+  "title": "RemoteIpDetails",
+  "description": "Contains information about the remote IP address of the connection.",
+  "type": "object",
+  "properties": {
+    "City": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/City"
+        },
+        {
+          "xml": {
+            "name": "city"
+          },
+          "description": "The city information of the remote IP address."
+        }
+      ]
+    },
+    "Country": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Country"
+        },
+        {
+          "xml": {
+            "name": "country"
+          },
+          "description": "The country code of the remote IP address."
+        }
+      ]
+    },
+    "GeoLocation": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/GeoLocation"
+        },
+        {
+          "xml": {
+            "name": "geoLocation"
+          },
+          "description": "The location information of the remote IP address."
+        }
+      ]
+    },
+    "IpAddressV4": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "xml": {
+            "name": "ipAddressV4"
+          },
+          "description": "The IPv4 remote address of the connection."
+        }
+      ]
+    },
+    "Organization": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Organization"
+        },
+        {
+          "xml": {
+            "name": "organization"
+          },
+          "description": "The ISP organization information of the remote IP address."
+        }
+      ]
+    }
+  }
+}

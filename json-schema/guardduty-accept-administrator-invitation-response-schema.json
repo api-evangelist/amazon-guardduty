@@ -1,0 +1,8 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-guardduty/refs/heads/main/json-schema/guardduty-accept-administrator-invitation-response-schema.json",
+  "title": "AcceptAdministratorInvitationResponse",
+  "description": "AcceptAdministratorInvitationResponse schema from Amazon GuardDuty API",
+  "type": "object",
+  "properties": {}
+}

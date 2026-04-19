@@ -1,0 +1,11 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-guardduty/refs/heads/main/json-structure/guardduty-coverage-statistics-type-structure.json",
+  "name": "CoverageStatisticsType",
+  "description": "CoverageStatisticsType schema from Amazon GuardDuty API",
+  "type": "string",
+  "enum": [
+    "COUNT_BY_RESOURCE_TYPE",
+    "COUNT_BY_COVERAGE_STATUS"
+  ]
+}

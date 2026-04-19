@@ -1,0 +1,8 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-guardduty/refs/heads/main/json-structure/guardduty-archive-findings-response-structure.json",
+  "name": "ArchiveFindingsResponse",
+  "description": "ArchiveFindingsResponse schema from Amazon GuardDuty API",
+  "type": "object",
+  "properties": {}
+}

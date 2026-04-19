@@ -1,0 +1,78 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-guardduty/refs/heads/main/json-schema/guardduty-get-usage-statistics-request-schema.json",
+  "title": "GetUsageStatisticsRequest",
+  "description": "GetUsageStatisticsRequest schema from Amazon GuardDuty API",
+  "type": "object",
+  "properties": {
+    "UsageStatisticType": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/UsageStatisticType"
+        },
+        {
+          "xml": {
+            "name": "usageStatisticsType"
+          },
+          "description": "The type of usage statistics to retrieve."
+        }
+      ]
+    },
+    "UsageCriteria": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/UsageCriteria"
+        },
+        {
+          "xml": {
+            "name": "usageCriteria"
+          },
+          "description": "Represents the criteria used for querying usage."
+        }
+      ]
+    },
+    "Unit": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "xml": {
+            "name": "unit"
+          },
+          "description": "The currency unit you would like to view your usage statistics in. Current valid values are USD."
+        }
+      ]
+    },
+    "MaxResults": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/MaxResults"
+        },
+        {
+          "xml": {
+            "name": "maxResults"
+          },
+          "description": "The maximum number of results to return in the response."
+        }
+      ]
+    },
+    "NextToken": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "xml": {
+            "name": "nextToken"
+          },
+          "description": "A token to use for paginating results that are returned in the response. Set the value of this parameter to null for the first request to a list action. For subsequent calls, use the NextToken value returned from the previous request to continue listing results after the first page."
+        }
+      ]
+    }
+  },
+  "required": [
+    "UsageStatisticType",
+    "UsageCriteria"
+  ]
+}

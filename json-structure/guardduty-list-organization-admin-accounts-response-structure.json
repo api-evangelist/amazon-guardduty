@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-guardduty/refs/heads/main/json-structure/guardduty-list-organization-admin-accounts-response-structure.json",
+  "name": "ListOrganizationAdminAccountsResponse",
+  "description": "ListOrganizationAdminAccountsResponse schema from Amazon GuardDuty API",
+  "type": "object",
+  "properties": {
+    "AdminAccounts": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/AdminAccounts"
+        },
+        {
+          "xml": {
+            "name": "adminAccounts"
+          },
+          "description": "A list of accounts configured as GuardDuty delegated administrators."
+        }
+      ]
+    },
+    "NextToken": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "xml": {
+            "name": "nextToken"
+          },
+          "description": "The pagination parameter to be used on the next list operation to retrieve more items."
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-guardduty/refs/heads/main/json-schema/guardduty-usage-account-result-schema.json",
+  "title": "UsageAccountResult",
+  "description": "Contains information on the total of usage based on account IDs.",
+  "type": "object",
+  "properties": {
+    "AccountId": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/AccountId"
+        },
+        {
+          "xml": {
+            "name": "accountId"
+          },
+          "description": "The Account ID that generated usage."
+        }
+      ]
+    },
+    "Total": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Total"
+        },
+        {
+          "xml": {
+            "name": "total"
+          },
+          "description": "Represents the total of usage for the Account ID."
+        }
+      ]
+    }
+  }
+}

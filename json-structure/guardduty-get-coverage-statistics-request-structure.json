@@ -1,0 +1,38 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-guardduty/refs/heads/main/json-structure/guardduty-get-coverage-statistics-request-structure.json",
+  "name": "GetCoverageStatisticsRequest",
+  "description": "GetCoverageStatisticsRequest schema from Amazon GuardDuty API",
+  "type": "object",
+  "properties": {
+    "FilterCriteria": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/CoverageFilterCriteria"
+        },
+        {
+          "xml": {
+            "name": "filterCriteria"
+          },
+          "description": "Represents the criteria used to filter the coverage statistics"
+        }
+      ]
+    },
+    "StatisticsType": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/CoverageStatisticsTypeList"
+        },
+        {
+          "xml": {
+            "name": "statisticsType"
+          },
+          "description": "Represents the statistics type used to aggregate the coverage details."
+        }
+      ]
+    }
+  },
+  "required": [
+    "StatisticsType"
+  ]
+}

@@ -1,0 +1,61 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-guardduty/refs/heads/main/json-schema/guardduty-update-filter-request-schema.json",
+  "title": "UpdateFilterRequest",
+  "description": "UpdateFilterRequest schema from Amazon GuardDuty API",
+  "type": "object",
+  "properties": {
+    "Description": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/FilterDescription"
+        },
+        {
+          "xml": {
+            "name": "description"
+          },
+          "description": "The description of the filter. Valid characters include alphanumeric characters, and special characters such as hyphen, period, colon, underscore, parentheses (<code>{ }</code>, <code>[ ]</code>, and <code>( )</code>), forward slash, horizontal tab, vertical tab, newline, form feed, return, and whitespace."
+        }
+      ]
+    },
+    "Action": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/FilterAction"
+        },
+        {
+          "xml": {
+            "name": "action"
+          },
+          "description": "Specifies the action that is to be applied to the findings that match the filter."
+        }
+      ]
+    },
+    "Rank": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/FilterRank"
+        },
+        {
+          "xml": {
+            "name": "rank"
+          },
+          "description": "Specifies the position of the filter in the list of current filters. Also specifies the order in which this filter is applied to the findings."
+        }
+      ]
+    },
+    "FindingCriteria": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/FindingCriteria"
+        },
+        {
+          "xml": {
+            "name": "findingCriteria"
+          },
+          "description": "Represents the criteria to be used in the filter for querying findings."
+        }
+      ]
+    }
+  }
+}

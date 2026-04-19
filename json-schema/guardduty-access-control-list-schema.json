@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-guardduty/refs/heads/main/json-schema/guardduty-access-control-list-schema.json",
+  "title": "AccessControlList",
+  "description": "Contains information on the current access control policies for the bucket.",
+  "type": "object",
+  "properties": {
+    "AllowsPublicReadAccess": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Boolean"
+        },
+        {
+          "xml": {
+            "name": "allowsPublicReadAccess"
+          },
+          "description": "A value that indicates whether public read access for the bucket is enabled through an Access Control List (ACL)."
+        }
+      ]
+    },
+    "AllowsPublicWriteAccess": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Boolean"
+        },
+        {
+          "xml": {
+            "name": "allowsPublicWriteAccess"
+          },
+          "description": "A value that indicates whether public write access for the bucket is enabled through an Access Control List (ACL)."
+        }
+      ]
+    }
+  }
+}

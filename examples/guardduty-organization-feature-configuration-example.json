@@ -1,0 +1,5 @@
+{
+  "Name": "MyThreatFilter",
+  "AutoEnable": "example-AutoEnable",
+  "AdditionalConfiguration": "example-AdditionalCo"
+}

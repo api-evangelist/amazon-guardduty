@@ -1,0 +1,10 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-guardduty/refs/heads/main/json-schema/guardduty-organization-additional-configurations-schema.json",
+  "title": "OrganizationAdditionalConfigurations",
+  "description": "OrganizationAdditionalConfigurations schema from Amazon GuardDuty API",
+  "type": "array",
+  "items": {
+    "$ref": "#/components/schemas/OrganizationAdditionalConfiguration"
+  }
+}

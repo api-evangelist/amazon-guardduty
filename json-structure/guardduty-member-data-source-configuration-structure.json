@@ -1,0 +1,52 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-guardduty/refs/heads/main/json-structure/guardduty-member-data-source-configuration-structure.json",
+  "name": "MemberDataSourceConfiguration",
+  "description": "Contains information on which data sources are enabled for a member account.",
+  "type": "object",
+  "properties": {
+    "AccountId": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/AccountId"
+        },
+        {
+          "xml": {
+            "name": "accountId"
+          },
+          "description": "The account ID for the member account."
+        }
+      ]
+    },
+    "DataSources": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/DataSourceConfigurationsResult"
+        },
+        {
+          "deprecated": true,
+          "xml": {
+            "name": "dataSources"
+          },
+          "description": "Contains information on the status of data sources for the account.This parameter is deprecated, use Features instead"
+        }
+      ]
+    },
+    "Features": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/MemberFeaturesConfigurationsResults"
+        },
+        {
+          "xml": {
+            "name": "features"
+          },
+          "description": "Contains information about the status of the features for the member account."
+        }
+      ]
+    }
+  },
+  "required": [
+    "AccountId"
+  ]
+}

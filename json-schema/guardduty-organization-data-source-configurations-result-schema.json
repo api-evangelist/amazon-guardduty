@@ -1,0 +1,51 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-guardduty/refs/heads/main/json-schema/guardduty-organization-data-source-configurations-result-schema.json",
+  "title": "OrganizationDataSourceConfigurationsResult",
+  "description": "An object that contains information on which data sources are automatically enabled for new members within the organization.",
+  "type": "object",
+  "properties": {
+    "S3Logs": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/OrganizationS3LogsConfigurationResult"
+        },
+        {
+          "xml": {
+            "name": "s3Logs"
+          },
+          "description": "Describes whether S3 data event logs are enabled as a data source."
+        }
+      ]
+    },
+    "Kubernetes": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/OrganizationKubernetesConfigurationResult"
+        },
+        {
+          "xml": {
+            "name": "kubernetes"
+          },
+          "description": "Describes the configuration of Kubernetes data sources."
+        }
+      ]
+    },
+    "MalwareProtection": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/OrganizationMalwareProtectionConfigurationResult"
+        },
+        {
+          "xml": {
+            "name": "malwareProtection"
+          },
+          "description": "Describes the configuration of Malware Protection data source for an organization."
+        }
+      ]
+    }
+  },
+  "required": [
+    "S3Logs"
+  ]
+}

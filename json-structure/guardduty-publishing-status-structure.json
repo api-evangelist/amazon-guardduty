@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-guardduty/refs/heads/main/json-structure/guardduty-publishing-status-structure.json",
+  "name": "PublishingStatus",
+  "description": "PublishingStatus schema from Amazon GuardDuty API",
+  "type": "string",
+  "enum": [
+    "PENDING_VERIFICATION",
+    "PUBLISHING",
+    "UNABLE_TO_PUBLISH_FIX_DESTINATION_PROPERTY",
+    "STOPPED"
+  ]
+}

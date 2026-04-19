@@ -1,0 +1,8 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-guardduty/refs/heads/main/json-schema/guardduty-disable-organization-admin-account-response-schema.json",
+  "title": "DisableOrganizationAdminAccountResponse",
+  "description": "DisableOrganizationAdminAccountResponse schema from Amazon GuardDuty API",
+  "type": "object",
+  "properties": {}
+}

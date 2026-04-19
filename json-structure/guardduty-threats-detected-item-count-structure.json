@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-guardduty/refs/heads/main/json-structure/guardduty-threats-detected-item-count-structure.json",
+  "name": "ThreatsDetectedItemCount",
+  "description": "Contains total number of infected files.",
+  "type": "object",
+  "properties": {
+    "Files": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Integer"
+        },
+        {
+          "xml": {
+            "name": "files"
+          },
+          "description": "Total number of infected files."
+        }
+      ]
+    }
+  }
+}

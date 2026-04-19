@@ -1,0 +1,8 @@
+{
+  "ResourceId": "abc123def456",
+  "DetectorId": "abc123def456",
+  "AccountId": "abc123def456",
+  "ResourceDetails": "example-ResourceDeta",
+  "CoverageStatus": "ENABLED",
+  "Issue": "example-Issue"
+}

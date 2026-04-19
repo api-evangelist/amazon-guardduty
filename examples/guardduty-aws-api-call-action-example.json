@@ -1,0 +1,8 @@
+{
+  "Api": "example-Api",
+  "CallerType": "example-CallerType",
+  "DomainDetails": "example-DomainDetail",
+  "ErrorCode": "example-ErrorCode",
+  "UserAgent": "example-UserAgent",
+  "RemoteIpDetails": "example-RemoteIpDeta"
+}

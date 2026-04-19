@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-guardduty/refs/heads/main/json-schema/guardduty-local-port-details-schema.json",
+  "title": "LocalPortDetails",
+  "description": "Contains information about the port for the local connection.",
+  "type": "object",
+  "properties": {
+    "Port": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Integer"
+        },
+        {
+          "xml": {
+            "name": "port"
+          },
+          "description": "The port number of the local connection."
+        }
+      ]
+    },
+    "PortName": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "xml": {
+            "name": "portName"
+          },
+          "description": "The port name of the local connection."
+        }
+      ]
+    }
+  }
+}

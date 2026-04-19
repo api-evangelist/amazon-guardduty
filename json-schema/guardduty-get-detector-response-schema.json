@@ -1,0 +1,118 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-guardduty/refs/heads/main/json-schema/guardduty-get-detector-response-schema.json",
+  "title": "GetDetectorResponse",
+  "description": "GetDetectorResponse schema from Amazon GuardDuty API",
+  "type": "object",
+  "properties": {
+    "CreatedAt": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "xml": {
+            "name": "createdAt"
+          },
+          "description": "The timestamp of when the detector was created."
+        }
+      ]
+    },
+    "FindingPublishingFrequency": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/FindingPublishingFrequency"
+        },
+        {
+          "xml": {
+            "name": "findingPublishingFrequency"
+          },
+          "description": "The publishing frequency of the finding."
+        }
+      ]
+    },
+    "ServiceRole": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "xml": {
+            "name": "serviceRole"
+          },
+          "description": "The GuardDuty service role."
+        }
+      ]
+    },
+    "Status": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/DetectorStatus"
+        },
+        {
+          "xml": {
+            "name": "status"
+          },
+          "description": "The detector status."
+        }
+      ]
+    },
+    "UpdatedAt": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "xml": {
+            "name": "updatedAt"
+          },
+          "description": "The last-updated timestamp for the detector."
+        }
+      ]
+    },
+    "DataSources": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/DataSourceConfigurationsResult"
+        },
+        {
+          "deprecated": true,
+          "xml": {
+            "name": "dataSources"
+          },
+          "description": "Describes which data sources are enabled for the detector.This parameter is deprecated, use Features instead"
+        }
+      ]
+    },
+    "Tags": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/TagMap"
+        },
+        {
+          "xml": {
+            "name": "tags"
+          },
+          "description": "The tags of the detector resource."
+        }
+      ]
+    },
+    "Features": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/DetectorFeatureConfigurationsResults"
+        },
+        {
+          "xml": {
+            "name": "features"
+          },
+          "description": "Describes the features that have been enabled for the detector."
+        }
+      ]
+    }
+  },
+  "required": [
+    "ServiceRole",
+    "Status"
+  ]
+}

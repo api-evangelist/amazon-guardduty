@@ -1,0 +1,7 @@
+{
+  "SumByAccount": "example-SumByAccount",
+  "SumByDataSource": "example-SumByDataSou",
+  "SumByResource": "example-SumByResourc",
+  "TopResources": "example-TopResources",
+  "SumByFeature": "example-SumByFeature"
+}

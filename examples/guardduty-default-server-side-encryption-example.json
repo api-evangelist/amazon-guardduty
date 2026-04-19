@@ -1,0 +1,4 @@
+{
+  "EncryptionType": "example-EncryptionTy",
+  "KmsMasterKeyArn": "arn:aws:guardduty:us-east-1:123456789012:detector/abc123"
+}

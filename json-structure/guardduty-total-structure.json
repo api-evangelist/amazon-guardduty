@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-guardduty/refs/heads/main/json-structure/guardduty-total-structure.json",
+  "name": "Total",
+  "description": "Contains the total usage with the corresponding currency unit for that value.",
+  "type": "object",
+  "properties": {
+    "Amount": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "xml": {
+            "name": "amount"
+          },
+          "description": "The total usage."
+        }
+      ]
+    },
+    "Unit": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "xml": {
+            "name": "unit"
+          },
+          "description": "The currency unit that the amount is given in."
+        }
+      ]
+    }
+  }
+}

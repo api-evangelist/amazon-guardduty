@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-guardduty/refs/heads/main/json-schema/guardduty-coverage-resource-details-schema.json",
+  "title": "CoverageResourceDetails",
+  "description": "Information about the resource for each individual EKS cluster.",
+  "type": "object",
+  "properties": {
+    "EksClusterDetails": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/CoverageEksClusterDetails"
+        },
+        {
+          "xml": {
+            "name": "eksClusterDetails"
+          },
+          "description": "EKS cluster details involved in the coverage statistics."
+        }
+      ]
+    },
+    "ResourceType": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ResourceType"
+        },
+        {
+          "xml": {
+            "name": "resourceType"
+          },
+          "description": "The type of Amazon Web Services resource."
+        }
+      ]
+    }
+  }
+}

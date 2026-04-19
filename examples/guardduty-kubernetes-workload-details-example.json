@@ -1,0 +1,8 @@
+{
+  "Name": "MyThreatFilter",
+  "Type": "example-Type",
+  "Uid": "abc123def456",
+  "Namespace": "MyThreatFilter",
+  "HostNetwork": "example-HostNetwork",
+  "Containers": "example-Containers"
+}

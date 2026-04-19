@@ -1,0 +1,74 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-guardduty/refs/heads/main/json-structure/guardduty-usage-statistics-structure.json",
+  "name": "UsageStatistics",
+  "description": "Contains the result of GuardDuty usage. If a UsageStatisticType is provided the result for other types will be null. ",
+  "type": "object",
+  "properties": {
+    "SumByAccount": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/UsageAccountResultList"
+        },
+        {
+          "xml": {
+            "name": "sumByAccount"
+          },
+          "description": "The usage statistic sum organized by account ID."
+        }
+      ]
+    },
+    "SumByDataSource": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/UsageDataSourceResultList"
+        },
+        {
+          "xml": {
+            "name": "sumByDataSource"
+          },
+          "description": "The usage statistic sum organized by on data source."
+        }
+      ]
+    },
+    "SumByResource": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/UsageResourceResultList"
+        },
+        {
+          "xml": {
+            "name": "sumByResource"
+          },
+          "description": "The usage statistic sum organized by resource."
+        }
+      ]
+    },
+    "TopResources": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/UsageResourceResultList"
+        },
+        {
+          "xml": {
+            "name": "topResources"
+          },
+          "description": "Lists the top 50 resources that have generated the most GuardDuty usage, in order from most to least expensive."
+        }
+      ]
+    },
+    "SumByFeature": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/UsageFeatureResultList"
+        },
+        {
+          "xml": {
+            "name": "sumByFeature"
+          },
+          "description": "The usage statistic sum organized by feature."
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-guardduty/refs/heads/main/json-schema/guardduty-destination-type-schema.json",
+  "title": "DestinationType",
+  "description": "DestinationType schema from Amazon GuardDuty API",
+  "type": "string",
+  "enum": [
+    "S3"
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-guardduty/refs/heads/main/json-schema/guardduty-get-administrator-account-response-schema.json",
+  "title": "GetAdministratorAccountResponse",
+  "description": "GetAdministratorAccountResponse schema from Amazon GuardDuty API",
+  "type": "object",
+  "properties": {
+    "Administrator": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Administrator"
+        },
+        {
+          "xml": {
+            "name": "administrator"
+          },
+          "description": "The administrator account details."
+        }
+      ]
+    }
+  },
+  "required": [
+    "Administrator"
+  ]
+}

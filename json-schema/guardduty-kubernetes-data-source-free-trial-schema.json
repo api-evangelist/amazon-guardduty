@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-guardduty/refs/heads/main/json-schema/guardduty-kubernetes-data-source-free-trial-schema.json",
+  "title": "KubernetesDataSourceFreeTrial",
+  "description": "Provides details about the Kubernetes resources when it is enabled as a data source.",
+  "type": "object",
+  "properties": {
+    "AuditLogs": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/DataSourceFreeTrial"
+        },
+        {
+          "xml": {
+            "name": "auditLogs"
+          },
+          "description": "Describes whether Kubernetes audit logs are enabled as a data source."
+        }
+      ]
+    }
+  }
+}

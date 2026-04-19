@@ -1,0 +1,10 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-guardduty/refs/heads/main/json-structure/guardduty-destination-type-structure.json",
+  "name": "DestinationType",
+  "description": "DestinationType schema from Amazon GuardDuty API",
+  "type": "string",
+  "enum": [
+    "S3"
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "Name": "MyThreatFilter",
+  "ExecutablePath": "example-ExecutablePa",
+  "ExecutableSha256": "example-ExecutableSh",
+  "NamespacePid": "abc123def456",
+  "Pwd": "example-Pwd",
+  "Pid": "abc123def456"
+}

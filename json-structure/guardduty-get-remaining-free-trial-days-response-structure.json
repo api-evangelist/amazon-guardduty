@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-guardduty/refs/heads/main/json-structure/guardduty-get-remaining-free-trial-days-response-structure.json",
+  "name": "GetRemainingFreeTrialDaysResponse",
+  "description": "GetRemainingFreeTrialDaysResponse schema from Amazon GuardDuty API",
+  "type": "object",
+  "properties": {
+    "Accounts": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/AccountFreeTrialInfos"
+        },
+        {
+          "xml": {
+            "name": "accounts"
+          },
+          "description": "The member accounts which were included in a request and were processed successfully."
+        }
+      ]
+    },
+    "UnprocessedAccounts": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/UnprocessedAccounts"
+        },
+        {
+          "xml": {
+            "name": "unprocessedAccounts"
+          },
+          "description": "The member account that was included in a request but for which the request could not be processed."
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "CreatedAt": "example-CreatedAt",
+  "FindingPublishingFrequency": "example-FindingPubli",
+  "ServiceRole": "example-ServiceRole",
+  "Status": "ENABLED",
+  "UpdatedAt": "example-UpdatedAt",
+  "DataSources": "example-DataSources"
+}

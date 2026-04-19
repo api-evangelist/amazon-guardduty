@@ -1,0 +1,38 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-guardduty/refs/heads/main/json-schema/guardduty-scan-condition-pair-schema.json",
+  "title": "ScanConditionPair",
+  "description": "Represents key, value pair to be matched against given resource property.",
+  "type": "object",
+  "properties": {
+    "Key": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/TagKey"
+        },
+        {
+          "xml": {
+            "name": "key"
+          },
+          "description": "Represents <i>key</i> <b/> in the map condition."
+        }
+      ]
+    },
+    "Value": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/TagValue"
+        },
+        {
+          "xml": {
+            "name": "value"
+          },
+          "description": "Represents optional <i>value</i> <b/> in the map condition. If not specified, only <i>key</i> <b/> will be matched."
+        }
+      ]
+    }
+  },
+  "required": [
+    "Key"
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-guardduty/refs/heads/main/json-structure/guardduty-update-ip-set-request-structure.json",
+  "name": "UpdateIPSetRequest",
+  "description": "UpdateIPSetRequest schema from Amazon GuardDuty API",
+  "type": "object",
+  "properties": {
+    "Name": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Name"
+        },
+        {
+          "xml": {
+            "name": "name"
+          },
+          "description": "The unique ID that specifies the IPSet that you want to update."
+        }
+      ]
+    },
+    "Location": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Location"
+        },
+        {
+          "xml": {
+            "name": "location"
+          },
+          "description": "The updated URI of the file that contains the IPSet. "
+        }
+      ]
+    },
+    "Activate": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Boolean"
+        },
+        {
+          "xml": {
+            "name": "activate"
+          },
+          "description": "The updated Boolean value that specifies whether the IPSet is active or not."
+        }
+      ]
+    }
+  }
+}

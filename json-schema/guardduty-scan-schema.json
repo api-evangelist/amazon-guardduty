@@ -1,0 +1,191 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-guardduty/refs/heads/main/json-schema/guardduty-scan-schema.json",
+  "title": "Scan",
+  "description": "Contains information about a malware scan.",
+  "type": "object",
+  "properties": {
+    "DetectorId": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/DetectorId"
+        },
+        {
+          "xml": {
+            "name": "detectorId"
+          },
+          "description": "The unique ID of the detector that the request is associated with."
+        }
+      ]
+    },
+    "AdminDetectorId": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/DetectorId"
+        },
+        {
+          "xml": {
+            "name": "adminDetectorId"
+          },
+          "description": "The unique detector ID of the administrator account that the request is associated with. Note that this value will be the same as the one used for <code>DetectorId</code> if the account is an administrator."
+        }
+      ]
+    },
+    "ScanId": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/NonEmptyString"
+        },
+        {
+          "xml": {
+            "name": "scanId"
+          },
+          "description": "The unique scan ID associated with a scan entry."
+        }
+      ]
+    },
+    "ScanStatus": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ScanStatus"
+        },
+        {
+          "xml": {
+            "name": "scanStatus"
+          },
+          "description": "An enum value representing possible scan statuses."
+        }
+      ]
+    },
+    "FailureReason": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/NonEmptyString"
+        },
+        {
+          "xml": {
+            "name": "failureReason"
+          },
+          "description": "Represents the reason for FAILED scan status."
+        }
+      ]
+    },
+    "ScanStartTime": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Timestamp"
+        },
+        {
+          "xml": {
+            "name": "scanStartTime"
+          },
+          "description": "The timestamp of when the scan was triggered."
+        }
+      ]
+    },
+    "ScanEndTime": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Timestamp"
+        },
+        {
+          "xml": {
+            "name": "scanEndTime"
+          },
+          "description": "The timestamp of when the scan was finished."
+        }
+      ]
+    },
+    "TriggerDetails": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/TriggerDetails"
+        },
+        {
+          "xml": {
+            "name": "triggerDetails"
+          },
+          "description": "Specifies the reason why the scan was initiated."
+        }
+      ]
+    },
+    "ResourceDetails": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ResourceDetails"
+        },
+        {
+          "xml": {
+            "name": "resourceDetails"
+          },
+          "description": "Represents the resources that were scanned in the scan entry."
+        }
+      ]
+    },
+    "ScanResultDetails": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ScanResultDetails"
+        },
+        {
+          "xml": {
+            "name": "scanResultDetails"
+          },
+          "description": "Represents the result of the scan."
+        }
+      ]
+    },
+    "AccountId": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/AccountId"
+        },
+        {
+          "xml": {
+            "name": "accountId"
+          },
+          "description": "The ID for the account that belongs to the scan."
+        }
+      ]
+    },
+    "TotalBytes": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/PositiveLong"
+        },
+        {
+          "xml": {
+            "name": "totalBytes"
+          },
+          "description": "Represents total bytes that were scanned."
+        }
+      ]
+    },
+    "FileCount": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/PositiveLong"
+        },
+        {
+          "xml": {
+            "name": "fileCount"
+          },
+          "description": "Represents the number of files that were scanned."
+        }
+      ]
+    },
+    "AttachedVolumes": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/VolumeDetails"
+        },
+        {
+          "xml": {
+            "name": "attachedVolumes"
+          },
+          "description": "List of volumes that were attached to the original instance to be scanned."
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-guardduty/refs/heads/main/json-schema/guardduty-dns-request-action-schema.json",
+  "title": "DnsRequestAction",
+  "description": "Contains information about the DNS_REQUEST action described in this finding.",
+  "type": "object",
+  "properties": {
+    "Domain": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "xml": {
+            "name": "domain"
+          },
+          "description": "The domain information for the API request."
+        }
+      ]
+    },
+    "Protocol": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "xml": {
+            "name": "protocol"
+          },
+          "description": "The network connection protocol observed in the activity that prompted GuardDuty to generate the finding."
+        }
+      ]
+    },
+    "Blocked": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Boolean"
+        },
+        {
+          "xml": {
+            "name": "blocked"
+          },
+          "description": "Indicates whether the targeted port is blocked."
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-guardduty/refs/heads/main/json-schema/guardduty-criterion-key-schema.json",
+  "title": "CriterionKey",
+  "description": "CriterionKey schema from Amazon GuardDuty API",
+  "type": "string",
+  "enum": [
+    "EC2_INSTANCE_ARN",
+    "SCAN_ID",
+    "ACCOUNT_ID",
+    "GUARDDUTY_FINDING_ID",
+    "SCAN_START_TIME",
+    "SCAN_STATUS"
+  ]
+}

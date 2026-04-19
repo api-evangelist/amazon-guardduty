@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-guardduty/refs/heads/main/json-schema/guardduty-member-additional-configuration-schema.json",
+  "title": "MemberAdditionalConfiguration",
+  "description": "Information about the additional configuration for the member account.",
+  "type": "object",
+  "properties": {
+    "Name": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/OrgFeatureAdditionalConfiguration"
+        },
+        {
+          "xml": {
+            "name": "name"
+          },
+          "description": "Name of the additional configuration."
+        }
+      ]
+    },
+    "Status": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/FeatureStatus"
+        },
+        {
+          "xml": {
+            "name": "status"
+          },
+          "description": "Status of the additional configuration."
+        }
+      ]
+    }
+  }
+}

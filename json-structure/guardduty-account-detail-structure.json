@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-guardduty/refs/heads/main/json-structure/guardduty-account-detail-structure.json",
+  "name": "AccountDetail",
+  "description": "Contains information about the account.",
+  "type": "object",
+  "properties": {
+    "AccountId": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/AccountId"
+        },
+        {
+          "xml": {
+            "name": "accountId"
+          },
+          "description": "The member account ID."
+        }
+      ]
+    },
+    "Email": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Email"
+        },
+        {
+          "xml": {
+            "name": "email"
+          },
+          "description": "The email address of the member account."
+        }
+      ]
+    }
+  },
+  "required": [
+    "AccountId",
+    "Email"
+  ]
+}

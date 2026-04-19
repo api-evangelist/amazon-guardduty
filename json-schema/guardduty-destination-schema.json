@@ -1,0 +1,53 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-guardduty/refs/heads/main/json-schema/guardduty-destination-schema.json",
+  "title": "Destination",
+  "description": "Contains information about the publishing destination, including the ID, type, and status.",
+  "type": "object",
+  "properties": {
+    "DestinationId": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "xml": {
+            "name": "destinationId"
+          },
+          "description": "The unique ID of the publishing destination."
+        }
+      ]
+    },
+    "DestinationType": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/DestinationType"
+        },
+        {
+          "xml": {
+            "name": "destinationType"
+          },
+          "description": "The type of resource used for the publishing destination. Currently, only Amazon S3 buckets are supported."
+        }
+      ]
+    },
+    "Status": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/PublishingStatus"
+        },
+        {
+          "xml": {
+            "name": "status"
+          },
+          "description": "The status of the publishing destination."
+        }
+      ]
+    }
+  },
+  "required": [
+    "DestinationId",
+    "DestinationType",
+    "Status"
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "DbInstanceIdentifier": "abc123def456",
+  "Engine": "example-Engine",
+  "EngineVersion": "example-EngineVersio",
+  "DbClusterIdentifier": "abc123def456",
+  "DbInstanceArn": "arn:aws:guardduty:us-east-1:123456789012:detector/abc123",
+  "Tags": "example-Tags"
+}

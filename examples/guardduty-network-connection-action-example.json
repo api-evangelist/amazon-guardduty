@@ -1,0 +1,8 @@
+{
+  "Blocked": "example-Blocked",
+  "ConnectionDirection": "example-ConnectionDi",
+  "LocalPortDetails": "example-LocalPortDet",
+  "Protocol": "example-Protocol",
+  "LocalIpDetails": "example-LocalIpDetai",
+  "RemoteIpDetails": "example-RemoteIpDeta"
+}

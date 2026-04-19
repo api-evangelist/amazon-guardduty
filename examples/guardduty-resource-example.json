@@ -1,0 +1,8 @@
+{
+  "AccessKeyDetails": "example-AccessKeyDet",
+  "S3BucketDetails": "example-S3BucketDeta",
+  "InstanceDetails": "example-InstanceDeta",
+  "EksClusterDetails": "example-EksClusterDe",
+  "KubernetesDetails": "example-KubernetesDe",
+  "ResourceType": "example-ResourceType"
+}

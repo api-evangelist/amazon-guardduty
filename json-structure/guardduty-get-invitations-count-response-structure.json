@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-guardduty/refs/heads/main/json-structure/guardduty-get-invitations-count-response-structure.json",
+  "name": "GetInvitationsCountResponse",
+  "description": "GetInvitationsCountResponse schema from Amazon GuardDuty API",
+  "type": "object",
+  "properties": {
+    "InvitationsCount": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Integer"
+        },
+        {
+          "xml": {
+            "name": "invitationsCount"
+          },
+          "description": "The number of received invitations."
+        }
+      ]
+    }
+  }
+}

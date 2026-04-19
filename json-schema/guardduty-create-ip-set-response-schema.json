@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-guardduty/refs/heads/main/json-schema/guardduty-create-ip-set-response-schema.json",
+  "title": "CreateIPSetResponse",
+  "description": "CreateIPSetResponse schema from Amazon GuardDuty API",
+  "type": "object",
+  "properties": {
+    "IpSetId": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "xml": {
+            "name": "ipSetId"
+          },
+          "description": "The ID of the IPSet resource."
+        }
+      ]
+    }
+  },
+  "required": [
+    "IpSetId"
+  ]
+}

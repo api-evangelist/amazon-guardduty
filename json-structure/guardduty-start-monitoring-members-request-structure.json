@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-guardduty/refs/heads/main/json-structure/guardduty-start-monitoring-members-request-structure.json",
+  "name": "StartMonitoringMembersRequest",
+  "description": "StartMonitoringMembersRequest schema from Amazon GuardDuty API",
+  "type": "object",
+  "properties": {
+    "AccountIds": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/AccountIds"
+        },
+        {
+          "xml": {
+            "name": "accountIds"
+          },
+          "description": "A list of account IDs of the GuardDuty member accounts to start monitoring."
+        }
+      ]
+    }
+  },
+  "required": [
+    "AccountIds"
+  ]
+}

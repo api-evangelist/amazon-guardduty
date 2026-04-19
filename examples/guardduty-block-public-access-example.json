@@ -1,0 +1,6 @@
+{
+  "IgnorePublicAcls": "example-IgnorePublic",
+  "RestrictPublicBuckets": "example-RestrictPubl",
+  "BlockPublicAcls": "example-BlockPublicA",
+  "BlockPublicPolicy": "example-BlockPublicP"
+}

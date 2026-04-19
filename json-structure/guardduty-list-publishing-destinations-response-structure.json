@@ -1,0 +1,38 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-guardduty/refs/heads/main/json-structure/guardduty-list-publishing-destinations-response-structure.json",
+  "name": "ListPublishingDestinationsResponse",
+  "description": "ListPublishingDestinationsResponse schema from Amazon GuardDuty API",
+  "type": "object",
+  "properties": {
+    "Destinations": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Destinations"
+        },
+        {
+          "xml": {
+            "name": "destinations"
+          },
+          "description": "A <code>Destinations</code> object that includes information about each publishing destination returned."
+        }
+      ]
+    },
+    "NextToken": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "xml": {
+            "name": "nextToken"
+          },
+          "description": "A token to use for paginating results that are returned in the response. Set the value of this parameter to null for the first request to a list action. For subsequent calls, use the <code>NextToken</code> value returned from the previous request to continue listing results after the first page."
+        }
+      ]
+    }
+  },
+  "required": [
+    "Destinations"
+  ]
+}

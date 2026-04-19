@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-guardduty/refs/heads/main/json-schema/guardduty-public-access-schema.json",
+  "title": "PublicAccess",
+  "description": "Describes the public access policies that apply to the S3 bucket.",
+  "type": "object",
+  "properties": {
+    "PermissionConfiguration": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/PermissionConfiguration"
+        },
+        {
+          "xml": {
+            "name": "permissionConfiguration"
+          },
+          "description": "Contains information about how permissions are configured for the S3 bucket."
+        }
+      ]
+    },
+    "EffectivePermission": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "xml": {
+            "name": "effectivePermission"
+          },
+          "description": "Describes the effective permission on this bucket after factoring all attached policies."
+        }
+      ]
+    }
+  }
+}

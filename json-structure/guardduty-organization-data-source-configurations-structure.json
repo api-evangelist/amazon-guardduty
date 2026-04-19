@@ -1,0 +1,48 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-guardduty/refs/heads/main/json-structure/guardduty-organization-data-source-configurations-structure.json",
+  "name": "OrganizationDataSourceConfigurations",
+  "description": "An object that contains information on which data sources will be configured to be automatically enabled for new members within the organization.",
+  "type": "object",
+  "properties": {
+    "S3Logs": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/OrganizationS3LogsConfiguration"
+        },
+        {
+          "xml": {
+            "name": "s3Logs"
+          },
+          "description": "Describes whether S3 data event logs are enabled for new members of the organization."
+        }
+      ]
+    },
+    "Kubernetes": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/OrganizationKubernetesConfiguration"
+        },
+        {
+          "xml": {
+            "name": "kubernetes"
+          },
+          "description": "Describes the configuration of Kubernetes data sources for new members of the organization."
+        }
+      ]
+    },
+    "MalwareProtection": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/OrganizationMalwareProtectionConfiguration"
+        },
+        {
+          "xml": {
+            "name": "malwareProtection"
+          },
+          "description": "Describes the configuration of Malware Protection for new members of the organization."
+        }
+      ]
+    }
+  }
+}

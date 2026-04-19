@@ -1,0 +1,7 @@
+{
+  "User": "example-User",
+  "Application": "example-Application",
+  "Database": "example-Database",
+  "Ssl": "example-Ssl",
+  "AuthMethod": "example-AuthMethod"
+}

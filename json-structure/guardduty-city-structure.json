@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-guardduty/refs/heads/main/json-structure/guardduty-city-structure.json",
+  "name": "City",
+  "description": "Contains information about the city associated with the IP address.",
+  "type": "object",
+  "properties": {
+    "CityName": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "xml": {
+            "name": "cityName"
+          },
+          "description": "The city name of the remote IP address."
+        }
+      ]
+    }
+  }
+}

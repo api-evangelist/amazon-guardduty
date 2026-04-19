@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-guardduty/refs/heads/main/json-structure/guardduty-admin-account-structure.json",
+  "name": "AdminAccount",
+  "description": "The account within the organization specified as the GuardDuty delegated administrator.",
+  "type": "object",
+  "properties": {
+    "AdminAccountId": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "xml": {
+            "name": "adminAccountId"
+          },
+          "description": "The Amazon Web Services account ID for the account."
+        }
+      ]
+    },
+    "AdminStatus": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/AdminStatus"
+        },
+        {
+          "xml": {
+            "name": "adminStatus"
+          },
+          "description": "Indicates whether the account is enabled as the delegated administrator."
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "ActionType": "example-ActionType",
+  "AwsApiCallAction": "example-AwsApiCallAc",
+  "DnsRequestAction": "example-DnsRequestAc",
+  "NetworkConnectionAction": "example-NetworkConne",
+  "PortProbeAction": "example-PortProbeAct",
+  "KubernetesApiCallAction": "example-KubernetesAp"
+}

@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-guardduty/refs/heads/main/json-schema/guardduty-archive-findings-request-schema.json",
+  "title": "ArchiveFindingsRequest",
+  "description": "ArchiveFindingsRequest schema from Amazon GuardDuty API",
+  "type": "object",
+  "properties": {
+    "FindingIds": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/FindingIds"
+        },
+        {
+          "xml": {
+            "name": "findingIds"
+          },
+          "description": "The IDs of the findings that you want to archive."
+        }
+      ]
+    }
+  },
+  "required": [
+    "FindingIds"
+  ]
+}

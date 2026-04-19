@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-guardduty/refs/heads/main/json-structure/guardduty-security-context-structure.json",
+  "name": "SecurityContext",
+  "description": "Container security context.",
+  "type": "object",
+  "properties": {
+    "Privileged": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Boolean"
+        },
+        {
+          "xml": {
+            "name": "privileged"
+          },
+          "description": "Whether the container is privileged."
+        }
+      ]
+    }
+  }
+}

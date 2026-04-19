@@ -1,0 +1,100 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-guardduty/refs/heads/main/json-schema/guardduty-coverage-resource-schema.json",
+  "title": "CoverageResource",
+  "description": "Information about the resource of the GuardDuty account.",
+  "type": "object",
+  "properties": {
+    "ResourceId": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "xml": {
+            "name": "resourceId"
+          },
+          "description": "The unique ID of the resource."
+        }
+      ]
+    },
+    "DetectorId": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/DetectorId"
+        },
+        {
+          "xml": {
+            "name": "detectorId"
+          },
+          "description": "The unique ID of the GuardDuty detector associated with the resource."
+        }
+      ]
+    },
+    "AccountId": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/AccountId"
+        },
+        {
+          "xml": {
+            "name": "accountId"
+          },
+          "description": "The unique ID of the Amazon Web Services account."
+        }
+      ]
+    },
+    "ResourceDetails": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/CoverageResourceDetails"
+        },
+        {
+          "xml": {
+            "name": "resourceDetails"
+          },
+          "description": "Information about the resource for which the coverage statistics are retrieved."
+        }
+      ]
+    },
+    "CoverageStatus": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/CoverageStatus"
+        },
+        {
+          "xml": {
+            "name": "coverageStatus"
+          },
+          "description": "Represents the status of the EKS cluster coverage."
+        }
+      ]
+    },
+    "Issue": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "xml": {
+            "name": "issue"
+          },
+          "description": "Represents the reason why a coverage status was <code>UNHEALTHY</code> for the EKS cluster."
+        }
+      ]
+    },
+    "UpdatedAt": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Timestamp"
+        },
+        {
+          "xml": {
+            "name": "updatedAt"
+          },
+          "description": "The timestamp at which the coverage details for the resource were last updated. This is in UTC format."
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "UsageStatisticType": "example-UsageStatist",
+  "UsageCriteria": "example-UsageCriteri",
+  "Unit": "example-Unit",
+  "MaxResults": "example-MaxResults",
+  "NextToken": "example-NextToken"
+}

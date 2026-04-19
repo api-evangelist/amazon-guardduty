@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-guardduty/refs/heads/main/json-structure/guardduty-scan-resource-criteria-structure.json",
+  "name": "ScanResourceCriteria",
+  "description": "Contains information about criteria used to filter resources before triggering malware scan.",
+  "type": "object",
+  "properties": {
+    "Include": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ScanCriterion"
+        },
+        {
+          "xml": {
+            "name": "include"
+          },
+          "description": "Represents condition that when matched will allow a malware scan for a certain resource."
+        }
+      ]
+    },
+    "Exclude": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ScanCriterion"
+        },
+        {
+          "xml": {
+            "name": "exclude"
+          },
+          "description": "Represents condition that when matched will prevent a malware scan for a certain resource."
+        }
+      ]
+    }
+  }
+}

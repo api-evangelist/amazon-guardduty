@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-guardduty/refs/heads/main/json-structure/guardduty-organization-kubernetes-configuration-result-structure.json",
+  "name": "OrganizationKubernetesConfigurationResult",
+  "description": "The current configuration of all Kubernetes data sources for the organization.",
+  "type": "object",
+  "properties": {
+    "AuditLogs": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/OrganizationKubernetesAuditLogsConfigurationResult"
+        },
+        {
+          "xml": {
+            "name": "auditLogs"
+          },
+          "description": "The current configuration of Kubernetes audit logs as a data source for the organization."
+        }
+      ]
+    }
+  },
+  "required": [
+    "AuditLogs"
+  ]
+}

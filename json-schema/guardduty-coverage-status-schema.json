@@ -1,0 +1,11 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-guardduty/refs/heads/main/json-schema/guardduty-coverage-status-schema.json",
+  "title": "CoverageStatus",
+  "description": "CoverageStatus schema from Amazon GuardDuty API",
+  "type": "string",
+  "enum": [
+    "HEALTHY",
+    "UNHEALTHY"
+  ]
+}

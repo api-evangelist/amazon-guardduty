@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-guardduty/refs/heads/main/json-structure/guardduty-bucket-policy-structure.json",
+  "name": "BucketPolicy",
+  "description": "Contains information on the current bucket policies for the S3 bucket.",
+  "type": "object",
+  "properties": {
+    "AllowsPublicReadAccess": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Boolean"
+        },
+        {
+          "xml": {
+            "name": "allowsPublicReadAccess"
+          },
+          "description": "A value that indicates whether public read access for the bucket is enabled through a bucket policy."
+        }
+      ]
+    },
+    "AllowsPublicWriteAccess": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Boolean"
+        },
+        {
+          "xml": {
+            "name": "allowsPublicWriteAccess"
+          },
+          "description": "A value that indicates whether public write access for the bucket is enabled through a bucket policy."
+        }
+      ]
+    }
+  }
+}

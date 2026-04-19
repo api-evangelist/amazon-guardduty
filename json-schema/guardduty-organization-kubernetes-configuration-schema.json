@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-guardduty/refs/heads/main/json-schema/guardduty-organization-kubernetes-configuration-schema.json",
+  "title": "OrganizationKubernetesConfiguration",
+  "description": "Organization-wide Kubernetes data sources configurations.",
+  "type": "object",
+  "properties": {
+    "AuditLogs": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/OrganizationKubernetesAuditLogsConfiguration"
+        },
+        {
+          "xml": {
+            "name": "auditLogs"
+          },
+          "description": "Whether Kubernetes audit logs data source should be auto-enabled for new members joining the organization."
+        }
+      ]
+    }
+  },
+  "required": [
+    "AuditLogs"
+  ]
+}

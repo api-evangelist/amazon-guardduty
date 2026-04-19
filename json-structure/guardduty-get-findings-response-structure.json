@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-guardduty/refs/heads/main/json-structure/guardduty-get-findings-response-structure.json",
+  "name": "GetFindingsResponse",
+  "description": "GetFindingsResponse schema from Amazon GuardDuty API",
+  "type": "object",
+  "properties": {
+    "Findings": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Findings"
+        },
+        {
+          "xml": {
+            "name": "findings"
+          },
+          "description": "A list of findings."
+        }
+      ]
+    }
+  },
+  "required": [
+    "Findings"
+  ]
+}

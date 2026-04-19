@@ -1,0 +1,8 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-guardduty/refs/heads/main/json-schema/guardduty-get-threat-intel-set-request-schema.json",
+  "title": "GetThreatIntelSetRequest",
+  "description": "GetThreatIntelSetRequest schema from Amazon GuardDuty API",
+  "type": "object",
+  "properties": {}
+}

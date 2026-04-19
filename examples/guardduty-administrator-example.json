@@ -1,0 +1,6 @@
+{
+  "AccountId": "abc123def456",
+  "InvitationId": "abc123def456",
+  "RelationshipStatus": "ENABLED",
+  "InvitedAt": "example-InvitedAt"
+}

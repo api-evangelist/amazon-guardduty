@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-guardduty/refs/heads/main/json-structure/guardduty-volume-structure.json",
+  "name": "Volume",
+  "description": "Volume used by the Kubernetes workload.",
+  "type": "object",
+  "properties": {
+    "Name": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "xml": {
+            "name": "name"
+          },
+          "description": "Volume name."
+        }
+      ]
+    },
+    "HostPath": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/HostPath"
+        },
+        {
+          "xml": {
+            "name": "hostPath"
+          },
+          "description": "Represents a pre-existing file or directory on the host machine that the volume maps to."
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-guardduty/refs/heads/main/json-structure/guardduty-threat-detected-by-name-structure.json",
+  "name": "ThreatDetectedByName",
+  "description": "Contains details about identified threats organized by threat name.",
+  "type": "object",
+  "properties": {
+    "ItemCount": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Integer"
+        },
+        {
+          "xml": {
+            "name": "itemCount"
+          },
+          "description": "Total number of infected files identified."
+        }
+      ]
+    },
+    "UniqueThreatNameCount": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Integer"
+        },
+        {
+          "xml": {
+            "name": "uniqueThreatNameCount"
+          },
+          "description": "Total number of unique threats by name identified, as part of the malware scan."
+        }
+      ]
+    },
+    "Shortened": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Boolean"
+        },
+        {
+          "xml": {
+            "name": "shortened"
+          },
+          "description": "Flag to determine if the finding contains every single infected file-path and/or every threat."
+        }
+      ]
+    },
+    "ThreatNames": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ScanThreatNames"
+        },
+        {
+          "xml": {
+            "name": "threatNames"
+          },
+          "description": "List of identified threats with details, organized by threat name."
+        }
+      ]
+    }
+  }
+}

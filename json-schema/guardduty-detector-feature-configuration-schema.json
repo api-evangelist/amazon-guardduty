@@ -1,0 +1,48 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-guardduty/refs/heads/main/json-schema/guardduty-detector-feature-configuration-schema.json",
+  "title": "DetectorFeatureConfiguration",
+  "description": "Contains information about a GuardDuty feature.",
+  "type": "object",
+  "properties": {
+    "Name": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/DetectorFeature"
+        },
+        {
+          "xml": {
+            "name": "name"
+          },
+          "description": "The name of the feature."
+        }
+      ]
+    },
+    "Status": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/FeatureStatus"
+        },
+        {
+          "xml": {
+            "name": "status"
+          },
+          "description": "The status of the feature."
+        }
+      ]
+    },
+    "AdditionalConfiguration": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/DetectorAdditionalConfigurations"
+        },
+        {
+          "xml": {
+            "name": "additionalConfiguration"
+          },
+          "description": "Additional configuration for a resource."
+        }
+      ]
+    }
+  }
+}

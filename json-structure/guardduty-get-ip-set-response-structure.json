@@ -1,0 +1,80 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-guardduty/refs/heads/main/json-structure/guardduty-get-ip-set-response-structure.json",
+  "name": "GetIPSetResponse",
+  "description": "GetIPSetResponse schema from Amazon GuardDuty API",
+  "type": "object",
+  "properties": {
+    "Name": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Name"
+        },
+        {
+          "xml": {
+            "name": "name"
+          },
+          "description": "The user-friendly name for the IPSet."
+        }
+      ]
+    },
+    "Format": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/IpSetFormat"
+        },
+        {
+          "xml": {
+            "name": "format"
+          },
+          "description": "The format of the file that contains the IPSet."
+        }
+      ]
+    },
+    "Location": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Location"
+        },
+        {
+          "xml": {
+            "name": "location"
+          },
+          "description": "The URI of the file that contains the IPSet."
+        }
+      ]
+    },
+    "Status": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/IpSetStatus"
+        },
+        {
+          "xml": {
+            "name": "status"
+          },
+          "description": "The status of IPSet file that was uploaded."
+        }
+      ]
+    },
+    "Tags": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/TagMap"
+        },
+        {
+          "xml": {
+            "name": "tags"
+          },
+          "description": "The tags of the IPSet resource."
+        }
+      ]
+    }
+  },
+  "required": [
+    "Name",
+    "Format",
+    "Location",
+    "Status"
+  ]
+}

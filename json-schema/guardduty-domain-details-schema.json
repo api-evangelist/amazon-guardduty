@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-guardduty/refs/heads/main/json-schema/guardduty-domain-details-schema.json",
+  "title": "DomainDetails",
+  "description": "Contains information about the domain.",
+  "type": "object",
+  "properties": {
+    "Domain": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "xml": {
+            "name": "domain"
+          },
+          "description": "The domain information for the Amazon Web Services API call."
+        }
+      ]
+    }
+  }
+}

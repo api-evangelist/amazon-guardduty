@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-guardduty/refs/heads/main/json-structure/guardduty-free-trial-feature-configuration-result-structure.json",
+  "name": "FreeTrialFeatureConfigurationResult",
+  "description": "Contains information about the free trial period for a feature.",
+  "type": "object",
+  "properties": {
+    "Name": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/FreeTrialFeatureResult"
+        },
+        {
+          "xml": {
+            "name": "name"
+          },
+          "description": "The name of the feature for which the free trial is configured."
+        }
+      ]
+    },
+    "FreeTrialDaysRemaining": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Integer"
+        },
+        {
+          "xml": {
+            "name": "freeTrialDaysRemaining"
+          },
+          "description": "The number of the remaining free trial days for the feature."
+        }
+      ]
+    }
+  }
+}

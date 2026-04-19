@@ -1,0 +1,8 @@
+{
+  "ModifyingProcess": "example-ModifyingPro",
+  "ModifiedAt": "example-ModifiedAt",
+  "ScriptPath": "example-ScriptPath",
+  "LibraryPath": "example-LibraryPath",
+  "LdPreloadValue": "example-LdPreloadVal",
+  "SocketPath": "example-SocketPath"
+}

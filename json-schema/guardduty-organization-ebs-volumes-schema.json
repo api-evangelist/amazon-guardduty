@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-guardduty/refs/heads/main/json-schema/guardduty-organization-ebs-volumes-schema.json",
+  "title": "OrganizationEbsVolumes",
+  "description": "Organization-wide EBS volumes scan configuration.",
+  "type": "object",
+  "properties": {
+    "AutoEnable": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Boolean"
+        },
+        {
+          "xml": {
+            "name": "autoEnable"
+          },
+          "description": "Whether scanning EBS volumes should be auto-enabled for new members joining the organization."
+        }
+      ]
+    }
+  }
+}

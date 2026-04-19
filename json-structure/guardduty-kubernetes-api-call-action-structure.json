@@ -1,0 +1,99 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-guardduty/refs/heads/main/json-structure/guardduty-kubernetes-api-call-action-structure.json",
+  "name": "KubernetesApiCallAction",
+  "description": "Information about the Kubernetes API call action described in this finding.",
+  "type": "object",
+  "properties": {
+    "RequestUri": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "xml": {
+            "name": "requestUri"
+          },
+          "description": "The Kubernetes API request URI."
+        }
+      ]
+    },
+    "Verb": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "xml": {
+            "name": "verb"
+          },
+          "description": "The Kubernetes API request HTTP verb."
+        }
+      ]
+    },
+    "SourceIps": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/SourceIps"
+        },
+        {
+          "xml": {
+            "name": "sourceIps"
+          },
+          "description": "The IP of the Kubernetes API caller and the IPs of any proxies or load balancers between the caller and the API endpoint."
+        }
+      ]
+    },
+    "UserAgent": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "xml": {
+            "name": "userAgent"
+          },
+          "description": "The user agent of the caller of the Kubernetes API."
+        }
+      ]
+    },
+    "RemoteIpDetails": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/RemoteIpDetails"
+        },
+        {
+          "xml": {
+            "name": "remoteIpDetails"
+          }
+        }
+      ]
+    },
+    "StatusCode": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Integer"
+        },
+        {
+          "xml": {
+            "name": "statusCode"
+          },
+          "description": "The resulting HTTP response code of the Kubernetes API call action."
+        }
+      ]
+    },
+    "Parameters": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "xml": {
+            "name": "parameters"
+          },
+          "description": "Parameters related to the Kubernetes API call action."
+        }
+      ]
+    }
+  }
+}

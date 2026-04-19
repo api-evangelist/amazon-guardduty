@@ -1,0 +1,87 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-guardduty/refs/heads/main/json-structure/guardduty-rds-db-instance-details-structure.json",
+  "name": "RdsDbInstanceDetails",
+  "description": "Contains information about the resource type <code>RDSDBInstance</code> involved in a GuardDuty finding.",
+  "type": "object",
+  "properties": {
+    "DbInstanceIdentifier": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "xml": {
+            "name": "dbInstanceIdentifier"
+          },
+          "description": "The identifier associated to the database instance that was involved in the finding."
+        }
+      ]
+    },
+    "Engine": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "xml": {
+            "name": "engine"
+          },
+          "description": "The database engine of the database instance involved in the finding."
+        }
+      ]
+    },
+    "EngineVersion": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "xml": {
+            "name": "engineVersion"
+          },
+          "description": "The version of the database engine that was involved in the finding."
+        }
+      ]
+    },
+    "DbClusterIdentifier": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "xml": {
+            "name": "dbClusterIdentifier"
+          },
+          "description": "The identifier of the database cluster that contains the database instance ID involved in the finding."
+        }
+      ]
+    },
+    "DbInstanceArn": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "xml": {
+            "name": "dbInstanceArn"
+          },
+          "description": "The Amazon Resource Name (ARN) that identifies the database instance involved in the finding."
+        }
+      ]
+    },
+    "Tags": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Tags"
+        },
+        {
+          "xml": {
+            "name": "tags"
+          },
+          "description": "Instance tag key-value pairs associated with the database instance ID."
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "ClusterName": "MyThreatFilter",
+  "CoveredNodes": "example-CoveredNodes",
+  "CompatibleNodes": "example-CompatibleNo",
+  "AddonDetails": "example-AddonDetails"
+}

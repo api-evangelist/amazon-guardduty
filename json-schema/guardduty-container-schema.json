@@ -1,0 +1,100 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-guardduty/refs/heads/main/json-schema/guardduty-container-schema.json",
+  "title": "Container",
+  "description": "Details of a container.",
+  "type": "object",
+  "properties": {
+    "ContainerRuntime": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "xml": {
+            "name": "containerRuntime"
+          },
+          "description": "The container runtime (such as, Docker or containerd) used to run the container."
+        }
+      ]
+    },
+    "Id": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "xml": {
+            "name": "id"
+          },
+          "description": "Container ID."
+        }
+      ]
+    },
+    "Name": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "xml": {
+            "name": "name"
+          },
+          "description": "Container name."
+        }
+      ]
+    },
+    "Image": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "xml": {
+            "name": "image"
+          },
+          "description": "Container image."
+        }
+      ]
+    },
+    "ImagePrefix": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "xml": {
+            "name": "imagePrefix"
+          },
+          "description": "Part of the image name before the last slash. For example, imagePrefix for public.ecr.aws/amazonlinux/amazonlinux:latest would be public.ecr.aws/amazonlinux. If the image name is relative and does not have a slash, this field is empty."
+        }
+      ]
+    },
+    "VolumeMounts": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/VolumeMounts"
+        },
+        {
+          "xml": {
+            "name": "volumeMounts"
+          },
+          "description": "Container volume mounts."
+        }
+      ]
+    },
+    "SecurityContext": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/SecurityContext"
+        },
+        {
+          "xml": {
+            "name": "securityContext"
+          },
+          "description": "Container security context."
+        }
+      ]
+    }
+  }
+}

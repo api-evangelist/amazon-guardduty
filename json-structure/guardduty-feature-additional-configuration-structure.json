@@ -1,0 +1,10 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-guardduty/refs/heads/main/json-structure/guardduty-feature-additional-configuration-structure.json",
+  "name": "FeatureAdditionalConfiguration",
+  "description": "FeatureAdditionalConfiguration schema from Amazon GuardDuty API",
+  "type": "string",
+  "enum": [
+    "EKS_ADDON_MANAGEMENT"
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-guardduty/refs/heads/main/json-schema/guardduty-s3-logs-configuration-result-schema.json",
+  "title": "S3LogsConfigurationResult",
+  "description": "Describes whether S3 data event logs will be enabled as a data source.",
+  "type": "object",
+  "properties": {
+    "Status": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/DataSourceStatus"
+        },
+        {
+          "xml": {
+            "name": "status"
+          },
+          "description": "A value that describes whether S3 data event logs are automatically enabled for new members of the organization."
+        }
+      ]
+    }
+  },
+  "required": [
+    "Status"
+  ]
+}

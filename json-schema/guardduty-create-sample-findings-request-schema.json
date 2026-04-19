@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-guardduty/refs/heads/main/json-schema/guardduty-create-sample-findings-request-schema.json",
+  "title": "CreateSampleFindingsRequest",
+  "description": "CreateSampleFindingsRequest schema from Amazon GuardDuty API",
+  "type": "object",
+  "properties": {
+    "FindingTypes": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/FindingTypes"
+        },
+        {
+          "xml": {
+            "name": "findingTypes"
+          },
+          "description": "The types of sample findings to generate."
+        }
+      ]
+    }
+  }
+}

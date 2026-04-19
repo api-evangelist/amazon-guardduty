@@ -1,0 +1,269 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-guardduty/refs/heads/main/json-structure/guardduty-runtime-context-structure.json",
+  "name": "RuntimeContext",
+  "description": "Additional information about the suspicious activity.",
+  "type": "object",
+  "properties": {
+    "ModifyingProcess": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ProcessDetails"
+        },
+        {
+          "xml": {
+            "name": "modifyingProcess"
+          },
+          "description": "Information about the process that modified the current process. This is available for multiple finding types."
+        }
+      ]
+    },
+    "ModifiedAt": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Timestamp"
+        },
+        {
+          "xml": {
+            "name": "modifiedAt"
+          },
+          "description": "The timestamp at which the process modified the current process. The timestamp is in UTC date string format."
+        }
+      ]
+    },
+    "ScriptPath": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "xml": {
+            "name": "scriptPath"
+          },
+          "description": "The path to the script that was executed."
+        }
+      ]
+    },
+    "LibraryPath": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "xml": {
+            "name": "libraryPath"
+          },
+          "description": "The path to the new library that was loaded."
+        }
+      ]
+    },
+    "LdPreloadValue": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "xml": {
+            "name": "ldPreloadValue"
+          },
+          "description": "The value of the LD_PRELOAD environment variable."
+        }
+      ]
+    },
+    "SocketPath": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "xml": {
+            "name": "socketPath"
+          },
+          "description": "The path to the docket socket that was accessed."
+        }
+      ]
+    },
+    "RuncBinaryPath": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "xml": {
+            "name": "runcBinaryPath"
+          },
+          "description": "The path to the leveraged <code>runc</code> implementation."
+        }
+      ]
+    },
+    "ReleaseAgentPath": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "xml": {
+            "name": "releaseAgentPath"
+          },
+          "description": "The path in the container that modified the release agent file."
+        }
+      ]
+    },
+    "MountSource": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "xml": {
+            "name": "mountSource"
+          },
+          "description": "The path on the host that is mounted by the container."
+        }
+      ]
+    },
+    "MountTarget": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "xml": {
+            "name": "mountTarget"
+          },
+          "description": "The path in the container that is mapped to the host directory."
+        }
+      ]
+    },
+    "FileSystemType": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "xml": {
+            "name": "fileSystemType"
+          },
+          "description": "Represents the type of mounted fileSystem."
+        }
+      ]
+    },
+    "Flags": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/FlagsList"
+        },
+        {
+          "xml": {
+            "name": "flags"
+          },
+          "description": "Represents options that control the behavior of a runtime operation or action. For example, a filesystem mount operation may contain a read-only flag."
+        }
+      ]
+    },
+    "ModuleName": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "xml": {
+            "name": "moduleName"
+          },
+          "description": "The name of the module loaded into the kernel."
+        }
+      ]
+    },
+    "ModuleFilePath": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "xml": {
+            "name": "moduleFilePath"
+          },
+          "description": "The path to the module loaded into the kernel."
+        }
+      ]
+    },
+    "ModuleSha256": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "xml": {
+            "name": "moduleSha256"
+          },
+          "description": "The <code>SHA256</code> hash of the module."
+        }
+      ]
+    },
+    "ShellHistoryFilePath": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "xml": {
+            "name": "shellHistoryFilePath"
+          },
+          "description": "The path to the modified shell history file."
+        }
+      ]
+    },
+    "TargetProcess": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ProcessDetails"
+        },
+        {
+          "xml": {
+            "name": "targetProcess"
+          },
+          "description": "Information about the process that had its memory overwritten by the current process."
+        }
+      ]
+    },
+    "AddressFamily": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "xml": {
+            "name": "addressFamily"
+          },
+          "description": "Represents the communication protocol associated with the address. For example, the address family <code>AF_INET</code> is used for IP version of 4 protocol."
+        }
+      ]
+    },
+    "IanaProtocolNumber": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Integer"
+        },
+        {
+          "xml": {
+            "name": "ianaProtocolNumber"
+          },
+          "description": "Specifies a particular protocol within the address family. Usually there is a single protocol in address families. For example, the address family <code>AF_INET</code> only has the IP protocol."
+        }
+      ]
+    },
+    "MemoryRegions": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/MemoryRegionsList"
+        },
+        {
+          "xml": {
+            "name": "memoryRegions"
+          },
+          "description": "Specifies the Region of a process's address space such as stack and heap."
+        }
+      ]
+    }
+  }
+}

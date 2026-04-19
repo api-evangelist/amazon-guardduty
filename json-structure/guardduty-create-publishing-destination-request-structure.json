@@ -1,0 +1,52 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-guardduty/refs/heads/main/json-structure/guardduty-create-publishing-destination-request-structure.json",
+  "name": "CreatePublishingDestinationRequest",
+  "description": "CreatePublishingDestinationRequest schema from Amazon GuardDuty API",
+  "type": "object",
+  "properties": {
+    "DestinationType": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/DestinationType"
+        },
+        {
+          "xml": {
+            "name": "destinationType"
+          },
+          "description": "The type of resource for the publishing destination. Currently only Amazon S3 buckets are supported."
+        }
+      ]
+    },
+    "DestinationProperties": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/DestinationProperties"
+        },
+        {
+          "xml": {
+            "name": "destinationProperties"
+          },
+          "description": "The properties of the publishing destination, including the ARNs for the destination and the KMS key used for encryption."
+        }
+      ]
+    },
+    "ClientToken": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ClientToken"
+        },
+        {
+          "xml": {
+            "name": "clientToken"
+          },
+          "description": "The idempotency token for the request."
+        }
+      ]
+    }
+  },
+  "required": [
+    "DestinationType",
+    "DestinationProperties"
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-guardduty/refs/heads/main/json-structure/guardduty-list-coverage-response-structure.json",
+  "name": "ListCoverageResponse",
+  "description": "ListCoverageResponse schema from Amazon GuardDuty API",
+  "type": "object",
+  "properties": {
+    "Resources": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/CoverageResources"
+        },
+        {
+          "xml": {
+            "name": "resources"
+          },
+          "description": "A list of resources and their attributes providing cluster details."
+        }
+      ]
+    },
+    "NextToken": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "xml": {
+            "name": "nextToken"
+          },
+          "description": "The pagination parameter to be used on the next list operation to retrieve more items."
+        }
+      ]
+    }
+  },
+  "required": [
+    "Resources"
+  ]
+}

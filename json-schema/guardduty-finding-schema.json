@@ -1,0 +1,214 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-guardduty/refs/heads/main/json-schema/guardduty-finding-schema.json",
+  "title": "Finding",
+  "description": "Contains information about the finding, which is generated when abnormal or suspicious activity is detected.",
+  "type": "object",
+  "properties": {
+    "AccountId": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "xml": {
+            "name": "accountId"
+          },
+          "description": "The ID of the account in which the finding was generated."
+        }
+      ]
+    },
+    "Arn": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "xml": {
+            "name": "arn"
+          },
+          "description": "The ARN of the finding."
+        }
+      ]
+    },
+    "Confidence": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Double"
+        },
+        {
+          "xml": {
+            "name": "confidence"
+          },
+          "description": "The confidence score for the finding."
+        }
+      ]
+    },
+    "CreatedAt": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "xml": {
+            "name": "createdAt"
+          },
+          "description": "The time and date when the finding was created."
+        }
+      ]
+    },
+    "Description": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "xml": {
+            "name": "description"
+          },
+          "description": "The description of the finding."
+        }
+      ]
+    },
+    "Id": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "xml": {
+            "name": "id"
+          },
+          "description": "The ID of the finding."
+        }
+      ]
+    },
+    "Partition": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "xml": {
+            "name": "partition"
+          },
+          "description": "The partition associated with the finding."
+        }
+      ]
+    },
+    "Region": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "xml": {
+            "name": "region"
+          },
+          "description": "The Region where the finding was generated."
+        }
+      ]
+    },
+    "Resource": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Resource"
+        },
+        {
+          "xml": {
+            "name": "resource"
+          }
+        }
+      ]
+    },
+    "SchemaVersion": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "xml": {
+            "name": "schemaVersion"
+          },
+          "description": "The version of the schema used for the finding."
+        }
+      ]
+    },
+    "Service": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Service"
+        },
+        {
+          "xml": {
+            "name": "service"
+          }
+        }
+      ]
+    },
+    "Severity": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Double"
+        },
+        {
+          "xml": {
+            "name": "severity"
+          },
+          "description": "The severity of the finding."
+        }
+      ]
+    },
+    "Title": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "xml": {
+            "name": "title"
+          },
+          "description": "The title of the finding."
+        }
+      ]
+    },
+    "Type": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/FindingType"
+        },
+        {
+          "xml": {
+            "name": "type"
+          },
+          "description": "The type of finding."
+        }
+      ]
+    },
+    "UpdatedAt": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "xml": {
+            "name": "updatedAt"
+          },
+          "description": "The time and date when the finding was last updated."
+        }
+      ]
+    }
+  },
+  "required": [
+    "AccountId",
+    "Arn",
+    "CreatedAt",
+    "Id",
+    "Region",
+    "Resource",
+    "SchemaVersion",
+    "Severity",
+    "Type",
+    "UpdatedAt"
+  ]
+}

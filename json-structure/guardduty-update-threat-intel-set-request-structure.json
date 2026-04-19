@@ -1,0 +1,48 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-guardduty/refs/heads/main/json-structure/guardduty-update-threat-intel-set-request-structure.json",
+  "name": "UpdateThreatIntelSetRequest",
+  "description": "UpdateThreatIntelSetRequest schema from Amazon GuardDuty API",
+  "type": "object",
+  "properties": {
+    "Name": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Name"
+        },
+        {
+          "xml": {
+            "name": "name"
+          },
+          "description": "The unique ID that specifies the ThreatIntelSet that you want to update."
+        }
+      ]
+    },
+    "Location": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Location"
+        },
+        {
+          "xml": {
+            "name": "location"
+          },
+          "description": "The updated URI of the file that contains the ThreateIntelSet."
+        }
+      ]
+    },
+    "Activate": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Boolean"
+        },
+        {
+          "xml": {
+            "name": "activate"
+          },
+          "description": "The updated Boolean value that specifies whether the ThreateIntelSet is active or not."
+        }
+      ]
+    }
+  }
+}

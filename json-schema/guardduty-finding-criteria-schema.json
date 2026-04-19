@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-guardduty/refs/heads/main/json-schema/guardduty-finding-criteria-schema.json",
+  "title": "FindingCriteria",
+  "description": "Contains information about the criteria used for querying findings.",
+  "type": "object",
+  "properties": {
+    "Criterion": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Criterion"
+        },
+        {
+          "xml": {
+            "name": "criterion"
+          },
+          "description": "Represents a map of finding properties that match specified conditions and values when querying findings."
+        }
+      ]
+    }
+  }
+}

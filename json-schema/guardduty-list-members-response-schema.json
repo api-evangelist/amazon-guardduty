@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-guardduty/refs/heads/main/json-schema/guardduty-list-members-response-schema.json",
+  "title": "ListMembersResponse",
+  "description": "ListMembersResponse schema from Amazon GuardDuty API",
+  "type": "object",
+  "properties": {
+    "Members": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Members"
+        },
+        {
+          "xml": {
+            "name": "members"
+          },
+          "description": "A list of members."
+        }
+      ]
+    },
+    "NextToken": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "xml": {
+            "name": "nextToken"
+          },
+          "description": "The pagination parameter to be used on the next list operation to retrieve more items."
+        }
+      ]
+    }
+  }
+}

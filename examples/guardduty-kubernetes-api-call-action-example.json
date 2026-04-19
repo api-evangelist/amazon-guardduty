@@ -1,0 +1,8 @@
+{
+  "RequestUri": "example-RequestUri",
+  "Verb": "example-Verb",
+  "SourceIps": "example-SourceIps",
+  "UserAgent": "example-UserAgent",
+  "RemoteIpDetails": "example-RemoteIpDeta",
+  "StatusCode": "ENABLED"
+}

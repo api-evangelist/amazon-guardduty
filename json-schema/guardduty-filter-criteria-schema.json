@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-guardduty/refs/heads/main/json-schema/guardduty-filter-criteria-schema.json",
+  "title": "FilterCriteria",
+  "description": "Represents the criteria to be used in the filter for describing scan entries.",
+  "type": "object",
+  "properties": {
+    "FilterCriterion": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/FilterCriterionList"
+        },
+        {
+          "xml": {
+            "name": "filterCriterion"
+          },
+          "description": "Represents a condition that when matched will be added to the response of the operation."
+        }
+      ]
+    }
+  }
+}

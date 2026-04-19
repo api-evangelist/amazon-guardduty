@@ -1,0 +1,8 @@
+{
+  "VolumeArn": "arn:aws:guardduty:us-east-1:123456789012:detector/abc123",
+  "VolumeType": "example-VolumeType",
+  "DeviceName": "MyThreatFilter",
+  "VolumeSizeInGB": "example-VolumeSizeIn",
+  "EncryptionType": "example-EncryptionTy",
+  "SnapshotArn": "arn:aws:guardduty:us-east-1:123456789012:detector/abc123"
+}

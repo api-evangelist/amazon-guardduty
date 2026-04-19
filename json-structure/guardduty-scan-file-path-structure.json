@@ -1,0 +1,61 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-guardduty/refs/heads/main/json-structure/guardduty-scan-file-path-structure.json",
+  "name": "ScanFilePath",
+  "description": "Contains details of infected file including name, file path and hash.",
+  "type": "object",
+  "properties": {
+    "FilePath": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "xml": {
+            "name": "filePath"
+          },
+          "description": "The file path of the infected file."
+        }
+      ]
+    },
+    "VolumeArn": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "xml": {
+            "name": "volumeArn"
+          },
+          "description": "EBS volume Arn details of the infected file."
+        }
+      ]
+    },
+    "Hash": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "xml": {
+            "name": "hash"
+          },
+          "description": "The hash value of the infected file."
+        }
+      ]
+    },
+    "FileName": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "xml": {
+            "name": "fileName"
+          },
+          "description": "File name of the infected file."
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-guardduty/refs/heads/main/json-schema/guardduty-get-master-account-request-schema.json",
+  "title": "GetMasterAccountRequest",
+  "description": "This input is deprecated, use GetAdministratorAccountRequest instead",
+  "type": "object",
+  "properties": {}
+}

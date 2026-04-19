@@ -1,0 +1,38 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-guardduty/refs/heads/main/json-structure/guardduty-get-findings-statistics-request-structure.json",
+  "name": "GetFindingsStatisticsRequest",
+  "description": "GetFindingsStatisticsRequest schema from Amazon GuardDuty API",
+  "type": "object",
+  "properties": {
+    "FindingStatisticTypes": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/FindingStatisticTypes"
+        },
+        {
+          "xml": {
+            "name": "findingStatisticTypes"
+          },
+          "description": "The types of finding statistics to retrieve."
+        }
+      ]
+    },
+    "FindingCriteria": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/FindingCriteria"
+        },
+        {
+          "xml": {
+            "name": "findingCriteria"
+          },
+          "description": "Represents the criteria that is used for querying findings."
+        }
+      ]
+    }
+  },
+  "required": [
+    "FindingStatisticTypes"
+  ]
+}

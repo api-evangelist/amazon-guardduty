@@ -1,0 +1,11 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-guardduty/refs/heads/main/json-structure/guardduty-org-feature-status-structure.json",
+  "name": "OrgFeatureStatus",
+  "description": "OrgFeatureStatus schema from Amazon GuardDuty API",
+  "type": "string",
+  "enum": [
+    "NEW",
+    "NONE"
+  ]
+}

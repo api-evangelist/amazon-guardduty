@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-guardduty/refs/heads/main/json-structure/guardduty-data-source-structure.json",
+  "name": "DataSource",
+  "description": "DataSource schema from Amazon GuardDuty API",
+  "type": "string",
+  "enum": [
+    "FLOW_LOGS",
+    "CLOUD_TRAIL",
+    "DNS_LOGS",
+    "S3_LOGS",
+    "KUBERNETES_AUDIT_LOGS",
+    "EC2_MALWARE_SCAN"
+  ]
+}
