@@ -50,6 +50,14 @@ apis:
       - type: JSONLD
         url: json-ld/amazon-guardduty-context.jsonld
 common:
+  - type: TrustCenter
+    url: security/amazon-guardduty-trust-center.yml
+  - type: VulnerabilityDisclosure
+    url: security/amazon-guardduty-vulnerability-disclosure.yml
+  - type: DomainSecurity
+    url: security/amazon-guardduty-domain-security.yml
+  - type: Authentication
+    url: authentication/amazon-guardduty-authentication.yml
   - type: Portal
     url: https://aws.amazon.com/guardduty/
   - type: Documentation
