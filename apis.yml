@@ -50,6 +50,8 @@ apis:
       - type: JSONLD
         url: json-ld/amazon-guardduty-context.jsonld
 common:
+  - type: AgenticAccess
+    url: agentic-access/amazon-guardduty-agentic-access.yml
   - type: TrustCenter
     url: security/amazon-guardduty-trust-center.yml
   - type: VulnerabilityDisclosure
