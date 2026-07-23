@@ -1,0 +1,582 @@
+openapi: 3.0.0
+info:
+  version: '2017-11-28'
+  x-release: v4
+  title: Amazon GuardDuty Admin Invitation API
+  description: '<p>Amazon GuardDuty is a continuous security monitoring service that analyzes and processes the following data sources: VPC flow logs, Amazon Web Services CloudTrail management event logs, CloudTrail S3 data event logs, EKS audit logs, DNS logs, and Amazon EBS volume data. It uses threat intelligence feeds, such as lists of malicious IPs and domains, and machine learning to identify unexpected, potentially unauthorized, and malicious activity within your Amazon Web Services environment. This can include issues like escalations of privileges, uses of exposed credentials, or communication with malicious IPs, domains, or presence of malware on your Amazon EC2 instances and container workloads. For example, GuardDuty can detect compromised EC2 instances and container workloads serving malware, or mining bitcoin. </p> <p>GuardDuty also monitors Amazon Web Services account access behavior for signs of compromise, such as unauthorized infrastructure deployments like EC2 instances deployed in a Region that has never been used, or unusual API calls like a password policy change to reduce password strength. </p> <p>GuardDuty informs you about the status of your Amazon Web Services environment by producing security findings that you can view in the GuardDuty console or through Amazon EventBridge. For more information, see the <i> <a href="https://docs.aws.amazon.com/guardduty/latest/ug/what-is-guardduty.html">Amazon GuardDuty User Guide</a> </i>. </p>'
+  x-logo:
+    url: https://api.apis.guru/v2/cache/logo/https_twitter.com_awscloud_profile_image.png
+    backgroundColor: '#FFFFFF'
+  termsOfService: https://aws.amazon.com/service-terms/
+  contact:
+    name: Mike Ralphson
+    email: mike.ralphson@gmail.com
+    url: https://github.com/mermade/aws2openapi
+    x-twitter: PermittedSoc
+  license:
+    name: Apache 2.0 License
+    url: http://www.apache.org/licenses/
+  x-providerName: amazonaws.com
+  x-serviceName: guardduty
+  x-aws-signingName: guardduty
+  x-origin:
+  - contentType: application/json
+    url: https://raw.githubusercontent.com/aws/aws-sdk-js/master/apis/guardduty-2017-11-28.normal.json
+    converter:
+      url: https://github.com/mermade/aws2openapi
+      version: 1.0.0
+    x-apisguru-driver: external
+  x-apiClientRegistration:
+    url: https://portal.aws.amazon.com/gp/aws/developer/registration/index.html?nc2=h_ct
+  x-apisguru-categories:
+  - cloud
+  x-preferred: true
+servers:
+- url: http://guardduty.{region}.amazonaws.com
+  variables:
+    region:
+      description: The AWS region
+      enum:
+      - us-east-1
+      - us-east-2
+      - us-west-1
+      - us-west-2
+      - us-gov-west-1
+      - us-gov-east-1
+      - ca-central-1
+      - eu-north-1
+      - eu-west-1
+      - eu-west-2
+      - eu-west-3
+      - eu-central-1
+      - eu-south-1
+      - af-south-1
+      - ap-northeast-1
+      - ap-northeast-2
+      - ap-northeast-3
+      - ap-southeast-1
+      - ap-southeast-2
+      - ap-east-1
+      - ap-south-1
+      - sa-east-1
+      - me-south-1
+      default: us-east-1
+  description: The Amazon GuardDuty multi-region endpoint
+- url: https://guardduty.{region}.amazonaws.com
+  variables:
+    region:
+      description: The AWS region
+      enum:
+      - us-east-1
+      - us-east-2
+      - us-west-1
+      - us-west-2
+      - us-gov-west-1
+      - us-gov-east-1
+      - ca-central-1
+      - eu-north-1
+      - eu-west-1
+      - eu-west-2
+      - eu-west-3
+      - eu-central-1
+      - eu-south-1
+      - af-south-1
+      - ap-northeast-1
+      - ap-northeast-2
+      - ap-northeast-3
+      - ap-southeast-1
+      - ap-southeast-2
+      - ap-east-1
+      - ap-south-1
+      - sa-east-1
+      - me-south-1
+      default: us-east-1
+  description: The Amazon GuardDuty multi-region endpoint
+- url: http://guardduty.{region}.amazonaws.com.cn
+  variables:
+    region:
+      description: The AWS region
+      enum:
+      - cn-north-1
+      - cn-northwest-1
+      default: cn-north-1
+  description: The Amazon GuardDuty endpoint for China (Beijing) and China (Ningxia)
+- url: https://guardduty.{region}.amazonaws.com.cn
+  variables:
+    region:
+      description: The AWS region
+      enum:
+      - cn-north-1
+      - cn-northwest-1
+      default: cn-north-1
+  description: The Amazon GuardDuty endpoint for China (Beijing) and China (Ningxia)
+security:
+- hmac: []
+tags:
+- name: Invitation
+paths:
+  /invitation/decline:
+    parameters:
+    - $ref: '#/components/parameters/X-Amz-Content-Sha256'
+    - $ref: '#/components/parameters/X-Amz-Date'
+    - $ref: '#/components/parameters/X-Amz-Algorithm'
+    - $ref: '#/components/parameters/X-Amz-Credential'
+    - $ref: '#/components/parameters/X-Amz-Security-Token'
+    - $ref: '#/components/parameters/X-Amz-Signature'
+    - $ref: '#/components/parameters/X-Amz-SignedHeaders'
+    post:
+      operationId: DeclineInvitations
+      description: Declines invitations sent to the current member account by Amazon Web Services accounts specified by their account IDs.
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DeclineInvitationsResponse'
+              examples:
+                DeclineInvitations200Example:
+                  summary: Default DeclineInvitations 200 response
+                  x-microcks-default: true
+                  value:
+                    detectorId: abc123
+                    format: DNS_LOGS
+        '480':
+          description: BadRequestException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BadRequestException'
+              examples:
+                DeclineInvitations480Example:
+                  summary: Default DeclineInvitations 480 response
+                  x-microcks-default: true
+                  value:
+                    detectorId: abc123
+                    format: DNS_LOGS
+        '481':
+          description: InternalServerErrorException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/InternalServerErrorException'
+              examples:
+                DeclineInvitations481Example:
+                  summary: Default DeclineInvitations 481 response
+                  x-microcks-default: true
+                  value:
+                    detectorId: abc123
+                    format: DNS_LOGS
+      parameters: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+              - accountIds
+              properties:
+                accountIds:
+                  description: A list of account IDs of the Amazon Web Services accounts that sent invitations to the current member account that you want to decline invitations from.
+                  type: array
+                  items:
+                    $ref: '#/components/schemas/AccountId'
+                  minItems: 1
+                  maxItems: 50
+      summary: Amazon GuardDuty Decline Invitations
+      x-microcks-operation:
+        delay: 0
+        dispatcher: FALLBACK
+      tags:
+      - Invitation
+  /invitation/delete:
+    parameters:
+    - $ref: '#/components/parameters/X-Amz-Content-Sha256'
+    - $ref: '#/components/parameters/X-Amz-Date'
+    - $ref: '#/components/parameters/X-Amz-Algorithm'
+    - $ref: '#/components/parameters/X-Amz-Credential'
+    - $ref: '#/components/parameters/X-Amz-Security-Token'
+    - $ref: '#/components/parameters/X-Amz-Signature'
+    - $ref: '#/components/parameters/X-Amz-SignedHeaders'
+    post:
+      operationId: DeleteInvitations
+      description: Deletes invitations sent to the current member account by Amazon Web Services accounts specified by their account IDs.
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DeleteInvitationsResponse'
+              examples:
+                DeleteInvitations200Example:
+                  summary: Default DeleteInvitations 200 response
+                  x-microcks-default: true
+                  value:
+                    detectorId: abc123
+                    format: DNS_LOGS
+        '480':
+          description: BadRequestException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BadRequestException'
+              examples:
+                DeleteInvitations480Example:
+                  summary: Default DeleteInvitations 480 response
+                  x-microcks-default: true
+                  value:
+                    detectorId: abc123
+                    format: DNS_LOGS
+        '481':
+          description: InternalServerErrorException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/InternalServerErrorException'
+              examples:
+                DeleteInvitations481Example:
+                  summary: Default DeleteInvitations 481 response
+                  x-microcks-default: true
+                  value:
+                    detectorId: abc123
+                    format: DNS_LOGS
+      parameters: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+              - accountIds
+              properties:
+                accountIds:
+                  description: A list of account IDs of the Amazon Web Services accounts that sent invitations to the current member account that you want to delete invitations from.
+                  type: array
+                  items:
+                    $ref: '#/components/schemas/AccountId'
+                  minItems: 1
+                  maxItems: 50
+      summary: Amazon GuardDuty Delete Invitations
+      x-microcks-operation:
+        delay: 0
+        dispatcher: FALLBACK
+      tags:
+      - Invitation
+  /invitation/count:
+    parameters:
+    - $ref: '#/components/parameters/X-Amz-Content-Sha256'
+    - $ref: '#/components/parameters/X-Amz-Date'
+    - $ref: '#/components/parameters/X-Amz-Algorithm'
+    - $ref: '#/components/parameters/X-Amz-Credential'
+    - $ref: '#/components/parameters/X-Amz-Security-Token'
+    - $ref: '#/components/parameters/X-Amz-Signature'
+    - $ref: '#/components/parameters/X-Amz-SignedHeaders'
+    get:
+      operationId: GetInvitationsCount
+      description: Returns the count of all GuardDuty membership invitations that were sent to the current member account except the currently accepted invitation.
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetInvitationsCountResponse'
+              examples:
+                GetInvitationsCount200Example:
+                  summary: Default GetInvitationsCount 200 response
+                  x-microcks-default: true
+                  value:
+                    detectorId: abc123
+                    format: DNS_LOGS
+        '480':
+          description: BadRequestException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BadRequestException'
+              examples:
+                GetInvitationsCount480Example:
+                  summary: Default GetInvitationsCount 480 response
+                  x-microcks-default: true
+                  value:
+                    detectorId: abc123
+                    format: DNS_LOGS
+        '481':
+          description: InternalServerErrorException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/InternalServerErrorException'
+              examples:
+                GetInvitationsCount481Example:
+                  summary: Default GetInvitationsCount 481 response
+                  x-microcks-default: true
+                  value:
+                    detectorId: abc123
+                    format: DNS_LOGS
+      parameters: []
+      summary: Amazon GuardDuty Get Invitations Count
+      x-microcks-operation:
+        delay: 0
+        dispatcher: FALLBACK
+      tags:
+      - Invitation
+  /invitation:
+    parameters:
+    - $ref: '#/components/parameters/X-Amz-Content-Sha256'
+    - $ref: '#/components/parameters/X-Amz-Date'
+    - $ref: '#/components/parameters/X-Amz-Algorithm'
+    - $ref: '#/components/parameters/X-Amz-Credential'
+    - $ref: '#/components/parameters/X-Amz-Security-Token'
+    - $ref: '#/components/parameters/X-Amz-Signature'
+    - $ref: '#/components/parameters/X-Amz-SignedHeaders'
+    get:
+      operationId: ListInvitations
+      description: Lists all GuardDuty membership invitations that were sent to the current Amazon Web Services account.
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ListInvitationsResponse'
+              examples:
+                ListInvitations200Example:
+                  summary: Default ListInvitations 200 response
+                  x-microcks-default: true
+                  value:
+                    detectorId: abc123
+                    format: DNS_LOGS
+        '480':
+          description: BadRequestException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BadRequestException'
+              examples:
+                ListInvitations480Example:
+                  summary: Default ListInvitations 480 response
+                  x-microcks-default: true
+                  value:
+                    detectorId: abc123
+                    format: DNS_LOGS
+        '481':
+          description: InternalServerErrorException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/InternalServerErrorException'
+              examples:
+                ListInvitations481Example:
+                  summary: Default ListInvitations 481 response
+                  x-microcks-default: true
+                  value:
+                    detectorId: abc123
+                    format: DNS_LOGS
+      parameters:
+      - name: maxResults
+        in: query
+        required: false
+        description: You can use this parameter to indicate the maximum number of items that you want in the response. The default value is 50. The maximum value is 50.
+        schema:
+          type: integer
+          minimum: 1
+          maximum: 50
+      - name: nextToken
+        in: query
+        required: false
+        description: You can use this parameter when paginating results. Set the value of this parameter to null on your first call to the list action. For subsequent calls to the action, fill nextToken in the request with the value of NextToken from the previous response to continue listing data.
+        schema:
+          type: string
+      - name: MaxResults
+        in: query
+        schema:
+          type: string
+        description: Pagination limit
+        required: false
+      - name: NextToken
+        in: query
+        schema:
+          type: string
+        description: Pagination token
+        required: false
+      summary: Amazon GuardDuty List Invitations
+      x-microcks-operation:
+        delay: 0
+        dispatcher: FALLBACK
+      tags:
+      - Invitation
+components:
+  schemas:
+    GetInvitationsCountResponse:
+      type: object
+      properties:
+        InvitationsCount:
+          allOf:
+          - $ref: '#/components/schemas/Integer'
+          - xml:
+              name: invitationsCount
+            description: The number of received invitations.
+    UnprocessedAccounts:
+      type: array
+      items:
+        $ref: '#/components/schemas/UnprocessedAccount'
+      minItems: 0
+      maxItems: 50
+    UnprocessedAccount:
+      type: object
+      required:
+      - AccountId
+      - Result
+      properties:
+        AccountId:
+          allOf:
+          - $ref: '#/components/schemas/AccountId'
+          - xml:
+              name: accountId
+            description: The Amazon Web Services account ID.
+        Result:
+          allOf:
+          - $ref: '#/components/schemas/String'
+          - xml:
+              name: result
+            description: A reason why the account hasn't been processed.
+      description: Contains information about the accounts that weren't processed.
+    BadRequestException: {}
+    Invitation:
+      type: object
+      properties:
+        AccountId:
+          allOf:
+          - $ref: '#/components/schemas/AccountId'
+          - xml:
+              name: accountId
+            description: The ID of the account that the invitation was sent from.
+        InvitationId:
+          allOf:
+          - $ref: '#/components/schemas/String'
+          - xml:
+              name: invitationId
+            description: The ID of the invitation. This value is used to validate the inviter account to the member account.
+        RelationshipStatus:
+          allOf:
+          - $ref: '#/components/schemas/String'
+          - xml:
+              name: relationshipStatus
+            description: The status of the relationship between the inviter and invitee accounts.
+        InvitedAt:
+          allOf:
+          - $ref: '#/components/schemas/String'
+          - xml:
+              name: invitedAt
+            description: The timestamp when the invitation was sent.
+      description: Contains information about the invitation to become a member account.
+    DeleteInvitationsResponse:
+      type: object
+      required:
+      - UnprocessedAccounts
+      properties:
+        UnprocessedAccounts:
+          allOf:
+          - $ref: '#/components/schemas/UnprocessedAccounts'
+          - xml:
+              name: unprocessedAccounts
+            description: A list of objects that contain the unprocessed account and a result string that explains why it was unprocessed.
+    Invitations:
+      type: array
+      items:
+        $ref: '#/components/schemas/Invitation'
+      minItems: 0
+      maxItems: 50
+    Integer:
+      type: integer
+    DeclineInvitationsResponse:
+      type: object
+      required:
+      - UnprocessedAccounts
+      properties:
+        UnprocessedAccounts:
+          allOf:
+          - $ref: '#/components/schemas/UnprocessedAccounts'
+          - xml:
+              name: unprocessedAccounts
+            description: A list of objects that contain the unprocessed account and a result string that explains why it was unprocessed.
+    InternalServerErrorException: {}
+    String:
+      type: string
+    ListInvitationsResponse:
+      type: object
+      properties:
+        Invitations:
+          allOf:
+          - $ref: '#/components/schemas/Invitations'
+          - xml:
+              name: invitations
+            description: A list of invitation descriptions.
+        NextToken:
+          allOf:
+          - $ref: '#/components/schemas/String'
+          - xml:
+              name: nextToken
+            description: The pagination parameter to be used on the next list operation to retrieve more items.
+    AccountId:
+      type: string
+      minLength: 12
+      maxLength: 12
+  parameters:
+    X-Amz-Content-Sha256:
+      name: X-Amz-Content-Sha256
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Algorithm:
+      name: X-Amz-Algorithm
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Credential:
+      name: X-Amz-Credential
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Security-Token:
+      name: X-Amz-Security-Token
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Signature:
+      name: X-Amz-Signature
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Date:
+      name: X-Amz-Date
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-SignedHeaders:
+      name: X-Amz-SignedHeaders
+      in: header
+      schema:
+        type: string
+      required: false
+  securitySchemes:
+    hmac:
+      type: apiKey
+      name: Authorization
+      in: header
+      description: Amazon Signature authorization v4
+      x-amazon-apigateway-authtype: awsSigv4
+externalDocs:
+  description: Amazon Web Services documentation
+  url: https://docs.aws.amazon.com/guardduty/
+x-hasEquivalentPaths: true
