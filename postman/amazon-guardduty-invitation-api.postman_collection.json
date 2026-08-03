@@ -1,0 +1,1352 @@
+{
+  "info": {
+    "_postman_id": "b6c307aa-c924-4fa8-bd3f-3e4a4dd95aa1",
+    "name": "Amazon GuardDuty Admin Invitation API",
+    "description": "<p>Amazon GuardDuty is a continuous security monitoring service that analyzes and processes the following data sources: VPC flow logs, Amazon Web Services CloudTrail management event logs, CloudTrail S3 data event logs, EKS audit logs, DNS logs, and Amazon EBS volume data. It uses threat intelligence feeds, such as lists of malicious IPs and domains, and machine learning to identify unexpected, potentially unauthorized, and malicious activity within your Amazon Web Services environment. This can include issues like escalations of privileges, uses of exposed credentials, or communication with malicious IPs, domains, or presence of malware on your Amazon EC2 instances and container workloads. For example, GuardDuty can detect compromised EC2 instances and container workloads serving malware, or mining bitcoin. </p> <p>GuardDuty also monitors Amazon Web Services account access behavior for signs of compromise, such as unauthorized infrastructure deployments like EC2 instances deployed in a Region that has never been used, or unusual API calls like a password policy change to reduce password strength. </p> <p>GuardDuty informs you about the status of your Amazon Web Services environment by producing security findings that you can view in the GuardDuty console or through Amazon EventBridge. For more information, see the <i> <a href=\"https://docs.aws.amazon.com/guardduty/latest/ug/what-is-guardduty.html\">Amazon GuardDuty User Guide</a> </i>. </p>\n\nContact Support:\n Name: Mike Ralphson\n Email: mike.ralphson@gmail.com",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "createdAt": "2026-07-28T10:24:10.000Z",
+    "updatedAt": "2026-07-28T10:24:10.000Z",
+    "lastUpdatedBy": "35240",
+    "uid": "35240-b6c307aa-c924-4fa8-bd3f-3e4a4dd95aa1"
+  },
+  "item": [
+    {
+      "name": "invitation",
+      "item": [
+        {
+          "name": "decline",
+          "item": [
+            {
+              "name": "Amazon GuardDuty Decline Invitations",
+              "id": "3f138c29-481c-480f-a3fb-2d8653d90cc0",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Date",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Credential",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Signature",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"accountIds\": [\n    \"<string>\"\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/invitation/decline",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "invitation",
+                    "decline"
+                  ]
+                },
+                "description": "Declines invitations sent to the current member account by Amazon Web Services accounts specified by their account IDs."
+              },
+              "response": [
+                {
+                  "id": "ac9924f7-ff03-414f-b265-c047f0f4db2b",
+                  "name": "Success",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [
+                      {
+                        "key": "X-Amz-Content-Sha256",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Date",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Algorithm",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Credential",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Security-Token",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Signature",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-SignedHeaders",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                      },
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      },
+                      {
+                        "description": "Added as a part of security scheme: apikey",
+                        "key": "Authorization",
+                        "value": "<API Key>"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\n  \"accountIds\": [\n    \"<string>\"\n  ]\n}",
+                      "options": {
+                        "raw": {
+                          "headerFamily": "json",
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": {
+                      "raw": "{{baseUrl}}/invitation/decline",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "invitation",
+                        "decline"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "{\n  \"UnprocessedAccounts\": [\n    {\n      \"AccountId\": \"<string>\",\n      \"Result\": \"<string>\"\n    },\n    {\n      \"AccountId\": \"<string>\",\n      \"Result\": \"<string>\"\n    },\n    {\n      \"AccountId\": \"<string>\",\n      \"Result\": \"<string>\"\n    },\n    {\n      \"AccountId\": \"<string>\",\n      \"Result\": \"<string>\"\n    },\n    {\n      \"AccountId\": \"<string>\",\n      \"Result\": \"<string>\"\n    },\n    {\n      \"AccountId\": \"<string>\",\n      \"Result\": \"<string>\"\n    },\n    {\n      \"AccountId\": \"<string>\",\n      \"Result\": \"<string>\"\n    },\n    {\n      \"AccountId\": \"<string>\",\n      \"Result\": \"<string>\"\n    },\n    {\n      \"AccountId\": \"<string>\",\n      \"Result\": \"<string>\"\n    },\n    {\n      \"AccountId\": \"<string>\",\n      \"Result\": \"<string>\"\n    },\n    {\n      \"AccountId\": \"<string>\",\n      \"Result\": \"<string>\"\n    },\n    {\n      \"AccountId\": \"<string>\",\n      \"Result\": \"<string>\"\n    },\n    {\n      \"AccountId\": \"<string>\",\n      \"Result\": \"<string>\"\n    },\n    {\n      \"AccountId\": \"<string>\",\n      \"Result\": \"<string>\"\n    },\n    {\n      \"AccountId\": \"<string>\",\n      \"Result\": \"<string>\"\n    },\n    {\n      \"AccountId\": \"<string>\",\n      \"Result\": \"<string>\"\n    },\n    {\n      \"AccountId\": \"<string>\",\n      \"Result\": \"<string>\"\n    },\n    {\n      \"AccountId\": \"<string>\",\n      \"Result\": \"<string>\"\n    },\n    {\n      \"AccountId\": \"<string>\",\n      \"Result\": \"<string>\"\n    },\n    {\n      \"AccountId\": \"<string>\",\n      \"Result\": \"<string>\"\n    }\n  ]\n}",
+                  "createdAt": "2026-07-28T10:24:11.000Z",
+                  "updatedAt": "2026-07-28T10:24:11.000Z",
+                  "uid": "35240-ac9924f7-ff03-414f-b265-c047f0f4db2b"
+                },
+                {
+                  "id": "73d6a617-af47-4025-a46c-ea8eb294caec",
+                  "name": "BadRequestException",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [
+                      {
+                        "key": "X-Amz-Content-Sha256",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Date",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Algorithm",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Credential",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Security-Token",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Signature",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-SignedHeaders",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                      },
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      },
+                      {
+                        "description": "Added as a part of security scheme: apikey",
+                        "key": "Authorization",
+                        "value": "<API Key>"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\n  \"accountIds\": [\n    \"<string>\"\n  ]\n}",
+                      "options": {
+                        "raw": {
+                          "headerFamily": "json",
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": {
+                      "raw": "{{baseUrl}}/invitation/decline",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "invitation",
+                        "decline"
+                      ]
+                    }
+                  },
+                  "_postman_previewlanguage": "json",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "{}",
+                  "createdAt": "2026-07-28T10:24:11.000Z",
+                  "updatedAt": "2026-07-28T10:24:11.000Z",
+                  "uid": "35240-73d6a617-af47-4025-a46c-ea8eb294caec"
+                },
+                {
+                  "id": "1be6ee90-dbca-4c49-b990-ab8657026795",
+                  "name": "InternalServerErrorException",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [
+                      {
+                        "key": "X-Amz-Content-Sha256",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Date",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Algorithm",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Credential",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Security-Token",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Signature",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-SignedHeaders",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                      },
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      },
+                      {
+                        "description": "Added as a part of security scheme: apikey",
+                        "key": "Authorization",
+                        "value": "<API Key>"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\n  \"accountIds\": [\n    \"<string>\"\n  ]\n}",
+                      "options": {
+                        "raw": {
+                          "headerFamily": "json",
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": {
+                      "raw": "{{baseUrl}}/invitation/decline",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "invitation",
+                        "decline"
+                      ]
+                    }
+                  },
+                  "_postman_previewlanguage": "json",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "{}",
+                  "createdAt": "2026-07-28T10:24:11.000Z",
+                  "updatedAt": "2026-07-28T10:24:11.000Z",
+                  "uid": "35240-1be6ee90-dbca-4c49-b990-ab8657026795"
+                }
+              ],
+              "createdAt": "2026-07-28T10:24:11.000Z",
+              "updatedAt": "2026-07-28T10:24:11.000Z",
+              "uid": "35240-3f138c29-481c-480f-a3fb-2d8653d90cc0"
+            }
+          ],
+          "id": "b51ad226-a6e0-4612-9295-a73d9b579648",
+          "createdAt": "2026-07-28T10:24:11.000Z",
+          "updatedAt": "2026-07-28T10:24:11.000Z",
+          "uid": "35240-b51ad226-a6e0-4612-9295-a73d9b579648"
+        },
+        {
+          "name": "delete",
+          "item": [
+            {
+              "name": "Amazon GuardDuty Delete Invitations",
+              "id": "00a5f81a-a6b2-4bdb-825c-0955da3c8682",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Date",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Credential",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Signature",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"accountIds\": [\n    \"<string>\"\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/invitation/delete",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "invitation",
+                    "delete"
+                  ]
+                },
+                "description": "Deletes invitations sent to the current member account by Amazon Web Services accounts specified by their account IDs."
+              },
+              "response": [
+                {
+                  "id": "8e622a19-86c0-4a5f-a09f-d710239ad062",
+                  "name": "Success",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [
+                      {
+                        "key": "X-Amz-Content-Sha256",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Date",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Algorithm",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Credential",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Security-Token",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Signature",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-SignedHeaders",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                      },
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      },
+                      {
+                        "description": "Added as a part of security scheme: apikey",
+                        "key": "Authorization",
+                        "value": "<API Key>"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\n  \"accountIds\": [\n    \"<string>\"\n  ]\n}",
+                      "options": {
+                        "raw": {
+                          "headerFamily": "json",
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": {
+                      "raw": "{{baseUrl}}/invitation/delete",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "invitation",
+                        "delete"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "{\n  \"UnprocessedAccounts\": [\n    {\n      \"AccountId\": \"<string>\",\n      \"Result\": \"<string>\"\n    },\n    {\n      \"AccountId\": \"<string>\",\n      \"Result\": \"<string>\"\n    },\n    {\n      \"AccountId\": \"<string>\",\n      \"Result\": \"<string>\"\n    },\n    {\n      \"AccountId\": \"<string>\",\n      \"Result\": \"<string>\"\n    },\n    {\n      \"AccountId\": \"<string>\",\n      \"Result\": \"<string>\"\n    },\n    {\n      \"AccountId\": \"<string>\",\n      \"Result\": \"<string>\"\n    },\n    {\n      \"AccountId\": \"<string>\",\n      \"Result\": \"<string>\"\n    },\n    {\n      \"AccountId\": \"<string>\",\n      \"Result\": \"<string>\"\n    },\n    {\n      \"AccountId\": \"<string>\",\n      \"Result\": \"<string>\"\n    },\n    {\n      \"AccountId\": \"<string>\",\n      \"Result\": \"<string>\"\n    },\n    {\n      \"AccountId\": \"<string>\",\n      \"Result\": \"<string>\"\n    },\n    {\n      \"AccountId\": \"<string>\",\n      \"Result\": \"<string>\"\n    },\n    {\n      \"AccountId\": \"<string>\",\n      \"Result\": \"<string>\"\n    },\n    {\n      \"AccountId\": \"<string>\",\n      \"Result\": \"<string>\"\n    },\n    {\n      \"AccountId\": \"<string>\",\n      \"Result\": \"<string>\"\n    },\n    {\n      \"AccountId\": \"<string>\",\n      \"Result\": \"<string>\"\n    },\n    {\n      \"AccountId\": \"<string>\",\n      \"Result\": \"<string>\"\n    },\n    {\n      \"AccountId\": \"<string>\",\n      \"Result\": \"<string>\"\n    },\n    {\n      \"AccountId\": \"<string>\",\n      \"Result\": \"<string>\"\n    },\n    {\n      \"AccountId\": \"<string>\",\n      \"Result\": \"<string>\"\n    }\n  ]\n}",
+                  "createdAt": "2026-07-28T10:24:11.000Z",
+                  "updatedAt": "2026-07-28T10:24:11.000Z",
+                  "uid": "35240-8e622a19-86c0-4a5f-a09f-d710239ad062"
+                },
+                {
+                  "id": "77f5bd10-0270-4ba3-a1f8-cf12229a0099",
+                  "name": "BadRequestException",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [
+                      {
+                        "key": "X-Amz-Content-Sha256",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Date",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Algorithm",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Credential",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Security-Token",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Signature",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-SignedHeaders",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                      },
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      },
+                      {
+                        "description": "Added as a part of security scheme: apikey",
+                        "key": "Authorization",
+                        "value": "<API Key>"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\n  \"accountIds\": [\n    \"<string>\"\n  ]\n}",
+                      "options": {
+                        "raw": {
+                          "headerFamily": "json",
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": {
+                      "raw": "{{baseUrl}}/invitation/delete",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "invitation",
+                        "delete"
+                      ]
+                    }
+                  },
+                  "_postman_previewlanguage": "json",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "{}",
+                  "createdAt": "2026-07-28T10:24:11.000Z",
+                  "updatedAt": "2026-07-28T10:24:11.000Z",
+                  "uid": "35240-77f5bd10-0270-4ba3-a1f8-cf12229a0099"
+                },
+                {
+                  "id": "ee5ffeac-c656-4064-a509-48d045722cf1",
+                  "name": "InternalServerErrorException",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [
+                      {
+                        "key": "X-Amz-Content-Sha256",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Date",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Algorithm",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Credential",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Security-Token",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Signature",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-SignedHeaders",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                      },
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      },
+                      {
+                        "description": "Added as a part of security scheme: apikey",
+                        "key": "Authorization",
+                        "value": "<API Key>"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\n  \"accountIds\": [\n    \"<string>\"\n  ]\n}",
+                      "options": {
+                        "raw": {
+                          "headerFamily": "json",
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": {
+                      "raw": "{{baseUrl}}/invitation/delete",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "invitation",
+                        "delete"
+                      ]
+                    }
+                  },
+                  "_postman_previewlanguage": "json",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "{}",
+                  "createdAt": "2026-07-28T10:24:11.000Z",
+                  "updatedAt": "2026-07-28T10:24:11.000Z",
+                  "uid": "35240-ee5ffeac-c656-4064-a509-48d045722cf1"
+                }
+              ],
+              "createdAt": "2026-07-28T10:24:11.000Z",
+              "updatedAt": "2026-07-28T10:24:11.000Z",
+              "uid": "35240-00a5f81a-a6b2-4bdb-825c-0955da3c8682"
+            }
+          ],
+          "id": "8b5ac08f-af06-4bfd-ace5-4737d1169615",
+          "createdAt": "2026-07-28T10:24:11.000Z",
+          "updatedAt": "2026-07-28T10:24:11.000Z",
+          "uid": "35240-8b5ac08f-af06-4bfd-ace5-4737d1169615"
+        },
+        {
+          "name": "count",
+          "item": [
+            {
+              "name": "Amazon GuardDuty Get Invitations Count",
+              "id": "121044de-6e4d-4ce7-b484-72ec231b4540",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Date",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Credential",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Signature",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/invitation/count",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "invitation",
+                    "count"
+                  ]
+                },
+                "description": "Returns the count of all GuardDuty membership invitations that were sent to the current member account except the currently accepted invitation."
+              },
+              "response": [
+                {
+                  "id": "f047c418-051c-452d-84a3-e4b2307ca8b8",
+                  "name": "Success",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "X-Amz-Content-Sha256",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Date",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Algorithm",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Credential",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Security-Token",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Signature",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-SignedHeaders",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      },
+                      {
+                        "description": "Added as a part of security scheme: apikey",
+                        "key": "Authorization",
+                        "value": "<API Key>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/invitation/count",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "invitation",
+                        "count"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "{\n  \"InvitationsCount\": \"<integer>\"\n}",
+                  "createdAt": "2026-07-28T10:24:11.000Z",
+                  "updatedAt": "2026-07-28T10:24:11.000Z",
+                  "uid": "35240-f047c418-051c-452d-84a3-e4b2307ca8b8"
+                },
+                {
+                  "id": "a53be17e-305c-419d-9934-43a5a2ce1dd1",
+                  "name": "BadRequestException",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "X-Amz-Content-Sha256",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Date",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Algorithm",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Credential",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Security-Token",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Signature",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-SignedHeaders",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      },
+                      {
+                        "description": "Added as a part of security scheme: apikey",
+                        "key": "Authorization",
+                        "value": "<API Key>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/invitation/count",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "invitation",
+                        "count"
+                      ]
+                    }
+                  },
+                  "_postman_previewlanguage": "json",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "{}",
+                  "createdAt": "2026-07-28T10:24:11.000Z",
+                  "updatedAt": "2026-07-28T10:24:11.000Z",
+                  "uid": "35240-a53be17e-305c-419d-9934-43a5a2ce1dd1"
+                },
+                {
+                  "id": "6f9c2d15-834e-4a4b-a336-345fd1691663",
+                  "name": "InternalServerErrorException",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "X-Amz-Content-Sha256",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Date",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Algorithm",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Credential",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Security-Token",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-Signature",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "X-Amz-SignedHeaders",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      },
+                      {
+                        "description": "Added as a part of security scheme: apikey",
+                        "key": "Authorization",
+                        "value": "<API Key>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/invitation/count",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "invitation",
+                        "count"
+                      ]
+                    }
+                  },
+                  "_postman_previewlanguage": "json",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "{}",
+                  "createdAt": "2026-07-28T10:24:11.000Z",
+                  "updatedAt": "2026-07-28T10:24:11.000Z",
+                  "uid": "35240-6f9c2d15-834e-4a4b-a336-345fd1691663"
+                }
+              ],
+              "createdAt": "2026-07-28T10:24:11.000Z",
+              "updatedAt": "2026-07-28T10:24:11.000Z",
+              "uid": "35240-121044de-6e4d-4ce7-b484-72ec231b4540"
+            }
+          ],
+          "id": "133cc294-8a54-49dd-8b52-bc586b6edc19",
+          "createdAt": "2026-07-28T10:24:11.000Z",
+          "updatedAt": "2026-07-28T10:24:11.000Z",
+          "uid": "35240-133cc294-8a54-49dd-8b52-bc586b6edc19"
+        },
+        {
+          "name": "Amazon GuardDuty List Invitations",
+          "id": "730e56f0-e137-404c-a430-1ff54c4e6836",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "X-Amz-Content-Sha256",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-Date",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-Algorithm",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-Credential",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-Security-Token",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-Signature",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-SignedHeaders",
+                "value": "<string>"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/invitation?maxResults=<integer>&nextToken=<string>&MaxResults=<string>&NextToken=<string>",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "invitation"
+              ],
+              "query": [
+                {
+                  "description": "You can use this parameter to indicate the maximum number of items that you want in the response. The default value is 50. The maximum value is 50.",
+                  "key": "maxResults",
+                  "value": "<integer>"
+                },
+                {
+                  "description": "You can use this parameter when paginating results. Set the value of this parameter to null on your first call to the list action. For subsequent calls to the action, fill nextToken in the request with the value of NextToken from the previous response to continue listing data.",
+                  "key": "nextToken",
+                  "value": "<string>"
+                },
+                {
+                  "description": "Pagination limit",
+                  "key": "MaxResults",
+                  "value": "<string>"
+                },
+                {
+                  "description": "Pagination token",
+                  "key": "NextToken",
+                  "value": "<string>"
+                }
+              ]
+            },
+            "description": "Lists all GuardDuty membership invitations that were sent to the current Amazon Web Services account."
+          },
+          "response": [
+            {
+              "id": "14747ef8-e4e7-4624-9676-af083fd8377c",
+              "name": "Success",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Date",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Credential",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Signature",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/invitation?maxResults=<integer>&nextToken=<string>&MaxResults=<string>&NextToken=<string>",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "invitation"
+                  ],
+                  "query": [
+                    {
+                      "description": "You can use this parameter to indicate the maximum number of items that you want in the response. The default value is 50. The maximum value is 50.",
+                      "key": "maxResults",
+                      "value": "<integer>"
+                    },
+                    {
+                      "description": "You can use this parameter when paginating results. Set the value of this parameter to null on your first call to the list action. For subsequent calls to the action, fill nextToken in the request with the value of NextToken from the previous response to continue listing data.",
+                      "key": "nextToken",
+                      "value": "<string>"
+                    },
+                    {
+                      "description": "Pagination limit",
+                      "key": "MaxResults",
+                      "value": "<string>"
+                    },
+                    {
+                      "description": "Pagination token",
+                      "key": "NextToken",
+                      "value": "<string>"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{\n  \"Invitations\": [\n    {\n      \"AccountId\": \"<string>\",\n      \"InvitationId\": \"<string>\",\n      \"RelationshipStatus\": \"<string>\",\n      \"InvitedAt\": \"<string>\"\n    },\n    {\n      \"AccountId\": \"<string>\",\n      \"InvitationId\": \"<string>\",\n      \"RelationshipStatus\": \"<string>\",\n      \"InvitedAt\": \"<string>\"\n    },\n    {\n      \"AccountId\": \"<string>\",\n      \"InvitationId\": \"<string>\",\n      \"RelationshipStatus\": \"<string>\",\n      \"InvitedAt\": \"<string>\"\n    },\n    {\n      \"AccountId\": \"<string>\",\n      \"InvitationId\": \"<string>\",\n      \"RelationshipStatus\": \"<string>\",\n      \"InvitedAt\": \"<string>\"\n    },\n    {\n      \"AccountId\": \"<string>\",\n      \"InvitationId\": \"<string>\",\n      \"RelationshipStatus\": \"<string>\",\n      \"InvitedAt\": \"<string>\"\n    },\n    {\n      \"AccountId\": \"<string>\",\n      \"InvitationId\": \"<string>\",\n      \"RelationshipStatus\": \"<string>\",\n      \"InvitedAt\": \"<string>\"\n    },\n    {\n      \"AccountId\": \"<string>\",\n      \"InvitationId\": \"<string>\",\n      \"RelationshipStatus\": \"<string>\",\n      \"InvitedAt\": \"<string>\"\n    },\n    {\n      \"AccountId\": \"<string>\",\n      \"InvitationId\": \"<string>\",\n      \"RelationshipStatus\": \"<string>\",\n      \"InvitedAt\": \"<string>\"\n    },\n    {\n      \"AccountId\": \"<string>\",\n      \"InvitationId\": \"<string>\",\n      \"RelationshipStatus\": \"<string>\",\n      \"InvitedAt\": \"<string>\"\n    },\n    {\n      \"AccountId\": \"<string>\",\n      \"InvitationId\": \"<string>\",\n      \"RelationshipStatus\": \"<string>\",\n      \"InvitedAt\": \"<string>\"\n    },\n    {\n      \"AccountId\": \"<string>\",\n      \"InvitationId\": \"<string>\",\n      \"RelationshipStatus\": \"<string>\",\n      \"InvitedAt\": \"<string>\"\n    },\n    {\n      \"AccountId\": \"<string>\",\n      \"InvitationId\": \"<string>\",\n      \"RelationshipStatus\": \"<string>\",\n      \"InvitedAt\": \"<string>\"\n    },\n    {\n      \"AccountId\": \"<string>\",\n      \"InvitationId\": \"<string>\",\n      \"RelationshipStatus\": \"<string>\",\n      \"InvitedAt\": \"<string>\"\n    },\n    {\n      \"AccountId\": \"<string>\",\n      \"InvitationId\": \"<string>\",\n      \"RelationshipStatus\": \"<string>\",\n      \"InvitedAt\": \"<string>\"\n    },\n    {\n      \"AccountId\": \"<string>\",\n      \"InvitationId\": \"<string>\",\n      \"RelationshipStatus\": \"<string>\",\n      \"InvitedAt\": \"<string>\"\n    },\n    {\n      \"AccountId\": \"<string>\",\n      \"InvitationId\": \"<string>\",\n      \"RelationshipStatus\": \"<string>\",\n      \"InvitedAt\": \"<string>\"\n    },\n    {\n      \"AccountId\": \"<string>\",\n      \"InvitationId\": \"<string>\",\n      \"RelationshipStatus\": \"<string>\",\n      \"InvitedAt\": \"<string>\"\n    },\n    {\n      \"AccountId\": \"<string>\",\n      \"InvitationId\": \"<string>\",\n      \"RelationshipStatus\": \"<string>\",\n      \"InvitedAt\": \"<string>\"\n    },\n    {\n      \"AccountId\": \"<string>\",\n      \"InvitationId\": \"<string>\",\n      \"RelationshipStatus\": \"<string>\",\n      \"InvitedAt\": \"<string>\"\n    },\n    {\n      \"AccountId\": \"<string>\",\n      \"InvitationId\": \"<string>\",\n      \"RelationshipStatus\": \"<string>\",\n      \"InvitedAt\": \"<string>\"\n    }\n  ],\n  \"NextToken\": \"<string>\"\n}",
+              "createdAt": "2026-07-28T10:24:11.000Z",
+              "updatedAt": "2026-07-28T10:24:11.000Z",
+              "uid": "35240-14747ef8-e4e7-4624-9676-af083fd8377c"
+            },
+            {
+              "id": "7d0f5673-bc73-497a-822c-962476131fd8",
+              "name": "BadRequestException",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Date",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Credential",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Signature",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/invitation?maxResults=<integer>&nextToken=<string>&MaxResults=<string>&NextToken=<string>",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "invitation"
+                  ],
+                  "query": [
+                    {
+                      "description": "You can use this parameter to indicate the maximum number of items that you want in the response. The default value is 50. The maximum value is 50.",
+                      "key": "maxResults",
+                      "value": "<integer>"
+                    },
+                    {
+                      "description": "You can use this parameter when paginating results. Set the value of this parameter to null on your first call to the list action. For subsequent calls to the action, fill nextToken in the request with the value of NextToken from the previous response to continue listing data.",
+                      "key": "nextToken",
+                      "value": "<string>"
+                    },
+                    {
+                      "description": "Pagination limit",
+                      "key": "MaxResults",
+                      "value": "<string>"
+                    },
+                    {
+                      "description": "Pagination token",
+                      "key": "NextToken",
+                      "value": "<string>"
+                    }
+                  ]
+                }
+              },
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-07-28T10:24:11.000Z",
+              "updatedAt": "2026-07-28T10:24:11.000Z",
+              "uid": "35240-7d0f5673-bc73-497a-822c-962476131fd8"
+            },
+            {
+              "id": "aa79fb54-8fa2-44db-a0d8-3962c7a625ca",
+              "name": "InternalServerErrorException",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Date",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Credential",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Signature",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/invitation?maxResults=<integer>&nextToken=<string>&MaxResults=<string>&NextToken=<string>",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "invitation"
+                  ],
+                  "query": [
+                    {
+                      "description": "You can use this parameter to indicate the maximum number of items that you want in the response. The default value is 50. The maximum value is 50.",
+                      "key": "maxResults",
+                      "value": "<integer>"
+                    },
+                    {
+                      "description": "You can use this parameter when paginating results. Set the value of this parameter to null on your first call to the list action. For subsequent calls to the action, fill nextToken in the request with the value of NextToken from the previous response to continue listing data.",
+                      "key": "nextToken",
+                      "value": "<string>"
+                    },
+                    {
+                      "description": "Pagination limit",
+                      "key": "MaxResults",
+                      "value": "<string>"
+                    },
+                    {
+                      "description": "Pagination token",
+                      "key": "NextToken",
+                      "value": "<string>"
+                    }
+                  ]
+                }
+              },
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-07-28T10:24:11.000Z",
+              "updatedAt": "2026-07-28T10:24:11.000Z",
+              "uid": "35240-aa79fb54-8fa2-44db-a0d8-3962c7a625ca"
+            }
+          ],
+          "createdAt": "2026-07-28T10:24:11.000Z",
+          "updatedAt": "2026-07-28T10:24:11.000Z",
+          "uid": "35240-730e56f0-e137-404c-a430-1ff54c4e6836"
+        }
+      ],
+      "id": "51b597cc-1278-4403-83bc-1b01769e5484",
+      "createdAt": "2026-07-28T10:24:11.000Z",
+      "updatedAt": "2026-07-28T10:24:11.000Z",
+      "uid": "35240-51b597cc-1278-4403-83bc-1b01769e5484"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "Authorization",
+        "type": "string"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}",
+        "type": "string"
+      },
+      {
+        "key": "in",
+        "value": "header",
+        "type": "string"
+      }
+    ]
+  },
+  "variable": [
+    {
+      "key": "region",
+      "value": "us-east-1"
+    },
+    {
+      "key": "baseUrl",
+      "value": "http://guardduty.{{region}}.amazonaws.com"
+    }
+  ]
+}
