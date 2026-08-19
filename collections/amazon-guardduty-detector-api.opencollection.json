@@ -1,0 +1,3239 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Amazon GuardDuty Admin Detector API",
+    "version": "1.0.0"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "Authorization",
+      "value": "{{Authorization}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Detector",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Amazon GuardDuty Get Administrator Account",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "http://guardduty.{region}.amazonaws.com/detector/:detectorId/administrator",
+            "headers": [
+              {
+                "name": "X-Amz-Content-Sha256",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Date",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Algorithm",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Credential",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Security-Token",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Signature",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-SignedHeaders",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "detectorId",
+                "value": "",
+                "type": "path",
+                "description": "The unique ID of the detector of the GuardDuty member account."
+              }
+            ]
+          },
+          "docs": "Provides the details for the GuardDuty administrator account associated with the current GuardDuty member account."
+        },
+        {
+          "info": {
+            "name": "Amazon GuardDuty Accept Administrator Invitation",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "http://guardduty.{region}.amazonaws.com/detector/:detectorId/administrator",
+            "headers": [
+              {
+                "name": "X-Amz-Content-Sha256",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Date",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Algorithm",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Credential",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Security-Token",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Signature",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-SignedHeaders",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "detectorId",
+                "value": "",
+                "type": "path",
+                "description": "The unique ID of the detector of the GuardDuty member account."
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Accepts the invitation to be a member account and get monitored by a GuardDuty administrator account that sent the invitation."
+        },
+        {
+          "info": {
+            "name": "Amazon GuardDuty Get Master Account",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "http://guardduty.{region}.amazonaws.com/detector/:detectorId/master",
+            "headers": [
+              {
+                "name": "X-Amz-Content-Sha256",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Date",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Algorithm",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Credential",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Security-Token",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Signature",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-SignedHeaders",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "detectorId",
+                "value": "",
+                "type": "path",
+                "description": "The unique ID of the detector of the GuardDuty member account."
+              }
+            ]
+          },
+          "docs": "Provides the details for the GuardDuty administrator account associated with the current GuardDuty member account."
+        },
+        {
+          "info": {
+            "name": "Amazon GuardDuty Accept Invitation",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "http://guardduty.{region}.amazonaws.com/detector/:detectorId/master",
+            "headers": [
+              {
+                "name": "X-Amz-Content-Sha256",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Date",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Algorithm",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Credential",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Security-Token",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Signature",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-SignedHeaders",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "detectorId",
+                "value": "",
+                "type": "path",
+                "description": "The unique ID of the detector of the GuardDuty member account."
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Accepts the invitation to be monitored by a GuardDuty administrator account."
+        },
+        {
+          "info": {
+            "name": "Amazon GuardDuty Archive Findings",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "http://guardduty.{region}.amazonaws.com/detector/:detectorId/findings/archive",
+            "headers": [
+              {
+                "name": "X-Amz-Content-Sha256",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Date",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Algorithm",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Credential",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Security-Token",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Signature",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-SignedHeaders",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "detectorId",
+                "value": "",
+                "type": "path",
+                "description": "The ID of the detector that specifies the GuardDuty service whose findings you want to archive."
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "<p>Archives GuardDuty findings that are specified by the list of finding IDs.</p> <note> <p>Only the administrator account can archive findings. Member accounts don't have permission to archive findings from their accounts.</p> </note>"
+        },
+        {
+          "info": {
+            "name": "Amazon GuardDuty List Detectors",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "http://guardduty.{region}.amazonaws.com/detector",
+            "headers": [
+              {
+                "name": "X-Amz-Content-Sha256",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Date",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Algorithm",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Credential",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Security-Token",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Signature",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-SignedHeaders",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "maxResults",
+                "value": "",
+                "type": "query",
+                "description": "You can use this parameter to indicate the maximum number of items that you want in the response. The default value is 50. The maximum value is 50."
+              },
+              {
+                "name": "nextToken",
+                "value": "",
+                "type": "query",
+                "description": "You can use this parameter when paginating results. Set the value of this parameter to null on your first call to the list action. For subsequent calls to the action, fill nextToken in the request with the value of NextToken from the previous response to continue listing data."
+              },
+              {
+                "name": "MaxResults",
+                "value": "",
+                "type": "query",
+                "description": "Pagination limit"
+              },
+              {
+                "name": "NextToken",
+                "value": "",
+                "type": "query",
+                "description": "Pagination token"
+              }
+            ]
+          },
+          "docs": "Lists detectorIds of all the existing Amazon GuardDuty detector resources."
+        },
+        {
+          "info": {
+            "name": "Amazon GuardDuty Create Detector",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "http://guardduty.{region}.amazonaws.com/detector",
+            "headers": [
+              {
+                "name": "X-Amz-Content-Sha256",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Date",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Algorithm",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Credential",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Security-Token",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Signature",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-SignedHeaders",
+                "value": ""
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "<p>Creates a single Amazon GuardDuty detector. A detector is a resource that represents the GuardDuty service. To start using GuardDuty, you must create a detector in each Region where you enable the service. You can have only one detector per account per Region. All data sources are enabled in a new detector by default.</p> <p>There might be regional differences because some data sources might not be available in all the Amazon Web Services Regions where GuardDuty is presently supported. For mo"
+        },
+        {
+          "info": {
+            "name": "Amazon GuardDuty List Filters",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "http://guardduty.{region}.amazonaws.com/detector/:detectorId/filter",
+            "headers": [
+              {
+                "name": "X-Amz-Content-Sha256",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Date",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Algorithm",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Credential",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Security-Token",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Signature",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-SignedHeaders",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "detectorId",
+                "value": "",
+                "type": "path",
+                "description": "The unique ID of the detector that the filter is associated with."
+              },
+              {
+                "name": "maxResults",
+                "value": "",
+                "type": "query",
+                "description": "You can use this parameter to indicate the maximum number of items that you want in the response. The default value is 50. The maximum value is 50."
+              },
+              {
+                "name": "nextToken",
+                "value": "",
+                "type": "query",
+                "description": "You can use this parameter when paginating results. Set the value of this parameter to null on your first call to the list action. For subsequent calls to the action, fill nextToken in the request with the value of NextToken from the previous response to continue listing data."
+              },
+              {
+                "name": "MaxResults",
+                "value": "",
+                "type": "query",
+                "description": "Pagination limit"
+              },
+              {
+                "name": "NextToken",
+                "value": "",
+                "type": "query",
+                "description": "Pagination token"
+              }
+            ]
+          },
+          "docs": "Returns a paginated list of the current filters."
+        },
+        {
+          "info": {
+            "name": "Amazon GuardDuty Create Filter",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "http://guardduty.{region}.amazonaws.com/detector/:detectorId/filter",
+            "headers": [
+              {
+                "name": "X-Amz-Content-Sha256",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Date",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Algorithm",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Credential",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Security-Token",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Signature",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-SignedHeaders",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "detectorId",
+                "value": "",
+                "type": "path",
+                "description": "The ID of the detector belonging to the GuardDuty account that you want to create a filter for."
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Creates a filter using the specified finding criteria. The maximum number of saved filters per Amazon Web Services account per Region is 100. For more information, see <a href=\"https://docs.aws.amazon.com/guardduty/latest/ug/guardduty_limits.html\">Quotas for GuardDuty</a>."
+        },
+        {
+          "info": {
+            "name": "Amazon GuardDuty List I P Sets",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "http://guardduty.{region}.amazonaws.com/detector/:detectorId/ipset",
+            "headers": [
+              {
+                "name": "X-Amz-Content-Sha256",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Date",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Algorithm",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Credential",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Security-Token",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Signature",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-SignedHeaders",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "detectorId",
+                "value": "",
+                "type": "path",
+                "description": "The unique ID of the detector that the IPSet is associated with."
+              },
+              {
+                "name": "maxResults",
+                "value": "",
+                "type": "query",
+                "description": "You can use this parameter to indicate the maximum number of items you want in the response. The default value is 50. The maximum value is 50."
+              },
+              {
+                "name": "nextToken",
+                "value": "",
+                "type": "query",
+                "description": "You can use this parameter when paginating results. Set the value of this parameter to null on your first call to the list action. For subsequent calls to the action, fill nextToken in the request with the value of NextToken from the previous response to continue listing data."
+              },
+              {
+                "name": "MaxResults",
+                "value": "",
+                "type": "query",
+                "description": "Pagination limit"
+              },
+              {
+                "name": "NextToken",
+                "value": "",
+                "type": "query",
+                "description": "Pagination token"
+              }
+            ]
+          },
+          "docs": "Lists the IPSets of the GuardDuty service specified by the detector ID. If you use this operation from a member account, the IPSets returned are the IPSets from the associated administrator account."
+        },
+        {
+          "info": {
+            "name": "Amazon GuardDuty Create I P Set",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "http://guardduty.{region}.amazonaws.com/detector/:detectorId/ipset",
+            "headers": [
+              {
+                "name": "X-Amz-Content-Sha256",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Date",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Algorithm",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Credential",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Security-Token",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Signature",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-SignedHeaders",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "detectorId",
+                "value": "",
+                "type": "path",
+                "description": "The unique ID of the detector of the GuardDuty account that you want to create an IPSet for."
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Creates a new IPSet, which is called a trusted IP list in the console user interface. An IPSet is a list of IP addresses that are trusted for secure communication with Amazon Web Services infrastructure and applications. GuardDuty doesn't generate findings for IP addresses that are included in IPSets. Only users from the administrator account can use this operation."
+        },
+        {
+          "info": {
+            "name": "Amazon GuardDuty List Members",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "http://guardduty.{region}.amazonaws.com/detector/:detectorId/member",
+            "headers": [
+              {
+                "name": "X-Amz-Content-Sha256",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Date",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Algorithm",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Credential",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Security-Token",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Signature",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-SignedHeaders",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "detectorId",
+                "value": "",
+                "type": "path",
+                "description": "The unique ID of the detector the member is associated with."
+              },
+              {
+                "name": "maxResults",
+                "value": "",
+                "type": "query",
+                "description": "You can use this parameter to indicate the maximum number of items you want in the response. The default value is 50. The maximum value is 50."
+              },
+              {
+                "name": "nextToken",
+                "value": "",
+                "type": "query",
+                "description": "You can use this parameter when paginating results. Set the value of this parameter to null on your first call to the list action. For subsequent calls to the action, fill nextToken in the request with the value of NextToken from the previous response to continue listing data."
+              },
+              {
+                "name": "onlyAssociated",
+                "value": "",
+                "type": "query",
+                "description": "Specifies whether to only return associated members or to return all members (including members who haven't been invited yet or have been disassociated). Member accounts must have been previously associated with the GuardDuty administrator account using <a href=\"https://docs.aws.amazon.com/guardduty/latest/APIReference/API_CreateMembers.html\"> <code>Create Members</code> </a>. "
+              },
+              {
+                "name": "MaxResults",
+                "value": "",
+                "type": "query",
+                "description": "Pagination limit"
+              },
+              {
+                "name": "NextToken",
+                "value": "",
+                "type": "query",
+                "description": "Pagination token"
+              }
+            ]
+          },
+          "docs": "Lists details about all member accounts for the current GuardDuty administrator account."
+        },
+        {
+          "info": {
+            "name": "Amazon GuardDuty Create Members",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "http://guardduty.{region}.amazonaws.com/detector/:detectorId/member",
+            "headers": [
+              {
+                "name": "X-Amz-Content-Sha256",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Date",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Algorithm",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Credential",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Security-Token",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Signature",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-SignedHeaders",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "detectorId",
+                "value": "",
+                "type": "path",
+                "description": "The unique ID of the detector of the GuardDuty account that you want to associate member accounts with."
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "<p>Creates member accounts of the current Amazon Web Services account by specifying a list of Amazon Web Services account IDs. This step is a prerequisite for managing the associated member accounts either by invitation or through an organization.</p> <p>When using <code>Create Members</code> as an organizations delegated administrator this action will enable GuardDuty in the added member accounts, with the exception of the organization delegated administrator account, which must enable GuardDut"
+        },
+        {
+          "info": {
+            "name": "Amazon GuardDuty List Publishing Destinations",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "http://guardduty.{region}.amazonaws.com/detector/:detectorId/publishingDestination",
+            "headers": [
+              {
+                "name": "X-Amz-Content-Sha256",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Date",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Algorithm",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Credential",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Security-Token",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Signature",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-SignedHeaders",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "detectorId",
+                "value": "",
+                "type": "path",
+                "description": "The ID of the detector to retrieve publishing destinations for."
+              },
+              {
+                "name": "maxResults",
+                "value": "",
+                "type": "query",
+                "description": "The maximum number of results to return in the response."
+              },
+              {
+                "name": "nextToken",
+                "value": "",
+                "type": "query",
+                "description": "A token to use for paginating results that are returned in the response. Set the value of this parameter to null for the first request to a list action. For subsequent calls, use the <code>NextToken</code> value returned from the previous request to continue listing results after the first page."
+              },
+              {
+                "name": "MaxResults",
+                "value": "",
+                "type": "query",
+                "description": "Pagination limit"
+              },
+              {
+                "name": "NextToken",
+                "value": "",
+                "type": "query",
+                "description": "Pagination token"
+              }
+            ]
+          },
+          "docs": "Returns a list of publishing destinations associated with the specified <code>detectorId</code>."
+        },
+        {
+          "info": {
+            "name": "Amazon GuardDuty Create Publishing Destination",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "http://guardduty.{region}.amazonaws.com/detector/:detectorId/publishingDestination",
+            "headers": [
+              {
+                "name": "X-Amz-Content-Sha256",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Date",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Algorithm",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Credential",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Security-Token",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Signature",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-SignedHeaders",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "detectorId",
+                "value": "",
+                "type": "path",
+                "description": "The ID of the GuardDuty detector associated with the publishing destination."
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Creates a publishing destination to export findings to. The resource to export findings to must exist before you use this operation."
+        },
+        {
+          "info": {
+            "name": "Amazon GuardDuty Create Sample Findings",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "http://guardduty.{region}.amazonaws.com/detector/:detectorId/findings/create",
+            "headers": [
+              {
+                "name": "X-Amz-Content-Sha256",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Date",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Algorithm",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Credential",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Security-Token",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Signature",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-SignedHeaders",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "detectorId",
+                "value": "",
+                "type": "path",
+                "description": "The ID of the detector to create sample findings for."
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Generates sample findings of types specified by the list of finding types. If 'NULL' is specified for <code>findingTypes</code>, the API generates sample findings of all supported finding types."
+        },
+        {
+          "info": {
+            "name": "Amazon GuardDuty List Threat Intel Sets",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "http://guardduty.{region}.amazonaws.com/detector/:detectorId/threatintelset",
+            "headers": [
+              {
+                "name": "X-Amz-Content-Sha256",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Date",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Algorithm",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Credential",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Security-Token",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Signature",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-SignedHeaders",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "detectorId",
+                "value": "",
+                "type": "path",
+                "description": "The unique ID of the detector that the threatIntelSet is associated with."
+              },
+              {
+                "name": "maxResults",
+                "value": "",
+                "type": "query",
+                "description": "You can use this parameter to indicate the maximum number of items that you want in the response. The default value is 50. The maximum value is 50."
+              },
+              {
+                "name": "nextToken",
+                "value": "",
+                "type": "query",
+                "description": "You can use this parameter to paginate results in the response. Set the value of this parameter to null on your first call to the list action. For subsequent calls to the action, fill nextToken in the request with the value of NextToken from the previous response to continue listing data."
+              },
+              {
+                "name": "MaxResults",
+                "value": "",
+                "type": "query",
+                "description": "Pagination limit"
+              },
+              {
+                "name": "NextToken",
+                "value": "",
+                "type": "query",
+                "description": "Pagination token"
+              }
+            ]
+          },
+          "docs": "Lists the ThreatIntelSets of the GuardDuty service specified by the detector ID. If you use this operation from a member account, the ThreatIntelSets associated with the administrator account are returned."
+        },
+        {
+          "info": {
+            "name": "Amazon GuardDuty Create Threat Intel Set",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "http://guardduty.{region}.amazonaws.com/detector/:detectorId/threatintelset",
+            "headers": [
+              {
+                "name": "X-Amz-Content-Sha256",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Date",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Algorithm",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Credential",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Security-Token",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Signature",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-SignedHeaders",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "detectorId",
+                "value": "",
+                "type": "path",
+                "description": "The unique ID of the detector of the GuardDuty account that you want to create a threatIntelSet for."
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Creates a new ThreatIntelSet. ThreatIntelSets consist of known malicious IP addresses. GuardDuty generates findings based on ThreatIntelSets. Only users of the administrator account can use this operation."
+        },
+        {
+          "info": {
+            "name": "Amazon GuardDuty Get Detector",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "http://guardduty.{region}.amazonaws.com/detector/:detectorId",
+            "headers": [
+              {
+                "name": "X-Amz-Content-Sha256",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Date",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Algorithm",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Credential",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Security-Token",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Signature",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-SignedHeaders",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "detectorId",
+                "value": "",
+                "type": "path",
+                "description": "The unique ID of the detector that you want to get."
+              }
+            ]
+          },
+          "docs": "<p>Retrieves an Amazon GuardDuty detector specified by the detectorId.</p> <p>There might be regional differences because some data sources might not be available in all the Amazon Web Services Regions where GuardDuty is presently supported. For more information, see <a href=\"https://docs.aws.amazon.com/guardduty/latest/ug/guardduty_regions.html\">Regions and endpoints</a>.</p>"
+        },
+        {
+          "info": {
+            "name": "Amazon GuardDuty Update Detector",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "http://guardduty.{region}.amazonaws.com/detector/:detectorId",
+            "headers": [
+              {
+                "name": "X-Amz-Content-Sha256",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Date",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Algorithm",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Credential",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Security-Token",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Signature",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-SignedHeaders",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "detectorId",
+                "value": "",
+                "type": "path",
+                "description": "The unique ID of the detector to update."
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "<p>Updates the Amazon GuardDuty detector specified by the detectorId.</p> <p>There might be regional differences because some data sources might not be available in all the Amazon Web Services Regions where GuardDuty is presently supported. For more information, see <a href=\"https://docs.aws.amazon.com/guardduty/latest/ug/guardduty_regions.html\">Regions and endpoints</a>.</p>"
+        },
+        {
+          "info": {
+            "name": "Amazon GuardDuty Delete Detector",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "http://guardduty.{region}.amazonaws.com/detector/:detectorId",
+            "headers": [
+              {
+                "name": "X-Amz-Content-Sha256",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Date",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Algorithm",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Credential",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Security-Token",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Signature",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-SignedHeaders",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "detectorId",
+                "value": "",
+                "type": "path",
+                "description": "The unique ID of the detector that you want to delete."
+              }
+            ]
+          },
+          "docs": "Deletes an Amazon GuardDuty detector that is specified by the detector ID."
+        },
+        {
+          "info": {
+            "name": "Amazon GuardDuty Get Filter",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "http://guardduty.{region}.amazonaws.com/detector/:detectorId/filter/:filterName",
+            "headers": [
+              {
+                "name": "X-Amz-Content-Sha256",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Date",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Algorithm",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Credential",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Security-Token",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Signature",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-SignedHeaders",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "detectorId",
+                "value": "",
+                "type": "path",
+                "description": "The unique ID of the detector that the filter is associated with."
+              },
+              {
+                "name": "filterName",
+                "value": "",
+                "type": "path",
+                "description": "The name of the filter you want to get."
+              }
+            ]
+          },
+          "docs": "Returns the details of the filter specified by the filter name."
+        },
+        {
+          "info": {
+            "name": "Amazon GuardDuty Update Filter",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "http://guardduty.{region}.amazonaws.com/detector/:detectorId/filter/:filterName",
+            "headers": [
+              {
+                "name": "X-Amz-Content-Sha256",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Date",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Algorithm",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Credential",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Security-Token",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Signature",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-SignedHeaders",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "detectorId",
+                "value": "",
+                "type": "path",
+                "description": "The unique ID of the detector that specifies the GuardDuty service where you want to update a filter."
+              },
+              {
+                "name": "filterName",
+                "value": "",
+                "type": "path",
+                "description": "The name of the filter."
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Updates the filter specified by the filter name."
+        },
+        {
+          "info": {
+            "name": "Amazon GuardDuty Delete Filter",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "http://guardduty.{region}.amazonaws.com/detector/:detectorId/filter/:filterName",
+            "headers": [
+              {
+                "name": "X-Amz-Content-Sha256",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Date",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Algorithm",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Credential",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Security-Token",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Signature",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-SignedHeaders",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "detectorId",
+                "value": "",
+                "type": "path",
+                "description": "The unique ID of the detector that the filter is associated with."
+              },
+              {
+                "name": "filterName",
+                "value": "",
+                "type": "path",
+                "description": "The name of the filter that you want to delete."
+              }
+            ]
+          },
+          "docs": "Deletes the filter specified by the filter name."
+        },
+        {
+          "info": {
+            "name": "Amazon GuardDuty Get I P Set",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "http://guardduty.{region}.amazonaws.com/detector/:detectorId/ipset/:ipSetId",
+            "headers": [
+              {
+                "name": "X-Amz-Content-Sha256",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Date",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Algorithm",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Credential",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Security-Token",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Signature",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-SignedHeaders",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "detectorId",
+                "value": "",
+                "type": "path",
+                "description": "The unique ID of the detector that the IPSet is associated with."
+              },
+              {
+                "name": "ipSetId",
+                "value": "",
+                "type": "path",
+                "description": "The unique ID of the IPSet to retrieve."
+              }
+            ]
+          },
+          "docs": "Retrieves the IPSet specified by the <code>ipSetId</code>."
+        },
+        {
+          "info": {
+            "name": "Amazon GuardDuty Update I P Set",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "http://guardduty.{region}.amazonaws.com/detector/:detectorId/ipset/:ipSetId",
+            "headers": [
+              {
+                "name": "X-Amz-Content-Sha256",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Date",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Algorithm",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Credential",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Security-Token",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Signature",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-SignedHeaders",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "detectorId",
+                "value": "",
+                "type": "path",
+                "description": "The detectorID that specifies the GuardDuty service whose IPSet you want to update."
+              },
+              {
+                "name": "ipSetId",
+                "value": "",
+                "type": "path",
+                "description": "The unique ID that specifies the IPSet that you want to update."
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Updates the IPSet specified by the IPSet ID."
+        },
+        {
+          "info": {
+            "name": "Amazon GuardDuty Delete I P Set",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "http://guardduty.{region}.amazonaws.com/detector/:detectorId/ipset/:ipSetId",
+            "headers": [
+              {
+                "name": "X-Amz-Content-Sha256",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Date",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Algorithm",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Credential",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Security-Token",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Signature",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-SignedHeaders",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "detectorId",
+                "value": "",
+                "type": "path",
+                "description": "The unique ID of the detector associated with the IPSet."
+              },
+              {
+                "name": "ipSetId",
+                "value": "",
+                "type": "path",
+                "description": "The unique ID of the IPSet to delete."
+              }
+            ]
+          },
+          "docs": "Deletes the IPSet specified by the <code>ipSetId</code>. IPSets are called trusted IP lists in the console user interface."
+        },
+        {
+          "info": {
+            "name": "Amazon GuardDuty Delete Members",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "http://guardduty.{region}.amazonaws.com/detector/:detectorId/member/delete",
+            "headers": [
+              {
+                "name": "X-Amz-Content-Sha256",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Date",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Algorithm",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Credential",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Security-Token",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Signature",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-SignedHeaders",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "detectorId",
+                "value": "",
+                "type": "path",
+                "description": "The unique ID of the detector of the GuardDuty account whose members you want to delete."
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "<p>Deletes GuardDuty member accounts (to the current GuardDuty administrator account) specified by the account IDs.</p> <p>With <code>autoEnableOrganizationMembers</code> configuration for your organization set to <code>ALL</code>, you'll receive an error if you attempt to disable GuardDuty for a member account in your organization.</p>"
+        },
+        {
+          "info": {
+            "name": "Amazon GuardDuty Describe Publishing Destination",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "http://guardduty.{region}.amazonaws.com/detector/:detectorId/publishingDestination/:destinationId",
+            "headers": [
+              {
+                "name": "X-Amz-Content-Sha256",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Date",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Algorithm",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Credential",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Security-Token",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Signature",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-SignedHeaders",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "detectorId",
+                "value": "",
+                "type": "path",
+                "description": "The unique ID of the detector associated with the publishing destination to retrieve."
+              },
+              {
+                "name": "destinationId",
+                "value": "",
+                "type": "path",
+                "description": "The ID of the publishing destination to retrieve."
+              }
+            ]
+          },
+          "docs": "Returns information about the publishing destination specified by the provided <code>destinationId</code>."
+        },
+        {
+          "info": {
+            "name": "Amazon GuardDuty Update Publishing Destination",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "http://guardduty.{region}.amazonaws.com/detector/:detectorId/publishingDestination/:destinationId",
+            "headers": [
+              {
+                "name": "X-Amz-Content-Sha256",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Date",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Algorithm",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Credential",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Security-Token",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Signature",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-SignedHeaders",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "detectorId",
+                "value": "",
+                "type": "path",
+                "description": "The ID of the detector associated with the publishing destinations to update."
+              },
+              {
+                "name": "destinationId",
+                "value": "",
+                "type": "path",
+                "description": "The ID of the publishing destination to update."
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Updates information about the publishing destination specified by the <code>destinationId</code>."
+        },
+        {
+          "info": {
+            "name": "Amazon GuardDuty Delete Publishing Destination",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "http://guardduty.{region}.amazonaws.com/detector/:detectorId/publishingDestination/:destinationId",
+            "headers": [
+              {
+                "name": "X-Amz-Content-Sha256",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Date",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Algorithm",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Credential",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Security-Token",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Signature",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-SignedHeaders",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "detectorId",
+                "value": "",
+                "type": "path",
+                "description": "The unique ID of the detector associated with the publishing destination to delete."
+              },
+              {
+                "name": "destinationId",
+                "value": "",
+                "type": "path",
+                "description": "The ID of the publishing destination to delete."
+              }
+            ]
+          },
+          "docs": "Deletes the publishing definition with the specified <code>destinationId</code>."
+        },
+        {
+          "info": {
+            "name": "Amazon GuardDuty Get Threat Intel Set",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "http://guardduty.{region}.amazonaws.com/detector/:detectorId/threatintelset/:threatIntelSetId",
+            "headers": [
+              {
+                "name": "X-Amz-Content-Sha256",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Date",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Algorithm",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Credential",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Security-Token",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Signature",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-SignedHeaders",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "detectorId",
+                "value": "",
+                "type": "path",
+                "description": "The unique ID of the detector that the threatIntelSet is associated with."
+              },
+              {
+                "name": "threatIntelSetId",
+                "value": "",
+                "type": "path",
+                "description": "The unique ID of the threatIntelSet that you want to get."
+              }
+            ]
+          },
+          "docs": "Retrieves the ThreatIntelSet that is specified by the ThreatIntelSet ID."
+        },
+        {
+          "info": {
+            "name": "Amazon GuardDuty Update Threat Intel Set",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "http://guardduty.{region}.amazonaws.com/detector/:detectorId/threatintelset/:threatIntelSetId",
+            "headers": [
+              {
+                "name": "X-Amz-Content-Sha256",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Date",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Algorithm",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Credential",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Security-Token",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Signature",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-SignedHeaders",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "detectorId",
+                "value": "",
+                "type": "path",
+                "description": "The detectorID that specifies the GuardDuty service whose ThreatIntelSet you want to update."
+              },
+              {
+                "name": "threatIntelSetId",
+                "value": "",
+                "type": "path",
+                "description": "The unique ID that specifies the ThreatIntelSet that you want to update."
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Updates the ThreatIntelSet specified by the ThreatIntelSet ID."
+        },
+        {
+          "info": {
+            "name": "Amazon GuardDuty Delete Threat Intel Set",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "http://guardduty.{region}.amazonaws.com/detector/:detectorId/threatintelset/:threatIntelSetId",
+            "headers": [
+              {
+                "name": "X-Amz-Content-Sha256",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Date",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Algorithm",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Credential",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Security-Token",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Signature",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-SignedHeaders",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "detectorId",
+                "value": "",
+                "type": "path",
+                "description": "The unique ID of the detector that the threatIntelSet is associated with."
+              },
+              {
+                "name": "threatIntelSetId",
+                "value": "",
+                "type": "path",
+                "description": "The unique ID of the threatIntelSet that you want to delete."
+              }
+            ]
+          },
+          "docs": "Deletes the ThreatIntelSet specified by the ThreatIntelSet ID."
+        },
+        {
+          "info": {
+            "name": "Amazon GuardDuty Describe Malware Scans",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "http://guardduty.{region}.amazonaws.com/detector/:detectorId/malware-scans",
+            "headers": [
+              {
+                "name": "X-Amz-Content-Sha256",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Date",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Algorithm",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Credential",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Security-Token",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Signature",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-SignedHeaders",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "detectorId",
+                "value": "",
+                "type": "path",
+                "description": "The unique ID of the detector that the request is associated with."
+              },
+              {
+                "name": "MaxResults",
+                "value": "",
+                "type": "query",
+                "description": "Pagination limit"
+              },
+              {
+                "name": "NextToken",
+                "value": "",
+                "type": "query",
+                "description": "Pagination token"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "<p>Returns a list of malware scans. Each member account can view the malware scans for their own accounts. An administrator can view the malware scans for all the member accounts.</p> <p>There might be regional differences because some data sources might not be available in all the Amazon Web Services Regions where GuardDuty is presently supported. For more information, see <a href=\"https://docs.aws.amazon.com/guardduty/latest/ug/guardduty_regions.html\">Regions and endpoints</a>.</p>"
+        },
+        {
+          "info": {
+            "name": "Amazon GuardDuty Describe Organization Configuration",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "http://guardduty.{region}.amazonaws.com/detector/:detectorId/admin",
+            "headers": [
+              {
+                "name": "X-Amz-Content-Sha256",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Date",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Algorithm",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Credential",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Security-Token",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Signature",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-SignedHeaders",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "detectorId",
+                "value": "",
+                "type": "path",
+                "description": "The ID of the detector to retrieve information about the delegated administrator from."
+              },
+              {
+                "name": "maxResults",
+                "value": "",
+                "type": "query",
+                "description": "You can use this parameter to indicate the maximum number of items that you want in the response."
+              },
+              {
+                "name": "nextToken",
+                "value": "",
+                "type": "query",
+                "description": "You can use this parameter when paginating results. Set the value of this parameter to null on your first call to the list action. For subsequent calls to the action, fill <code>nextToken</code> in the request with the value of <code>NextToken</code> from the previous response to continue listing data."
+              },
+              {
+                "name": "MaxResults",
+                "value": "",
+                "type": "query",
+                "description": "Pagination limit"
+              },
+              {
+                "name": "NextToken",
+                "value": "",
+                "type": "query",
+                "description": "Pagination token"
+              }
+            ]
+          },
+          "docs": "<p>Returns information about the account selected as the delegated administrator for GuardDuty.</p> <p>There might be regional differences because some data sources might not be available in all the Amazon Web Services Regions where GuardDuty is presently supported. For more information, see <a href=\"https://docs.aws.amazon.com/guardduty/latest/ug/guardduty_regions.html\">Regions and endpoints</a>.</p>"
+        },
+        {
+          "info": {
+            "name": "Amazon GuardDuty Update Organization Configuration",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "http://guardduty.{region}.amazonaws.com/detector/:detectorId/admin",
+            "headers": [
+              {
+                "name": "X-Amz-Content-Sha256",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Date",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Algorithm",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Credential",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Security-Token",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Signature",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-SignedHeaders",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "detectorId",
+                "value": "",
+                "type": "path",
+                "description": "The ID of the detector that configures the delegated administrator."
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "<p>Configures the delegated administrator account with the provided values. You must provide the value for either <code>autoEnableOrganizationMembers</code> or <code>autoEnable</code>. </p> <p>There might be regional differences because some data sources might not be available in all the Amazon Web Services Regions where GuardDuty is presently supported. For more information, see <a href=\"https://docs.aws.amazon.com/guardduty/latest/ug/guardduty_regions.html\">Regions and endpoints</a>.</p>"
+        },
+        {
+          "info": {
+            "name": "Amazon GuardDuty Disassociate from Administrator Account",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "http://guardduty.{region}.amazonaws.com/detector/:detectorId/administrator/disassociate",
+            "headers": [
+              {
+                "name": "X-Amz-Content-Sha256",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Date",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Algorithm",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Credential",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Security-Token",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Signature",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-SignedHeaders",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "detectorId",
+                "value": "",
+                "type": "path",
+                "description": "The unique ID of the detector of the GuardDuty member account."
+              }
+            ]
+          },
+          "docs": "<p>Disassociates the current GuardDuty member account from its administrator account.</p> <p>With <code>autoEnableOrganizationMembers</code> configuration for your organization set to <code>ALL</code>, you'll receive an error if you attempt to disable GuardDuty in a member account.</p>"
+        },
+        {
+          "info": {
+            "name": "Amazon GuardDuty Disassociate from Master Account",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "http://guardduty.{region}.amazonaws.com/detector/:detectorId/master/disassociate",
+            "headers": [
+              {
+                "name": "X-Amz-Content-Sha256",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Date",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Algorithm",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Credential",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Security-Token",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Signature",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-SignedHeaders",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "detectorId",
+                "value": "",
+                "type": "path",
+                "description": "The unique ID of the detector of the GuardDuty member account."
+              }
+            ]
+          },
+          "docs": "Disassociates the current GuardDuty member account from its administrator account."
+        },
+        {
+          "info": {
+            "name": "Amazon GuardDuty Disassociate Members",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "http://guardduty.{region}.amazonaws.com/detector/:detectorId/member/disassociate",
+            "headers": [
+              {
+                "name": "X-Amz-Content-Sha256",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Date",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Algorithm",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Credential",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Security-Token",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Signature",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-SignedHeaders",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "detectorId",
+                "value": "",
+                "type": "path",
+                "description": "The unique ID of the detector of the GuardDuty account whose members you want to disassociate from the administrator account."
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "<p>Disassociates GuardDuty member accounts (to the current administrator account) specified by the account IDs.</p> <p>With <code>autoEnableOrganizationMembers</code> configuration for your organization set to <code>ALL</code>, you'll receive an error if you attempt to disassociate a member account before removing them from your Amazon Web Services organization.</p>"
+        },
+        {
+          "info": {
+            "name": "Amazon GuardDuty Get Coverage Statistics",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "http://guardduty.{region}.amazonaws.com/detector/:detectorId/coverage/statistics",
+            "headers": [
+              {
+                "name": "X-Amz-Content-Sha256",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Date",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Algorithm",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Credential",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Security-Token",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Signature",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-SignedHeaders",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "detectorId",
+                "value": "",
+                "type": "path",
+                "description": "The unique ID of the GuardDuty detector associated to the coverage statistics."
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Retrieves aggregated statistics for your account. If you are a GuardDuty administrator, you can retrieve the statistics for all the resources associated with the active member accounts in your organization who have enabled EKS Runtime Monitoring and have the GuardDuty agent running on their EKS nodes."
+        },
+        {
+          "info": {
+            "name": "Amazon GuardDuty Get Findings",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "http://guardduty.{region}.amazonaws.com/detector/:detectorId/findings/get",
+            "headers": [
+              {
+                "name": "X-Amz-Content-Sha256",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Date",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Algorithm",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Credential",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Security-Token",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Signature",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-SignedHeaders",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "detectorId",
+                "value": "",
+                "type": "path",
+                "description": "The ID of the detector that specifies the GuardDuty service whose findings you want to retrieve."
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Describes Amazon GuardDuty findings specified by finding IDs."
+        },
+        {
+          "info": {
+            "name": "Amazon GuardDuty Get Findings Statistics",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "http://guardduty.{region}.amazonaws.com/detector/:detectorId/findings/statistics",
+            "headers": [
+              {
+                "name": "X-Amz-Content-Sha256",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Date",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Algorithm",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Credential",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Security-Token",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Signature",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-SignedHeaders",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "detectorId",
+                "value": "",
+                "type": "path",
+                "description": "The ID of the detector that specifies the GuardDuty service whose findings' statistics you want to retrieve."
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Lists Amazon GuardDuty findings statistics for the specified detector ID."
+        },
+        {
+          "info": {
+            "name": "Amazon GuardDuty Get Malware Scan Settings",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "http://guardduty.{region}.amazonaws.com/detector/:detectorId/malware-scan-settings",
+            "headers": [
+              {
+                "name": "X-Amz-Content-Sha256",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Date",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Algorithm",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Credential",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Security-Token",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Signature",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-SignedHeaders",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "detectorId",
+                "value": "",
+                "type": "path",
+                "description": "The unique ID of the detector that the scan setting is associated with."
+              }
+            ]
+          },
+          "docs": "<p>Returns the details of the malware scan settings.</p> <p>There might be regional differences because some data sources might not be available in all the Amazon Web Services Regions where GuardDuty is presently supported. For more information, see <a href=\"https://docs.aws.amazon.com/guardduty/latest/ug/guardduty_regions.html\">Regions and endpoints</a>.</p>"
+        },
+        {
+          "info": {
+            "name": "Amazon GuardDuty Update Malware Scan Settings",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "http://guardduty.{region}.amazonaws.com/detector/:detectorId/malware-scan-settings",
+            "headers": [
+              {
+                "name": "X-Amz-Content-Sha256",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Date",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Algorithm",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Credential",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Security-Token",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Signature",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-SignedHeaders",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "detectorId",
+                "value": "",
+                "type": "path",
+                "description": "The unique ID of the detector that specifies the GuardDuty service where you want to update scan settings."
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "<p>Updates the malware scan settings.</p> <p>There might be regional differences because some data sources might not be available in all the Amazon Web Services Regions where GuardDuty is presently supported. For more information, see <a href=\"https://docs.aws.amazon.com/guardduty/latest/ug/guardduty_regions.html\">Regions and endpoints</a>.</p>"
+        },
+        {
+          "info": {
+            "name": "Amazon GuardDuty Get Member Detectors",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "http://guardduty.{region}.amazonaws.com/detector/:detectorId/member/detector/get",
+            "headers": [
+              {
+                "name": "X-Amz-Content-Sha256",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Date",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Algorithm",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Credential",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Security-Token",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Signature",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-SignedHeaders",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "detectorId",
+                "value": "",
+                "type": "path",
+                "description": "The detector ID for the administrator account."
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "<p>Describes which data sources are enabled for the member account's detector.</p> <p>There might be regional differences because some data sources might not be available in all the Amazon Web Services Regions where GuardDuty is presently supported. For more information, see <a href=\"https://docs.aws.amazon.com/guardduty/latest/ug/guardduty_regions.html\">Regions and endpoints</a>.</p>"
+        },
+        {
+          "info": {
+            "name": "Amazon GuardDuty Get Members",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "http://guardduty.{region}.amazonaws.com/detector/:detectorId/member/get",
+            "headers": [
+              {
+                "name": "X-Amz-Content-Sha256",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Date",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Algorithm",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Credential",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Security-Token",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Signature",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-SignedHeaders",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "detectorId",
+                "value": "",
+                "type": "path",
+                "description": "The unique ID of the detector of the GuardDuty account whose members you want to retrieve."
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Retrieves GuardDuty member accounts (of the current GuardDuty administrator account) specified by the account IDs."
+        },
+        {
+          "info": {
+            "name": "Amazon GuardDuty Get Remaining Free Trial Days",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "http://guardduty.{region}.amazonaws.com/detector/:detectorId/freeTrial/daysRemaining",
+            "headers": [
+              {
+                "name": "X-Amz-Content-Sha256",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Date",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Algorithm",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Credential",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Security-Token",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Signature",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-SignedHeaders",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "detectorId",
+                "value": "",
+                "type": "path",
+                "description": "The unique ID of the detector of the GuardDuty member account."
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Provides the number of days left for each data source used in the free trial period."
+        },
+        {
+          "info": {
+            "name": "Amazon GuardDuty Get Usage Statistics",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "http://guardduty.{region}.amazonaws.com/detector/:detectorId/usage/statistics",
+            "headers": [
+              {
+                "name": "X-Amz-Content-Sha256",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Date",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Algorithm",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Credential",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Security-Token",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Signature",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-SignedHeaders",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "detectorId",
+                "value": "",
+                "type": "path",
+                "description": "The ID of the detector that specifies the GuardDuty service whose usage statistics you want to retrieve."
+              },
+              {
+                "name": "MaxResults",
+                "value": "",
+                "type": "query",
+                "description": "Pagination limit"
+              },
+              {
+                "name": "NextToken",
+                "value": "",
+                "type": "query",
+                "description": "Pagination token"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Lists Amazon GuardDuty usage statistics over the last 30 days for the specified detector ID. For newly enabled detectors or data sources, the cost returned will include only the usage so far under 30 days. This may differ from the cost metrics in the console, which project usage over 30 days to provide a monthly cost estimate. For more information, see <a href=\"https://docs.aws.amazon.com/guardduty/latest/ug/monitoring_costs.html#usage-calculations\">Understanding How Usage Costs are Calculated</"
+        },
+        {
+          "info": {
+            "name": "Amazon GuardDuty Invite Members",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "http://guardduty.{region}.amazonaws.com/detector/:detectorId/member/invite",
+            "headers": [
+              {
+                "name": "X-Amz-Content-Sha256",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Date",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Algorithm",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Credential",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Security-Token",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Signature",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-SignedHeaders",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "detectorId",
+                "value": "",
+                "type": "path",
+                "description": "The unique ID of the detector of the GuardDuty account that you want to invite members with."
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Invites other Amazon Web Services accounts (created as members of the current Amazon Web Services account by CreateMembers) to enable GuardDuty, and allow the current Amazon Web Services account to view and manage these accounts' findings on their behalf as the GuardDuty administrator account."
+        },
+        {
+          "info": {
+            "name": "Amazon GuardDuty List Coverage",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "http://guardduty.{region}.amazonaws.com/detector/:detectorId/coverage",
+            "headers": [
+              {
+                "name": "X-Amz-Content-Sha256",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Date",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Algorithm",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Credential",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Security-Token",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Signature",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-SignedHeaders",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "detectorId",
+                "value": "",
+                "type": "path",
+                "description": "The unique ID of the detector whose coverage details you want to retrieve."
+              },
+              {
+                "name": "MaxResults",
+                "value": "",
+                "type": "query",
+                "description": "Pagination limit"
+              },
+              {
+                "name": "NextToken",
+                "value": "",
+                "type": "query",
+                "description": "Pagination token"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "<p>Lists coverage details for your GuardDuty account. If you're a GuardDuty administrator, you can retrieve all resources associated with the active member accounts in your organization.</p> <p>Make sure the accounts have EKS Runtime Monitoring enabled and GuardDuty agent running on their EKS nodes.</p>"
+        },
+        {
+          "info": {
+            "name": "Amazon GuardDuty List Findings",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "http://guardduty.{region}.amazonaws.com/detector/:detectorId/findings",
+            "headers": [
+              {
+                "name": "X-Amz-Content-Sha256",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Date",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Algorithm",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Credential",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Security-Token",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Signature",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-SignedHeaders",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "detectorId",
+                "value": "",
+                "type": "path",
+                "description": "The ID of the detector that specifies the GuardDuty service whose findings you want to list."
+              },
+              {
+                "name": "MaxResults",
+                "value": "",
+                "type": "query",
+                "description": "Pagination limit"
+              },
+              {
+                "name": "NextToken",
+                "value": "",
+                "type": "query",
+                "description": "Pagination token"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Lists Amazon GuardDuty findings for the specified detector ID."
+        },
+        {
+          "info": {
+            "name": "Amazon GuardDuty Start Monitoring Members",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "http://guardduty.{region}.amazonaws.com/detector/:detectorId/member/start",
+            "headers": [
+              {
+                "name": "X-Amz-Content-Sha256",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Date",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Algorithm",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Credential",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Security-Token",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Signature",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-SignedHeaders",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "detectorId",
+                "value": "",
+                "type": "path",
+                "description": "The unique ID of the detector of the GuardDuty administrator account associated with the member accounts to monitor."
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Turns on GuardDuty monitoring of the specified member accounts. Use this operation to restart monitoring of accounts that you stopped monitoring with the <a href=\"https://docs.aws.amazon.com/guardduty/latest/APIReference/API_StopMonitoringMembers.html\">StopMonitoringMembers</a> operation."
+        },
+        {
+          "info": {
+            "name": "Amazon GuardDuty Stop Monitoring Members",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "http://guardduty.{region}.amazonaws.com/detector/:detectorId/member/stop",
+            "headers": [
+              {
+                "name": "X-Amz-Content-Sha256",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Date",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Algorithm",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Credential",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Security-Token",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Signature",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-SignedHeaders",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "detectorId",
+                "value": "",
+                "type": "path",
+                "description": "The unique ID of the detector associated with the GuardDuty administrator account that is monitoring member accounts."
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "<p>Stops GuardDuty monitoring for the specified member accounts. Use the <code>StartMonitoringMembers</code> operation to restart monitoring for those accounts.</p> <p>With <code>autoEnableOrganizationMembers</code> configuration for your organization set to <code>ALL</code>, you'll receive an error if you attempt to stop monitoring the member accounts in your organization.</p>"
+        },
+        {
+          "info": {
+            "name": "Amazon GuardDuty Unarchive Findings",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "http://guardduty.{region}.amazonaws.com/detector/:detectorId/findings/unarchive",
+            "headers": [
+              {
+                "name": "X-Amz-Content-Sha256",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Date",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Algorithm",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Credential",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Security-Token",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Signature",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-SignedHeaders",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "detectorId",
+                "value": "",
+                "type": "path",
+                "description": "The ID of the detector associated with the findings to unarchive."
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Unarchives GuardDuty findings specified by the <code>findingIds</code>."
+        },
+        {
+          "info": {
+            "name": "Amazon GuardDuty Update Findings Feedback",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "http://guardduty.{region}.amazonaws.com/detector/:detectorId/findings/feedback",
+            "headers": [
+              {
+                "name": "X-Amz-Content-Sha256",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Date",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Algorithm",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Credential",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Security-Token",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Signature",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-SignedHeaders",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "detectorId",
+                "value": "",
+                "type": "path",
+                "description": "The ID of the detector associated with the findings to update feedback for."
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Marks the specified GuardDuty findings as useful or not useful."
+        },
+        {
+          "info": {
+            "name": "Amazon GuardDuty Update Member Detectors",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "http://guardduty.{region}.amazonaws.com/detector/:detectorId/member/detector/update",
+            "headers": [
+              {
+                "name": "X-Amz-Content-Sha256",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Date",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Algorithm",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Credential",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Security-Token",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-Signature",
+                "value": ""
+              },
+              {
+                "name": "X-Amz-SignedHeaders",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "detectorId",
+                "value": "",
+                "type": "path",
+                "description": "The detector ID of the administrator account."
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "<p>Contains information on member accounts to be updated.</p> <p>There might be regional differences because some data sources might not be available in all the Amazon Web Services Regions where GuardDuty is presently supported. For more information, see <a href=\"https://docs.aws.amazon.com/guardduty/latest/ug/guardduty_regions.html\">Regions and endpoints</a>.</p>"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
