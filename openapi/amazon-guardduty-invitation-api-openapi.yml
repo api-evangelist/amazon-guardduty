@@ -1,6 +1,6 @@
-openapi: 3.0.0
+openapi: 3.2.0
 info:
-  version: "1.0.0"
+  version: 1.0.0
   x-release: v4
   title: Amazon GuardDuty Admin Invitation API
   description: '<p>Amazon GuardDuty is a continuous security monitoring service that analyzes and processes the following data sources: VPC flow logs, Amazon Web Services CloudTrail management event logs, CloudTrail S3 data event logs, EKS audit logs, DNS logs, and Amazon EBS volume data. It uses threat intelligence feeds, such as lists of malicious IPs and domains, and machine learning to identify unexpected, potentially unauthorized, and malicious activity within your Amazon Web Services environment. This can include issues like escalations of privileges, uses of exposed credentials, or communication with malicious IPs, domains, or presence of malware on your Amazon EC2 instances and container workloads. For example, GuardDuty can detect compromised EC2 instances and container workloads serving malware, or mining bitcoin. </p> <p>GuardDuty also monitors Amazon Web Services account access behavior for signs of compromise, such as unauthorized infrastructure deployments like EC2 instances deployed in a Region that has never been used, or unusual API calls like a password policy change to reduce password strength. </p> <p>GuardDuty informs you about the status of your Amazon Web Services environment by producing security findings that you can view in the GuardDuty console or through Amazon EventBridge. For more information, see the <i> <a href="https://docs.aws.amazon.com/guardduty/latest/ug/what-is-guardduty.html">Amazon GuardDuty User Guide</a> </i>. </p>'
@@ -410,6 +410,48 @@ paths:
       - Invitation
 components:
   schemas:
+    BadRequestException: {}
+    UnprocessedAccounts:
+      type: array
+      items:
+        $ref: '#/components/schemas/UnprocessedAccount'
+      minItems: 0
+      maxItems: 50
+    Integer:
+      type: integer
+    DeleteInvitationsResponse:
+      type: object
+      required:
+      - UnprocessedAccounts
+      properties:
+        UnprocessedAccounts:
+          allOf:
+          - $ref: '#/components/schemas/UnprocessedAccounts'
+          - xml:
+              name: unprocessedAccounts
+            description: A list of objects that contain the unprocessed account and a result string that explains why it was unprocessed.
+    AccountId:
+      type: string
+      minLength: 12
+      maxLength: 12
+    String:
+      type: string
+    ListInvitationsResponse:
+      type: object
+      properties:
+        Invitations:
+          allOf:
+          - $ref: '#/components/schemas/Invitations'
+          - xml:
+              name: invitations
+            description: A list of invitation descriptions.
+        NextToken:
+          allOf:
+          - $ref: '#/components/schemas/String'
+          - xml:
+              name: nextToken
+            description: The pagination parameter to be used on the next list operation to retrieve more items.
+    InternalServerErrorException: {}
     GetInvitationsCountResponse:
       type: object
       properties:
@@ -419,12 +461,6 @@ components:
           - xml:
               name: invitationsCount
             description: The number of received invitations.
-    UnprocessedAccounts:
-      type: array
-      items:
-        $ref: '#/components/schemas/UnprocessedAccount'
-      minItems: 0
-      maxItems: 50
     UnprocessedAccount:
       type: object
       required:
@@ -444,7 +480,23 @@ components:
               name: result
             description: A reason why the account hasn't been processed.
       description: Contains information about the accounts that weren't processed.
-    BadRequestException: {}
+    Invitations:
+      type: array
+      items:
+        $ref: '#/components/schemas/Invitation'
+      minItems: 0
+      maxItems: 50
+    DeclineInvitationsResponse:
+      type: object
+      required:
+      - UnprocessedAccounts
+      properties:
+        UnprocessedAccounts:
+          allOf:
+          - $ref: '#/components/schemas/UnprocessedAccounts'
+          - xml:
+              name: unprocessedAccounts
+            description: A list of objects that contain the unprocessed account and a result string that explains why it was unprocessed.
     Invitation:
       type: object
       properties:
@@ -473,61 +525,9 @@ components:
               name: invitedAt
             description: The timestamp when the invitation was sent.
       description: Contains information about the invitation to become a member account.
-    DeleteInvitationsResponse:
-      type: object
-      required:
-      - UnprocessedAccounts
-      properties:
-        UnprocessedAccounts:
-          allOf:
-          - $ref: '#/components/schemas/UnprocessedAccounts'
-          - xml:
-              name: unprocessedAccounts
-            description: A list of objects that contain the unprocessed account and a result string that explains why it was unprocessed.
-    Invitations:
-      type: array
-      items:
-        $ref: '#/components/schemas/Invitation'
-      minItems: 0
-      maxItems: 50
-    Integer:
-      type: integer
-    DeclineInvitationsResponse:
-      type: object
-      required:
-      - UnprocessedAccounts
-      properties:
-        UnprocessedAccounts:
-          allOf:
-          - $ref: '#/components/schemas/UnprocessedAccounts'
-          - xml:
-              name: unprocessedAccounts
-            description: A list of objects that contain the unprocessed account and a result string that explains why it was unprocessed.
-    InternalServerErrorException: {}
-    String:
-      type: string
-    ListInvitationsResponse:
-      type: object
-      properties:
-        Invitations:
-          allOf:
-          - $ref: '#/components/schemas/Invitations'
-          - xml:
-              name: invitations
-            description: A list of invitation descriptions.
-        NextToken:
-          allOf:
-          - $ref: '#/components/schemas/String'
-          - xml:
-              name: nextToken
-            description: The pagination parameter to be used on the next list operation to retrieve more items.
-    AccountId:
-      type: string
-      minLength: 12
-      maxLength: 12
   parameters:
-    X-Amz-Content-Sha256:
-      name: X-Amz-Content-Sha256
+    X-Amz-Credential:
+      name: X-Amz-Credential
       in: header
       schema:
         type: string
@@ -538,20 +538,14 @@ components:
       schema:
         type: string
       required: false
-    X-Amz-Credential:
-      name: X-Amz-Credential
+    X-Amz-Signature:
+      name: X-Amz-Signature
       in: header
       schema:
         type: string
       required: false
     X-Amz-Security-Token:
       name: X-Amz-Security-Token
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Signature:
-      name: X-Amz-Signature
       in: header
       schema:
         type: string
@@ -564,6 +558,12 @@ components:
       required: false
     X-Amz-SignedHeaders:
       name: X-Amz-SignedHeaders
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Content-Sha256:
+      name: X-Amz-Content-Sha256
       in: header
       schema:
         type: string
