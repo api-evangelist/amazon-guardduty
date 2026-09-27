@@ -343,7 +343,87 @@ paths:
       tags:
       - Admin
 components:
+  parameters:
+    X-Amz-Content-Sha256:
+      name: X-Amz-Content-Sha256
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Security-Token:
+      name: X-Amz-Security-Token
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Algorithm:
+      name: X-Amz-Algorithm
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Signature:
+      name: X-Amz-Signature
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-SignedHeaders:
+      name: X-Amz-SignedHeaders
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Credential:
+      name: X-Amz-Credential
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Date:
+      name: X-Amz-Date
+      in: header
+      schema:
+        type: string
+      required: false
   schemas:
+    BadRequestException: {}
+    AdminAccounts:
+      type: array
+      items:
+        $ref: '#/components/schemas/AdminAccount'
+      minItems: 0
+      maxItems: 1
+    String:
+      type: string
+    DisableOrganizationAdminAccountResponse:
+      type: object
+      properties: {}
+    EnableOrganizationAdminAccountResponse:
+      type: object
+      properties: {}
+    AdminStatus:
+      type: string
+      enum:
+      - ENABLED
+      - DISABLE_IN_PROGRESS
+      minLength: 1
+      maxLength: 300
+    ListOrganizationAdminAccountsResponse:
+      type: object
+      properties:
+        AdminAccounts:
+          allOf:
+          - $ref: '#/components/schemas/AdminAccounts'
+          - xml:
+              name: adminAccounts
+            description: A list of accounts configured as GuardDuty delegated administrators.
+        NextToken:
+          allOf:
+          - $ref: '#/components/schemas/String'
+          - xml:
+              name: nextToken
+            description: The pagination parameter to be used on the next list operation to retrieve more items.
     AdminAccount:
       type: object
       properties:
@@ -360,87 +440,7 @@ components:
               name: adminStatus
             description: Indicates whether the account is enabled as the delegated administrator.
       description: The account within the organization specified as the GuardDuty delegated administrator.
-    String:
-      type: string
-    BadRequestException: {}
-    AdminAccounts:
-      type: array
-      items:
-        $ref: '#/components/schemas/AdminAccount'
-      minItems: 0
-      maxItems: 1
-    ListOrganizationAdminAccountsResponse:
-      type: object
-      properties:
-        AdminAccounts:
-          allOf:
-          - $ref: '#/components/schemas/AdminAccounts'
-          - xml:
-              name: adminAccounts
-            description: A list of accounts configured as GuardDuty delegated administrators.
-        NextToken:
-          allOf:
-          - $ref: '#/components/schemas/String'
-          - xml:
-              name: nextToken
-            description: The pagination parameter to be used on the next list operation to retrieve more items.
     InternalServerErrorException: {}
-    AdminStatus:
-      type: string
-      enum:
-      - ENABLED
-      - DISABLE_IN_PROGRESS
-      minLength: 1
-      maxLength: 300
-    DisableOrganizationAdminAccountResponse:
-      type: object
-      properties: {}
-    EnableOrganizationAdminAccountResponse:
-      type: object
-      properties: {}
-  parameters:
-    X-Amz-Algorithm:
-      name: X-Amz-Algorithm
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Content-Sha256:
-      name: X-Amz-Content-Sha256
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Date:
-      name: X-Amz-Date
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Credential:
-      name: X-Amz-Credential
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-SignedHeaders:
-      name: X-Amz-SignedHeaders
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Signature:
-      name: X-Amz-Signature
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Security-Token:
-      name: X-Amz-Security-Token
-      in: header
-      schema:
-        type: string
-      required: false
   securitySchemes:
     hmac:
       type: apiKey

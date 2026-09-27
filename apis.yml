@@ -39,7 +39,7 @@ tags:
 - Anomaly Detection
 - AWS
 - Compliance
-- Machine-Learning
+- Machine Learning
 - Monitoring
 - Security
 - Threat Detection
@@ -51,6 +51,7 @@ tags_raw:
 - Monitoring
 - Security
 - Threat Detection
+- Machine-Learning
 apis:
 - aid: amazon-guardduty:amazon-guardduty-admin-api
   name: Amazon GuardDuty Admin API
@@ -158,7 +159,7 @@ apis:
     url: json-ld/amazon-guardduty-context.jsonld
 common:
 - type: Website
-  url: https://amazon.com
+  url: https://aws.amazon.com/guardduty/
 - type: PostmanWorkspace
   url: https://www.postman.com/kinlaneapi/amazon-guardduty/overview
 - type: AgenticAccess
@@ -243,5 +244,5 @@ maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
   url: https://apievangelist.com
-x-parent: aws
+x-parent: amazon-web-services
 x-relationship: product
