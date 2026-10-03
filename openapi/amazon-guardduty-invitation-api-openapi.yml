@@ -411,6 +411,14 @@ paths:
       - Invitation
 components:
   schemas:
+    BadRequestException: {}
+    InternalServerErrorException: {}
+    UnprocessedAccounts:
+      type: array
+      items:
+        $ref: '#/components/schemas/UnprocessedAccount'
+      minItems: 0
+      maxItems: 50
     Integer:
       type: integer
     ListInvitationsResponse:
@@ -428,27 +436,6 @@ components:
           - xml:
               name: nextToken
             description: The pagination parameter to be used on the next list operation to retrieve more items.
-    GetInvitationsCountResponse:
-      type: object
-      properties:
-        InvitationsCount:
-          allOf:
-          - $ref: '#/components/schemas/Integer'
-          - xml:
-              name: invitationsCount
-            description: The number of received invitations.
-    DeleteInvitationsResponse:
-      type: object
-      required:
-      - UnprocessedAccounts
-      properties:
-        UnprocessedAccounts:
-          allOf:
-          - $ref: '#/components/schemas/UnprocessedAccounts'
-          - xml:
-              name: unprocessedAccounts
-            description: A list of objects that contain the unprocessed account and a result string that explains why it was unprocessed.
-    InternalServerErrorException: {}
     Invitation:
       type: object
       properties:
@@ -477,6 +464,17 @@ components:
               name: invitedAt
             description: The timestamp when the invitation was sent.
       description: Contains information about the invitation to become a member account.
+    DeclineInvitationsResponse:
+      type: object
+      required:
+      - UnprocessedAccounts
+      properties:
+        UnprocessedAccounts:
+          allOf:
+          - $ref: '#/components/schemas/UnprocessedAccounts'
+          - xml:
+              name: unprocessedAccounts
+            description: A list of objects that contain the unprocessed account and a result string that explains why it was unprocessed.
     UnprocessedAccount:
       type: object
       required:
@@ -502,7 +500,7 @@ components:
         $ref: '#/components/schemas/Invitation'
       minItems: 0
       maxItems: 50
-    DeclineInvitationsResponse:
+    DeleteInvitationsResponse:
       type: object
       required:
       - UnprocessedAccounts
@@ -513,28 +511,24 @@ components:
           - xml:
               name: unprocessedAccounts
             description: A list of objects that contain the unprocessed account and a result string that explains why it was unprocessed.
-    BadRequestException: {}
-    UnprocessedAccounts:
-      type: array
-      items:
-        $ref: '#/components/schemas/UnprocessedAccount'
-      minItems: 0
-      maxItems: 50
-    String:
-      type: string
+    GetInvitationsCountResponse:
+      type: object
+      properties:
+        InvitationsCount:
+          allOf:
+          - $ref: '#/components/schemas/Integer'
+          - xml:
+              name: invitationsCount
+            description: The number of received invitations.
     AccountId:
       type: string
       minLength: 12
       maxLength: 12
+    String:
+      type: string
   parameters:
-    X-Amz-Credential:
-      name: X-Amz-Credential
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Date:
-      name: X-Amz-Date
+    X-Amz-SignedHeaders:
+      name: X-Amz-SignedHeaders
       in: header
       schema:
         type: string
@@ -545,8 +539,8 @@ components:
       schema:
         type: string
       required: false
-    X-Amz-Algorithm:
-      name: X-Amz-Algorithm
+    X-Amz-Credential:
+      name: X-Amz-Credential
       in: header
       schema:
         type: string
@@ -557,14 +551,20 @@ components:
       schema:
         type: string
       required: false
-    X-Amz-SignedHeaders:
-      name: X-Amz-SignedHeaders
+    X-Amz-Content-Sha256:
+      name: X-Amz-Content-Sha256
       in: header
       schema:
         type: string
       required: false
-    X-Amz-Content-Sha256:
-      name: X-Amz-Content-Sha256
+    X-Amz-Algorithm:
+      name: X-Amz-Algorithm
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Date:
+      name: X-Amz-Date
       in: header
       schema:
         type: string
