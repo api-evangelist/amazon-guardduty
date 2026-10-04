@@ -344,7 +344,11 @@ paths:
       - Admin
 components:
   schemas:
+    InternalServerErrorException: {}
     DisableOrganizationAdminAccountResponse:
+      type: object
+      properties: {}
+    EnableOrganizationAdminAccountResponse:
       type: object
       properties: {}
     AdminAccount:
@@ -363,9 +367,6 @@ components:
               name: adminStatus
             description: Indicates whether the account is enabled as the delegated administrator.
       description: The account within the organization specified as the GuardDuty delegated administrator.
-    BadRequestException: {}
-    String:
-      type: string
     AdminStatus:
       type: string
       enum:
@@ -388,19 +389,24 @@ components:
           - xml:
               name: nextToken
             description: The pagination parameter to be used on the next list operation to retrieve more items.
-    InternalServerErrorException: {}
-    EnableOrganizationAdminAccountResponse:
-      type: object
-      properties: {}
+    String:
+      type: string
     AdminAccounts:
       type: array
       items:
         $ref: '#/components/schemas/AdminAccount'
       minItems: 0
       maxItems: 1
+    BadRequestException: {}
   parameters:
     X-Amz-SignedHeaders:
       name: X-Amz-SignedHeaders
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Signature:
+      name: X-Amz-Signature
       in: header
       schema:
         type: string
@@ -423,20 +429,14 @@ components:
       schema:
         type: string
       required: false
-    X-Amz-Credential:
-      name: X-Amz-Credential
-      in: header
-      schema:
-        type: string
-      required: false
     X-Amz-Date:
       name: X-Amz-Date
       in: header
       schema:
         type: string
       required: false
-    X-Amz-Signature:
-      name: X-Amz-Signature
+    X-Amz-Credential:
+      name: X-Amz-Credential
       in: header
       schema:
         type: string

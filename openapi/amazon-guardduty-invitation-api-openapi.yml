@@ -410,32 +410,89 @@ paths:
       tags:
       - Invitation
 components:
+  parameters:
+    X-Amz-Signature:
+      name: X-Amz-Signature
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Content-Sha256:
+      name: X-Amz-Content-Sha256
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Algorithm:
+      name: X-Amz-Algorithm
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Date:
+      name: X-Amz-Date
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-SignedHeaders:
+      name: X-Amz-SignedHeaders
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Credential:
+      name: X-Amz-Credential
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Security-Token:
+      name: X-Amz-Security-Token
+      in: header
+      schema:
+        type: string
+      required: false
   schemas:
-    BadRequestException: {}
     InternalServerErrorException: {}
+    Invitations:
+      type: array
+      items:
+        $ref: '#/components/schemas/Invitation'
+      minItems: 0
+      maxItems: 50
+    DeclineInvitationsResponse:
+      type: object
+      required:
+      - UnprocessedAccounts
+      properties:
+        UnprocessedAccounts:
+          allOf:
+          - $ref: '#/components/schemas/UnprocessedAccounts'
+          - xml:
+              name: unprocessedAccounts
+            description: A list of objects that contain the unprocessed account and a result string that explains why it was unprocessed.
     UnprocessedAccounts:
       type: array
       items:
         $ref: '#/components/schemas/UnprocessedAccount'
       minItems: 0
       maxItems: 50
+    AccountId:
+      type: string
+      minLength: 12
+      maxLength: 12
     Integer:
       type: integer
-    ListInvitationsResponse:
+    GetInvitationsCountResponse:
       type: object
       properties:
-        Invitations:
+        InvitationsCount:
           allOf:
-          - $ref: '#/components/schemas/Invitations'
+          - $ref: '#/components/schemas/Integer'
           - xml:
-              name: invitations
-            description: A list of invitation descriptions.
-        NextToken:
-          allOf:
-          - $ref: '#/components/schemas/String'
-          - xml:
-              name: nextToken
-            description: The pagination parameter to be used on the next list operation to retrieve more items.
+              name: invitationsCount
+            description: The number of received invitations.
     Invitation:
       type: object
       properties:
@@ -464,7 +521,8 @@ components:
               name: invitedAt
             description: The timestamp when the invitation was sent.
       description: Contains information about the invitation to become a member account.
-    DeclineInvitationsResponse:
+    BadRequestException: {}
+    DeleteInvitationsResponse:
       type: object
       required:
       - UnprocessedAccounts
@@ -475,6 +533,23 @@ components:
           - xml:
               name: unprocessedAccounts
             description: A list of objects that contain the unprocessed account and a result string that explains why it was unprocessed.
+    ListInvitationsResponse:
+      type: object
+      properties:
+        Invitations:
+          allOf:
+          - $ref: '#/components/schemas/Invitations'
+          - xml:
+              name: invitations
+            description: A list of invitation descriptions.
+        NextToken:
+          allOf:
+          - $ref: '#/components/schemas/String'
+          - xml:
+              name: nextToken
+            description: The pagination parameter to be used on the next list operation to retrieve more items.
+    String:
+      type: string
     UnprocessedAccount:
       type: object
       required:
@@ -494,81 +569,6 @@ components:
               name: result
             description: A reason why the account hasn't been processed.
       description: Contains information about the accounts that weren't processed.
-    Invitations:
-      type: array
-      items:
-        $ref: '#/components/schemas/Invitation'
-      minItems: 0
-      maxItems: 50
-    DeleteInvitationsResponse:
-      type: object
-      required:
-      - UnprocessedAccounts
-      properties:
-        UnprocessedAccounts:
-          allOf:
-          - $ref: '#/components/schemas/UnprocessedAccounts'
-          - xml:
-              name: unprocessedAccounts
-            description: A list of objects that contain the unprocessed account and a result string that explains why it was unprocessed.
-    GetInvitationsCountResponse:
-      type: object
-      properties:
-        InvitationsCount:
-          allOf:
-          - $ref: '#/components/schemas/Integer'
-          - xml:
-              name: invitationsCount
-            description: The number of received invitations.
-    AccountId:
-      type: string
-      minLength: 12
-      maxLength: 12
-    String:
-      type: string
-  parameters:
-    X-Amz-SignedHeaders:
-      name: X-Amz-SignedHeaders
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Security-Token:
-      name: X-Amz-Security-Token
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Credential:
-      name: X-Amz-Credential
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Signature:
-      name: X-Amz-Signature
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Content-Sha256:
-      name: X-Amz-Content-Sha256
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Algorithm:
-      name: X-Amz-Algorithm
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Date:
-      name: X-Amz-Date
-      in: header
-      schema:
-        type: string
-      required: false
   securitySchemes:
     hmac:
       type: apiKey
