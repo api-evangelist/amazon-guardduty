@@ -1,0 +1,27 @@
+slug: amazon-guardduty
+provider: Amazon GuardDuty
+generated_by: planning/capability-mapping/scripts/classify_capabilities.py
+model: claude-opus-5
+frame:
+- Software & Technology
+min_confidence: 0.7
+capability_model:
+  source: https://github.com/vincentmakes/turbo-ea-capabilities
+  license: CC-BY-4.0
+  attribution: Turbo EA Capabilities by Vincent Verdet — Turbo EA, https://github.com/vincentmakes/turbo-ea-capabilities,
+    CC BY 4.0
+  notice: NOTICE
+edge_count: 1
+edges:
+- tag: Detector
+  spec_file: amazon-guardduty-detector-api-openapi.yml
+  capability_id: BC-620.30
+  capability_id_l1: BC-620
+  capability_name: Threat Detection & Response Management
+  confidence: 0.92
+  evidence: POST /detector/{detectorId}/findings/archive  ArchiveFindings; POST /detector  CreateDetector;
+    "continuous security monitoring service that analyzes ... VPC flow logs, CloudTrail management event
+    logs, EKS audit logs, DNS logs"
+  reason: 'The detector tag carries the core threat-detection surface: creating detectors over log data
+    sources, managing findings, filters and IP/threat-intel sets. This is SOC-style threat detection and
+    response.'

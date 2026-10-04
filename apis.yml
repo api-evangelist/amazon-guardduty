@@ -158,6 +158,9 @@ apis:
   - type: JSONLD
     url: json-ld/amazon-guardduty-context.jsonld
 common:
+- type: CapabilityMap
+  url: capabilities/amazon-guardduty-capability-edges.yml
+  name: Amazon GuardDuty Business Capability Map
 - type: Website
   url: https://aws.amazon.com/guardduty/
 - type: PostmanWorkspace
