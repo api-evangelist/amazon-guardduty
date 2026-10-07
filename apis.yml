@@ -158,6 +158,8 @@ apis:
   - type: JSONLD
     url: json-ld/amazon-guardduty-context.jsonld
 common:
+- type: Plans
+  url: plans/amazon-guardduty-plans-pricing.yml
 - type: CapabilityMap
   url: capabilities/amazon-guardduty-capability-edges.yml
   name: Amazon GuardDuty Business Capability Map
