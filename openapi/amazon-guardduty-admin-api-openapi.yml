@@ -344,13 +344,40 @@ paths:
       - Admin
 components:
   schemas:
-    InternalServerErrorException: {}
+    ListOrganizationAdminAccountsResponse:
+      type: object
+      properties:
+        AdminAccounts:
+          allOf:
+          - $ref: '#/components/schemas/AdminAccounts'
+          - xml:
+              name: adminAccounts
+            description: A list of accounts configured as GuardDuty delegated administrators.
+        NextToken:
+          allOf:
+          - $ref: '#/components/schemas/String'
+          - xml:
+              name: nextToken
+            description: The pagination parameter to be used on the next list operation to retrieve more items.
     DisableOrganizationAdminAccountResponse:
       type: object
       properties: {}
-    EnableOrganizationAdminAccountResponse:
-      type: object
-      properties: {}
+    String:
+      type: string
+    AdminStatus:
+      type: string
+      enum:
+      - ENABLED
+      - DISABLE_IN_PROGRESS
+      minLength: 1
+      maxLength: 300
+    AdminAccounts:
+      type: array
+      items:
+        $ref: '#/components/schemas/AdminAccount'
+      minItems: 0
+      maxItems: 1
+    InternalServerErrorException: {}
     AdminAccount:
       type: object
       properties:
@@ -367,52 +394,13 @@ components:
               name: adminStatus
             description: Indicates whether the account is enabled as the delegated administrator.
       description: The account within the organization specified as the GuardDuty delegated administrator.
-    AdminStatus:
-      type: string
-      enum:
-      - ENABLED
-      - DISABLE_IN_PROGRESS
-      minLength: 1
-      maxLength: 300
-    ListOrganizationAdminAccountsResponse:
-      type: object
-      properties:
-        AdminAccounts:
-          allOf:
-          - $ref: '#/components/schemas/AdminAccounts'
-          - xml:
-              name: adminAccounts
-            description: A list of accounts configured as GuardDuty delegated administrators.
-        NextToken:
-          allOf:
-          - $ref: '#/components/schemas/String'
-          - xml:
-              name: nextToken
-            description: The pagination parameter to be used on the next list operation to retrieve more items.
-    String:
-      type: string
-    AdminAccounts:
-      type: array
-      items:
-        $ref: '#/components/schemas/AdminAccount'
-      minItems: 0
-      maxItems: 1
     BadRequestException: {}
+    EnableOrganizationAdminAccountResponse:
+      type: object
+      properties: {}
   parameters:
-    X-Amz-SignedHeaders:
-      name: X-Amz-SignedHeaders
-      in: header
-      schema:
-        type: string
-      required: false
     X-Amz-Signature:
       name: X-Amz-Signature
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Content-Sha256:
-      name: X-Amz-Content-Sha256
       in: header
       schema:
         type: string
@@ -423,20 +411,32 @@ components:
       schema:
         type: string
       required: false
+    X-Amz-SignedHeaders:
+      name: X-Amz-SignedHeaders
+      in: header
+      schema:
+        type: string
+      required: false
     X-Amz-Algorithm:
       name: X-Amz-Algorithm
       in: header
       schema:
         type: string
       required: false
-    X-Amz-Date:
-      name: X-Amz-Date
+    X-Amz-Credential:
+      name: X-Amz-Credential
       in: header
       schema:
         type: string
       required: false
-    X-Amz-Credential:
-      name: X-Amz-Credential
+    X-Amz-Content-Sha256:
+      name: X-Amz-Content-Sha256
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Date:
+      name: X-Amz-Date
       in: header
       schema:
         type: string
