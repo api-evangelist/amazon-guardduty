@@ -1,0 +1,433 @@
+aid: amazon-guardduty
+name: Amazon GuardDuty
+description: Amazon GuardDuty is an intelligent threat detection service that continuously monitors your
+  AWS accounts, workloads, and data for malicious activity. It uses machine learning, anomaly detection,
+  and integrated threat intelligence to identify and prioritize potential threats to your AWS environment.
+type: Index
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: true
+  label: Hosted service · you call their endpoint
+  confidence: high
+  source:
+  - openapi
+  - pricing
+  generated: '2026-08-28'
+  method: derived
+accessModel:
+  pricing: freemium
+  onboarding: self-serve
+  trial: false
+  try_now: true
+  public: false
+  label: Freemium · Self-serve signup
+  confidence: medium
+  source:
+  - plans
+  - authentication
+  - security
+  generated: '2026-09-03'
+  method: derived
+image: https://a0.awsstatic.com/libra-css/images/logos/aws_logo_smile_1200x630.png
+url: https://raw.githubusercontent.com/api-evangelist/amazon-guardduty/refs/heads/main/apis.yml
+created: '2024-01-15'
+modified: '2026-09-16'
+specificationVersion: '0.23'
+tags:
+- Anomaly Detection
+- Amazon Web Services
+- Compliance
+- Machine Learning
+- Monitoring
+- Security
+- Threat Detection
+tags_raw:
+- Anomaly Detection
+- AWS
+- Compliance
+- Machine Learning
+- Monitoring
+- Security
+- Threat Detection
+- Machine-Learning
+apis:
+- aid: amazon-guardduty:amazon-guardduty-admin-api
+  name: Amazon GuardDuty Admin API
+  description: The Admin API from Amazon GuardDuty — 3 operation(s) for admin.
+  humanURL: https://aws.amazon.com/guardduty/
+  baseURL: https://guardduty.amazonaws.com
+  tags:
+  - Admin
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-guardduty-admin-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/guardduty/latest/APIReference/Welcome.html
+  - type: GettingStarted
+    url: https://aws.amazon.com/guardduty/getting-started/
+  - type: Pricing
+    url: https://aws.amazon.com/guardduty/pricing/
+  - type: FAQ
+    url: https://aws.amazon.com/guardduty/faqs/
+  - type: APIReference
+    url: https://docs.aws.amazon.com/guardduty/latest/APIReference/Welcome.html
+  - type: Authentication
+    url: https://docs.aws.amazon.com/general/latest/gr/signature-version-4.html
+  - type: JSONSchema
+    url: json-schema/guardduty-finding-schema.json
+  - type: JSONLD
+    url: json-ld/amazon-guardduty-context.jsonld
+- aid: amazon-guardduty:amazon-guardduty-detector-api
+  name: Amazon GuardDuty Detector API
+  description: The Detector API from Amazon GuardDuty — 37 operation(s) for detector.
+  humanURL: https://aws.amazon.com/guardduty/
+  baseURL: https://guardduty.amazonaws.com
+  tags:
+  - Detector
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-guardduty-detector-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/guardduty/latest/APIReference/Welcome.html
+  - type: GettingStarted
+    url: https://aws.amazon.com/guardduty/getting-started/
+  - type: Pricing
+    url: https://aws.amazon.com/guardduty/pricing/
+  - type: FAQ
+    url: https://aws.amazon.com/guardduty/faqs/
+  - type: APIReference
+    url: https://docs.aws.amazon.com/guardduty/latest/APIReference/Welcome.html
+  - type: Authentication
+    url: https://docs.aws.amazon.com/general/latest/gr/signature-version-4.html
+  - type: JSONSchema
+    url: json-schema/guardduty-finding-schema.json
+  - type: JSONLD
+    url: json-ld/amazon-guardduty-context.jsonld
+- aid: amazon-guardduty:amazon-guardduty-invitation-api
+  name: Amazon GuardDuty Invitation API
+  description: The Invitation API from Amazon GuardDuty — 4 operation(s) for invitation.
+  humanURL: https://aws.amazon.com/guardduty/
+  baseURL: https://guardduty.amazonaws.com
+  tags:
+  - Invitation
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-guardduty-invitation-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/guardduty/latest/APIReference/Welcome.html
+  - type: GettingStarted
+    url: https://aws.amazon.com/guardduty/getting-started/
+  - type: Pricing
+    url: https://aws.amazon.com/guardduty/pricing/
+  - type: FAQ
+    url: https://aws.amazon.com/guardduty/faqs/
+  - type: APIReference
+    url: https://docs.aws.amazon.com/guardduty/latest/APIReference/Welcome.html
+  - type: Authentication
+    url: https://docs.aws.amazon.com/general/latest/gr/signature-version-4.html
+  - type: JSONSchema
+    url: json-schema/guardduty-finding-schema.json
+  - type: JSONLD
+    url: json-ld/amazon-guardduty-context.jsonld
+- aid: amazon-guardduty:amazon-guardduty-tags-api
+  name: Amazon GuardDuty Tags API
+  description: The Tags API from Amazon GuardDuty — 2 operation(s) for tags.
+  humanURL: https://aws.amazon.com/guardduty/
+  baseURL: https://guardduty.amazonaws.com
+  tags:
+  - Tags
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-guardduty-tags-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/guardduty/latest/APIReference/Welcome.html
+  - type: GettingStarted
+    url: https://aws.amazon.com/guardduty/getting-started/
+  - type: Pricing
+    url: https://aws.amazon.com/guardduty/pricing/
+  - type: FAQ
+    url: https://aws.amazon.com/guardduty/faqs/
+  - type: APIReference
+    url: https://docs.aws.amazon.com/guardduty/latest/APIReference/Welcome.html
+  - type: Authentication
+    url: https://docs.aws.amazon.com/general/latest/gr/signature-version-4.html
+  - type: JSONSchema
+    url: json-schema/guardduty-finding-schema.json
+  - type: JSONLD
+    url: json-ld/amazon-guardduty-context.jsonld
+- aid: amazon-guardduty:amazon-guardduty-administrator-api
+  name: Amazon GuardDuty Guardduty Administrator API
+  description: >-
+    The Guardduty Administrator API from Amazon GuardDuty — 2 operation(s) for guardduty administrator.
+  humanURL: https://aws.amazon.com/guardduty/
+  baseURL: https://guardduty.amazonaws.com
+  tags:
+  - Guardduty Administrator
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-guardduty-administrator-api-openapi.yml
+- aid: amazon-guardduty:amazon-guardduty-association-api
+  name: Amazon GuardDuty Guardduty Association API
+  description: >-
+    The Guardduty Association API from Amazon GuardDuty — 1 operation(s) for guardduty association.
+  humanURL: https://aws.amazon.com/guardduty/
+  baseURL: https://guardduty.amazonaws.com
+  tags:
+  - Guardduty Association
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-guardduty-association-api-openapi.yml
+- aid: amazon-guardduty:amazon-guardduty-custom-detection-rule-api
+  name: Amazon GuardDuty Guardduty Custom Detection Rule API
+  description: >-
+    The Guardduty Custom Detection Rule API from Amazon GuardDuty — 5 operation(s) for guardduty custom
+    detection rule.
+  humanURL: https://aws.amazon.com/guardduty/
+  baseURL: https://guardduty.amazonaws.com
+  tags:
+  - Guardduty Custom Detection Rule
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-guardduty-custom-detection-rule-api-openapi.yml
+- aid: amazon-guardduty:amazon-guardduty-filter-api
+  name: Amazon GuardDuty Guardduty Filter API
+  description: The Guardduty Filter API from Amazon GuardDuty — 2 operation(s) for guardduty filter.
+  humanURL: https://aws.amazon.com/guardduty/
+  baseURL: https://guardduty.amazonaws.com
+  tags:
+  - Guardduty Filter
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-guardduty-filter-api-openapi.yml
+- aid: amazon-guardduty:amazon-guardduty-findings-api
+  name: Amazon GuardDuty Guardduty Findings API
+  description: >-
+    The Guardduty Findings API from Amazon GuardDuty — 7 operation(s) for guardduty findings.
+  humanURL: https://aws.amazon.com/guardduty/
+  baseURL: https://guardduty.amazonaws.com
+  tags:
+  - Guardduty Findings
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-guardduty-findings-api-openapi.yml
+- aid: amazon-guardduty:amazon-guardduty-investigation-api
+  name: Amazon GuardDuty Guardduty Investigation API
+  description: >-
+    The Guardduty Investigation API from Amazon GuardDuty — 3 operation(s) for guardduty investigation.
+  humanURL: https://aws.amazon.com/guardduty/
+  baseURL: https://guardduty.amazonaws.com
+  tags:
+  - Guardduty Investigation
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-guardduty-investigation-api-openapi.yml
+- aid: amazon-guardduty:amazon-guardduty-ipset-api
+  name: Amazon GuardDuty Guardduty Ipset API
+  description: The Guardduty Ipset API from Amazon GuardDuty — 2 operation(s) for guardduty ipset.
+  humanURL: https://aws.amazon.com/guardduty/
+  baseURL: https://guardduty.amazonaws.com
+  tags:
+  - Guardduty Ipset
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-guardduty-ipset-api-openapi.yml
+- aid: amazon-guardduty:amazon-guardduty-malware-protection-plan-api
+  name: Amazon GuardDuty Guardduty Malware Protection Plan API
+  description: >-
+    The Guardduty Malware Protection Plan API from Amazon GuardDuty — 2 operation(s) for guardduty malware
+    protection plan.
+  humanURL: https://aws.amazon.com/guardduty/
+  baseURL: https://guardduty.amazonaws.com
+  tags:
+  - Guardduty Malware Protection Plan
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-guardduty-malware-protection-plan-api-openapi.yml
+- aid: amazon-guardduty:amazon-guardduty-malware-scan-api
+  name: Amazon GuardDuty Guardduty Malware Scan API
+  description: >-
+    The Guardduty Malware Scan API from Amazon GuardDuty — 3 operation(s) for guardduty malware scan.
+  humanURL: https://aws.amazon.com/guardduty/
+  baseURL: https://guardduty.amazonaws.com
+  tags:
+  - Guardduty Malware Scan
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-guardduty-malware-scan-api-openapi.yml
+- aid: amazon-guardduty:amazon-guardduty-master-api
+  name: Amazon GuardDuty Guardduty Master API
+  description: The Guardduty Master API from Amazon GuardDuty — 2 operation(s) for guardduty master.
+  humanURL: https://aws.amazon.com/guardduty/
+  baseURL: https://guardduty.amazonaws.com
+  tags:
+  - Guardduty Master
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-guardduty-master-api-openapi.yml
+- aid: amazon-guardduty:amazon-guardduty-member-api
+  name: Amazon GuardDuty Guardduty Member API
+  description: The Guardduty Member API from Amazon GuardDuty — 9 operation(s) for guardduty member.
+  humanURL: https://aws.amazon.com/guardduty/
+  baseURL: https://guardduty.amazonaws.com
+  tags:
+  - Guardduty Member
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-guardduty-member-api-openapi.yml
+- aid: amazon-guardduty:amazon-guardduty-operations-api
+  name: Amazon GuardDuty Guardduty Operations API
+  description: >-
+    The Guardduty Operations API from Amazon GuardDuty — 8 operation(s) for guardduty operations.
+  humanURL: https://aws.amazon.com/guardduty/
+  baseURL: https://guardduty.amazonaws.com
+  tags:
+  - Guardduty Operations
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-guardduty-operations-api-openapi.yml
+- aid: amazon-guardduty:amazon-guardduty-publishingdestination-api
+  name: Amazon GuardDuty Guardduty Publishingdestination API
+  description: >-
+    The Guardduty Publishingdestination API from Amazon GuardDuty — 2 operation(s) for guardduty publishingdestination.
+  humanURL: https://aws.amazon.com/guardduty/
+  baseURL: https://guardduty.amazonaws.com
+  tags:
+  - Guardduty Publishingdestination
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-guardduty-publishingdestination-api-openapi.yml
+- aid: amazon-guardduty:amazon-guardduty-threatentityset-api
+  name: Amazon GuardDuty Guardduty Threatentityset API
+  description: >-
+    The Guardduty Threatentityset API from Amazon GuardDuty — 2 operation(s) for guardduty threatentityset.
+  humanURL: https://aws.amazon.com/guardduty/
+  baseURL: https://guardduty.amazonaws.com
+  tags:
+  - Guardduty Threatentityset
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-guardduty-threatentityset-api-openapi.yml
+- aid: amazon-guardduty:amazon-guardduty-threatintelset-api
+  name: Amazon GuardDuty Guardduty Threatintelset API
+  description: >-
+    The Guardduty Threatintelset API from Amazon GuardDuty — 2 operation(s) for guardduty threatintelset.
+  humanURL: https://aws.amazon.com/guardduty/
+  baseURL: https://guardduty.amazonaws.com
+  tags:
+  - Guardduty Threatintelset
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-guardduty-threatintelset-api-openapi.yml
+- aid: amazon-guardduty:amazon-guardduty-trustedentityset-api
+  name: Amazon GuardDuty Guardduty Trustedentityset API
+  description: >-
+    The Guardduty Trustedentityset API from Amazon GuardDuty — 2 operation(s) for guardduty trustedentityset.
+  humanURL: https://aws.amazon.com/guardduty/
+  baseURL: https://guardduty.amazonaws.com
+  tags:
+  - Guardduty Trustedentityset
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-guardduty-trustedentityset-api-openapi.yml
+common:
+- type: Pricing
+  url: https://aws.amazon.com/guardduty/pricing/
+- type: RateLimits
+  url: rate-limits/amazon-guardduty-rate-limits.yml
+- type: FinOps
+  url: finops/amazon-guardduty-finops.yml
+- type: Plans
+  url: plans/amazon-guardduty-plans-pricing.yml
+- type: CapabilityMap
+  url: capabilities/amazon-guardduty-capability-edges.yml
+  name: Amazon GuardDuty Business Capability Map
+- type: Website
+  url: https://aws.amazon.com/guardduty/
+- type: PostmanWorkspace
+  url: https://www.postman.com/kinlaneapi/amazon-guardduty/overview
+- type: AgenticAccess
+  url: agentic-access/amazon-guardduty-agentic-access.yml
+- type: TrustCenter
+  url: security/amazon-guardduty-trust-center.yml
+- type: VulnerabilityDisclosure
+  url: security/amazon-guardduty-vulnerability-disclosure.yml
+- type: DomainSecurity
+  url: security/amazon-guardduty-domain-security.yml
+- type: Authentication
+  url: authentication/amazon-guardduty-authentication.yml
+- type: Portal
+  url: https://aws.amazon.com/guardduty/
+- type: Documentation
+  url: https://docs.aws.amazon.com/guardduty/
+- type: TermsOfService
+  url: https://aws.amazon.com/service-terms/
+- type: PrivacyPolicy
+  url: https://aws.amazon.com/privacy/
+- type: Support
+  url: https://aws.amazon.com/premiumsupport/
+- type: Blog
+  url: https://aws.amazon.com/blogs/security/tag/amazon-guardduty/
+- type: GitHubOrganization
+  url: https://github.com/aws
+- type: Console
+  url: https://console.aws.amazon.com/guardduty/
+- type: Signup
+  url: https://portal.aws.amazon.com/billing/signup
+- type: StatusPage
+  url: https://health.aws.amazon.com/health/status
+- type: Contact
+  url: https://aws.amazon.com/contact-us/
+- type: SpectralRules
+  url: rules/amazon-guardduty-spectral-rules.yml
+- type: Vocabulary
+  url: vocabulary/amazon-guardduty-vocabulary.yaml
+- type: Features
+  data:
+  - name: Intelligent Threat Detection
+    description: Uses ML and anomaly detection to identify threats without manual configuration or rule
+      management.
+  - name: Integrated Threat Intelligence
+    description: Incorporates curated threat intelligence feeds from AWS, CrowdStrike, and Proofpoint
+      for enhanced detection.
+  - name: Multi-Account Support
+    description: Monitor all accounts in an AWS Organization from a central administrator account.
+  - name: Continuous Monitoring
+    description: Analyzes CloudTrail, VPC Flow Logs, DNS logs, and S3 access logs 24/7 without performance
+      impact.
+  - name: Finding Prioritization
+    description: Automatically prioritizes findings by severity (Low, Medium, High) for efficient response.
+  - name: Malware Protection
+    description: Scans EC2 instance volumes and S3 objects for malware and known threats.
+- type: UseCases
+  data:
+  - name: Account Compromise Detection
+    description: Detect compromised AWS credentials and unauthorized API calls using ML-based anomaly
+      detection.
+  - name: Insider Threat Monitoring
+    description: Identify suspicious behavior from privileged users or compromised internal accounts.
+  - name: Cryptocurrency Mining Detection
+    description: Detect and alert on unauthorized cryptocurrency mining using EC2 or Lambda resources.
+  - name: Malware Detection
+    description: Scan workloads and data for malware and ransomware threats.
+  - name: Data Exfiltration Prevention
+    description: Identify unusual data access patterns and potential exfiltration from S3 buckets.
+- type: Integrations
+  data:
+  - name: AWS Security Hub
+    description: Automatically send GuardDuty findings to Security Hub for centralized security management.
+  - name: Amazon EventBridge
+    description: Trigger automated responses to findings using EventBridge rules and Lambda functions.
+  - name: AWS Organizations
+    description: Enable GuardDuty organization-wide for centralized multi-account threat monitoring.
+  - name: Amazon Detective
+    description: Investigate GuardDuty findings in depth using Detective for root cause analysis.
+  - name: Amazon Macie
+    description: Combine with Macie for comprehensive data security and threat detection.
+maintainers:
+- FN: Kin Lane
+  email: kin@apievangelist.com
+  url: https://apievangelist.com
+x-parent: amazon-web-services
+x-relationship: product
