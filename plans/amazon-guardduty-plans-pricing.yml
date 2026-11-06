@@ -110,12 +110,13 @@ plans:
 rate_limit_statements:
 - attached EBS volumes over 2 TB (2,048 GB) are not scanned
 x-canonical:
-  generated: '2026-11-02'
+  generated: '2026-11-06'
   vocabulary: engine/economics/plans-canonical.yml
   models:
   - hybrid
   - subscription
   units:
+  - compute
   - data
   plans:
   - name: CloudTrail management event analysis
@@ -155,7 +156,7 @@ x-canonical:
     model: hybrid
     model_how: derived
     units:
-    - other
+    - compute
     periods:
     - month
   - name: Malware Protection for EC2 (EBS data scanned)
@@ -187,23 +188,23 @@ x-canonical:
     model: hybrid
     model_how: derived
     units:
-    - other
+    - compute
     periods:
     - month
   - name: RDS Protection Europe (Spain)
     access: other
-    model: subscription
+    model: hybrid
     model_how: derived
     units:
-    - other
+    - compute
     periods:
     - month
   - name: RDS Protection Europe (Zurich)
     access: other
-    model: subscription
+    model: hybrid
     model_how: derived
     units:
-    - other
+    - compute
     periods:
     - month
   - name: Lambda Protection network activity log analysis
