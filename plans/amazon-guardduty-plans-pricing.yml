@@ -2,6 +2,7 @@
 generated: '2026-10-07'
 method: searched
 source: https://aws.amazon.com/guardduty/pricing/
+name: Amazon GuardDuty API Plans
 sources:
 - https://aws.amazon.com/guardduty/pricing/
 provenance:
@@ -110,7 +111,7 @@ plans:
 rate_limit_statements:
 - attached EBS volumes over 2 TB (2,048 GB) are not scanned
 x-canonical:
-  generated: '2026-11-06'
+  generated: '2026-11-13'
   vocabulary: engine/economics/plans-canonical.yml
   models:
   - hybrid

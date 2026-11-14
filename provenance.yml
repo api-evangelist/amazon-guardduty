@@ -5,12 +5,27 @@ artifacts:
   agentic-access/amazon-guardduty-agentic-access.yml:
     method: generated
     evidence: declared in the artifact
+  ai-preferences/amazon-guardduty-ai-preferences.yml:
+    method: harvested
+    evidence: declared in the artifact
   authentication/amazon-guardduty-authentication.yml:
     method: derived
     evidence: declared in the artifact
   capabilities/amazon-guardduty-capability-edges.yml:
     method: unknown
     evidence: no authorship recorded
+  certification/observations-2026-11-11.jsonl:
+    method: unknown
+    evidence: no authorship recorded
+  certification/status.yml:
+    method: unknown
+    evidence: no authorship recorded
+  changelog/amazon-guardduty-changelog.yml:
+    method: searched
+    evidence: declared in the artifact
+  cli/amazon-guardduty-cli.yml:
+    method: searched
+    evidence: declared in the artifact
   collections/amazon-guardduty-admin-api.opencollection.json:
     method: derived
     evidence: openapi/amazon-guardduty-admin-api
@@ -41,6 +56,24 @@ artifacts:
   collections/amazon-guardduty.postman_collection.json:
     method: derived
     evidence: openapi/amazon-guardduty
+  compliance/amazon-guardduty-compliance.yml:
+    method: harvested
+    evidence: declared in the artifact
+  conformance/amazon-guardduty-conformance.yml:
+    method: derived
+    evidence: declared in the artifact
+  conventions/amazon-guardduty-conventions.yml:
+    method: derived
+    evidence: declared in the artifact
+  data-model/amazon-guardduty-data-model.yml:
+    method: derived
+    evidence: declared in the artifact
+  errors/amazon-guardduty-error-codes.yml:
+    method: searched
+    evidence: declared in the artifact
+  errors/amazon-guardduty-problem-types.yml:
+    method: derived
+    evidence: declared in the artifact
   examples/amazon-guardduty-example.json:
     method: unknown
     evidence: no authorship recorded
@@ -1364,6 +1397,9 @@ artifacts:
   front-door-ai/2026-09-17.yml:
     method: unknown
     evidence: no authorship recorded
+  hosts/amazon-guardduty-hosts.yml:
+    method: derived
+    evidence: declared in the artifact
   integrations/_index.yml:
     method: generated
     evidence: carries an API Evangelist house phrase
@@ -1373,7 +1409,292 @@ artifacts:
   json-ld/amazon-guardduty-context.jsonld:
     method: unknown
     evidence: no authorship recorded
+  json-schema/amazon-guardduty-accept-administrator-invitation-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-guardduty-accept-administrator-invitation-response-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-guardduty-accept-invitation-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-guardduty-accept-invitation-response-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-guardduty-archive-findings-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-guardduty-create-custom-detection-rule-association-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-guardduty-create-custom-detection-rule-org-configuration-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-guardduty-create-filter-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-guardduty-create-investigation-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-guardduty-create-investigation-response-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-guardduty-create-ipset-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-guardduty-create-malware-protection-plan-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-guardduty-create-members-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-guardduty-create-publishing-destination-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-guardduty-create-threat-entity-set-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-guardduty-create-threat-intel-set-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-guardduty-create-trusted-entity-set-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-guardduty-delete-custom-detection-rule-association-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-guardduty-delete-custom-detection-rule-association-response-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-guardduty-delete-filter-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-guardduty-delete-ipset-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-guardduty-delete-malware-protection-plan-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-guardduty-delete-threat-entity-set-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-guardduty-delete-threat-intel-set-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-guardduty-delete-trusted-entity-set-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-guardduty-describe-malware-scans-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-guardduty-describe-malware-scans-response-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-guardduty-describe-publishing-destination-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-guardduty-describe-publishing-destination-response-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-guardduty-disassociate-from-administrator-account-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-guardduty-disassociate-from-administrator-account-response-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-guardduty-disassociate-from-master-account-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-guardduty-disassociate-from-master-account-response-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-guardduty-get-administrator-account-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-guardduty-get-administrator-account-response-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-guardduty-get-coverage-statistics-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-guardduty-get-custom-detection-rule-association-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-guardduty-get-custom-detection-rule-association-response-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-guardduty-get-filter-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-guardduty-get-filter-response-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-guardduty-get-findings-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-guardduty-get-findings-statistics-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-guardduty-get-investigation-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-guardduty-get-investigation-response-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-guardduty-get-ipset-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-guardduty-get-ipset-response-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-guardduty-get-malware-protection-plan-response-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-guardduty-get-malware-scan-response-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-guardduty-get-master-account-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-guardduty-get-master-account-response-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-guardduty-get-member-detectors-response-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-guardduty-get-remaining-free-trial-days-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-guardduty-get-threat-entity-set-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-guardduty-get-threat-entity-set-response-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-guardduty-get-threat-intel-set-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-guardduty-get-threat-intel-set-response-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-guardduty-get-trusted-entity-set-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-guardduty-get-trusted-entity-set-response-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-guardduty-get-usage-statistics-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-guardduty-invite-members-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-guardduty-list-coverage-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-guardduty-list-custom-detection-rule-associations-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-guardduty-list-custom-detection-rule-org-configurations-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-guardduty-list-custom-detection-rules-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-guardduty-list-filters-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-guardduty-list-findings-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-guardduty-list-investigations-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-guardduty-list-investigations-response-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-guardduty-list-ipsets-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-guardduty-list-malware-protection-plans-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-guardduty-list-malware-protection-plans-response-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-guardduty-list-malware-scans-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-guardduty-list-malware-scans-response-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-guardduty-list-members-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-guardduty-list-publishing-destinations-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-guardduty-list-publishing-destinations-response-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-guardduty-list-threat-entity-sets-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-guardduty-list-threat-intel-sets-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-guardduty-list-trusted-entity-sets-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
   json-schema/amazon-guardduty-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-guardduty-start-malware-scan-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-guardduty-start-monitoring-members-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-guardduty-unarchive-findings-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-guardduty-update-custom-detection-rule-association-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-guardduty-update-custom-detection-rule-association-response-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-guardduty-update-custom-detection-rule-org-configuration-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-guardduty-update-filter-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-guardduty-update-findings-feedback-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-guardduty-update-ipset-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-guardduty-update-malware-protection-plan-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-guardduty-update-malware-scan-settings-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-guardduty-update-member-detectors-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-guardduty-update-publishing-destination-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-guardduty-update-threat-entity-set-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-guardduty-update-threat-intel-set-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-guardduty-update-trusted-entity-set-request-schema.json:
     method: unknown
     evidence: no authorship recorded
   json-schema/guardduty-accept-administrator-invitation-request-schema.json:
@@ -4010,7 +4331,7 @@ artifacts:
   kin/checks-2026-10-23T222754.yml:
     method: generated
     evidence: Kin Score snapshot written by score.rb
-  kin/checks-2026-11-02T082323.yml:
+  kin/checks-2026-11-06T143934.yml:
     method: generated
     evidence: Kin Score snapshot written by score.rb
   kin/score-2026-09-23T000603.yml:
@@ -4079,10 +4400,21 @@ artifacts:
   kin/score-2026-11-02T082323.yml:
     method: generated
     evidence: Kin Score snapshot written by score.rb
-  openapi/_original/amazon-guardduty-openapi.yml:
-    method: harvested
-    evidence: found in openapi/_original/; the fetch URL and bytes were not recorded, so byte-identity
-      to the provider's source is unverified
+  kin/score-2026-11-06T143934.yml:
+    method: generated
+    evidence: Kin Score snapshot written by score.rb
+  lifecycle/amazon-guardduty-lifecycle.yml:
+    method: derived
+    evidence: declared in the artifact
+  llms/amazon-guardduty-llms-provenance.yml:
+    method: unknown
+    evidence: no authorship recorded
+  llms/amazon-guardduty-llms.txt:
+    method: unknown
+    evidence: no authorship recorded
+  mcp/amazon-guardduty-mcp.yml:
+    method: derived
+    evidence: declared in the artifact
   openapi/amazon-guardduty-admin-api-openapi.yml:
     method: unknown
     evidence: no authorship recorded
@@ -4108,8 +4440,8 @@ artifacts:
     method: unknown
     evidence: no authorship recorded
   openapi/amazon-guardduty-invitation-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
+    method: unknown
+    evidence: no authorship recorded
   openapi/amazon-guardduty-ipset-api-openapi.yml:
     method: unknown
     evidence: no authorship recorded
@@ -4143,6 +4475,12 @@ artifacts:
   openapi/amazon-guardduty-trustedentityset-api-openapi.yml:
     method: unknown
     evidence: no authorship recorded
+  packages/amazon-guardduty-packages.yml:
+    method: searched
+    evidence: declared in the artifact
+  patterns/amazon-guardduty-patterns.yml:
+    method: derived
+    evidence: declared in the artifact
   plans/amazon-guardduty-plans-pricing.yml:
     method: searched
     evidence: declared in the artifact
@@ -4164,8 +4502,14 @@ artifacts:
   rules/amazon-guardduty-jsonschema-spectral-rules.yml:
     method: generated
     evidence: declared in the artifact
+  rules/amazon-guardduty-rules.yml:
+    method: generated
+    evidence: declared in the artifact
   rules/amazon-guardduty-spectral-rules.yml:
     method: generated
+    evidence: declared in the artifact
+  sandbox/amazon-guardduty-sandbox.yml:
+    method: searched
     evidence: declared in the artifact
   security/amazon-guardduty-domain-security.yml:
     method: unknown
@@ -4176,12 +4520,40 @@ artifacts:
   security/amazon-guardduty-vulnerability-disclosure.yml:
     method: searched
     evidence: declared in the artifact
+  skills/_index.yml:
+    method: generated
+    evidence: declared in the artifact
+  skills/amazon-guardduty-test-with-sample-findings.md:
+    method: unknown
+    evidence: no authorship recorded
+  skills/amazon-guardduty-triage-findings.md:
+    method: unknown
+    evidence: no authorship recorded
   sla/amazon-guardduty-sla.yml:
     method: generated
     evidence: declared in the artifact
   smithy/guardduty-2017-11-28.json:
+    method: harvested
+    evidence: byte-identical to https://raw.githubusercontent.com/aws/api-models-aws/3cd98287b471c106254abd89279cc87308d38bfd/models/guardduty/service/2017-11-28/guardduty-2017-11-28.json
+      (sha256 b258ccc1bccd, fetched 2026-11-11T21:10:11+00:00)
+  terms/amazon-guardduty-terms-of-service.yml:
+    method: harvested
+    evidence: declared in the artifact
+  vendors/amazon-guardduty-vendors.yml:
     method: unknown
     evidence: no authorship recorded
   vocabulary/amazon-guardduty-vocabulary.yaml:
     method: generated
     evidence: declared in the artifact
+  vocabulary/amazon-guardduty-vocabulary.yml:
+    method: derived
+    evidence: declared in the artifact
+  well-known/amazon-guardduty-midway-auth-openid-configuration.json:
+    method: unknown
+    evidence: no authorship recorded
+  well-known/amazon-guardduty-security.txt:
+    method: unknown
+    evidence: no authorship recorded
+  well-known/amazon-guardduty-well-known.yml:
+    method: unknown
+    evidence: no authorship recorded
